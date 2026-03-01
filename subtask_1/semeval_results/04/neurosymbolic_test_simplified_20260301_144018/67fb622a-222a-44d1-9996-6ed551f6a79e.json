@@ -1,0 +1,68 @@
+{
+  "id": "67fb622a-222a-44d1-9996-6ed551f6a79e",
+  "text": "Every single triangle is a polygon. Anything that is a triangle is also a geometric shape with three sides. A portion of geometric shapes with three sides are not polygons.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "triangle",
+      "predicate": "polygon",
+      "raw_text": "Every single triangle is a polygon"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "triangle",
+      "predicate": "geometric shape with three sides",
+      "raw_text": "Anything that is a triangle is also a geometric shape with three sides"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "geometric shape with three sides",
+      "predicate": "polygon",
+      "raw_text": "A portion of geometric shapes with three sides are not polygons"
+    },
+    "middle_term": "triangle",
+    "major_term": "polygon",
+    "minor_term": "geometric shape with three sides",
+    "figure": 3,
+    "mood": "AAO",
+    "form": "AAO-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-3",
+    "figure": 3,
+    "mood": "AAO",
+    "reason": "AAO-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "geometric shape with three sides",
+      "P": "polygon",
+      "M": "triangle"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

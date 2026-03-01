@@ -1,0 +1,68 @@
+{
+  "id": "60609ba7-37db-446f-a53c-e41568217236",
+  "text": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "cloud",
+      "predicate": "white",
+      "raw_text": "It is the case that some clouds are white"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "sheep",
+      "predicate": "white",
+      "raw_text": "There are some sheep that are also white"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "sheep",
+      "predicate": "cloud",
+      "raw_text": "This implies that all sheep are clouds"
+    },
+    "middle_term": "white",
+    "major_term": "cloud",
+    "minor_term": "sheep",
+    "figure": 2,
+    "mood": "IIA",
+    "form": "IIA-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IIA-2",
+    "figure": 2,
+    "mood": "IIA",
+    "reason": "IIA-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "sheep",
+      "P": "cloud",
+      "M": "white"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IIA": 3
+    },
+    "types_seen": [
+      "IIA",
+      "IIA",
+      "IIA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

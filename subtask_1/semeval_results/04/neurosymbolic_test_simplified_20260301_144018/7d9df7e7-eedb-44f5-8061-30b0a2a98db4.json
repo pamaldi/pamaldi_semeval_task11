@@ -1,0 +1,68 @@
+{
+  "id": "7d9df7e7-eedb-44f5-8061-30b0a2a98db4",
+  "text": "There are no birds that are also mammals. The set of pets includes some creatures that are mammals. A consequence is that some pets are birds.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "mammal",
+      "raw_text": "There are no birds that are also mammals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "pet",
+      "predicate": "mammal",
+      "raw_text": "The set of pets includes some creatures that are mammals"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "pet",
+      "predicate": "bird",
+      "raw_text": "A consequence is that some pets are birds"
+    },
+    "middle_term": "mammal",
+    "major_term": "bird",
+    "minor_term": "pet",
+    "figure": 2,
+    "mood": "EII",
+    "form": "EII-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-2",
+    "figure": 2,
+    "mood": "EII",
+    "reason": "EII-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "pet",
+      "P": "bird",
+      "M": "mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

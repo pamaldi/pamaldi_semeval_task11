@@ -1,0 +1,70 @@
+{
+  "id": "efa6cac1-2f25-4499-a8c3-270cd761f39b",
+  "text": "Every single bird has a beak. It is not true that any bird is a penguin. Therefore, some penguins have beaks.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "beak",
+      "raw_text": "Every single bird has a beak"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "penguin",
+      "raw_text": "It is not true that any bird is a penguin"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "penguin",
+      "predicate": "beak",
+      "raw_text": "Therefore, some penguins have beaks"
+    },
+    "middle_term": "bird",
+    "major_term": "beak",
+    "minor_term": "penguin",
+    "figure": 1,
+    "mood": "AEI",
+    "form": "AEI-1"
+  },
+  "validity_details": {
+    "form": "AEI-1",
+    "mood": "AEI",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AEI-1",
+    "vote_counts": {
+      "AEI-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "AEI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

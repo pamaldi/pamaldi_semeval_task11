@@ -1,0 +1,78 @@
+{
+  "id": "e4fb7540-5e00-4c53-9dfd-4e7050ae4dc6",
+  "text": "Not a single piece of furniture is an animal. Every animal is a chair. It must be that a portion of chairs are not furniture.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "furniture",
+      "predicate": "animal",
+      "raw_text": "Not a single piece of furniture is an animal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "chair",
+      "raw_text": "Every animal is a chair"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "chair",
+      "predicate": "furniture",
+      "raw_text": "It must be that a portion of chairs are not furniture"
+    },
+    "middle_term": "animal",
+    "major_term": "furniture",
+    "minor_term": "chair",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "form": "EAO-2",
+    "mood": "EAO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Cesaro",
+    "reason": "Valid syllogistic form: Cesaro (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-2",
+    "vote_counts": {
+      "EAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-2",
+      "EAO-2",
+      "EAO-2",
+      "EAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-2 (t=0.0)",
+      "EAO-2 (t=0.3)",
+      "EAO-2 (t=0.5)",
+      "EAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

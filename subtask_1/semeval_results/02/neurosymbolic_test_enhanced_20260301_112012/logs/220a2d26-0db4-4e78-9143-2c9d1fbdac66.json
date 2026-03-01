@@ -1,0 +1,78 @@
+{
+  "id": "220a2d26-0db4-4e78-9143-2c9d1fbdac66",
+  "text": "Anything that is an athlete can photosynthesize. Every single tennis player is an athlete. At least one tennis player can photosynthesize.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "athlete",
+      "predicate": "can photosynthesize",
+      "raw_text": "Anything that is an athlete can photosynthesize."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tennis player",
+      "predicate": "athlete",
+      "raw_text": "Every single tennis player is an athlete."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tennis player",
+      "predicate": "can photosynthesize",
+      "raw_text": "At least one tennis player can photosynthesize."
+    },
+    "middle_term": "athlete",
+    "major_term": "can photosynthesize",
+    "minor_term": "tennis player",
+    "figure": 1,
+    "mood": "AAI",
+    "form": "AAI-1"
+  },
+  "validity_details": {
+    "form": "AAI-1",
+    "mood": "AAI",
+    "figure": 1,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Barbari",
+    "reason": "Valid syllogistic form: Barbari (requires existential import)"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAI-1",
+    "vote_counts": {
+      "AAI-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAI-1",
+      "AAI-1",
+      "AAI-1",
+      "AAI-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAI-1 (t=0.0)",
+      "AAI-1 (t=0.3)",
+      "AAI-1 (t=0.5)",
+      "AAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "5934014e-aec0-442f-8a04-abddc9379cfc",
+  "text": "Anything that is a rose is a flower. There are no tulips that are roses. Every tulip is a flower.",
+  "extraction_success": false,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "VALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Anything that is a rose is a flower. (All roses are flowers)\n   - **Premise 2:** There are no tulips that are roses. (No tulips are roses)\n   - **Conclusion:** Every tulip is a flower. (All tulips are flowers)\n\n2. **Identify the three terms:**\n   - **Middle term:** *rose* (appears in both premises, not in conclusion)\n   - **Major term:** *flower* (predicate of the conclusion)\n   - **Minor term:** *tulip* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All roses are flowers\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"No tulips are roses\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"All tulips are flowers\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (roses-flower)\n   - Premise 2: S-M (tulips-roses)\n   - This is **Figure 2** (middle term is predicate of both premises)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **AEE**\n   - Figure: **2**\n   - **AEE in Figure 2 is valid** (Camestres)\n\n6. **Check for fallacies:**\n   - Middle term (*rose*) is distributed in **Premise 2** (E statement), so no undistributed middle.\n   - Major term (*flower*) is not distributed in the conclusion (A statement), and it is not distributed in the major premise (A statement), so no illicit major.\n   - Minor term (*tulip*) is distributed in the conclusion (A statement), and it is distributed in the minor premise (E statement), so no illicit minor.\n   - Only one premise is negative (Premise 2), and the conclusion is affirmative, which is valid.\n   - No two particular premises.\n\n### Final determination:\n\n**VALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

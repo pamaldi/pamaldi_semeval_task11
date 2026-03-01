@@ -1,0 +1,78 @@
+{
+  "id": "0b4b4991-85ef-45dd-981a-4ab75398a0e7",
+  "text": "No stars are celestial bodies. All suns are things that are stars. It follows that some suns are not celestial bodies.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "star",
+      "predicate": "celestial body",
+      "raw_text": "No stars are celestial bodies"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "sun",
+      "predicate": "star",
+      "raw_text": "All suns are things that are stars"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "sun",
+      "predicate": "celestial body",
+      "raw_text": "It follows that some suns are not celestial bodies"
+    },
+    "middle_term": "star",
+    "major_term": "celestial body",
+    "minor_term": "sun",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "form": "EAO-2",
+    "mood": "EAO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Cesaro",
+    "reason": "Valid syllogistic form: Cesaro (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-2",
+    "vote_counts": {
+      "EAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-2",
+      "EAO-2",
+      "EAO-2",
+      "EAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-2 (t=0.0)",
+      "EAO-2 (t=0.3)",
+      "EAO-2 (t=0.5)",
+      "EAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

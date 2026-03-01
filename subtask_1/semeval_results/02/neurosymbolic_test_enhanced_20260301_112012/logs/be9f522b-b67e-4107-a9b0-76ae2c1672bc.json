@@ -1,0 +1,78 @@
+{
+  "id": "be9f522b-b67e-4107-a9b0-76ae2c1672bc",
+  "text": "Some root vegetables are known as carrots. Everything that is a carrot is also a vegetable. Therefore, there are vegetables that are root vegetables.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "root vegetable",
+      "predicate": "carrot",
+      "raw_text": "Some root vegetables are known as carrots"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "carrot",
+      "predicate": "vegetable",
+      "raw_text": "Everything that is a carrot is also a vegetable"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vegetable",
+      "predicate": "root vegetable",
+      "raw_text": "Therefore, there are vegetables that are root vegetables"
+    },
+    "middle_term": "carrot",
+    "major_term": "root vegetable",
+    "minor_term": "vegetable",
+    "figure": 1,
+    "mood": "IAI",
+    "form": "IAI-1"
+  },
+  "validity_details": {
+    "form": "IAI-1",
+    "mood": "IAI",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Form IAI-1 is not valid"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "IAI-1",
+    "vote_counts": {
+      "IAI-4": 1,
+      "IAI-1": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "IAI-4",
+      "IAI-1",
+      "IAI-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAI-4 (t=0.0)",
+      "FAILED (t=0.3)",
+      "IAI-1 (t=0.5)",
+      "IAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

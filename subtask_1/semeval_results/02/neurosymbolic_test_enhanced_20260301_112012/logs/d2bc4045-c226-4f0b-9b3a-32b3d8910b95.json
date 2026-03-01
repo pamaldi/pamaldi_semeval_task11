@@ -1,0 +1,37 @@
+{
+  "id": "d2bc4045-c226-4f0b-9b3a-32b3d8910b95",
+  "text": "Every single dog is an animal. Nothing that is a fish is an animal. It follows from this that every single fish is a dog.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Every single dog is an animal. (All D are A)\n   - **Premise 2:** Nothing that is a fish is an animal. (No F is A)\n   - **Conclusion:** Every single fish is a dog. (All F are D)\n\n2. **Identify the three terms:**\n   - **Middle term:** Animal (A) \u2014 appears in both premises, not in the conclusion\n   - **Major term:** Dog (D) \u2014 predicate of the conclusion\n   - **Minor term:** Fish (F) \u2014 subject of the conclusion\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** A (All D are A)\n   - **Premise 2:** E (No F is A)\n   - **Conclusion:** A (All F are D)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (Animal is predicate of the first premise)\n   - Premise 2: S-M (Animal is subject of the second premise)\n   - **Figure 4:** P-M, M-S (middle term is predicate of P1, subject of P2)\n\n5. **Check if the mood-figure combination is valid:**\n   - **Mood:** A (Premise 1), E (Premise 2), A (Conclusion) \u2192 **AE A**\n   - **Figure 4:** AEE is valid (Camenes), but **AE A** is **not** a valid form.\n\n6. **Check for fallacies:**\n   - **Two negative premises?** No \u2014 only one premise is negative (Premise 2).\n   - **Negative premise with affirmative conclusion?** Yes \u2014 this is a **fallacy**.\n   - **Undistributed middle?** The middle term (Animal) is distributed in Premise 2 (E), but not in Premise 1 (A). So it is **distributed at least once**, not a fallacy.\n   - **Illicit major/minor?** \n     - **Major term (Dog)** is distributed in the conclusion (All F are D), but not in the major premise (All D are A). This is an **illicit major**.\n     - **Minor term (Fish)** is distributed in the conclusion (All F are D), and not in the minor premise (No F is A). This is an **illicit minor**.\n\n### Final determination:\nThe syllogism is **invalid** due to the **negative premise with an affirmative conclusion**, and also due to **illicit major** and **illicit minor**.\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

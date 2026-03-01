@@ -1,0 +1,110 @@
+# PREVIOUS ATTEMPT FAILED
+
+You previously generated code for this syllogism, but it failed.
+
+## Syllogism
+{syllogism}
+
+## Your Previous Code
+```python
+{code}
+```
+
+## Error Output
+{stderr}
+
+## What Went Wrong
+{failure_guidance}
+
+{attempt_history}
+
+# Reflexion Error Hints for runtime_error (NestedQueryError)
+
+Add these to your reflexion prompt when the error type is `runtime_error` and contains "NestedQueryError":
+
+---
+
+## CRITICAL PySwip RULES (NestedQueryError fixes):
+
+The error `NestedQueryError: The last query was not closed` is caused by problematic Prolog code patterns during file loading. It is **NOT** caused by the `valid_syllogism` rule itself.
+
+### Root Causes and Fixes:
+
+**1. NEVER mix facts and fail clauses for the same predicate**
+```prolog
+% WRONG - causes NestedQueryError:
+inanimate(table1).         % fact defined
+inanimate(_) :- fail.      % then fail clause for same predicate - ERROR!
+
+% RIGHT - choose ONE approach:
+% Option A: Just facts (if predicate has instances)
+inanimate(table1).
+
+% Option B: Just fail clause (if predicate has NO instances)
+inanimate(_) :- fail.
+```
+
+**2. NEVER duplicate fail clauses for the same predicate**
+```prolog
+% WRONG - causes NestedQueryError:
+chair(_) :- fail.
+% ... other code ...
+chair(_) :- fail.          % duplicate - ERROR!
+
+% RIGHT - define each predicate ONCE:
+chair(_) :- fail.
+```
+
+**3. NEVER use :- dynamic or any directives**
+```prolog
+% WRONG - causes NestedQueryError:
+:- dynamic predicate/1.
+:- discontiguous predicate/1.
+
+% RIGHT - just omit these entirely, they're not needed
+```
+
+**4. Group all clauses for a predicate together**
+```prolog
+% WRONG - scattered definitions:
+cat(whiskers).
+dog(rex).
+cat(fluffy).               % cat defined in two places
+
+% RIGHT - group together:
+cat(whiskers).
+cat(fluffy).
+dog(rex).
+```
+
+### Correct Pattern Template:
+
+```prolog
+% 1. Facts (witnesses) - grouped by predicate
+predicate1(witness1).
+predicate1(witness2).
+predicate2(witness1).
+
+% 2. Fail clauses ONLY for predicates with NO facts/rules
+empty_predicate(_) :- fail.
+
+% 3. Rules from premises
+derived_predicate(X) :- base_predicate(X).
+conflict :- predA(X), predB(X).
+
+% 4. Validity check (this is fine, NOT the cause of errors)
+valid_syllogism :- some_predicate(X), \+ other_predicate(X).
+```
+
+### Quick Checklist Before Generating Code:
+- [ ] Each predicate appears in only ONE location (no scattered definitions)
+- [ ] No predicate has BOTH facts AND a fail clause
+- [ ] No duplicate fail clauses
+- [ ] No :- directives of any kind
+- [ ] Fail clauses only for predicates that have NO other definitions
+
+## Your Task
+Generate CORRECTED code that fixes the above issues.
+Output ONLY the Python code in a ```python block, with NO explanations.
+
+Syllogism: {syllogism}

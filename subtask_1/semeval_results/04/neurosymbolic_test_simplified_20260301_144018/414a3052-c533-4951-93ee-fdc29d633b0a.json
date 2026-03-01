@@ -1,0 +1,68 @@
+{
+  "id": "414a3052-c533-4951-93ee-fdc29d633b0a",
+  "text": "There are some animals that are mammals. There are no mammals that are birds. Thus, it can be said that some birds are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "mammal",
+      "raw_text": "There are some animals that are mammals"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "bird",
+      "raw_text": "There are no mammals that are birds"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "animal",
+      "raw_text": "Thus, it can be said that some birds are animals"
+    },
+    "middle_term": "mammal",
+    "major_term": "animal",
+    "minor_term": "bird",
+    "figure": 4,
+    "mood": "IEI",
+    "form": "IEI-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IEI-4",
+    "figure": 4,
+    "mood": "IEI",
+    "reason": "IEI-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "bird",
+      "P": "animal",
+      "M": "mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IEI": 3
+    },
+    "types_seen": [
+      "IEI",
+      "IEI",
+      "IEI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

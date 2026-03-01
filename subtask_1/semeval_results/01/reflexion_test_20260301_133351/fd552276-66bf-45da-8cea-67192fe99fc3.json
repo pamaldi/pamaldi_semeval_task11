@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "fd552276-66bf-45da-8cea-67192fe99fc3",
+  "syllogism_text": "There is no piece of furniture that can be called a planet. Each and every chair is a piece of furniture. Consequently, no chair is a planet.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% No furniture is a planet\nplanet(_) :- fail.\n\n% All chairs are furniture\nfurniture(X) :- chair(X).\n\n% Witness chair\nchair(library_chair).\n\n% Validity check: No chair is a planet\nvalid_syllogism :- \\+ (chair(X), planet(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:34:37.690262"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

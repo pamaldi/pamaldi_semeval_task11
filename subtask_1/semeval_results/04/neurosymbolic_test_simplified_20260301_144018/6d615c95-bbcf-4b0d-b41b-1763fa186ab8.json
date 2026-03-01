@@ -1,0 +1,68 @@
+{
+  "id": "6d615c95-bbcf-4b0d-b41b-1763fa186ab8",
+  "text": "It is true that no apples are mammals. Every single apple is a fruit. This is why every fruit is not a mammal.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "apple",
+      "predicate": "mammal",
+      "raw_text": "It is true that no apples are mammals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "Every single apple is a fruit"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "fruit",
+      "predicate": "mammal",
+      "raw_text": "This is why every fruit is not a mammal"
+    },
+    "middle_term": "apple",
+    "major_term": "mammal",
+    "minor_term": "fruit",
+    "figure": 3,
+    "mood": "EAE",
+    "form": "EAE-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAE-3",
+    "figure": 3,
+    "mood": "EAE",
+    "reason": "EAE-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "fruit",
+      "P": "mammal",
+      "M": "apple"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

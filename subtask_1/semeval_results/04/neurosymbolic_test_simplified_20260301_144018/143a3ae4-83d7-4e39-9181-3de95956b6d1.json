@@ -1,0 +1,68 @@
+{
+  "id": "143a3ae4-83d7-4e39-9181-3de95956b6d1",
+  "text": "Not one single animal is a pet. All dogs are pets. It follows from this that some dogs are not animals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "pet",
+      "raw_text": "Not one single animal is a pet"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "pet",
+      "raw_text": "All dogs are pets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "dog",
+      "predicate": "animal",
+      "raw_text": "It follows from this that some dogs are not animals"
+    },
+    "middle_term": "pet",
+    "major_term": "animal",
+    "minor_term": "dog",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-2",
+    "figure": 2,
+    "mood": "EAO",
+    "reason": "EAO-2 is valid (Cesaro)",
+    "form_name": "Cesaro",
+    "terms": {
+      "S": "dog",
+      "P": "animal",
+      "M": "pet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRUE REFLEXION LOG - 267064a3-db1a-4c57-a571-ce5c0c8f141e
+Mode: label_free
+================================================================================
+
+Syllogism:
+A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.
+
+Ground Truth: INVALID
+Validity: False
+Plausibility: False
+Final Prediction: INVALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: INVALID
+Failure Type: unknown
+
+Code:
+% Witness: reptile that is also a mammal
+reptile(lizard).
+mammal(lizard).
+
+% Fish has no facts (nothing is fish)
+fish(_) :- fail.
+
+% E-premise: no mammals are fish
+conflict :- mammal(X), fish(X).
+
+% Validity check: some fish are reptiles
+valid_syllogism :- fish(X), reptile(X).
+
+Stdout: RESULT:INVALID
+
+

@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "aba58977-4f05-4852-a433-720010a97208",
+  "syllogism_text": "Anything which is a shoe is also an idea. All ideas are insects. We can infer that some insects are shoes.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness for shoe (which is also an idea and insect)\nshoe(s1).\n\n% Rules from premises\nidea(X) :- shoe(X).\ninsect(X) :- idea(X).\n\n% Validity check: Some insects are shoes\nvalid_syllogism :- insect(X), shoe(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:45:33.021864"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

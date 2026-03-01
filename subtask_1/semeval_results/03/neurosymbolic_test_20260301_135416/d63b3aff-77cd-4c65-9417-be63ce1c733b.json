@@ -1,0 +1,50 @@
+{
+  "id": "d63b3aff-77cd-4c65-9417-be63ce1c733b",
+  "text": "Every piece of fruit is edible. Any apple is a fruit. This means that some apples are not vegetables.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 5,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "votes": [
+      "INVALID",
+      "INVALID",
+      "INVALID"
+    ],
+    "vote_counts": {
+      "VALID": 0,
+      "INVALID": 3
+    },
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5
+    ],
+    "had_disagreement": false
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

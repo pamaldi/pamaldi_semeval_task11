@@ -1,0 +1,19 @@
+================================================================================
+VALIDITY / PLAUSIBILITY BREAKDOWN
+Reflexion Mode: label_free
+================================================================================
+
+Combinations:
+- VP: Valid + Plausible
+- VI: Valid + Implausible
+- IP: Invalid + Plausible
+- II: Invalid + Implausible
+
+Combination               Total      Correct    Accuracy  
+-------------------------------------------------------
+Valid + Plausible (VP)    48         47         97.9%
+Valid + Implausible (VI)  48         42         87.5%
+Invalid + Plausible (IP)  47         40         85.1%
+Invalid + Implausible (II) 48         44         91.7%
+-------------------------------------------------------
+OVERALL                   191        173        90.6%

@@ -1,0 +1,68 @@
+{
+  "id": "10541e1f-8a1c-4e7b-8d84-fab0d65b94d8",
+  "text": "Anything that is a cat is also a feline. Under no circumstances is a feline a canine. It can thus be inferred that certain canines are not cats.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cat",
+      "predicate": "feline",
+      "raw_text": "Anything that is a cat is also a feline"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "feline",
+      "predicate": "canine",
+      "raw_text": "Under no circumstances is a feline a canine"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "canine",
+      "predicate": "cat",
+      "raw_text": "It can thus be inferred that certain canines are not cats"
+    },
+    "middle_term": "feline",
+    "major_term": "cat",
+    "minor_term": "canine",
+    "figure": 4,
+    "mood": "AEO",
+    "form": "AEO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEO-4",
+    "figure": 4,
+    "mood": "AEO",
+    "reason": "AEO-4 is valid (Camenop)",
+    "form_name": "Camenop",
+    "terms": {
+      "S": "canine",
+      "P": "cat",
+      "M": "feline"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEO": 3
+    },
+    "types_seen": [
+      "AEO",
+      "AEO",
+      "AEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

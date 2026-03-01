@@ -1,0 +1,70 @@
+{
+  "id": "3c944a90-a461-4136-99dc-8ed0cf1d04b0",
+  "text": "Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "person who is a doctor",
+      "predicate": "medical professional",
+      "raw_text": "Every person who is a doctor is also a medical professional"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "medical professional",
+      "predicate": "person with a degree",
+      "raw_text": "All medical professionals are people with degrees"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "person with a degree",
+      "predicate": "doctor",
+      "raw_text": "We can logically conclude that some people with degrees are doctors"
+    },
+    "middle_term": "medical professional",
+    "major_term": "doctor",
+    "minor_term": "person with a degree",
+    "figure": 2,
+    "mood": "AAI",
+    "form": "AAI-2"
+  },
+  "validity_details": {
+    "form": "AAI-2",
+    "mood": "AAI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Form AAI-2 is not valid"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AAI-2",
+    "vote_counts": {
+      "AAI-2": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "AAI-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "195b8204-13fb-460d-9b86-16a1cf946ffa",
+  "text": "It is the case that no cat is a dog. Among the animals that are cats, some are pets. The logical consequence is that there are pets that are not dogs.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "dog",
+      "raw_text": "It is the case that no cat is a dog"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "cat",
+      "predicate": "pet",
+      "raw_text": "Among the animals that are cats, some are pets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "pet",
+      "predicate": "dog",
+      "raw_text": "The logical consequence is that there are pets that are not dogs"
+    },
+    "middle_term": "cat",
+    "major_term": "dog",
+    "minor_term": "pet",
+    "figure": 3,
+    "mood": "EIO",
+    "form": "EIO-3"
+  },
+  "validity_details": {
+    "form": "EIO-3",
+    "mood": "EIO",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Ferison",
+    "reason": "Valid syllogistic form: Ferison"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-3",
+    "vote_counts": {
+      "EIO-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-3",
+      "EIO-3",
+      "EIO-3",
+      "EIO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-3 (t=0.0)",
+      "EIO-3 (t=0.3)",
+      "EIO-3 (t=0.5)",
+      "EIO-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

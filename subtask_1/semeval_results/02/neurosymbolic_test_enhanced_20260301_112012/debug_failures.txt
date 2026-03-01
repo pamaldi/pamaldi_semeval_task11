@@ -1,0 +1,1232 @@
+====================================================================================================
+DEBUG LOG - ERRORI E MISMATCH (scritto in tempo reale)
+Timestamp: 2026-03-01 11:20:12
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: bff2af61-d4b0-4147-8a5b-ff4fe1892559
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no bikes that can be called cars. It is also true that every bike is a type of vehicle. This has led to the conclusion that a portion of vehicles are bikes.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: a2fcf47a-5df0-405d-86ce-ed8629f387a9
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every single fruit is a food. Nothing that is a vegetable is a food. It follows from this that every vegetable is a fruit.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: cc8b1d14-79aa-445e-929c-ec3043229103
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: VALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 370fc136-33be-4129-bf71-b557576fc5d2
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every piece of fruit grows from plants. There are some apples which are fruits. Therefore, it is the case that some apples grow from plants.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: VALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: ed73250f-c7ad-4976-8c45-d9bf6ece787b
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "I",
+    "subject": "rose",
+    "predicate": "yellow",
+    "raw_text": "It is true that some roses are yellow"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "rose",
+    "predicate": "flower",
+    "raw_text": "A rose is a type of flower"
+  },
+  "conclusion": {
+    "type": "I",
+    "subject": "flower",
+    "predicate": "yellow",
+    "raw_text": "Thus, some flowers are yellow"
+  },
+  "middle_term": "rose",
+  "major_term": "yellow",
+  "minor_term": "flower",
+  "figure": 1,
+  "mood": "IAI",
+  "form": "IAI-1"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: IAI-1
+  Figure: 1
+  Mood: IAI
+  Valid: False
+  Ragione invalidità: Form IAI-1 is not valid
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 4
+  Failed samples: 0
+  Vote counts: {'IAI-1': 4}
+  Selected form: IAI-1
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 45fc2b0d-433e-407f-a574-cac2caa54b90
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a planet is a celestial body. The category of comets contains no celestial bodies. Every comet is a planet.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 7f1f3231-3a3a-44fa-930f-ace6cf37147e
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+No item that is a polygon with seven sides is a square. There are no triangles which are polygons with seven sides. Thus, a portion of triangles are not squares.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 730ad5ee-b19a-4d69-bad3-309f2f2ac775
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+It is true that a portion of animals are birds. Among the animals that are penguins, some are also animals. This proves that not every penguin is a bird.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: 103e14a2-88ad-41b1-8d1f-7308698193ba
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no pianos that are not musical instruments. All musical instruments are objects. From this, it can be derived that some objects are pianos.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "A",
+    "subject": "pianos",
+    "predicate": "musical instruments",
+    "raw_text": "There are no pianos that are not musical instruments."
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "musical instruments",
+    "predicate": "objects",
+    "raw_text": "All musical instruments are objects."
+  },
+  "conclusion": {
+    "type": "I",
+    "subject": "objects",
+    "predicate": "pianos",
+    "raw_text": "From this, it can be derived that some objects are pianos."
+  },
+  "middle_term": "musical instruments",
+  "major_term": "pianos",
+  "minor_term": "objects",
+  "figure": 2,
+  "mood": "AAI",
+  "form": "AAI-2"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: AAI-2
+  Figure: 2
+  Mood: AAI
+  Valid: False
+  Ragione invalidità: Form AAI-2 is not valid
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 1
+  Vote counts: {'AAI-2': 2, 'AAI-1': 1}
+  Selected form: AAI-2
+  ⚠ Disagreement: ['AAI-2', 'AAI-1', 'AAI-2']
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 4b3008e8-0b0d-4ea6-8765-de94774551ae
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no creatures that are non-bipeds that are also living creatures. Everything that is a squirrel is a non-biped. Thus, every squirrel is a living creature.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 400d39a6-3666-4806-8143-03dacb844452
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There exist some individuals who are scientists who are not physicists. Every single person who is a scientist is an academic. One can thus conclude that all academics are physicists.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: 3c944a90-a461-4136-99dc-8ed0cf1d04b0
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "A",
+    "subject": "person who is a doctor",
+    "predicate": "medical professional",
+    "raw_text": "Every person who is a doctor is also a medical professional."
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "medical professional",
+    "predicate": "person with degrees",
+    "raw_text": "All medical professionals are people with degrees."
+  },
+  "conclusion": {
+    "type": "I",
+    "subject": "person with degrees",
+    "predicate": "doctor",
+    "raw_text": "We can logically conclude that some people with degrees are doctors."
+  },
+  "middle_term": "medical professional",
+  "major_term": "doctor",
+  "minor_term": "person with degrees",
+  "figure": 2,
+  "mood": "AAI",
+  "form": "AAI-2"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: AAI-2
+  Figure: 2
+  Mood: AAI
+  Valid: False
+  Ragione invalidità: Form AAI-2 is not valid
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 1
+  Failed samples: 3
+  Vote counts: {'AAI-2': 1}
+  Selected form: AAI-2
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: d2bc4045-c226-4f0b-9b3a-32b3d8910b95
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every single dog is an animal. Nothing that is a fish is an animal. It follows from this that every single fish is a dog.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: 3a2acb10-9c38-4a52-a0a0-b2bf04e3759a
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "O",
+    "subject": "car",
+    "predicate": "truck",
+    "raw_text": "It is not the case that every single car is a truck"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "car",
+    "predicate": "vehicle",
+    "raw_text": "All cars are vehicles"
+  },
+  "conclusion": {
+    "type": "O",
+    "subject": "vehicle",
+    "predicate": "truck",
+    "raw_text": "One can logically conclude that some vehicles are not trucks"
+  },
+  "middle_term": "car",
+  "major_term": "truck",
+  "minor_term": "vehicle",
+  "figure": 1,
+  "mood": "OAO",
+  "form": "OAO-1"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: OAO-1
+  Figure: 1
+  Mood: OAO
+  Valid: False
+  Ragione invalidità: Form OAO-1 is not valid
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 1
+  Failed samples: 3
+  Vote counts: {'OAO-1': 1}
+  Selected form: OAO-1
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_VALID] ID: 331224ac-9f0e-4258-ab9d-8a3a73304e04
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Not a single animal with wings is an aquatic mammal. Anything that is an aquatic mammal is a fish. It is necessarily true that no fish are animals with wings.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "E",
+    "subject": "animal with wings",
+    "predicate": "aquatic mammal",
+    "raw_text": "Not a single animal with wings is an aquatic mammal"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "aquatic mammal",
+    "predicate": "fish",
+    "raw_text": "Anything that is an aquatic mammal is a fish"
+  },
+  "conclusion": {
+    "type": "E",
+    "subject": "fish",
+    "predicate": "animal with wings",
+    "raw_text": "It is necessarily true that no fish are animals with wings"
+  },
+  "middle_term": "aquatic mammal",
+  "major_term": "animal with wings",
+  "minor_term": "fish",
+  "figure": 2,
+  "mood": "EAE",
+  "form": "EAE-2"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: EAE-2
+  Figure: 2
+  Mood: EAE
+  Valid: True
+  Nome forma: Cesare
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: INVALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 4
+  Failed samples: 0
+  Vote counts: {'EAE-4': 1, 'EAE-2': 2, 'EAE-1': 1}
+  Selected form: EAE-2
+  ⚠ Disagreement: ['EAE-4', 'EAE-2', 'EAE-2', 'EAE-1']
+
+### ANALISI ERRORE:
+  Il sistema ha predetto VALID ma il ground truth è INVALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: fc53be1a-0b75-4995-bcb2-bc3a878a0cb2
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+No animal that is a house pet is a feline. Not a single cat is a house pet. This demonstrates that some cats are not felines.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 6936ce4a-9e83-488a-947d-66bb574f1789
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+It is true that no person who is North American is a European. It is also true that no person who is French is a North American. It is a logical necessity that no French person is a European.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 8e100be7-956f-46e7-a431-a884cc30b28c
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no cats that can be called dogs. It is also true that every cat is a type of animal. This has led to the conclusion that a portion of animals are cats.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: aba58977-4f05-4852-a433-720010a97208
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything which is a shoe is also an idea. All ideas are insects. We can infer that some insects are shoes.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: VALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 9f78a37a-81a8-426d-b524-d824fbeceab0
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every single apple is a fruit. Nothing that is a banana is an apple. It follows from this that every banana is a fruit.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: d63b3aff-77cd-4c65-9417-be63ce1c733b
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every piece of fruit is edible. Any apple is a fruit. This means that some apples are not vegetables.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: be9f522b-b67e-4107-a9b0-76ae2c1672bc
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Some root vegetables are known as carrots. Everything that is a carrot is also a vegetable. Therefore, there are vegetables that are root vegetables.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "I",
+    "subject": "root vegetable",
+    "predicate": "carrot",
+    "raw_text": "Some root vegetables are known as carrots"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "carrot",
+    "predicate": "vegetable",
+    "raw_text": "Everything that is a carrot is also a vegetable"
+  },
+  "conclusion": {
+    "type": "I",
+    "subject": "vegetable",
+    "predicate": "root vegetable",
+    "raw_text": "Therefore, there are vegetables that are root vegetables"
+  },
+  "middle_term": "carrot",
+  "major_term": "root vegetable",
+  "minor_term": "vegetable",
+  "figure": 1,
+  "mood": "IAI",
+  "form": "IAI-1"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: IAI-1
+  Figure: 1
+  Mood: IAI
+  Valid: False
+  Ragione invalidità: Form IAI-1 is not valid
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 1
+  Vote counts: {'IAI-4': 1, 'IAI-1': 2}
+  Selected form: IAI-1
+  ⚠ Disagreement: ['IAI-4', 'IAI-1', 'IAI-1']
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: e1a54f18-8d34-4a45-ae80-85de65382e9d
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Not a single state within the USA is Canada. Every single instance of Canada is a country. It is necessary that a portion of countries are not states in the USA.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto erroneamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: c232d8c7-8f29-46bc-8f5c-bdfa3c52fcd5
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a sea is a large body of saltwater. The category of rivers contains no large bodies of saltwater. Every river is a sea.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 5934014e-aec0-442f-8a04-abddc9379cfc
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a rose is a flower. There are no tulips that are roses. Every tulip is a flower.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: INVALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto erroneamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_VALID] ID: 6d615c95-bbcf-4b0d-b41b-1763fa186ab8
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+It is true that no apples are mammals. Every single apple is a fruit. This is why every fruit is not a mammal.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "E",
+    "subject": "apple",
+    "predicate": "mammal",
+    "raw_text": "It is true that no apples are mammals"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "apple",
+    "predicate": "fruit",
+    "raw_text": "Every single apple is a fruit"
+  },
+  "conclusion": {
+    "type": "E",
+    "subject": "fruit",
+    "predicate": "mammal",
+    "raw_text": "This is why every fruit is not a mammal"
+  },
+  "middle_term": "apple",
+  "major_term": "mammal",
+  "minor_term": "fruit",
+  "figure": 2,
+  "mood": "EAE",
+  "form": "EAE-2"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: EAE-2
+  Figure: 2
+  Mood: EAE
+  Valid: True
+  Nome forma: Cesare
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: INVALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 1
+  Failed samples: 3
+  Vote counts: {'EAE-2': 1}
+  Selected form: EAE-2
+
+### ANALISI ERRORE:
+  Il sistema ha predetto VALID ma il ground truth è INVALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 79d80652-f46b-46f0-aa71-9d23c95901bf
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+A portion of things that are paper objects are books. Among the items known as notebooks, some are paper objects. This allows us to state that not all notebooks are books.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Max attempts reached
+  Tentativi: 3
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 4
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+
+====================================================================================================
+RIEPILOGO FINALE
+====================================================================================================
+Methods: 171 symbolic, 20 fallback, 0 failed
+
+OFFICIAL METRICS:
+  Combined Score:  31.97
+  Accuracy:        95.29%
+  Content Effect:  6.25
+
+FAILURES:
+  Extraction Errors: 0
+  False VALID:       3
+  False INVALID:     6
+  TOTAL:             9

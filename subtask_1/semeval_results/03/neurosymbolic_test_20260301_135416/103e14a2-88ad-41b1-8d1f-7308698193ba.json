@@ -1,0 +1,77 @@
+{
+  "id": "103e14a2-88ad-41b1-8d1f-7308698193ba",
+  "text": "There are no pianos that are not musical instruments. All musical instruments are objects. From this, it can be derived that some objects are pianos.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "pianos",
+      "predicate": "musical instruments",
+      "raw_text": "There are no pianos that are not musical instruments."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "musical instruments",
+      "predicate": "objects",
+      "raw_text": "All musical instruments are objects."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "objects",
+      "predicate": "pianos",
+      "raw_text": "From this, it can be derived that some objects are pianos."
+    },
+    "middle_term": "musical instruments",
+    "major_term": "pianos",
+    "minor_term": "objects",
+    "figure": 2,
+    "mood": "AAI",
+    "form": "AAI-2"
+  },
+  "validity_details": {
+    "form": "AAI-2",
+    "mood": "AAI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Form AAI-2 is not valid"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AAI-2",
+    "vote_counts": {
+      "AAI-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AAI-2",
+      "AAI-2",
+      "AAI-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAI-2 (t=0.0)",
+      "AAI-2 (t=0.3)",
+      "AAI-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

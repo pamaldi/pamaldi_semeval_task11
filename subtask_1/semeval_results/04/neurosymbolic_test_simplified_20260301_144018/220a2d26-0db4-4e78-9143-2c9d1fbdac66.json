@@ -1,0 +1,68 @@
+{
+  "id": "220a2d26-0db4-4e78-9143-2c9d1fbdac66",
+  "text": "Anything that is an athlete can photosynthesize. Every single tennis player is an athlete. At least one tennis player can photosynthesize.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "athlete",
+      "predicate": "thing that can photosynthesize",
+      "raw_text": "Anything that is an athlete can photosynthesize"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tennis player",
+      "predicate": "athlete",
+      "raw_text": "Every single tennis player is an athlete"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tennis player",
+      "predicate": "thing that can photosynthesize",
+      "raw_text": "At least one tennis player can photosynthesize"
+    },
+    "middle_term": "athlete",
+    "major_term": "thing that can photosynthesize",
+    "minor_term": "tennis player",
+    "figure": 1,
+    "mood": "AAI",
+    "form": "AAI-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-1",
+    "figure": 1,
+    "mood": "AAI",
+    "reason": "AAI-1 is valid (Barbari)",
+    "form_name": "Barbari",
+    "terms": {
+      "S": "tennis player",
+      "P": "thing that can photosynthesize",
+      "M": "athlete"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

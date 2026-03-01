@@ -1,0 +1,79 @@
+{
+  "id": "c690ad4e-b9a5-4410-80ac-5f97894dedff",
+  "text": "Not a single car is a bicycle. Vehicles include every single bicycle. It is logically follows that some vehicles are not cars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "car",
+      "predicate": "bicycle",
+      "raw_text": "Not a single car is a bicycle"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bicycle",
+      "predicate": "vehicle",
+      "raw_text": "Vehicles include every single bicycle"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "vehicle",
+      "predicate": "car",
+      "raw_text": "It is logically follows that some vehicles are not cars"
+    },
+    "middle_term": "bicycle",
+    "major_term": "car",
+    "minor_term": "vehicle",
+    "figure": 4,
+    "mood": "EAO",
+    "form": "EAO-4"
+  },
+  "validity_details": {
+    "form": "EAO-4",
+    "mood": "EAO",
+    "figure": 4,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Fesapo",
+    "reason": "Valid syllogistic form: Fesapo (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-4",
+    "vote_counts": {
+      "EAO-4": 3,
+      "EAO-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAO-4",
+      "EAO-4",
+      "EAO-4",
+      "EAO-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-4 (t=0.0)",
+      "EAO-4 (t=0.3)",
+      "EAO-4 (t=0.5)",
+      "EAO-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "5da917df-8760-476f-ae79-e20c20c61236",
+  "text": "Nothing that is an organic thing can be said to be a celestial object. Every planet is a type of organic thing. Therefore, there are no planets that are celestial objects.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "organic thing",
+      "predicate": "celestial object",
+      "raw_text": "Nothing that is an organic thing can be said to be a celestial object."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "planet",
+      "predicate": "organic thing",
+      "raw_text": "Every planet is a type of organic thing."
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "celestial object",
+      "raw_text": "Therefore, there are no planets that are celestial objects."
+    },
+    "middle_term": "organic thing",
+    "major_term": "celestial object",
+    "minor_term": "planet",
+    "figure": 1,
+    "mood": "EAE",
+    "form": "EAE-1"
+  },
+  "validity_details": {
+    "form": "EAE-1",
+    "mood": "EAE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Celarent",
+    "reason": "Valid syllogistic form: Celarent"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAE-1",
+    "vote_counts": {
+      "EAE-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAE-1",
+      "EAE-1",
+      "EAE-1",
+      "EAE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-1 (t=0.0)",
+      "EAE-1 (t=0.3)",
+      "EAE-1 (t=0.5)",
+      "EAE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

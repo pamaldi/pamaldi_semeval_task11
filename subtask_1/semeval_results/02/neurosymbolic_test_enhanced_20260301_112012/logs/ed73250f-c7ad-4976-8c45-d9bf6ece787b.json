@@ -1,0 +1,78 @@
+{
+  "id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+  "text": "It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "rose",
+      "predicate": "yellow",
+      "raw_text": "It is true that some roses are yellow"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "rose",
+      "predicate": "flower",
+      "raw_text": "A rose is a type of flower"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "flower",
+      "predicate": "yellow",
+      "raw_text": "Thus, some flowers are yellow"
+    },
+    "middle_term": "rose",
+    "major_term": "yellow",
+    "minor_term": "flower",
+    "figure": 1,
+    "mood": "IAI",
+    "form": "IAI-1"
+  },
+  "validity_details": {
+    "form": "IAI-1",
+    "mood": "IAI",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Form IAI-1 is not valid"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAI-1",
+    "vote_counts": {
+      "IAI-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IAI-1",
+      "IAI-1",
+      "IAI-1",
+      "IAI-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAI-1 (t=0.0)",
+      "IAI-1 (t=0.3)",
+      "IAI-1 (t=0.5)",
+      "IAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

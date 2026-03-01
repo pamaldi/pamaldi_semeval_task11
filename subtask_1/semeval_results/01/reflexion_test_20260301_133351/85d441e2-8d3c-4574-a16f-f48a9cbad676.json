@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "85d441e2-8d3c-4574-a16f-f48a9cbad676",
+  "syllogism_text": "Every single cow is a farm animal. The category of wolves does not contain farm animals. A portion of wolves are not cows.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness for wolves that are not cows\nwolf(alpha).\n\n% cow has NO facts in this model\ncow(_) :- fail.\n\n% Rule from first premise: All cows are farm animals\nfarm_animal(X) :- cow(X).\n\n% Rule from second premise: No wolves are farm animals\nconflict :- wolf(X), farm_animal(X).\n\n% Third premise: Some wolves are not cows\n% Already true since cow(_) fails\n\n% Validity check: Some wolves are not cows\nvalid_syllogism :- wolf(X), \\+ cow(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:40:04.492242"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

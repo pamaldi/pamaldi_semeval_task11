@@ -1,0 +1,70 @@
+{
+  "id": "2becb2e2-09ad-4468-91ab-59cd84985759",
+  "text": "There are no mammals who are also rational beings. Every single human is a rational being. Mammals are not humans.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "rational being",
+      "raw_text": "There are no mammals who are also rational beings"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "rational being",
+      "raw_text": "Every single human is a rational being"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "mammal",
+      "predicate": "human",
+      "raw_text": "Mammals are not humans"
+    },
+    "middle_term": "rational being",
+    "major_term": "human",
+    "minor_term": "mammal",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-2",
+    "figure": 2,
+    "mood": "EAO",
+    "reason": "EAO-2 is valid (Cesaro)",
+    "form_name": "Cesaro",
+    "terms": {
+      "S": "mammal",
+      "P": "human",
+      "M": "rational being"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for conclusion: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "9f78a37a-81a8-426d-b524-d824fbeceab0",
+  "text": "Every single apple is a fruit. Nothing that is a banana is an apple. It follows from this that every banana is a fruit.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: Every single apple is a fruit. (All apples are fruits)\n   - Premise 2: Nothing that is a banana is an apple. (No bananas are apples)\n   - Conclusion: Every banana is a fruit. (All bananas are fruits)\n\n2. **Identify the three terms:**\n   - Middle term: **apple** (appears in both premises, not in conclusion)\n   - Major term: **fruit** (predicate of conclusion)\n   - Minor term: **banana** (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"All apples are fruits\" \u2192 **A** (universal affirmative)\n   - Premise 2: \"No bananas are apples\" \u2192 **E** (universal negative)\n   - Conclusion: \"All bananas are fruits\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: All apples are fruits \u2192 M-P\n   - Premise 2: No bananas are apples \u2192 S-M\n   - Figure: **Figure 2** (P-M, S-M)\n\n5. **Mood and figure:**\n   - Mood: **A-E-A**\n   - Figure: **2**\n\n6. **Check validity:**\n   - The mood-figure combination **AE A** in **Figure 2** is **not valid**.\n   - The valid forms in Figure 2 are: **EAE**, **AEE**, **EIO**, **AOO**.\n   - **AE A** is not among them.\n\n7. **Check for fallacies:**\n   - **Undistributed middle**: The middle term \"apple\" is distributed in Premise 1 (as subject of a universal affirmative), but not in Premise 2 (as predicate of a universal negative). So it is **not undistributed**.\n   - **Illicit major**: The major term \"fruit\" is undistributed in the conclusion (it is the predicate of a universal affirmative), and it is also undistributed in Premise 1 (predicate of a universal affirmative). So it is **not illicit**.\n   - **Illicit minor**: The minor term \"banana\" is distributed in the conclusion (subject of a universal affirmative), but it is not distributed in Premise 2 (subject of a universal negative). This is an **illicit minor**.\n   - **Two negative premises**: Only one premise is negative, so this is not an issue.\n   - **Negative premise with affirmative conclusion**: One premise is negative, and the conclusion is affirmative. This is **not invalid** on its own.\n   - **Two particular premises**: Not applicable here.\n\n8. **Conclusion**: The syllogism commits the **illicit minor** fallacy. The minor term \"banana\" is distributed in the conclusion but not in the premise. Therefore, the syllogism is **invalid**.\n\n---\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

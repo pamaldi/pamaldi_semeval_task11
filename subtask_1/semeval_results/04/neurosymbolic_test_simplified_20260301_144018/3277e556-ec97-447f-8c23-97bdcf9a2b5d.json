@@ -1,0 +1,68 @@
+{
+  "id": "3277e556-ec97-447f-8c23-97bdcf9a2b5d",
+  "text": "Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no snakes are mammals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "metal",
+      "predicate": "mammal",
+      "raw_text": "Nothing that is a metal is a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "snake",
+      "predicate": "metal",
+      "raw_text": "Among the creatures that are snakes, there are none that are metals"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "snake",
+      "predicate": "mammal",
+      "raw_text": "It must be concluded that no snakes are mammals"
+    },
+    "middle_term": "metal",
+    "major_term": "mammal",
+    "minor_term": "snake",
+    "figure": 1,
+    "mood": "EEE",
+    "form": "EEE-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EEE-1",
+    "figure": 1,
+    "mood": "EEE",
+    "reason": "EEE-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "snake",
+      "P": "mammal",
+      "M": "metal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEE": 3
+    },
+    "types_seen": [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

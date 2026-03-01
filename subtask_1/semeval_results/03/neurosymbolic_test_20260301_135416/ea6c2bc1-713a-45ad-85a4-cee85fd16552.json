@@ -1,0 +1,78 @@
+{
+  "id": "ea6c2bc1-713a-45ad-85a4-cee85fd16552",
+  "text": "There are no pets which are animals. A few birds are categorized as pets. Thus, a group of birds are not animals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "pet",
+      "predicate": "animal",
+      "raw_text": "There are no pets which are animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "pet",
+      "raw_text": "A few birds are categorized as pets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "bird",
+      "predicate": "animal",
+      "raw_text": "Thus, a group of birds are not animals"
+    },
+    "middle_term": "pet",
+    "major_term": "animal",
+    "minor_term": "bird",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2",
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

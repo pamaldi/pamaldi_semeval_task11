@@ -1,0 +1,78 @@
+{
+  "id": "eb316e9a-bfaa-484e-934b-26203731767c",
+  "text": "There are no planets that are also stars. Everything classified as a celestial body named Earth is a planet. This means some things that are Earth are not stars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "star",
+      "raw_text": "There are no planets that are also stars."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "celestial body named earth",
+      "predicate": "planet",
+      "raw_text": "Everything classified as a celestial body named Earth is a planet."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "earth",
+      "predicate": "star",
+      "raw_text": "This means some things that are Earth are not stars."
+    },
+    "middle_term": "planet",
+    "major_term": "star",
+    "minor_term": "earth",
+    "figure": 1,
+    "mood": "EAO",
+    "form": "EAO-1"
+  },
+  "validity_details": {
+    "form": "EAO-1",
+    "mood": "EAO",
+    "figure": 1,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Celaront",
+    "reason": "Valid syllogistic form: Celaront (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-1",
+    "vote_counts": {
+      "EAO-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-1",
+      "EAO-1",
+      "EAO-1",
+      "EAO-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-1 (t=0.0)",
+      "EAO-1 (t=0.3)",
+      "EAO-1 (t=0.5)",
+      "EAO-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

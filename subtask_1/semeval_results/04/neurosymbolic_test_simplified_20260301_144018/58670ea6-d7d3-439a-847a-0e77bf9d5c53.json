@@ -1,0 +1,68 @@
+{
+  "id": "58670ea6-d7d3-439a-847a-0e77bf9d5c53",
+  "text": "Every single dog is a thing with fur. It is the case that no cat is a dog. This implies that some cats have fur.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "thing with fur",
+      "raw_text": "Every single dog is a thing with fur"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "dog",
+      "raw_text": "It is the case that no cat is a dog"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cat",
+      "predicate": "thing with fur",
+      "raw_text": "This implies that some cats have fur"
+    },
+    "middle_term": "dog",
+    "major_term": "thing with fur",
+    "minor_term": "cat",
+    "figure": 1,
+    "mood": "AEI",
+    "form": "AEI-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEI-1",
+    "figure": 1,
+    "mood": "AEI",
+    "reason": "AEI-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "cat",
+      "P": "thing with fur",
+      "M": "dog"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEI": 3
+    },
+    "types_seen": [
+      "AEI",
+      "AEI",
+      "AEI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

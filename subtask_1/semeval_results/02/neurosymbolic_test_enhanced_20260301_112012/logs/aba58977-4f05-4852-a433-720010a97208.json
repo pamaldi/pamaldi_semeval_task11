@@ -1,0 +1,37 @@
+{
+  "id": "aba58977-4f05-4852-a433-720010a97208",
+  "text": "Anything which is a shoe is also an idea. All ideas are insects. We can infer that some insects are shoes.",
+  "extraction_success": false,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "VALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: Anything which is a shoe is also an idea. (All shoes are ideas)\n   - Premise 2: All ideas are insects.\n   - Conclusion: Some insects are shoes.\n\n2. **Identify the three terms:**\n   - **Middle term**: \"ideas\" (appears in both premises)\n   - **Major term**: \"insects\" (predicate of the conclusion)\n   - **Minor term**: \"shoes\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"All shoes are ideas\" \u2192 **A** (universal affirmative)\n   - Premise 2: \"All ideas are insects\" \u2192 **A** (universal affirmative)\n   - Conclusion: \"Some insects are shoes\" \u2192 **I** (particular affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (ideas-insects)\n   - Premise 2: S-M (shoes-ideas)\n   - This is **Figure 3** (M-P, M-S)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: AAI\n   - Figure: 3\n   - AAI in Figure 3 is a **weakened form** (not one of the 24 valid syllogisms, but considered valid in a weakened sense).\n\n6. **Check for fallacies:**\n   - Middle term \"ideas\" is distributed in both premises (in universal affirmatives, the subject is distributed).\n   - Major term \"insects\" is not distributed in the conclusion (it is the predicate of a particular affirmative), and it is not distributed in the major premise (it is the predicate of a universal affirmative).\n   - Minor term \"shoes\" is distributed in the minor premise (subject of a universal affirmative) and in the conclusion (subject of a particular affirmative).\n   - No fallacy of undistributed middle, illicit major, or illicit minor.\n   - No two negative premises.\n   - The conclusion is particular affirmative, and the premises are both universal affirmative \u2014 this is acceptable.\n\n**Conclusion:** The syllogism is **VALID** in a weakened sense (AAI in Figure 3).\n\nVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

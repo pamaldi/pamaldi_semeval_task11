@@ -1,0 +1,78 @@
+{
+  "id": "f86ad9f5-da96-48cf-8f1b-eecff4855720",
+  "text": "Anything that is a human is also a mammal. No animal is a human. This means that no animal is a mammal.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "mammal",
+      "raw_text": "Anything that is a human is also a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "human",
+      "raw_text": "No animal is a human"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "mammal",
+      "raw_text": "This means that no animal is a mammal"
+    },
+    "middle_term": "human",
+    "major_term": "mammal",
+    "minor_term": "animal",
+    "figure": 1,
+    "mood": "AEE",
+    "form": "AEE-1"
+  },
+  "validity_details": {
+    "form": "AEE-1",
+    "mood": "AEE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit major: 'mammal'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-1",
+    "vote_counts": {
+      "AEE-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-1",
+      "AEE-1",
+      "AEE-1",
+      "AEE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-1 (t=0.0)",
+      "AEE-1 (t=0.3)",
+      "AEE-1 (t=0.5)",
+      "AEE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

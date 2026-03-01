@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "5da02e7d-f0ca-462a-9517-061b16eb5248",
+  "syllogism_text": "It is impossible for a mammal to be an eagle. Some of the eagles are birds. There are a few birds which are not mammals.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for eagles that are birds\neagle(hawk1).\nbird(hawk1).\n\n% No mammal is an eagle\nmammal(_) :- fail.\n\n% Some birds are not mammals (eagle is a bird but not a mammal)\nvalid_syllogism :- bird(X), \\+ mammal(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:43:33.855017"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

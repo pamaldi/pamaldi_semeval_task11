@@ -1,0 +1,68 @@
+{
+  "id": "ea6c2bc1-713a-45ad-85a4-cee85fd16552",
+  "text": "There are no pets which are animals. A few birds are categorized as pets. Thus, a group of birds are not animals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "pet",
+      "predicate": "animal",
+      "raw_text": "There are no pets which are animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "pet",
+      "raw_text": "A few birds are categorized as pets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "bird",
+      "predicate": "animal",
+      "raw_text": "Thus, a group of birds are not animals"
+    },
+    "middle_term": "pet",
+    "major_term": "animal",
+    "minor_term": "bird",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-1",
+    "figure": 1,
+    "mood": "EIO",
+    "reason": "EIO-1 is valid (Ferio)",
+    "form_name": "Ferio",
+    "terms": {
+      "S": "bird",
+      "P": "animal",
+      "M": "pet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

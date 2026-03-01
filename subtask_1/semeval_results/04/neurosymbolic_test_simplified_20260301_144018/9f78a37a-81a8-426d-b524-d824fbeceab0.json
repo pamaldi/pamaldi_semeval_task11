@@ -1,0 +1,68 @@
+{
+  "id": "9f78a37a-81a8-426d-b524-d824fbeceab0",
+  "text": "Every single apple is a fruit. Nothing that is a banana is an apple. It follows from this that every banana is a fruit.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "Every single apple is a fruit"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "banana",
+      "predicate": "apple",
+      "raw_text": "Nothing that is a banana is an apple"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "banana",
+      "predicate": "fruit",
+      "raw_text": "It follows from this that every banana is a fruit"
+    },
+    "middle_term": "apple",
+    "major_term": "fruit",
+    "minor_term": "banana",
+    "figure": 1,
+    "mood": "AEA",
+    "form": "AEA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEA-1",
+    "figure": 1,
+    "mood": "AEA",
+    "reason": "AEA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "banana",
+      "P": "fruit",
+      "M": "apple"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEA": 3
+    },
+    "types_seen": [
+      "AEA",
+      "AEA",
+      "AEA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

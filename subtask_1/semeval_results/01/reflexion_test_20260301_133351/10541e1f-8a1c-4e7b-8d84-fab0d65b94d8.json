@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "10541e1f-8a1c-4e7b-8d84-fab0d65b94d8",
+  "syllogism_text": "Anything that is a cat is also a feline. Under no circumstances is a feline a canine. It can thus be inferred that certain canines are not cats.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts\ncat(tom).\ncanine(buddy).\n\n% Rules from premises\nfeline(X) :- cat(X).\nconflict :- feline(X), canine(X).\n\n% Validity check: Some canines are not cats (O-conclusion)\nvalid_syllogism :- canine(X), \\+ cat(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:47:07.493813"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

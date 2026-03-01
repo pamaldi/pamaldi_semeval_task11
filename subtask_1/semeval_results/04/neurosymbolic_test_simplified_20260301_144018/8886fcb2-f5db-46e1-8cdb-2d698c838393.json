@@ -1,0 +1,68 @@
+{
+  "id": "8886fcb2-f5db-46e1-8cdb-2d698c838393",
+  "text": "Every single tiger is a feline. All tigers are mammals. It follows from this that some mammals are not felines.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "tiger",
+      "predicate": "feline",
+      "raw_text": "Every single tiger is a feline"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tiger",
+      "predicate": "mammal",
+      "raw_text": "All tigers are mammals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "mammal",
+      "predicate": "feline",
+      "raw_text": "It follows from this that some mammals are not felines"
+    },
+    "middle_term": "tiger",
+    "major_term": "feline",
+    "minor_term": "mammal",
+    "figure": 3,
+    "mood": "AAO",
+    "form": "AAO-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-3",
+    "figure": 3,
+    "mood": "AAO",
+    "reason": "AAO-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "mammal",
+      "P": "feline",
+      "M": "tiger"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

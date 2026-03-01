@@ -1,0 +1,68 @@
+{
+  "id": "6a9dff3f-07fb-4a68-9fe0-5f3b51d9ffeb",
+  "text": "There are no professors that are children. Some children are athletes. It is concluded that some professors are athletes.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "professor",
+      "predicate": "child",
+      "raw_text": "There are no professors that are children"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "child",
+      "predicate": "athlete",
+      "raw_text": "Some children are athletes"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "professor",
+      "predicate": "athlete",
+      "raw_text": "It is concluded that some professors are athletes"
+    },
+    "middle_term": "child",
+    "major_term": "athlete",
+    "minor_term": "professor",
+    "figure": 4,
+    "mood": "EII",
+    "form": "EII-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-4",
+    "figure": 4,
+    "mood": "EII",
+    "reason": "EII-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "professor",
+      "P": "athlete",
+      "M": "child"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

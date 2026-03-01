@@ -1,0 +1,20 @@
+================================================================================
+SIMPLE EXECUTION REPORT
+================================================================================
+
+Total Syllogisms Processed: 1
+
+Predictions:
+  VALID:   0
+  INVALID: 1
+  ERROR:   0
+
+Prolog Errors Breakdown:
+  Runtime Errors: 0
+  Syntax Errors:  0
+
+Ground Truth Plausibility:
+  Plausible:   1
+  Implausible: 0
+
+================================================================================

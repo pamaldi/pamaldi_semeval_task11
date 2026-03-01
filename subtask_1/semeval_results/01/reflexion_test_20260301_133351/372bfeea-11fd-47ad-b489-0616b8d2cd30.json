@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "372bfeea-11fd-47ad-b489-0616b8d2cd30",
+  "syllogism_text": "Any and all clouds are made of solid iron. There are clouds that are a type of cumulus. This implies that some cumulus clouds are solid iron.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts\ncloud(c1).\ncumulus(c1).\n\n% Rule from first premise: All clouds are made of solid iron\nsolid_iron(X) :- cloud(X).\n\n% Validity check: Some cumulus clouds are solid iron\nvalid_syllogism :- cumulus(X), solid_iron(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:40:52.716583"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

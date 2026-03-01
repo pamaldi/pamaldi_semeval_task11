@@ -1,0 +1,78 @@
+{
+  "id": "75606fbf-243c-4bf4-a2c9-b465e1dfc625",
+  "text": "Every human is a primate. Any person that is a man is a human. Therefore, it is a certainty that every man is a primate.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "primate",
+      "raw_text": "Every human is a primate"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "person that is a man",
+      "predicate": "human",
+      "raw_text": "Any person that is a man is a human"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "man",
+      "predicate": "primate",
+      "raw_text": "Therefore, it is a certainty that every man is a primate"
+    },
+    "middle_term": "human",
+    "major_term": "primate",
+    "minor_term": "man",
+    "figure": 1,
+    "mood": "AAA",
+    "form": "AAA-1"
+  },
+  "validity_details": {
+    "form": "AAA-1",
+    "mood": "AAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Barbara",
+    "reason": "Valid syllogistic form: Barbara"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAA-1",
+    "vote_counts": {
+      "AAA-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAA-1",
+      "AAA-1",
+      "AAA-1",
+      "AAA-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAA-1 (t=0.0)",
+      "AAA-1 (t=0.3)",
+      "AAA-1 (t=0.5)",
+      "AAA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

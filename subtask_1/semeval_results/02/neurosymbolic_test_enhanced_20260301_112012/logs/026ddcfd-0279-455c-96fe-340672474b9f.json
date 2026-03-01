@@ -1,0 +1,79 @@
+{
+  "id": "026ddcfd-0279-455c-96fe-340672474b9f",
+  "text": "Every single liquid is composed of rock. A certain amount of liquid is water. Consequently, it is the case that some water is made of rock.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "liquid",
+      "predicate": "thing composed of rock",
+      "raw_text": "Every single liquid is composed of rock"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "liquid",
+      "predicate": "water",
+      "raw_text": "A certain amount of liquid is water"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "water",
+      "predicate": "thing made of rock",
+      "raw_text": "Consequently, it is the case that some water is made of rock"
+    },
+    "middle_term": "liquid",
+    "major_term": "thing made of rock",
+    "minor_term": "water",
+    "figure": 3,
+    "mood": "AII",
+    "form": "AII-3"
+  },
+  "validity_details": {
+    "form": "AII-3",
+    "mood": "AII",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Datisi",
+    "reason": "Valid syllogistic form: Datisi"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-3",
+    "vote_counts": {
+      "AII-1": 1,
+      "AII-3": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AII-1",
+      "AII-3",
+      "AII-3",
+      "AII-3"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-1 (t=0.0)",
+      "AII-3 (t=0.3)",
+      "AII-3 (t=0.5)",
+      "AII-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

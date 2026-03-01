@@ -1,0 +1,68 @@
+{
+  "id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+  "text": "Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cat",
+      "predicate": "fish",
+      "raw_text": "Every single creature that is a cat is a fish"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "tiger",
+      "predicate": "cat",
+      "raw_text": "A number of tigers are cats"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tiger",
+      "predicate": "fish",
+      "raw_text": "This means that there are some tigers which are fish"
+    },
+    "middle_term": "cat",
+    "major_term": "fish",
+    "minor_term": "tiger",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AII-1",
+    "figure": 1,
+    "mood": "AII",
+    "reason": "AII-1 is valid (Darii)",
+    "form_name": "Darii",
+    "terms": {
+      "S": "tiger",
+      "P": "fish",
+      "M": "cat"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

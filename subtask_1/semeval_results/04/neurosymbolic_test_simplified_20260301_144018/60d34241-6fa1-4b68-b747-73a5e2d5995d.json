@@ -1,0 +1,68 @@
+{
+  "id": "60d34241-6fa1-4b68-b747-73a5e2d5995d",
+  "text": "It is a given that every machine is an animal. No animals are computers. Therefore, it is a necessary conclusion that some computers are not machines.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "machine",
+      "predicate": "animal",
+      "raw_text": "It is a given that every machine is an animal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "computer",
+      "raw_text": "No animals are computers"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "computer",
+      "predicate": "machine",
+      "raw_text": "Therefore, it is a necessary conclusion that some computers are not machines"
+    },
+    "middle_term": "animal",
+    "major_term": "machine",
+    "minor_term": "computer",
+    "figure": 4,
+    "mood": "AEO",
+    "form": "AEO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEO-4",
+    "figure": 4,
+    "mood": "AEO",
+    "reason": "AEO-4 is valid (Camenop)",
+    "form_name": "Camenop",
+    "terms": {
+      "S": "computer",
+      "P": "machine",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEO": 3
+    },
+    "types_seen": [
+      "AEO",
+      "AEO",
+      "AEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

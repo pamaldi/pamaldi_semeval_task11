@@ -1,0 +1,68 @@
+{
+  "id": "50b2444b-686f-487c-8e11-e76b4126b8ff",
+  "text": "There is not a single piece of paper that can be eaten. A portion of all paper is a book. It is the case that some books are edible.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "piece of paper",
+      "predicate": "thing that can be eaten",
+      "raw_text": "There is not a single piece of paper that can be eaten"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "paper",
+      "predicate": "book",
+      "raw_text": "A portion of all paper is a book"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "book",
+      "predicate": "edible",
+      "raw_text": "It is the case that some books are edible"
+    },
+    "middle_term": "paper",
+    "major_term": "edible",
+    "minor_term": "book",
+    "figure": 3,
+    "mood": "EII",
+    "form": "EII-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-3",
+    "figure": 3,
+    "mood": "EII",
+    "reason": "EII-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "book",
+      "P": "edible",
+      "M": "paper"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

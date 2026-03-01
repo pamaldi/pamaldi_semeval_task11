@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+  "syllogism_text": "Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: a tiger that is a cat\ntiger(fluffy).\ncat(fluffy).\n\n% Rule from first premise: All cats are fish\nfish(X) :- cat(X).\n\n% I-conclusion: Some tigers are fish\nvalid_syllogism :- tiger(X), fish(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:37:32.023167"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

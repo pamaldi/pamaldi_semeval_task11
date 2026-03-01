@@ -1,0 +1,68 @@
+{
+  "id": "821cda62-dee6-452f-ad54-8efdc614af27",
+  "text": "Every single skyscraper is a building. Some sheds are skyscrapers. Consequently, every shed is a building.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "skyscraper",
+      "predicate": "building",
+      "raw_text": "Every single skyscraper is a building"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "shed",
+      "predicate": "skyscraper",
+      "raw_text": "Some sheds are skyscrapers"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "shed",
+      "predicate": "building",
+      "raw_text": "Consequently, every shed is a building"
+    },
+    "middle_term": "skyscraper",
+    "major_term": "building",
+    "minor_term": "shed",
+    "figure": 1,
+    "mood": "AIA",
+    "form": "AIA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AIA-1",
+    "figure": 1,
+    "mood": "AIA",
+    "reason": "AIA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "shed",
+      "P": "building",
+      "M": "skyscraper"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AIA": 3
+    },
+    "types_seen": [
+      "AIA",
+      "AIA",
+      "AIA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

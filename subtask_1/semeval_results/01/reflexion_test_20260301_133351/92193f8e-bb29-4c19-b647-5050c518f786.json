@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "92193f8e-bb29-4c19-b647-5050c518f786",
+  "syllogism_text": "Any and all apples are foods that are delicious. There are some apples which are also fruits. Consequently, a portion of fruits are foods that are delicious.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witnesses: an apple that is also a fruit\napple(a1).\nfruit(a1).\n\n% A-premise: All apples are delicious foods\ndelicious_food(X) :- apple(X).\n\n% I-premise: Some apples are fruits (already encoded in facts)\n\n% Validity check for conclusion: Some fruits are delicious foods\nvalid_syllogism :- fruit(X), delicious_food(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:42:12.840591"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

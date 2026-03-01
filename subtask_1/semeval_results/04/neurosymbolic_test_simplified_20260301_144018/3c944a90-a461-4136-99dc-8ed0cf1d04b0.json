@@ -1,0 +1,68 @@
+{
+  "id": "3c944a90-a461-4136-99dc-8ed0cf1d04b0",
+  "text": "Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "doctor",
+      "predicate": "medical professional",
+      "raw_text": "Every person who is a doctor is also a medical professional"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "medical professional",
+      "predicate": "person with a degree",
+      "raw_text": "All medical professionals are people with degrees"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "person with a degree",
+      "predicate": "doctor",
+      "raw_text": "We can logically conclude that some people with degrees are doctors"
+    },
+    "middle_term": "medical professional",
+    "major_term": "doctor",
+    "minor_term": "person with a degree",
+    "figure": 4,
+    "mood": "AAI",
+    "form": "AAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-4",
+    "figure": 4,
+    "mood": "AAI",
+    "reason": "AAI-4 is valid (Bramantip)",
+    "form_name": "Bramantip",
+    "terms": {
+      "S": "person with a degree",
+      "P": "doctor",
+      "M": "medical professional"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

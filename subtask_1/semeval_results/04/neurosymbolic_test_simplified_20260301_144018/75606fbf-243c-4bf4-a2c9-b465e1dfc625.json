@@ -1,0 +1,68 @@
+{
+  "id": "75606fbf-243c-4bf4-a2c9-b465e1dfc625",
+  "text": "Every human is a primate. Any person that is a man is a human. Therefore, it is a certainty that every man is a primate.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "primate",
+      "raw_text": "Every human is a primate"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "man",
+      "predicate": "human",
+      "raw_text": "Any person that is a man is a human"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "man",
+      "predicate": "primate",
+      "raw_text": "Therefore, it is a certainty that every man is a primate"
+    },
+    "middle_term": "human",
+    "major_term": "primate",
+    "minor_term": "man",
+    "figure": 3,
+    "mood": "AAA",
+    "form": "AAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAA-3",
+    "figure": 3,
+    "mood": "AAA",
+    "reason": "AAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "man",
+      "P": "primate",
+      "M": "human"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAA": 3
+    },
+    "types_seen": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

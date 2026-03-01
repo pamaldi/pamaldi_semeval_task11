@@ -1,0 +1,68 @@
+{
+  "id": "245192ce-465d-4f70-8808-b8f3ed933095",
+  "text": "Anything that is a book is edible. Every single novel is a book. This means that every novel is edible.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "edible",
+      "raw_text": "Anything that is a book is edible"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "novel",
+      "predicate": "book",
+      "raw_text": "Every single novel is a book"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "novel",
+      "predicate": "edible",
+      "raw_text": "This means that every novel is edible"
+    },
+    "middle_term": "book",
+    "major_term": "edible",
+    "minor_term": "novel",
+    "figure": 1,
+    "mood": "AAA",
+    "form": "AAA-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAA-1",
+    "figure": 1,
+    "mood": "AAA",
+    "reason": "AAA-1 is valid (Barbara)",
+    "form_name": "Barbara",
+    "terms": {
+      "S": "novel",
+      "P": "edible",
+      "M": "book"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAA": 3
+    },
+    "types_seen": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "711debd8-26fc-42bc-916e-a7144ce10c7c",
+  "text": "Any object that is a house is a building. Some tents are not buildings. This implies that some tents are not houses.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "object that is a house",
+      "predicate": "building",
+      "raw_text": "Any object that is a house is a building"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "tent",
+      "predicate": "building",
+      "raw_text": "Some tents are not buildings"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "tent",
+      "predicate": "house",
+      "raw_text": "This implies that some tents are not houses"
+    },
+    "middle_term": "building",
+    "major_term": "house",
+    "minor_term": "tent",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "form": "AOO-2",
+    "mood": "AOO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Baroco",
+    "reason": "Valid syllogistic form: Baroco"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AOO-2",
+    "vote_counts": {
+      "AOO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AOO-2",
+      "AOO-2",
+      "AOO-2",
+      "AOO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOO-2 (t=0.0)",
+      "AOO-2 (t=0.3)",
+      "AOO-2 (t=0.5)",
+      "AOO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

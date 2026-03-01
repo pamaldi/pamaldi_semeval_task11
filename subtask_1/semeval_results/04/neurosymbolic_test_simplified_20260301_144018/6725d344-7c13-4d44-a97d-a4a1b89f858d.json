@@ -1,0 +1,68 @@
+{
+  "id": "6725d344-7c13-4d44-a97d-a4a1b89f858d",
+  "text": "The category of celestial bodies and the category of planets are mutually exclusive. Not a single planet is a star. It must be the case that a portion of stars are not celestial bodies.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "star",
+      "raw_text": "The category of celestial bodies and the category of planets are mutually exclusive"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "star",
+      "raw_text": "Not a single planet is a star"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "star",
+      "predicate": "celestial body",
+      "raw_text": "It must be the case that a portion of stars are not celestial bodies"
+    },
+    "middle_term": "planet",
+    "major_term": "celestial body",
+    "minor_term": "star",
+    "figure": 3,
+    "mood": "EEO",
+    "form": "EEO-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EEO-3",
+    "figure": 3,
+    "mood": "EEO",
+    "reason": "EEO-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "star",
+      "P": "celestial body",
+      "M": "planet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEO": 3
+    },
+    "types_seen": [
+      "EEO",
+      "EEO",
+      "EEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

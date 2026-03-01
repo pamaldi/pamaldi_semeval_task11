@@ -1,0 +1,68 @@
+{
+  "id": "edd9d95e-5279-446f-bfeb-5c6360139e89",
+  "text": "Anything that is a cloud is a politician. Every politician is made of cotton candy. Consequently, some things made of cotton candy are clouds.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cloud",
+      "predicate": "politician",
+      "raw_text": "Anything that is a cloud is a politician"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "politician",
+      "predicate": "thing made of cotton candy",
+      "raw_text": "Every politician is made of cotton candy"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "thing made of cotton candy",
+      "predicate": "cloud",
+      "raw_text": "Consequently, some things made of cotton candy are clouds"
+    },
+    "middle_term": "politician",
+    "major_term": "cloud",
+    "minor_term": "thing made of cotton candy",
+    "figure": 4,
+    "mood": "AAI",
+    "form": "AAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-4",
+    "figure": 4,
+    "mood": "AAI",
+    "reason": "AAI-4 is valid (Bramantip)",
+    "form_name": "Bramantip",
+    "terms": {
+      "S": "thing made of cotton candy",
+      "P": "cloud",
+      "M": "politician"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

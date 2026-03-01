@@ -1,0 +1,70 @@
+{
+  "id": "fb637f9c-1c26-4302-9c01-94c061bd352c",
+  "text": "The category of chairs and the category of living things do not overlap. The group of living things and the group of inanimate objects are mutually exclusive. A portion of inanimate objects are not chairs.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "chair",
+      "predicate": "living thing",
+      "raw_text": "The category of chairs and the category of living things do not overlap"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "living thing",
+      "predicate": "inanimate object",
+      "raw_text": "The group of living things and the group of inanimate objects are mutually exclusive"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "inanimate object",
+      "predicate": "chair",
+      "raw_text": "A portion of inanimate objects are not chairs"
+    },
+    "middle_term": "living thing",
+    "major_term": "chair",
+    "minor_term": "inanimate object",
+    "figure": 4,
+    "mood": "OEO",
+    "form": "OEO-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OEO-4",
+    "figure": 4,
+    "mood": "OEO",
+    "reason": "OEO-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "inanimate object",
+      "P": "chair",
+      "M": "living thing"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise1: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEO": 3
+    },
+    "types_seen": [
+      "EEO",
+      "EEO",
+      "EEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

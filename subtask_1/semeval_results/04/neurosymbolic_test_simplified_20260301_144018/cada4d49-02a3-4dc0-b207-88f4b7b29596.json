@@ -1,0 +1,68 @@
+{
+  "id": "cada4d49-02a3-4dc0-b207-88f4b7b29596",
+  "text": "No object that is a planet can be a star. There are some things known as gas giants which are planets. Consequently, not all gas giants are stars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "star",
+      "raw_text": "No object that is a planet can be a star"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "gas giant",
+      "predicate": "planet",
+      "raw_text": "There are some things known as gas giants which are planets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "gas giant",
+      "predicate": "star",
+      "raw_text": "Consequently, not all gas giants are stars"
+    },
+    "middle_term": "planet",
+    "major_term": "star",
+    "minor_term": "gas giant",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-1",
+    "figure": 1,
+    "mood": "EIO",
+    "reason": "EIO-1 is valid (Ferio)",
+    "form_name": "Ferio",
+    "terms": {
+      "S": "gas giant",
+      "P": "star",
+      "M": "planet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "5f9dc1fd-7296-4337-bd26-73b8b1734c54",
+  "text": "There exist some things which are cars that are not expensive things. It is true that all cars are vehicles. It follows that some vehicles are expensive things.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "car",
+      "predicate": "expensive thing",
+      "raw_text": "There exist some things which are cars that are not expensive things"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "It is true that all cars are vehicles"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vehicle",
+      "predicate": "expensive thing",
+      "raw_text": "It follows that some vehicles are expensive things"
+    },
+    "middle_term": "car",
+    "major_term": "expensive thing",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "form": "OAI-3",
+    "mood": "OAI",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "OAI-3",
+    "vote_counts": {
+      "OAI-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "OAI-3",
+      "OAI-3",
+      "OAI-3",
+      "OAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAI-3 (t=0.0)",
+      "OAI-3 (t=0.3)",
+      "OAI-3 (t=0.5)",
+      "OAI-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

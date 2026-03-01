@@ -1,0 +1,37 @@
+{
+  "id": "4b3008e8-0b0d-4ea6-8765-de94774551ae",
+  "text": "There are no creatures that are non-bipeds that are also living creatures. Everything that is a squirrel is a non-biped. Thus, every squirrel is a living creature.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** There are no creatures that are non-bipeds that are also living creatures.  \n     (This is logically equivalent to: **No non-bipeds are living creatures.**)\n   - **Premise 2:** Everything that is a squirrel is a non-biped.  \n     (This is logically equivalent to: **All squirrels are non-bipeds.**)\n   - **Conclusion:** Every squirrel is a living creature.  \n     (This is logically equivalent to: **All squirrels are living creatures.**)\n\n2. **Identify the three terms:**\n   - **Middle term:** *non-bipeds* (appears in both premises)\n   - **Major term:** *living creatures* (predicate of the conclusion)\n   - **Minor term:** *squirrels* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"No non-bipeds are living creatures.\" \u2192 **E** (universal negative)\n   - **Premise 2:** \"All squirrels are non-bipeds.\" \u2192 **A** (universal affirmative)\n   - **Conclusion:** \"All squirrels are living creatures.\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: *non-bipeds* - *living creatures* (M - P)\n   - Premise 2: *squirrels* - *non-bipeds* (S - M)\n   - This is **Figure 1** (M-P, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **EAA**\n   - Figure: **1**\n   - **EAA** is **not** a valid syllogism form in Figure 1.\n\n6. **Check for fallacies:**\n   - **Undistributed middle:** The middle term *non-bipeds* is distributed in Premise 1 (E statement), but not in Premise 2 (A statement). So the middle term is **distributed in one premise only**, not both. This is **not** a case of the undistributed middle fallacy.\n   - **Illicit major:** The major term *living creatures* is distributed in the conclusion (A statement), but it is also distributed in the major premise (E statement). So this is **not** a case of illicit major.\n   - **Illicit minor:** The minor term *squirrels* is distributed in the conclusion (A statement), but it is **not** distributed in the minor premise (A statement). This is a case of **illicit minor**.\n   - **Two negative premises:** Only one premise is negative, so this is not the issue.\n   - **Negative premise with affirmative conclusion:** One premise is negative, and the conclusion is affirmative. This is **not** a direct contradiction, but it can be problematic if the syllogism is invalid.\n   - **Two particular premises:** Not the case here.\n\n7. **Conclusion:**\n   - The syllogism is **invalid** due to the **illicit minor** fallacy (the minor term is distributed in the conclusion but not in the minor premise).\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

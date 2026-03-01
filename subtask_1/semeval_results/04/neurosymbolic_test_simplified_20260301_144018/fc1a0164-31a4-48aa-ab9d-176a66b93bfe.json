@@ -1,0 +1,68 @@
+{
+  "id": "fc1a0164-31a4-48aa-ab9d-176a66b93bfe",
+  "text": "Anything that is a square is also a quadrilateral. No circle is a square. It follows that no circle is a quadrilateral.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "square",
+      "predicate": "quadrilateral",
+      "raw_text": "Anything that is a square is also a quadrilateral"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "square",
+      "raw_text": "No circle is a square"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "quadrilateral",
+      "raw_text": "It follows that no circle is a quadrilateral"
+    },
+    "middle_term": "square",
+    "major_term": "quadrilateral",
+    "minor_term": "circle",
+    "figure": 1,
+    "mood": "AEE",
+    "form": "AEE-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEE-1",
+    "figure": 1,
+    "mood": "AEE",
+    "reason": "AEE-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "circle",
+      "P": "quadrilateral",
+      "M": "square"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

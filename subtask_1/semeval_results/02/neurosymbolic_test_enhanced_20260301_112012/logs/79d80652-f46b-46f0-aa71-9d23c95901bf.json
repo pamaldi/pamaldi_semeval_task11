@@ -1,0 +1,37 @@
+{
+  "id": "79d80652-f46b-46f0-aa71-9d23c95901bf",
+  "text": "A portion of things that are paper objects are books. Among the items known as notebooks, some are paper objects. This allows us to state that not all notebooks are books.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** A portion of things that are paper objects are books. (Some paper objects are books)\n   - **Premise 2:** Among the items known as notebooks, some are paper objects. (Some notebooks are paper objects)\n   - **Conclusion:** Not all notebooks are books. (Some notebooks are not books)\n\n2. **Identify the three terms:**\n   - **Middle term:** *paper objects* (appears in both premises)\n   - **Major term:** *books* (predicate of the conclusion)\n   - **Minor term:** *notebooks* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"Some paper objects are books\" \u2192 **I** (particular affirmative)\n   - **Premise 2:** \"Some notebooks are paper objects\" \u2192 **I** (particular affirmative)\n   - **Conclusion:** \"Some notebooks are not books\" \u2192 **O** (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: *paper objects* (M) - *books* (P)\n   - Premise 2: *notebooks* (S) - *paper objects* (M)\n   - Figure: **Figure 3** (M-P, M-S)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **IIO**\n   - Figure: **3**\n   - This combination is **not** among the valid syllogism forms.\n\n6. **Check for fallacies:**\n   - **Two particular premises:** Invalid (cannot derive a valid conclusion from two particular premises).\n   - **Undistributed middle:** The middle term *paper objects* is not distributed in either premise (both are I statements), so the **undistributed middle** fallacy applies.\n   - **Conclusion is negative**, but **no premise is negative**, which is invalid (a negative conclusion cannot be drawn from two affirmative premises).\n\n---\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

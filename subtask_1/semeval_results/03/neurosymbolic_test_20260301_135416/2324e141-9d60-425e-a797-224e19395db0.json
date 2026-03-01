@@ -1,0 +1,78 @@
+{
+  "id": "2324e141-9d60-425e-a797-224e19395db0",
+  "text": "Everything that is a planet is a celestial body. Everything that is a planet is a round object. This means that some round objects are celestial bodies.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "planet",
+      "predicate": "celestial body",
+      "raw_text": "Everything that is a planet is a celestial body"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "planet",
+      "predicate": "round object",
+      "raw_text": "Everything that is a planet is a round object"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "round object",
+      "predicate": "celestial body",
+      "raw_text": "This means that some round objects are celestial bodies"
+    },
+    "middle_term": "planet",
+    "major_term": "celestial body",
+    "minor_term": "round object",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "form": "AAI-3",
+    "mood": "AAI",
+    "figure": 3,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Darapti",
+    "reason": "Valid syllogistic form: Darapti (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAI-3",
+    "vote_counts": {
+      "AAI-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAI-3",
+      "AAI-3",
+      "AAI-3",
+      "AAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAI-3 (t=0.0)",
+      "AAI-3 (t=0.3)",
+      "AAI-3 (t=0.5)",
+      "AAI-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

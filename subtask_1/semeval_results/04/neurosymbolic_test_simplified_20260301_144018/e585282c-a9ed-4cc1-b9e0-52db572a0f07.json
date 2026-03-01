@@ -1,0 +1,70 @@
+{
+  "id": "e585282c-a9ed-4cc1-b9e0-52db572a0f07",
+  "text": "Every instance of chess is a board game. The game of tag is never a board game. Therefore, tag is not chess.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "instance of chess",
+      "predicate": "board game",
+      "raw_text": "Every instance of chess is a board game"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "game of tag",
+      "predicate": "board game",
+      "raw_text": "The game of tag is never a board game"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "tag",
+      "predicate": "chess",
+      "raw_text": "Therefore, tag is not chess"
+    },
+    "middle_term": "board game",
+    "major_term": "chess",
+    "minor_term": "tag",
+    "figure": 2,
+    "mood": "AEO",
+    "form": "AEO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEO-2",
+    "figure": 2,
+    "mood": "AEO",
+    "reason": "AEO-2 is valid (Camestrop)",
+    "form_name": "Camestrop",
+    "terms": {
+      "S": "tag",
+      "P": "chess",
+      "M": "board game"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for conclusion: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

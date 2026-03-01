@@ -1,0 +1,68 @@
+{
+  "id": "331224ac-9f0e-4258-ab9d-8a3a73304e04",
+  "text": "Not a single animal with wings is an aquatic mammal. Anything that is an aquatic mammal is a fish. It is necessarily true that no fish are animals with wings.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal with wings",
+      "predicate": "aquatic mammal",
+      "raw_text": "Not a single animal with wings is an aquatic mammal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "aquatic mammal",
+      "predicate": "fish",
+      "raw_text": "Anything that is an aquatic mammal is a fish"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "animal with wings",
+      "raw_text": "It is necessarily true that no fish are animals with wings"
+    },
+    "middle_term": "aquatic mammal",
+    "major_term": "animal with wings",
+    "minor_term": "fish",
+    "figure": 4,
+    "mood": "EAE",
+    "form": "EAE-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAE-4",
+    "figure": 4,
+    "mood": "EAE",
+    "reason": "EAE-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "fish",
+      "P": "animal with wings",
+      "M": "aquatic mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

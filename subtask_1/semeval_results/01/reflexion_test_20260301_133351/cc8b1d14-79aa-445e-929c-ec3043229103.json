@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "cc8b1d14-79aa-445e-929c-ec3043229103",
+  "syllogism_text": "Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for buses (some vehicles are buses)\nvehicle(b1).\nvehicle(b2).\nvehicle(b3).\n\nbus(b1).\nbus(b2).\n\n% vehicle is not a type of transportation (E-premise)\n% So transportation has no facts, and we add a fail clause\ntransportation(_) :- fail.\n\n% Validity check for conclusion \"Some buses are not transportation\"\nvalid_syllogism :- bus(X), \\+ transportation(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:35.050161"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

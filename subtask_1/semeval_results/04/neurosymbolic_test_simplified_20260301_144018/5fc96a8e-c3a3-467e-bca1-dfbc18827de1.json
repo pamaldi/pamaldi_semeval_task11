@@ -1,0 +1,68 @@
+{
+  "id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+  "text": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "clothing",
+      "predicate": "shirt",
+      "raw_text": "Anything that is clothing is not a shirt"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "apparel",
+      "predicate": "shirt",
+      "raw_text": "The group of items known as apparel has members that are shirts"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "apparel",
+      "predicate": "clothing",
+      "raw_text": "It follows that some apparel is not clothing"
+    },
+    "middle_term": "shirt",
+    "major_term": "clothing",
+    "minor_term": "apparel",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-2",
+    "figure": 2,
+    "mood": "EIO",
+    "reason": "EIO-2 is valid (Festino)",
+    "form_name": "Festino",
+    "terms": {
+      "S": "apparel",
+      "P": "clothing",
+      "M": "shirt"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

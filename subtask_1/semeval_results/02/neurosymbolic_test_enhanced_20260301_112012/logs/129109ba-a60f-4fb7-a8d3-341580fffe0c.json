@@ -1,0 +1,78 @@
+{
+  "id": "129109ba-a60f-4fb7-a8d3-341580fffe0c",
+  "text": "There are no plants that are mammals. Some rose is a plant. It is the case that no roses are mammals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "mammal",
+      "raw_text": "There are no plants that are mammals."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "rose",
+      "predicate": "plant",
+      "raw_text": "Some rose is a plant."
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "rose",
+      "predicate": "mammal",
+      "raw_text": "It is the case that no roses are mammals."
+    },
+    "middle_term": "plant",
+    "major_term": "mammal",
+    "minor_term": "rose",
+    "figure": 1,
+    "mood": "EIE",
+    "form": "EIE-1"
+  },
+  "validity_details": {
+    "form": "EIE-1",
+    "mood": "EIE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit minor: 'rose'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIE-1",
+    "vote_counts": {
+      "EIE-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIE-1",
+      "EIE-1",
+      "EIE-1",
+      "EIE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIE-1 (t=0.0)",
+      "EIE-1 (t=0.3)",
+      "EIE-1 (t=0.5)",
+      "EIE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

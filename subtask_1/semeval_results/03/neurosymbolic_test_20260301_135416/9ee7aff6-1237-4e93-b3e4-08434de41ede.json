@@ -1,0 +1,70 @@
+{
+  "id": "9ee7aff6-1237-4e93-b3e4-08434de41ede",
+  "text": "There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "canine",
+      "predicate": "feline",
+      "raw_text": "There is no canine that is a feline"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "canine",
+      "predicate": "dog",
+      "raw_text": "Everything that is a canine is also a dog"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "cat",
+      "raw_text": "This makes it true that all dogs are cats"
+    },
+    "middle_term": "canine",
+    "major_term": "cat",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "form": "EAA-1",
+    "mood": "EAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion; Illicit minor: 'dog'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "EAA-1",
+    "vote_counts": {
+      "EAA-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "EAA-1 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

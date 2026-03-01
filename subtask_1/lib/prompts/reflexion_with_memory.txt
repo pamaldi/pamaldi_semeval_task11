@@ -1,0 +1,27 @@
+{memory_section}
+CURRENT TASK
+============
+Solve this syllogism by generating Prolog code:
+
+{syllogism}
+
+PREVIOUS ATTEMPT FAILED
+=======================
+Failure type: {failure_type}
+Error message: {stderr}
+
+Previous code:
+```
+{code}
+```
+
+{failure_guidance}
+
+INSTRUCTIONS
+============
+1. Review the lessons learned above (if any)
+2. Analyze what went wrong in the previous attempt
+3. Generate CORRECTED Prolog code that addresses all identified issues
+4. Ensure the code handles the syllogism structure correctly
+
+Generate your corrected solution:

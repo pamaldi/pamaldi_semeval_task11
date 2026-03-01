@@ -1,0 +1,286 @@
+Convert syllogisms to pyDatalog. Output ONLY executable Python code in a code block.
+
+# CRITICAL RULES
+
+## 1. RULE DIRECTION - MOST IMPORTANT
+"All S are P" or "Every S is a P" or "Anything that is S is P" ALWAYS encodes as:
+p(X) <= s(X)
+
+Read it as: "If X is an S, then X is a P"
+
+Examples:
+- "Every city is a location" → location(X) <= city(X)
+- "All dogs are mammals" → mammal(X) <= dog(X)  
+- "Anything that is a bird is an animal" → animal(X) <= bird(X)
+- "Every cat is invisible" → invisible(X) <= cat(X)
+
+NEVER write: s(X) <= p(X)  (this means the opposite!)
+
+## 2. ALWAYS Define ALL Predicates
+- Every predicate used MUST be in create_terms()
+- Every predicate used in negation ~p(X) MUST have a fact: +p('_dummy')
+- Every predicate in the conclusion's subject MUST have a fact
+
+## 3. EXACT SPELLING - NO SHORTCUTS
+Every predicate name in code must EXACTLY match create_terms().
+- NEVER use placeholder names like 's', 'p', 'm' for predicates
+- ALWAYS use the full predicate name from the syllogism
+- If the syllogism says "capital cities", use capital_city, NOT s
+
+## 4. VALID SYNTAX ONLY
+Facts are ONLY written as: +predicate('value')
+- CORRECT: +beverage('w')
+- WRONG: +p(beverage('w'))  ← This is invalid syntax!
+- WRONG: +s('w')  ← 's' is not a predicate!
+
+## 5. WITNESS SHARING
+For "Some S are P" (I-type premise), use the SAME witness for both:
+```python
++s('w')
++p('w')  # Same 'w' - this entity is both S and P
+```
+
+## 6. Proposition Encoding Patterns
+
+### A-type: "All S are P" / "Every S is a P"
+```python
+p(X) <= s(X)
+```
+
+### E-type: "No S is P" / "S are never P"
+```python
++s('_s')  # Ensure s is defined
++p('_p')  # Ensure p is defined
+conflict(X) <= s(X) & p(X)
+```
+
+### I-type: "Some S are P" / "A few S are P"
+```python
++s('w')
++p('w')  # SAME witness
+```
+
+### O-type: "Some S are not P" / "Not all S are P"
+```python
++s('w')
++p('_other')  # Define p but NOT for witness w
+```
+
+## 7. Conclusion Validity Checks - CHECK EXACTLY WHAT THE CONCLUSION STATES
+
+### For A-conclusion "All S are P":
+```python
++p('_dummy')  # Ensure p is defined for negation
+invalid(X) <= s(X) & ~p(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+### For E-conclusion "No S is P":
+```python
+invalid(X) <= s(X) & p(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+### For I-conclusion "Some S are P":
+Check EXACTLY the predicates in the conclusion:
+```python
+result = (s(X) & p(X)).data  # s and p from the CONCLUSION, not premises!
+print("VALID" if result else "INVALID")
+```
+
+### For O-conclusion "Some S are not P":
+```python
++p('_dummy')  # CRITICAL: Define p for negation
+result = (s(X) & ~p(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## 8. INVALID Syllogism Strategy
+For INVALID syllogisms (undistributed middle, illicit major/minor):
+- Use DIFFERENT witnesses for different predicates
+- This creates a model where premises are satisfied but conclusion fails
+
+Example - AAI-2 (Invalid undistributed middle):
+"All A are B. All C are B. Therefore, some C are A."
+```python
++c('x')      # Witness for C
++a('y')      # DIFFERENT witness for A - no overlap!
+b(X) <= a(X)
+b(X) <= c(X)
+result = (c(X) & a(X)).data  # Check if any C is also A
+print("VALID" if result else "INVALID")  # INVALID - no overlap
+```
+
+## 9. Valid Syllogistic Forms Reference
+Figure 1 (M-P, S-M): AAA(Barbara), EAE(Celarent), AII(Darii), EIO(Ferio)
+Figure 2 (P-M, S-M): EAE(Cesare), AEE(Camestres), EIO(Festino), AOO(Baroco)
+Figure 3 (M-P, M-S): IAI(Disamis), AII(Datisi), OAO(Bocardo), EIO(Ferison)
+Figure 4 (P-M, M-S): AEE(Camenes), IAI(Dimaris), EIO(Fresison)
+
+# COMPLETE EXAMPLES
+
+## Ex1: AII-3 Datisi - VALID
+"Every cat is an invisible creature. A number of cats are animals. Consequently, a portion of animals are invisible."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('cat, invisible, animal, X')
++cat('w')
++animal('w')
+invisible(X) <= cat(X)
+result = (animal(X) & invisible(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex2: EIO-3 Ferison - VALID
+"No capital cities are oceans. Some large cities are capital cities. Some large cities are not oceans."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('capital_city, large_city, ocean, conflict, X')
++large_city('w')
++capital_city('w')
++ocean('_o')
+conflict(X) <= capital_city(X) & ocean(X)
+result = (large_city(X) & ~ocean(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex3: EAE-1 Celarent - VALID
+"No building is a vehicle. All houses are buildings. No house is a vehicle."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('building, vehicle, house, conflict, invalid, X')
++house('h')
++vehicle('_v')
+building(X) <= house(X)
+conflict(X) <= building(X) & vehicle(X)
+invalid(X) <= house(X) & vehicle(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex4: AAA-3 - VALID
+"All geckos are lizards. All geckos are reptiles. Some reptiles are lizards."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('gecko, lizard, reptile, X')
++gecko('g')
+lizard(X) <= gecko(X)
+reptile(X) <= gecko(X)
+result = (reptile(X) & lizard(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex5: AAA-2 - INVALID (Undistributed Middle)
+"All birds are animals. All sparrows are animals. All sparrows are birds."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('bird, animal, sparrow, invalid, X')
++sparrow('s')
++bird('_b')
+animal(X) <= bird(X)
+animal(X) <= sparrow(X)
+invalid(X) <= sparrow(X) & ~bird(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex6: AEE-2 - INVALID (Illicit Major)
+"All cars are vehicles. No animal is a car. Therefore, no animal is a vehicle."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('car, vehicle, animal, conflict, invalid, X')
++car('_c')
++animal('horse')
++vehicle('horse')
+vehicle(X) <= car(X)
+conflict(X) <= animal(X) & car(X)
+invalid(X) <= animal(X) & vehicle(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex7: EIO-4 Fresison - VALID
+"No soda is a juice. Some beverages are juices. Some beverages are not sodas."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('soda, juice, beverage, conflict, X')
++beverage('w')
++juice('w')
++soda('_s')
+conflict(X) <= soda(X) & juice(X)
+result = (beverage(X) & ~soda(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex8: AAI-2 - INVALID (Undistributed Middle)
+"All planets are celestial bodies. All suns are celestial bodies. Some suns are planets."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('planet, celestial_body, sun, X')
++sun('sol')
++planet('earth')
+celestial_body(X) <= planet(X)
+celestial_body(X) <= sun(X)
+result = (sun(X) & planet(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex9: OAO-3 Bocardo - VALID
+"Some cats are not pets. All cats are mammals. Some mammals are not pets."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('cat, mammal, pet, X')
++cat('stray')
++pet('_p')
+mammal(X) <= cat(X)
+result = (mammal(X) & ~pet(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex10: AOO-2 Baroco - VALID
+"All insects are animals. Some spiders are not animals. Some spiders are not insects."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('insect, animal, spider, X')
++spider('s')
++animal('_a')
++insect('_i')
+animal(X) <= insect(X)
+result = (spider(X) & ~insect(X)).data
+print("VALID" if result else "INVALID")
+```
+
+# PRE-OUTPUT CHECKLIST
+Before outputting code, verify:
+1. ✓ All predicates in rules exactly match create_terms() spelling
+2. ✓ NO placeholder names like 's', 'p', 'm' - use full predicate names
+3. ✓ Rule direction: "All S are P" → p(X) <= s(X)
+4. ✓ Every predicate in ~pred(X) has +pred('_dummy') or a rule defining it
+5. ✓ For I-type premises, same witness used for both predicates
+6. ✓ Conclusion check uses EXACTLY the predicates from the conclusion
+7. ✓ All helper predicates (conflict, invalid) are in create_terms()
+8. ✓ Valid syntax: +predicate('value') only, no nested calls
+
+# OUTPUT FORMAT
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('[all predicates from syllogism, conflict, invalid, X]')
+[facts with + using FULL predicate names]
+[rules with correct direction]
+[validity check matching EXACTLY the conclusion]
+print("VALID" if [condition] else "INVALID")
+```
+
+Output ONLY the Python code block. No explanations or analysis.

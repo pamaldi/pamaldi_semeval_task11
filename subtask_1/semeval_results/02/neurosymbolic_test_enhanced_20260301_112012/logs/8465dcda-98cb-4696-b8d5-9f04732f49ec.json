@@ -1,0 +1,79 @@
+{
+  "id": "8465dcda-98cb-4696-b8d5-9f04732f49ec",
+  "text": "There are no numbers that are ideas. Everything that is a liquid is a number. Thus, every liquid is an idea.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "number",
+      "predicate": "idea",
+      "raw_text": "There are no numbers that are ideas"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "liquid",
+      "predicate": "number",
+      "raw_text": "Everything that is a liquid is a number"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "liquid",
+      "predicate": "idea",
+      "raw_text": "Thus, every liquid is an idea"
+    },
+    "middle_term": "number",
+    "major_term": "idea",
+    "minor_term": "liquid",
+    "figure": 2,
+    "mood": "EAA",
+    "form": "EAA-2"
+  },
+  "validity_details": {
+    "form": "EAA-2",
+    "mood": "EAA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAA-2",
+    "vote_counts": {
+      "EAA-2": 2,
+      "EAA-1": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EAA-2",
+      "EAA-2",
+      "EAA-1",
+      "EAA-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-2 (t=0.0)",
+      "EAA-2 (t=0.3)",
+      "EAA-1 (t=0.5)",
+      "EAA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

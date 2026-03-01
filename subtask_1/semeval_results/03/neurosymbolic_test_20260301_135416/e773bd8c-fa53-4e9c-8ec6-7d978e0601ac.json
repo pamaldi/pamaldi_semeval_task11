@@ -1,0 +1,78 @@
+{
+  "id": "e773bd8c-fa53-4e9c-8ec6-7d978e0601ac",
+  "text": "Every single object can fly. It is known that some boats cannot fly. It follows that some boats are not objects.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "object",
+      "predicate": "thing that can fly",
+      "raw_text": "Every single object can fly"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "boat",
+      "predicate": "thing that can fly",
+      "raw_text": "It is known that some boats cannot fly"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "boat",
+      "predicate": "object",
+      "raw_text": "It follows that some boats are not objects"
+    },
+    "middle_term": "thing that can fly",
+    "major_term": "object",
+    "minor_term": "boat",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "form": "AOO-2",
+    "mood": "AOO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Baroco",
+    "reason": "Valid syllogistic form: Baroco"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AOO-2",
+    "vote_counts": {
+      "AOO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AOO-2",
+      "AOO-2",
+      "AOO-2",
+      "AOO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOO-2 (t=0.0)",
+      "AOO-2 (t=0.3)",
+      "AOO-2 (t=0.5)",
+      "AOO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

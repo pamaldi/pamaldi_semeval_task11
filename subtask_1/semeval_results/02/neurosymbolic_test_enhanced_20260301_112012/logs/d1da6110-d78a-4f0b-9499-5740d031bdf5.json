@@ -1,0 +1,77 @@
+{
+  "id": "d1da6110-d78a-4f0b-9499-5740d031bdf5",
+  "text": "Anything that is a bird is a building. Anything that is a bird is a vehicle. Consequently, some vehicles are buildings.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "building",
+      "raw_text": "Anything that is a bird is a building"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "vehicle",
+      "raw_text": "Anything that is a bird is a vehicle"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vehicle",
+      "predicate": "building",
+      "raw_text": "Consequently, some vehicles are buildings"
+    },
+    "middle_term": "bird",
+    "major_term": "building",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "form": "AAI-3",
+    "mood": "AAI",
+    "figure": 3,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Darapti",
+    "reason": "Valid syllogistic form: Darapti (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AAI-3",
+    "vote_counts": {
+      "AAI-3": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AAI-3",
+      "AAI-3",
+      "AAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAI-3 (t=0.0)",
+      "AAI-3 (t=0.3)",
+      "AAI-3 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

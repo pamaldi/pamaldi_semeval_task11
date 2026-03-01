@@ -1,0 +1,70 @@
+{
+  "id": "fd7eed56-3886-40c5-b22d-627e7434e507",
+  "text": "Reptiles are not animals. All things that are lizards are reptiles. It follows logically that some lizards are not animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "reptile",
+      "predicate": "animal",
+      "raw_text": "Reptiles are not animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "lizard",
+      "predicate": "reptile",
+      "raw_text": "All things that are lizards are reptiles"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "lizard",
+      "predicate": "animal",
+      "raw_text": "It follows logically that some lizards are not animals"
+    },
+    "middle_term": "reptile",
+    "major_term": "animal",
+    "minor_term": "lizard",
+    "figure": 1,
+    "mood": "OAO",
+    "form": "OAO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OAO-1",
+    "figure": 1,
+    "mood": "OAO",
+    "reason": "OAO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "lizard",
+      "P": "animal",
+      "M": "reptile"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise1: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

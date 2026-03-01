@@ -1,0 +1,79 @@
+{
+  "id": "3167dc72-56e1-47ad-8a27-e9883d7cb917",
+  "text": "There are no birds which are aquatic animals. Some animals are things that are birds. It must be true that some animals are aquatic animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "aquatic animal",
+      "raw_text": "There are no birds which are aquatic animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "bird",
+      "raw_text": "Some animals are things that are birds"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "aquatic animal",
+      "raw_text": "It must be true that some animals are aquatic animals"
+    },
+    "middle_term": "bird",
+    "major_term": "aquatic animal",
+    "minor_term": "animal",
+    "figure": 2,
+    "mood": "EII",
+    "form": "EII-2"
+  },
+  "validity_details": {
+    "form": "EII-2",
+    "mood": "EII",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-2",
+    "vote_counts": {
+      "EII-2": 3,
+      "EII-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EII-2",
+      "EII-1",
+      "EII-2",
+      "EII-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-2 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-2 (t=0.5)",
+      "EII-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

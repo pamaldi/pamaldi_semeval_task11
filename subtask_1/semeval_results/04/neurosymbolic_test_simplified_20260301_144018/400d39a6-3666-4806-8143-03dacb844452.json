@@ -1,0 +1,68 @@
+{
+  "id": "400d39a6-3666-4806-8143-03dacb844452",
+  "text": "There exist some individuals who are scientists who are not physicists. Every single person who is a scientist is an academic. One can thus conclude that all academics are physicists.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "scientist",
+      "predicate": "physicist",
+      "raw_text": "There exist some individuals who are scientists who are not physicists"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "scientist",
+      "predicate": "academic",
+      "raw_text": "Every single person who is a scientist is an academic"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "academic",
+      "predicate": "physicist",
+      "raw_text": "One can thus conclude that all academics are physicists"
+    },
+    "middle_term": "scientist",
+    "major_term": "physicist",
+    "minor_term": "academic",
+    "figure": 3,
+    "mood": "OAA",
+    "form": "OAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OAA-3",
+    "figure": 3,
+    "mood": "OAA",
+    "reason": "OAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "academic",
+      "P": "physicist",
+      "M": "scientist"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OAA": 3
+    },
+    "types_seen": [
+      "OAA",
+      "OAA",
+      "OAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

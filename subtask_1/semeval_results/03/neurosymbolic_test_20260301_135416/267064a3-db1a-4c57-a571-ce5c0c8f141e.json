@@ -1,0 +1,78 @@
+{
+  "id": "267064a3-db1a-4c57-a571-ce5c0c8f141e",
+  "text": "A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "reptile",
+      "predicate": "mammal",
+      "raw_text": "A few reptiles are mammals"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "fish",
+      "raw_text": "There are no mammals that are fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fish",
+      "predicate": "reptile",
+      "raw_text": "As a result, some fish are reptiles"
+    },
+    "middle_term": "mammal",
+    "major_term": "reptile",
+    "minor_term": "fish",
+    "figure": 4,
+    "mood": "IEI",
+    "form": "IEI-4"
+  },
+  "validity_details": {
+    "form": "IEI-4",
+    "mood": "IEI",
+    "figure": 4,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IEI-4",
+    "vote_counts": {
+      "IEI-4": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IEI-4",
+      "IEI-4",
+      "IEI-4",
+      "IEI-4"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IEI-4 (t=0.0)",
+      "IEI-4 (t=0.3)",
+      "IEI-4 (t=0.5)",
+      "IEI-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

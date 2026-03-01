@@ -1,0 +1,77 @@
+{
+  "id": "3277e556-ec97-447f-8c23-97bdcf9a2b5d",
+  "text": "Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no snakes are mammals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "metal",
+      "predicate": "mammal",
+      "raw_text": "Nothing that is a metal is a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "snake",
+      "predicate": "metal",
+      "raw_text": "Among the creatures that are snakes, there are none that are metals"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "snake",
+      "predicate": "mammal",
+      "raw_text": "It must be concluded that no snakes are mammals"
+    },
+    "middle_term": "metal",
+    "major_term": "mammal",
+    "minor_term": "snake",
+    "figure": 2,
+    "mood": "EEE",
+    "form": "EEE-2"
+  },
+  "validity_details": {
+    "form": "EEE-2",
+    "mood": "EEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EEE-2",
+    "vote_counts": {
+      "EEE-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EEE-2",
+      "EEE-2",
+      "EEE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "EEE-2 (t=0.3)",
+      "EEE-2 (t=0.5)",
+      "EEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

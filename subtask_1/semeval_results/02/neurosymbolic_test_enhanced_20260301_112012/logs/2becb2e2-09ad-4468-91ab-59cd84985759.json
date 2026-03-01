@@ -1,0 +1,78 @@
+{
+  "id": "2becb2e2-09ad-4468-91ab-59cd84985759",
+  "text": "There are no mammals who are also rational beings. Every single human is a rational being. Mammals are not humans.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "rational being",
+      "raw_text": "There are no mammals who are also rational beings"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "rational being",
+      "raw_text": "Every single human is a rational being"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "human",
+      "raw_text": "Mammals are not humans"
+    },
+    "middle_term": "rational being",
+    "major_term": "human",
+    "minor_term": "mammal",
+    "figure": 2,
+    "mood": "EAE",
+    "form": "EAE-2"
+  },
+  "validity_details": {
+    "form": "EAE-2",
+    "mood": "EAE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Cesare",
+    "reason": "Valid syllogistic form: Cesare"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAE-2",
+    "vote_counts": {
+      "EAE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAE-2",
+      "EAE-2",
+      "EAE-2",
+      "EAE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-2 (t=0.0)",
+      "EAE-2 (t=0.3)",
+      "EAE-2 (t=0.5)",
+      "EAE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

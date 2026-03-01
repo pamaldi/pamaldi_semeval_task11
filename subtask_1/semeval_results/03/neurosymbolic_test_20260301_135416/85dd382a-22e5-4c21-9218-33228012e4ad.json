@@ -1,0 +1,78 @@
+{
+  "id": "85dd382a-22e5-4c21-9218-33228012e4ad",
+  "text": "It is completely false that any fruit is a thing that grows on a tree. A portion of fruits are apples. We must conclude that some apples do not grow on trees.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fruit",
+      "predicate": "thing that grows on a tree",
+      "raw_text": "It is completely false that any fruit is a thing that grows on a tree"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "fruit",
+      "predicate": "apple",
+      "raw_text": "A portion of fruits are apples"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "apple",
+      "predicate": "thing that grows on a tree",
+      "raw_text": "We must conclude that some apples do not grow on trees"
+    },
+    "middle_term": "fruit",
+    "major_term": "thing that grows on a tree",
+    "minor_term": "apple",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "form": "EIO-1",
+    "mood": "EIO",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Ferio",
+    "reason": "Valid syllogistic form: Ferio"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-1",
+    "vote_counts": {
+      "EIO-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-1",
+      "EIO-1",
+      "EIO-1",
+      "EIO-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-1 (t=0.0)",
+      "EIO-1 (t=0.3)",
+      "EIO-1 (t=0.5)",
+      "EIO-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

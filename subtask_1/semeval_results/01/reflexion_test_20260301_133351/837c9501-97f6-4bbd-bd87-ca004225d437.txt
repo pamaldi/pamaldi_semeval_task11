@@ -1,0 +1,39 @@
+================================================================================
+TRUE REFLEXION LOG - 837c9501-97f6-4bbd-bd87-ca004225d437
+Mode: label_free
+================================================================================
+
+Syllogism:
+It is known that there are no stars which are planets. Every single thing that is the Earth is a planet. As such, some things on Earth are stars.
+
+Ground Truth: INVALID
+Validity: False
+Plausibility: False
+Final Prediction: INVALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: INVALID
+Failure Type: unknown
+
+Code:
+% Facts (witnesses or counterexample entities)
+earth(earth1).
+
+% planet has no facts directly because it is defined via rules
+% star has no facts and no rules, so it must use fail clause
+star(_) :- fail.
+
+% Rules from premises
+planet(X) :- earth(X).
+
+% Validity check: Some things on Earth are stars
+valid_syllogism :- earth(X), star(X).
+
+Stdout: RESULT:INVALID
+
+

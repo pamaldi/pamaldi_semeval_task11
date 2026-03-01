@@ -1,0 +1,68 @@
+{
+  "id": "be9f522b-b67e-4107-a9b0-76ae2c1672bc",
+  "text": "Some root vegetables are known as carrots. Everything that is a carrot is also a vegetable. Therefore, there are vegetables that are root vegetables.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "root vegetable",
+      "predicate": "carrot",
+      "raw_text": "Some root vegetables are known as carrots"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "carrot",
+      "predicate": "vegetable",
+      "raw_text": "Everything that is a carrot is also a vegetable"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vegetable",
+      "predicate": "root vegetable",
+      "raw_text": "Therefore, there are vegetables that are root vegetables"
+    },
+    "middle_term": "carrot",
+    "major_term": "root vegetable",
+    "minor_term": "vegetable",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "vegetable",
+      "P": "root vegetable",
+      "M": "carrot"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

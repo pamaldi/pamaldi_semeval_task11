@@ -1,0 +1,78 @@
+{
+  "id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+  "text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "robot",
+      "predicate": "dolphin",
+      "raw_text": "Some robots are dolphins"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dolphin",
+      "predicate": "fish",
+      "raw_text": "Every single dolphin is a fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fish",
+      "predicate": "robot",
+      "raw_text": "It must be true that some fish are robots"
+    },
+    "middle_term": "dolphin",
+    "major_term": "robot",
+    "minor_term": "fish",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "form": "IAI-4",
+    "mood": "IAI",
+    "figure": 4,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Dimaris",
+    "reason": "Valid syllogistic form: Dimaris"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAI-4",
+    "vote_counts": {
+      "IAI-4": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IAI-4",
+      "IAI-4",
+      "IAI-4",
+      "IAI-4"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAI-4 (t=0.0)",
+      "IAI-4 (t=0.3)",
+      "IAI-4 (t=0.5)",
+      "IAI-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

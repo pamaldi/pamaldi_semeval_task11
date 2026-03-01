@@ -1,0 +1,78 @@
+{
+  "id": "c869ec62-ccfd-47ab-b7bc-2cb24c86b835",
+  "text": "There are no books that can be called plants. It is also true that every book is a type of animal. This has led to the conclusion that every animal is a plant.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "books",
+      "predicate": "plants",
+      "raw_text": "There are no books that can be called plants."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "books",
+      "predicate": "animal",
+      "raw_text": "every book is a type of animal."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "plant",
+      "raw_text": "every animal is a plant."
+    },
+    "middle_term": "books",
+    "major_term": "plant",
+    "minor_term": "animal",
+    "figure": 2,
+    "mood": "EAA",
+    "form": "EAA-2"
+  },
+  "validity_details": {
+    "form": "EAA-2",
+    "mood": "EAA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion; Illicit minor: 'animal'"
+  },
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EAA-2",
+    "vote_counts": {
+      "EAA-2": 2,
+      "EAA-3": 1
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EAA-2",
+      "EAA-2",
+      "EAA-3"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-2 (t=0.0)",
+      "FAILED (t=0.3)",
+      "EAA-2 (t=0.5)",
+      "EAA-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

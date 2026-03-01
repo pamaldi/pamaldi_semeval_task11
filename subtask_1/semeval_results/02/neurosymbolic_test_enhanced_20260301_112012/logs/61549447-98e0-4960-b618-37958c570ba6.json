@@ -1,0 +1,79 @@
+{
+  "id": "61549447-98e0-4960-b618-37958c570ba6",
+  "text": "Something that is a bird is a mammal. A thing that is a dog is never a bird. It follows that a dog is never a mammal.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "mammal",
+      "raw_text": "Something that is a bird is a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "dog",
+      "predicate": "bird",
+      "raw_text": "A thing that is a dog is never a bird"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "It follows that a dog is never a mammal"
+    },
+    "middle_term": "bird",
+    "major_term": "mammal",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "IEE",
+    "form": "IEE-1"
+  },
+  "validity_details": {
+    "form": "IEE-1",
+    "mood": "IEE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit major: 'mammal'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IEE-1",
+    "vote_counts": {
+      "IEE-2": 1,
+      "IEE-1": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "IEE-2",
+      "IEE-1",
+      "IEE-1",
+      "IEE-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IEE-2 (t=0.0)",
+      "IEE-1 (t=0.3)",
+      "IEE-1 (t=0.5)",
+      "IEE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

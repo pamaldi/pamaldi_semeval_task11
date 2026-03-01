@@ -1,0 +1,78 @@
+{
+  "id": "f6da63f4-4a1e-4d79-8767-b7b8761a3a2e",
+  "text": "No reptiles possess fur. There are some snakes which are reptiles. This means that some snakes have fur.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "reptile",
+      "predicate": "thing that possesses fur",
+      "raw_text": "No reptiles possess fur"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "snake",
+      "predicate": "reptile",
+      "raw_text": "There are some snakes which are reptiles"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "snake",
+      "predicate": "thing that possesses fur",
+      "raw_text": "This means that some snakes have fur"
+    },
+    "middle_term": "reptile",
+    "major_term": "thing that possesses fur",
+    "minor_term": "snake",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "form": "EII-1",
+    "mood": "EII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-1",
+    "vote_counts": {
+      "EII-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EII-1",
+      "EII-1",
+      "EII-1",
+      "EII-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-1 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-1 (t=0.5)",
+      "EII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

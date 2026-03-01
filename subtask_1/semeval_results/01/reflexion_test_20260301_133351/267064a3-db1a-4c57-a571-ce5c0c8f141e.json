@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "267064a3-db1a-4c57-a571-ce5c0c8f141e",
+  "syllogism_text": "A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: reptile that is also a mammal\nreptile(lizard).\nmammal(lizard).\n\n% Fish has no facts (nothing is fish)\nfish(_) :- fail.\n\n% E-premise: no mammals are fish\nconflict :- mammal(X), fish(X).\n\n% Validity check: some fish are reptiles\nvalid_syllogism :- fish(X), reptile(X).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:40:55.115690"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": false
+}

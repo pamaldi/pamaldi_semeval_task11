@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+  "syllogism_text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: a robot that is also a dolphin\nrobot(robodolphin).\ndolphin(robodolphin).\n\n% All dolphins are fish\nfish(X) :- dolphin(X).\n\n% Validity check: Some fish are robots\nvalid_syllogism :- fish(X), robot(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:55.324684"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "9c320004-80e7-4842-8b4d-87867ae29d08",
+  "syllogism_text": "Anything that is C++ is a programming language. There are no instances of English which are programming languages. It is therefore established that no English is C++.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for C++\ncpp(cplusplus11).\n\n% Facts for English\nenglish(shakespeare).\n\n% Rules from \"All C++ is a programming language\"\nprogramming_language(X) :- cpp(X).\n\n% Fail clause for English to enforce \"No English is a programming language\"\nprogramming_language(_) :- fail.\n\n% Validity check for \"No English is C++\"\nvalid_syllogism :- \\+ (english(X), cpp(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:39:50.428835"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

@@ -1,0 +1,77 @@
+{
+  "id": "8dcec24c-8e0d-4c22-9ecc-5134f3c59fa8",
+  "text": "There are no plants that are animals. Every single oak tree is a plant. It is therefore the case that all oak trees are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "There are no plants that are animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "oak tree",
+      "predicate": "plant",
+      "raw_text": "Every single oak tree is a plant"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "oak tree",
+      "predicate": "animal",
+      "raw_text": "It is therefore the case that all oak trees are animals"
+    },
+    "middle_term": "plant",
+    "major_term": "animal",
+    "minor_term": "oak tree",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "form": "EAA-1",
+    "mood": "EAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EAA-1",
+    "vote_counts": {
+      "EAA-1": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAA-1",
+      "EAA-1",
+      "EAA-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-1 (t=0.0)",
+      "EAA-1 (t=0.3)",
+      "FAILED (t=0.5)",
+      "EAA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

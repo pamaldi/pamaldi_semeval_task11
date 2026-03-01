@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "8e2e1ec3-ffad-4df7-a36e-686e0e81b7fe",
+  "syllogism_text": "Some individuals who have degrees are people who work in schools. Some person who works in a school is a teacher. As a result, some teachers are individuals with degrees.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witnesses for I-propositions\nhas_degree(anna).\nworks_in_school(anna).\n\nworks_in_school(bob).\nis_teacher(bob).\n\n% A-premise: Some individuals who have degrees are people who work in schools.\n% Encoded as facts for has_degree/1 and works_in_school/1\n\n% A-premise: Some person who works in a school is a teacher.\n% Encoded as facts for works_in_school/1 and is_teacher/1\n\n% Conclusion: Some teachers are individuals with degrees.\n% Validity check: does there exist a teacher who has a degree?\n\nvalid_syllogism :- is_teacher(X), has_degree(X).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:42:42.401064"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": true
+}

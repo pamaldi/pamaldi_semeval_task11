@@ -1,0 +1,363 @@
+================================================================================
+CHAIN-OF-THOUGHT SYLLOGISM VALIDITY PROMPT (v3 - Complete Template)
+================================================================================
+
+You are a formal logic expert. Analyze the syllogism step-by-step to determine if it is VALID or INVALID.
+
+# KEY PRINCIPLE
+
+VALIDITY = the conclusion NECESSARILY follows from the premises
+- Ignore real-world truth of premises
+- Focus ONLY on logical structure
+- A valid argument with false premises is still VALID
+- An invalid argument can have a true conclusion
+
+# PROPOSITION TYPES
+
+| Type | Form | Example | Distributes |
+|------|------|---------|-------------|
+| A | All S are P | "All dogs are mammals" | Subject |
+| E | No S is P | "No fish is a mammal" | Both |
+| I | Some S are P | "Some animals are pets" | Neither |
+| O | Some S are not P | "Some birds cannot fly" | Predicate |
+
+# FEW-SHOT EXAMPLES
+
+## Example 1 (Valid + Plausible)
+Syllogism: "Every gecko is a lizard. Some geckos are reptiles. Therefore, some reptiles are lizards."
+
+Step 1 - Propositions:
+- P1: Every gecko is a lizard
+- P2: Some geckos are reptiles
+- C: Some reptiles are lizards
+
+Step 2 - Types:
+- P1: A (All S are P)
+- P2: I (Some S are P)
+- C: I (Some S are P)
+- Mood: AII
+
+Step 3 - Terms:
+- Minor (subject of C): reptiles
+- Major (predicate of C): lizards
+- Middle (shared): geckos
+
+Step 4 - Validity Check:
+The geckos that are reptiles (P2) must be lizards (P1). So some reptiles are lizards. The conclusion necessarily follows.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 2 (Valid + Implausible)
+Syllogism: "Every cat is invisible. Some cats are animals. Some animals are invisible."
+
+Step 1 - Propositions:
+- P1: Every cat is invisible
+- P2: Some cats are animals
+- C: Some animals are invisible
+
+Step 2 - Types:
+- P1: A
+- P2: I
+- C: I
+- Mood: AII
+
+Step 3 - Terms:
+- Minor: animals
+- Major: invisible
+- Middle: cats
+
+Step 4 - Validity Check:
+"Cats are invisible" is false in reality, but irrelevant. IF all cats are invisible AND some cats are animals, THEN those cat-animals are invisible. Logic is valid despite absurd premise.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 3 (Invalid + Plausible)
+Syllogism: "All cars are vehicles. No animals are cars. No animals are vehicles."
+
+Step 1 - Propositions:
+- P1: All cars are vehicles
+- P2: No animals are cars
+- C: No animals are vehicles
+
+Step 2 - Types:
+- P1: A
+- P2: E
+- C: E
+- Mood: AEE
+
+Step 3 - Terms:
+- Minor: animals
+- Major: vehicles
+- Middle: cars
+
+Step 4 - Validity Check:
+Animals aren't cars (P2), and cars are vehicles (P1). But animals could be vehicles WITHOUT being cars (e.g., horses). The premises don't exclude this. Conclusion doesn't follow.
+
+Step 5 - Answer: INVALID
+
+---
+
+## Example 4 (Invalid + Plausible)
+Syllogism: "All birds are animals. All sparrows are animals. All sparrows are birds."
+
+Step 1 - Propositions:
+- P1: All birds are animals
+- P2: All sparrows are animals
+- C: All sparrows are birds
+
+Step 2 - Types:
+- P1: A
+- P2: A
+- C: A
+- Mood: AAA
+
+Step 3 - Terms:
+- Minor: sparrows
+- Major: birds
+- Middle: animals
+
+Step 4 - Validity Check:
+UNDISTRIBUTED MIDDLE: "animals" appears in predicate of both premises (never distributed in A-propositions). Sparrows and birds could be separate subsets of animals. The conclusion is TRUE in reality but DOES NOT FOLLOW logically.
+
+Step 5 - Answer: INVALID
+
+---
+
+## Example 5 (Valid + Implausible)
+Syllogism: "No plants are living organisms. All trees are living organisms. No trees are plants."
+
+Step 1 - Propositions:
+- P1: No plants are living organisms
+- P2: All trees are living organisms
+- C: No trees are plants
+
+Step 2 - Types:
+- P1: E
+- P2: A
+- C: E
+- Mood: EAE
+
+Step 3 - Terms:
+- Minor: trees
+- Major: plants
+- Middle: living organisms
+
+Step 4 - Validity Check:
+All trees are living organisms (P2). No plants are living organisms (P1). Therefore trees (being living organisms) cannot be plants. Premises are FALSE but logic is VALID.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 6 (Invalid + Implausible)
+Syllogism: "All planets are celestial bodies. All suns are celestial bodies. Some suns are planets."
+
+Step 1 - Propositions:
+- P1: All planets are celestial bodies
+- P2: All suns are celestial bodies
+- C: Some suns are planets
+
+Step 2 - Types:
+- P1: A
+- P2: A
+- C: I
+- Mood: AAI
+
+Step 3 - Terms:
+- Minor: suns
+- Major: planets
+- Middle: celestial bodies
+
+Step 4 - Validity Check:
+UNDISTRIBUTED MIDDLE: Both premises have "celestial bodies" as predicate (undistributed). Planets and suns could be disjoint subsets of celestial bodies. Cannot conclude any overlap.
+
+Step 5 - Answer: INVALID
+
+---
+
+## Example 7 (Valid + Implausible)
+Syllogism: "Some planets are dogs. All dogs are beings. Some beings are planets."
+
+Step 1 - Propositions:
+- P1: Some planets are dogs
+- P2: All dogs are beings
+- C: Some beings are planets
+
+Step 2 - Types:
+- P1: I
+- P2: A
+- C: I
+- Mood: IAI
+
+Step 3 - Terms:
+- Minor: beings
+- Major: planets
+- Middle: dogs
+
+Step 4 - Validity Check:
+Some planets are dogs (P1). All dogs are beings (P2). Therefore those planet-dogs are beings. So some beings are planets. Absurd but VALID.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 8 (Valid + Plausible)
+Syllogism: "No insects are arachnids. Some spiders are arachnids. Some spiders are not insects."
+
+Step 1 - Propositions:
+- P1: No insects are arachnids
+- P2: Some spiders are arachnids
+- C: Some spiders are not insects
+
+Step 2 - Types:
+- P1: E
+- P2: I
+- C: O
+- Mood: EIO
+
+Step 3 - Terms:
+- Minor: spiders
+- Major: insects
+- Middle: arachnids
+
+Step 4 - Validity Check:
+Some spiders are arachnids (P2). No insects are arachnids (P1). Those arachnid-spiders cannot be insects. So some spiders are not insects.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 9 (Invalid + Plausible)
+Syllogism: "All cars are vehicles. All bicycles are vehicles. Some bicycles are not cars."
+
+Step 1 - Propositions:
+- P1: All cars are vehicles
+- P2: All bicycles are vehicles
+- C: Some bicycles are not cars
+
+Step 2 - Types:
+- P1: A
+- P2: A
+- C: O
+- Mood: AAO
+
+Step 3 - Terms:
+- Minor: bicycles
+- Major: cars
+- Middle: vehicles
+
+Step 4 - Validity Check:
+Both are vehicles, but premises don't establish ANY direct relationship between bicycles and cars. The conclusion is TRUE in the real world but DOES NOT FOLLOW from these premises alone.
+
+Step 5 - Answer: INVALID
+
+---
+
+## Example 10 (Invalid + Implausible)
+Syllogism: "All cats are animals. All dogs are animals. All dogs are cats."
+
+Step 1 - Propositions:
+- P1: All cats are animals
+- P2: All dogs are animals
+- C: All dogs are cats
+
+Step 2 - Types:
+- P1: A
+- P2: A
+- C: A
+- Mood: AAA
+
+Step 3 - Terms:
+- Minor: dogs
+- Major: cats
+- Middle: animals
+
+Step 4 - Validity Check:
+UNDISTRIBUTED MIDDLE: "animals" is predicate in both A-premises (never distributed). Cats and dogs can both be animals without overlapping.
+
+Step 5 - Answer: INVALID
+
+---
+
+## Example 11 (Valid + Plausible)
+Syllogism: "No buildings are vehicles. All houses are buildings. No houses are vehicles."
+
+Step 1 - Propositions:
+- P1: No buildings are vehicles
+- P2: All houses are buildings
+- C: No houses are vehicles
+
+Step 2 - Types:
+- P1: E
+- P2: A
+- C: E
+- Mood: EAE
+
+Step 3 - Terms:
+- Minor: houses
+- Major: vehicles
+- Middle: buildings
+
+Step 4 - Validity Check:
+All houses are buildings (P2). No buildings are vehicles (P1). Therefore no houses are vehicles. Classic Celarent - VALID.
+
+Step 5 - Answer: VALID
+
+---
+
+## Example 12 (Invalid + Implausible)
+Syllogism: "No stars are meteors. All meteors are planets. Some planets are stars."
+
+Step 1 - Propositions:
+- P1: No stars are meteors
+- P2: All meteors are planets
+- C: Some planets are stars
+
+Step 2 - Types:
+- P1: E
+- P2: A
+- C: I
+- Mood: EAI
+
+Step 3 - Terms:
+- Minor: planets
+- Major: stars
+- Middle: meteors
+
+Step 4 - Validity Check:
+Meteors are planets (P2) and meteors aren't stars (P1). But OTHER planets (non-meteors) could be stars - or not. We cannot derive a positive I-conclusion about planets being stars.
+
+Step 5 - Answer: INVALID
+
+---
+
+# YOUR TASK
+
+Analyze this syllogism using the EXACT same 5-step format:
+
+Syllogism: "{syllogism}"
+
+Step 1 - Propositions:
+- P1: [first premise]
+- P2: [second premise]
+- C: [conclusion]
+
+Step 2 - Types:
+- P1: [A/E/I/O]
+- P2: [A/E/I/O]
+- C: [A/E/I/O]
+- Mood: [three letters]
+
+Step 3 - Terms:
+- Minor (subject of C): [term]
+- Major (predicate of C): [term]
+- Middle (shared): [term]
+
+Step 4 - Validity Check:
+[Your reasoning here - does conclusion NECESSARILY follow?]
+
+Step 5 - Answer: [VALID or INVALID]

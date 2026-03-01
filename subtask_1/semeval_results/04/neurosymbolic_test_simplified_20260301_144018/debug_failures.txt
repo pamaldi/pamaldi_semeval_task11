@@ -1,0 +1,537 @@
+====================================================================================================
+DEBUG LOG - ERRORI E MISMATCH (scritto in tempo reale)
+Timestamp: 2026-03-01 14:40:18
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: bff2af61-d4b0-4147-8a5b-ff4fe1892559
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no bikes that can be called cars. It is also true that every bike is a type of vehicle. This has led to the conclusion that a portion of vehicles are bikes.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Post-processing failed: ['No middle term found']
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 80a62ff2-1bc5-48e6-bc9f-f877690852fc
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+The entire set of fruits is composed of round objects with a citrus peel. At least one orange is not a round object with a citrus peel. Every single fruit is an orange.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: All 3 extraction attempts failed
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 3
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: b479b2a2-7e13-4c4d-9269-fad1e3fd5220
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+The set of objects and spoons do not overlap. A portion of spoons are implements. Some implements are not objects.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "O",
+    "subject": "object",
+    "predicate": "spoon",
+    "raw_text": "The set of objects and spoons do not overlap"
+  },
+  "premise2": {
+    "type": "I",
+    "subject": "spoon",
+    "predicate": "implement",
+    "raw_text": "A portion of spoons are implements"
+  },
+  "conclusion": {
+    "type": "O",
+    "subject": "implement",
+    "predicate": "object",
+    "raw_text": "Some implements are not objects"
+  },
+  "middle_term": "spoon",
+  "major_term": "object",
+  "minor_term": "implement",
+  "figure": 4,
+  "mood": "OIO",
+  "form": "OIO-4"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: OIO-4
+  Figure: 4
+  Mood: OIO
+  Valid: False
+  Ragione invalidità: OIO-4 is not in the 24 valid syllogistic forms
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 0
+  Vote counts: {'EIO': 3}
+  Selected form: N/A
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 45fc2b0d-433e-407f-a574-cac2caa54b90
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a planet is a celestial body. The category of comets contains no celestial bodies. Every comet is a planet.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: All 3 extraction attempts failed
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 3
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: 75606fbf-243c-4bf4-a2c9-b465e1dfc625
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every human is a primate. Any person that is a man is a human. Therefore, it is a certainty that every man is a primate.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "A",
+    "subject": "human",
+    "predicate": "primate",
+    "raw_text": "Every human is a primate"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "man",
+    "predicate": "human",
+    "raw_text": "Any person that is a man is a human"
+  },
+  "conclusion": {
+    "type": "A",
+    "subject": "man",
+    "predicate": "primate",
+    "raw_text": "Therefore, it is a certainty that every man is a primate"
+  },
+  "middle_term": "human",
+  "major_term": "primate",
+  "minor_term": "man",
+  "figure": 3,
+  "mood": "AAA",
+  "form": "AAA-3"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: AAA-3
+  Figure: 3
+  Mood: AAA
+  Valid: False
+  Ragione invalidità: AAA-3 is not in the 24 valid syllogistic forms
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 0
+  Vote counts: {'AAA': 3}
+  Selected form: N/A
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 8e100be7-956f-46e7-a431-a884cc30b28c
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+There are no cats that can be called dogs. It is also true that every cat is a type of animal. This has led to the conclusion that a portion of animals are cats.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Post-processing failed: ['No middle term found']
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_INVALID] ID: fd7eed56-3886-40c5-b22d-627e7434e507
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Reptiles are not animals. All things that are lizards are reptiles. It follows logically that some lizards are not animals.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "O",
+    "subject": "reptile",
+    "predicate": "animal",
+    "raw_text": "Reptiles are not animals"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "lizard",
+    "predicate": "reptile",
+    "raw_text": "All things that are lizards are reptiles"
+  },
+  "conclusion": {
+    "type": "O",
+    "subject": "lizard",
+    "predicate": "animal",
+    "raw_text": "It follows logically that some lizards are not animals"
+  },
+  "middle_term": "reptile",
+  "major_term": "animal",
+  "minor_term": "lizard",
+  "figure": 1,
+  "mood": "OAO",
+  "form": "OAO-1"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: OAO-1
+  Figure: 1
+  Mood: OAO
+  Valid: False
+  Ragione invalidità: OAO-1 is not in the 24 valid syllogistic forms
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 0
+  Vote counts: {'EAO': 3}
+  Selected form: N/A
+
+### ANALISI ERRORE:
+  Il sistema ha predetto INVALID ma il ground truth è VALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+    - Forma valida non riconosciuta (controllare le 24 forme)
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: c232d8c7-8f29-46bc-8f5c-bdfa3c52fcd5
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a sea is a large body of saltwater. The category of rivers contains no large bodies of saltwater. Every river is a sea.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: All 3 extraction attempts failed
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 3
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 04996853-61fd-42a9-a624-55022231c633
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Every single pencil is an item of stationery. There are no stationery items that can be described as food. It is therefore true that some items of food are not pencils.
+
+### GROUND TRUTH:
+  Validity: VALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: Post-processing failed: ['No middle term found']
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: VALID
+  Match: ✗ ERRORE
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto erroneamente.
+
+
+----------------------------------------------------------------------------------------------------
+[MISMATCH_FALSE_VALID] ID: 652a6a0e-cef2-4cd8-8562-e4c78589d320
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+The set of humans is a subset of the set of legal professionals. At least one doctor is not a legal professional. The entire group of doctors is not humans.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: IMPLAUSIBLE
+
+### METODO:
+  Method: symbolic
+  Confidence: 0.95
+
+### STRUTTURA ESTRATTA (JSON):
+{
+  "premise1": {
+    "type": "A",
+    "subject": "human",
+    "predicate": "legal professional",
+    "raw_text": "The set of humans is a subset of the set of legal professionals"
+  },
+  "premise2": {
+    "type": "O",
+    "subject": "doctor",
+    "predicate": "legal professional",
+    "raw_text": "At least one doctor is not a legal professional"
+  },
+  "conclusion": {
+    "type": "O",
+    "subject": "doctor",
+    "predicate": "human",
+    "raw_text": "The entire group of doctors is not humans"
+  },
+  "middle_term": "legal professional",
+  "major_term": "human",
+  "minor_term": "doctor",
+  "figure": 2,
+  "mood": "AOO",
+  "form": "AOO-2"
+}
+
+### PASSI LOGICI (Validity Checker):
+  Form: AOO-2
+  Figure: 2
+  Mood: AOO
+  Valid: True
+  Nome forma: Baroco
+
+### RISULTATO:
+  Prediction: VALID
+  Ground Truth: INVALID
+  Match: ✗ ERRORE
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 3
+  Failed samples: 0
+  Vote counts: {'AOE': 3}
+  Selected form: N/A
+
+### ANALISI ERRORE:
+  Il sistema ha predetto VALID ma il ground truth è INVALID.
+  Possibili cause:
+    - Estrazione errata della struttura (tipo proposizione sbagliato)
+    - Middle term identificato erroneamente
+    - Figura calcolata erroneamente
+
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 5934014e-aec0-442f-8a04-abddc9379cfc
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+Anything that is a rose is a flower. There are no tulips that are roses. Every tulip is a flower.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: All 3 extraction attempts failed
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 3
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+
+====================================================================================================
+RIEPILOGO FINALE
+====================================================================================================
+Methods: 184 symbolic, 7 fallback, 0 failed
+
+OFFICIAL METRICS:
+  Combined Score:  45.81
+  Accuracy:        97.38%
+  Content Effect:  2.08
+
+FAILURES:
+  Extraction Errors: 0
+  False VALID:       1
+  False INVALID:     4
+  TOTAL:             5

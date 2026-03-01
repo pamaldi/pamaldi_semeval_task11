@@ -1,0 +1,77 @@
+{
+  "id": "fb637f9c-1c26-4302-9c01-94c061bd352c",
+  "text": "The category of chairs and the category of living things do not overlap. The group of living things and the group of inanimate objects are mutually exclusive. A portion of inanimate objects are not chairs.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "chair",
+      "predicate": "living thing",
+      "raw_text": "The category of chairs and the category of living things do not overlap."
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "living thing",
+      "predicate": "inanimate object",
+      "raw_text": "The group of living things and the group of inanimate objects are mutually exclusive."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "inanimate object",
+      "predicate": "chair",
+      "raw_text": "A portion of inanimate objects are not chairs."
+    },
+    "middle_term": "living thing",
+    "major_term": "chair",
+    "minor_term": "inanimate object",
+    "figure": 2,
+    "mood": "EEO",
+    "form": "EEO-2"
+  },
+  "validity_details": {
+    "form": "EEO-2",
+    "mood": "EEO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EEO-2",
+    "vote_counts": {
+      "EEO-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EEO-2",
+      "EEO-2",
+      "EEO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EEO-2 (t=0.0)",
+      "EEO-2 (t=0.3)",
+      "EEO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

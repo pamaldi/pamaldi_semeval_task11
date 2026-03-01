@@ -1,0 +1,68 @@
+{
+  "id": "d2bc4045-c226-4f0b-9b3a-32b3d8910b95",
+  "text": "Every single dog is an animal. Nothing that is a fish is an animal. It follows from this that every single fish is a dog.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "animal",
+      "raw_text": "Every single dog is an animal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "animal",
+      "raw_text": "Nothing that is a fish is an animal"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "dog",
+      "raw_text": "It follows from this that every single fish is a dog"
+    },
+    "middle_term": "animal",
+    "major_term": "dog",
+    "minor_term": "fish",
+    "figure": 2,
+    "mood": "AEA",
+    "form": "AEA-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEA-2",
+    "figure": 2,
+    "mood": "AEA",
+    "reason": "AEA-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "fish",
+      "P": "dog",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEA": 3
+    },
+    "types_seen": [
+      "AEA",
+      "AEA",
+      "AEA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "8041eb99-e73f-46ca-a2d7-9aefd2c6c0b1",
+  "text": "Every single vehicle can be considered an object. There are no cars that are objects. Therefore, no car is a vehicle.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "vehicle",
+      "predicate": "object",
+      "raw_text": "Every single vehicle can be considered an object"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "car",
+      "predicate": "object",
+      "raw_text": "There are no cars that are objects"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "Therefore, no car is a vehicle"
+    },
+    "middle_term": "object",
+    "major_term": "vehicle",
+    "minor_term": "car",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEE-2",
+    "figure": 2,
+    "mood": "AEE",
+    "reason": "AEE-2 is valid (Camestres)",
+    "form_name": "Camestres",
+    "terms": {
+      "S": "car",
+      "P": "vehicle",
+      "M": "object"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

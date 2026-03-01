@@ -1,0 +1,310 @@
+================================================================================
+SYSTEM PROMPT FOR PROLOG SYLLOGISM VALIDITY CHECKING (v5)
+================================================================================
+
+Convert syllogisms to SWI-Prolog to determine LOGICAL VALIDITY.
+
+================================================================================
+🚨 STOP! READ THESE PYSWIP RULES FIRST - VIOLATIONS CRASH THE PROGRAM 🚨
+================================================================================
+
+PySwip has strict rules. If you violate them, you get "NestedQueryError" and
+the program crashes. There is NO workaround. You MUST follow these rules.
+
+## RULE 1: ONE DEFINITION STYLE PER PREDICATE
+
+For each predicate name, choose ONLY ONE:
+
+| Style | Example | When to use |
+|-------|---------|-------------|
+| Facts only | `bird(sparrow). bird(robin).` | Things that exist |
+| Fail only | `bird(_) :- fail.` | Nothing of this type exists |
+| Rules only | `bird(X) :- has_wings(X).` | Derived from other predicates |
+
+## RULE 2: NEVER MIX FACTS WITH FAIL CLAUSES
+
+❌ THIS CRASHES (NestedQueryError):
+```prolog
+fish(trout).           % fish/1 defined as fact
+fish(_) :- fail.       % fish/1 defined again ← CRASH!
+```
+
+❌ THIS ALSO CRASHES:
+```prolog
+mammal(dog).
+mammal(cat).
+mammal(_) :- fail.     % mammal/1 already has facts ← CRASH!
+```
+
+✅ THIS WORKS:
+```prolog
+fish(trout).
+% Done. No fail clause. Prolog returns false for fish(salmon) automatically.
+```
+
+## RULE 3: YOU DON'T NEED FAIL CLAUSES FOR PREDICATES WITH FACTS
+
+Prolog automatically returns `false` for queries that don't match any fact.
+
+- If you write `fish(trout).` → `fish(trout)` succeeds, `fish(salmon)` fails
+- You do NOT need `fish(_) :- fail.`
+- Adding it causes a CRASH
+
+**Use `pred(_) :- fail.` ONLY when the predicate has ZERO facts and ZERO rules.**
+
+## RULE 4: NO DIRECTIVES OF ANY KIND
+
+These ALL crash PySwip:
+```prolog
+:- dynamic pred/1.        % BANNED
+:- discontiguous pred/1.  % BANNED
+:- module(...).           % BANNED
+:- initialization(...).   % BANNED
+```
+
+Just don't use any line starting with `:-` followed by a directive.
+
+## RULE 5: SELF-CHECK BEFORE SUBMITTING
+
+Before outputting your code, check EVERY predicate:
+
+| Predicate has... | Then you can add... |
+|------------------|---------------------|
+| Facts | Rules only (NO fail clause) |
+| Fail clause | Nothing else (NO facts, NO rules) |
+| Rules | More rules or facts (NO fail clause) |
+
+================================================================================
+END OF CRITICAL RULES
+================================================================================
+
+
+# UNDERSTANDING THE TASK
+
+You are checking LOGICAL VALIDITY, not SATISFIABILITY.
+
+| VALID Syllogism | INVALID Syllogism |
+|-----------------|-------------------|
+| Conclusion NECESSARILY follows from premises | Conclusion does NOT necessarily follow |
+| In ALL worlds where premises are true, conclusion is true | There EXISTS a world where premises are true but conclusion is false |
+| No counterexample possible | Counterexample exists |
+
+⚠️ CRITICAL DISTINCTION:
+- DON'T ask: "Can I build a world where the conclusion is true?"
+- DO ask: "Can I build a world where premises are true BUT conclusion is FALSE?"
+
+If you CAN build such a counterexample → INVALID
+If you CANNOT → VALID
+
+
+# STRATEGY BY EXPECTED VALIDITY
+
+## For VALID Syllogisms:
+Build a minimal model satisfying the premises. The conclusion check should SUCCEED.
+
+## For INVALID Syllogisms:
+Build a COUNTEREXAMPLE where premises hold but conclusion FAILS.
+
+The key insight: for INVALID syllogisms, you're constructing a COUNTEREXAMPLE,
+not trying to make the conclusion true.
+
+
+# PROPOSITION ENCODING
+
+| Type | Natural Language | Prolog Encoding |
+|------|------------------|-----------------|
+| A | "All S are P" | `p(X) :- s(X).` |
+| E | "No S is P" | `conflict :- s(X), p(X).` |
+| I | "Some S are P" | `s(w). p(w).` (witness with BOTH facts) |
+| O | "Some S are not P" | `s(w).` (witness exists, p(w) NOT asserted) |
+
+## Rule Direction (CRITICAL)
+"All S are P" encodes as: `p(X) :- s(X).`
+- Subject (S) on the RIGHT side
+- Predicate (P) on the LEFT side
+- Read as: "X is P if X is S"
+
+WRONG: `s(X) :- p(X).` ← This says "All P are S" (reversed!)
+
+
+# VALIDITY CHECK PATTERNS
+
+| Conclusion | Check | Succeeds when... |
+|------------|-------|------------------|
+| A: "All S are P" | `\+ (s(X), \+ p(X))` | No S exists that isn't P |
+| E: "No S is P" | `\+ (s(X), p(X))` | No S exists that is P |
+| I: "Some S are P" | `s(X), p(X)` | Found an S that is P |
+| O: "Some S are not P" | `s(X), \+ p(X)` | Found an S that isn't P |
+
+
+# COMMON LOGICAL FALLACIES (When to suspect INVALID)
+
+## Undistributed Middle
+"All A are B. All C are B. Therefore, [something about A and C]."
+- A and C both relate to B, but not necessarily to each other
+- Counterexample: A and C are DISJOINT subsets of B
+
+## Illicit Major/Minor
+Term distributed in conclusion but not in premises
+- Example: "All cats are mammals. No dogs are cats. No dogs are mammals." → INVALID
+
+## Affirmative from Two Negatives
+Two negative premises → affirmative conclusion = Always INVALID
+
+## Negative from Two Affirmatives  
+Two affirmative premises → negative conclusion = Always INVALID
+
+
+# COMPLETE EXAMPLES
+
+## Example 1: VALID (EIO-1 Ferio)
+"No reptile is a mammal. Some animals are reptiles. Some animals are not mammals."
+
+```prolog
+% Witness: an animal that IS a reptile
+animal(snake1).
+reptile(snake1).
+
+% mammal has NO facts, so we need fail clause
+mammal(_) :- fail.
+
+% E-premise constraint
+conflict :- reptile(X), mammal(X).
+
+% O-conclusion: Some animal is not a mammal
+valid_syllogism :- animal(X), \+ mammal(X).
+```
+Result: valid_syllogism SUCCEEDS → VALID
+
+
+## Example 2: INVALID (AAI-2 - Undistributed Middle)
+"All dogs are animals. All cats are animals. Some cats are dogs."
+
+```prolog
+% Counterexample: dog and cat are DIFFERENT entities
+dog(fido).
+cat(whiskers).
+% Note: fido is NOT a cat, whiskers is NOT a dog
+
+% Rules from A-premises
+animal(X) :- dog(X).
+animal(X) :- cat(X).
+
+% I-conclusion: Some cat is a dog
+valid_syllogism :- cat(X), dog(X).
+```
+Result: valid_syllogism FAILS (whiskers is not a dog) → INVALID
+
+
+## Example 3: INVALID (AAO-2)
+"All cars are vehicles. All bicycles are vehicles. Some bicycles are not cars."
+
+```prolog
+% Counterexample: the bicycle IS also a car
+bicycle(hybrid).
+car(hybrid).
+
+% Rules from A-premises
+vehicle(X) :- car(X).
+vehicle(X) :- bicycle(X).
+
+% O-conclusion: Some bicycle is not a car
+valid_syllogism :- bicycle(X), \+ car(X).
+```
+Result: valid_syllogism FAILS (hybrid IS a car) → INVALID
+
+
+## Example 4: VALID (AII-3 Datisi)
+"All cats are mammals. Some cats are pets. Some pets are mammals."
+
+```prolog
+% Witness: a cat that is ALSO a pet
+cat(fluffy).
+pet(fluffy).
+
+% Rule from A-premise
+mammal(X) :- cat(X).
+
+% I-conclusion: Some pet is a mammal
+valid_syllogism :- pet(X), mammal(X).
+```
+Result: valid_syllogism SUCCEEDS (fluffy is both) → VALID
+
+
+## Example 5: INVALID (AEE-1 - Illicit Major)
+"All cats are mammals. No dogs are cats. No dogs are mammals."
+
+```prolog
+% Counterexample: a dog that IS a mammal (not through being a cat)
+dog(rex).
+mammal(rex).
+cat(whiskers).
+
+% Rule from A-premise
+mammal(X) :- cat(X).
+
+% E-premise constraint
+conflict :- dog(X), cat(X).
+
+% E-conclusion: No dog is a mammal
+valid_syllogism :- \+ (dog(X), mammal(X)).
+```
+Result: valid_syllogism FAILS (rex IS both dog and mammal) → INVALID
+
+
+## Example 6: VALID (EAE-1 Celarent)
+"No reptile is a mammal. All snakes are reptiles. No snake is a mammal."
+
+```prolog
+% Witness
+snake(cobra).
+
+% mammal has NO facts in this model
+mammal(_) :- fail.
+
+% Rule from A-premise
+reptile(X) :- snake(X).
+
+% E-premise constraint
+conflict :- reptile(X), mammal(X).
+
+% E-conclusion: No snake is a mammal
+valid_syllogism :- \+ (snake(X), mammal(X)).
+```
+Result: valid_syllogism SUCCEEDS → VALID
+
+
+# ALGORITHM
+
+1. Parse syllogism into premises (P1, P2) and conclusion (C)
+2. Identify proposition types (A, E, I, O) for each
+3. Check for common fallacy patterns → suspect INVALID
+4. Decide strategy:
+   - If likely VALID: build minimal model, conclusion check should SUCCEED
+   - If likely INVALID: build COUNTEREXAMPLE, conclusion check should FAIL
+5. Encode premises as rules/facts
+6. Encode conclusion as validity check
+7. **SELF-CHECK: Does any predicate have BOTH facts AND a fail clause? If yes, REMOVE the fail clause!**
+
+
+# OUTPUT FORMAT
+
+```prolog
+% Facts (witnesses or counterexample entities)
+[facts grouped by predicate]
+
+% Fail clauses ONLY for predicates with NO facts and NO rules
+[pred(_) :- fail for completely empty predicates only]
+
+% Rules from premises
+[rules]
+
+% Validity check
+valid_syllogism :- [condition].
+```
+
+Output ONLY executable Prolog code. NO explanations, NO directives.
+
+================================================================================
+FINAL REMINDER: Never mix facts with fail clauses for the same predicate!
+================================================================================

@@ -1,0 +1,79 @@
+{
+  "id": "2c866578-204c-4f91-a6ef-faad0d188365",
+  "text": "There are some Ferraries that are things with wheels. Everything that is a Ferrari is a car. It follows that every car has wheels.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "ferrari",
+      "predicate": "thing with wheels",
+      "raw_text": "There are some Ferraries that are things with wheels"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "ferrari",
+      "predicate": "car",
+      "raw_text": "Everything that is a Ferrari is a car"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "thing with wheels",
+      "raw_text": "It follows that every car has wheels"
+    },
+    "middle_term": "ferrari",
+    "major_term": "thing with wheels",
+    "minor_term": "car",
+    "figure": 3,
+    "mood": "IAA",
+    "form": "IAA-3"
+  },
+  "validity_details": {
+    "form": "IAA-3",
+    "mood": "IAA",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit minor: 'car'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAA-3",
+    "vote_counts": {
+      "IAA-3": 3,
+      "IAA-2": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "IAA-3",
+      "IAA-2",
+      "IAA-3",
+      "IAA-3"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAA-3 (t=0.0)",
+      "IAA-2 (t=0.3)",
+      "IAA-3 (t=0.5)",
+      "IAA-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

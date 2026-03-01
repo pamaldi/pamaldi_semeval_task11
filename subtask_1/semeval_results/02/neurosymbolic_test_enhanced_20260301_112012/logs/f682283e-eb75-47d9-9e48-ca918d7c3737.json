@@ -1,0 +1,79 @@
+{
+  "id": "f682283e-eb75-47d9-9e48-ca918d7c3737",
+  "text": "No animal is a tree. All trees are plants without exception. A number of plants are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "tree",
+      "raw_text": "No animal is a tree"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "plant",
+      "raw_text": "All trees are plants without exception"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "A number of plants are animals"
+    },
+    "middle_term": "tree",
+    "major_term": "animal",
+    "minor_term": "plant",
+    "figure": 2,
+    "mood": "EAI",
+    "form": "EAI-2"
+  },
+  "validity_details": {
+    "form": "EAI-2",
+    "mood": "EAI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAI-2",
+    "vote_counts": {
+      "EAI-2": 3,
+      "EAI-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAI-2",
+      "EAI-2",
+      "EAI-2",
+      "EAI-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAI-2 (t=0.0)",
+      "EAI-2 (t=0.3)",
+      "EAI-2 (t=0.5)",
+      "EAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

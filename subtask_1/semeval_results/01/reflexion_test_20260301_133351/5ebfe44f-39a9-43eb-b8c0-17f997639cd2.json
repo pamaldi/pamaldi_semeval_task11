@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "5ebfe44f-39a9-43eb-b8c0-17f997639cd2",
+  "syllogism_text": "Every single tree has leaves. Any object that is an oak is a tree. Consequently, all oaks are objects that have leaves.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witnesses)\noak(western_white).\n\n% Rules from premises\ntree(X) :- oak(X).\nhas_leaves(X) :- tree(X).\n\n% Validity check: All oaks have leaves\nvalid_syllogism :- \\+ (oak(X), \\+ has_leaves(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:37:52.724877"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

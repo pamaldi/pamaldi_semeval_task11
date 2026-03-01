@@ -1,0 +1,79 @@
+{
+  "id": "b479b2a2-7e13-4c4d-9269-fad1e3fd5220",
+  "text": "The set of objects and spoons do not overlap. A portion of spoons are implements. Some implements are not objects.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "object",
+      "predicate": "spoon",
+      "raw_text": "The set of objects and spoons do not overlap."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "spoon",
+      "predicate": "implement",
+      "raw_text": "A portion of spoons are implements."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "implement",
+      "predicate": "object",
+      "raw_text": "Some implements are not objects."
+    },
+    "middle_term": "spoon",
+    "major_term": "object",
+    "minor_term": "implement",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 2,
+      "EIO-1": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EIO-2",
+      "EIO-1",
+      "EIO-1",
+      "EIO-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-1 (t=0.3)",
+      "EIO-1 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

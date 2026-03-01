@@ -1,0 +1,37 @@
+{
+  "id": "a2fcf47a-5df0-405d-86ce-ed8629f387a9",
+  "text": "Every single fruit is a food. Nothing that is a vegetable is a food. It follows from this that every vegetable is a fruit.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Every single fruit is a food. (All fruits are food)\n   - **Premise 2:** Nothing that is a vegetable is a food. (No vegetables are food)\n   - **Conclusion:** Every vegetable is a fruit. (All vegetables are fruits)\n\n2. **Identify the three terms:**\n   - **Middle term:** \"food\" (appears in both premises, not in conclusion)\n   - **Major term:** \"fruit\" (predicate of the conclusion)\n   - **Minor term:** \"vegetable\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All fruits are food\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"No vegetables are food\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"All vegetables are fruits\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (food is predicate)\n   - Premise 2: S-M (food is predicate)\n   - **Figure 2** (middle term is predicate of both premises)\n\n5. **Mood and figure:**\n   - **Mood:** A-E-A\n   - **Figure:** 2\n   - **Mood-figure combination:** **AE A** in Figure 2 \u2192 **Not a valid syllogism**\n\n6. **Check for fallacies:**\n   - **Two negative premises?** No \u2014 only one premise is negative.\n   - **Negative premise with affirmative conclusion?** Yes \u2014 this is **invalid**.\n   - **Undistributed middle?** The middle term \"food\" is distributed in Premise 2 (E statement), but not in Premise 1 (A statement). So it is **not undistributed in both**.\n   - **Illicit major/minor?** \n     - **Major term \"fruit\"** is distributed in the conclusion (A statement), but not in the major premise (Premise 1 is A, so \"fruit\" is distributed). \u2705\n     - **Minor term \"vegetable\"** is distributed in the conclusion (A statement), but also in the minor premise (Premise 2 is E, so \"vegetable\" is distributed). \u2705\n   - **Two particular premises?** No \u2014 both premises are universal.\n\n7. **Conclusion:**\n   - The syllogism has a **negative premise** and an **affirmative conclusion**, which is **invalid** in syllogistic logic.\n\n---\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

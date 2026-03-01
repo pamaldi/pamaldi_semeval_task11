@@ -1,0 +1,77 @@
+{
+  "id": "0b026bf4-126a-47df-b0de-b388bd27cfbf",
+  "text": "There exist some things which are fruits that are not apples. It is true that all fruits are foods. From this, it follows that there are some foods that are not apples.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "fruit",
+      "predicate": "apple",
+      "raw_text": "There exist some things which are fruits that are not apples"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "fruit",
+      "predicate": "food",
+      "raw_text": "It is true that all fruits are foods"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "food",
+      "predicate": "apple",
+      "raw_text": "From this, it follows that there are some foods that are not apples"
+    },
+    "middle_term": "fruit",
+    "major_term": "apple",
+    "minor_term": "food",
+    "figure": 3,
+    "mood": "OAO",
+    "form": "OAO-3"
+  },
+  "validity_details": {
+    "form": "OAO-3",
+    "mood": "OAO",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Bocardo",
+    "reason": "Valid syllogistic form: Bocardo"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "OAO-3",
+    "vote_counts": {
+      "OAO-3": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "OAO-3",
+      "OAO-3",
+      "OAO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAO-3 (t=0.0)",
+      "FAILED (t=0.3)",
+      "OAO-3 (t=0.5)",
+      "OAO-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

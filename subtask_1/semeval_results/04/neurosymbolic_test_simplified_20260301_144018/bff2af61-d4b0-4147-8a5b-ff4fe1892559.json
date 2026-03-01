@@ -1,0 +1,22 @@
+{
+  "id": "bff2af61-d4b0-4147-8a5b-ff4fe1892559",
+  "text": "There are no bikes that can be called cars. It is also true that every bike is a type of vehicle. This has led to the conclusion that a portion of vehicles are bikes.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Post-processing failed: ['No middle term found']",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": null,
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "Step-by-step analysis:\n\n1. **Identify the three statements:**\n   - Premise 1: *There are no bikes that can be called cars.* \u2192 \"No bikes are cars.\"\n   - Premise 2: *Every bike is a type of vehicle.* \u2192 \"All bikes are vehicles.\"\n   - Conclusion: *A portion of vehicles are bikes.* \u2192 \"Some vehicles are bikes.\"\n\n2. **Identify the three terms:**\n   - Middle term: *bikes* (appears in both premises)\n   - Major term: *vehicles* (predicate of conclusion)\n   - Minor term: *bikes* (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"No bikes are cars.\" \u2192 **E** (universal negative)\n   - Premise 2: \"All bikes are vehicles.\" \u2192 **A** (universal affirmative)\n   - Conclusion: \"Some vehicles are bikes.\" \u2192 **I** (particular affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (bikes-vehicles)\n   - Premise 2: M-S (bikes-cars)\n   - Figure: **Figure 3** (Middle term is subject of both premises)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **AEI**\n   - Figure: **3**\n   - Valid forms in Figure 3: IAI, AII, OAO, EIO\n   - **AEI** is **not** a valid form in Figure 3.\n\n6. **Check for fallacies:**\n   - The middle term (*bikes*) is distributed in Premise 1 (E statement), but not in Premise 2 (A statement). This is **not** a case of the \"undistributed middle\" fallacy because the middle term is distributed in at least one premise.\n   - The conclusion is particular affirmative (I), and the premises are E and A.\n   - However, the mood AEI in Figure 3 is **not valid**.\n\n**Conclusion:** The syllogism is **invalid**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

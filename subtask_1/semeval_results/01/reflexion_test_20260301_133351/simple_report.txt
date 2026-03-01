@@ -1,0 +1,20 @@
+================================================================================
+SIMPLE EXECUTION REPORT
+================================================================================
+
+Total Syllogisms Processed: 191
+
+Predictions:
+  VALID:   100
+  INVALID: 81
+  ERROR:   10
+
+Prolog Errors Breakdown:
+  Runtime Errors: 65
+  Syntax Errors:  0
+
+Ground Truth Plausibility:
+  Plausible:   95
+  Implausible: 96
+
+================================================================================

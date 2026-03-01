@@ -1,0 +1,47 @@
+{
+  "reflexion_mode": "label_free",
+  "summary": {
+    "total": 1,
+    "correct": 1,
+    "overall_accuracy": 100.0
+  },
+  "combinations": {
+    "valid_plausible": {
+      "label": "Valid + Plausible (VP)",
+      "total": 0,
+      "correct": 0,
+      "accuracy": 0.0,
+      "items": []
+    },
+    "valid_implausible": {
+      "label": "Valid + Implausible (VI)",
+      "total": 0,
+      "correct": 0,
+      "accuracy": 0.0,
+      "items": []
+    },
+    "invalid_plausible": {
+      "label": "Invalid + Plausible (IP)",
+      "total": 1,
+      "correct": 1,
+      "accuracy": 100.0,
+      "items": [
+        {
+          "id": "50146f21-d265-4e3a-8d93-8165cdbe89a3",
+          "ground_truth_validity": false,
+          "ground_truth_plausibility": true,
+          "predicted": "INVALID",
+          "correct": true,
+          "attempts": 1
+        }
+      ]
+    },
+    "invalid_implausible": {
+      "label": "Invalid + Implausible (II)",
+      "total": 0,
+      "correct": 0,
+      "accuracy": 0.0,
+      "items": []
+    }
+  }
+}

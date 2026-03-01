@@ -1,0 +1,78 @@
+{
+  "id": "414a3052-c533-4951-93ee-fdc29d633b0a",
+  "text": "There are some animals that are mammals. There are no mammals that are birds. Thus, it can be said that some birds are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "mammal",
+      "raw_text": "There are some animals that are mammals"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "bird",
+      "raw_text": "There are no mammals that are birds"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "animal",
+      "raw_text": "Thus, it can be said that some birds are animals"
+    },
+    "middle_term": "mammal",
+    "major_term": "animal",
+    "minor_term": "bird",
+    "figure": 4,
+    "mood": "IEI",
+    "form": "IEI-4"
+  },
+  "validity_details": {
+    "form": "IEI-4",
+    "mood": "IEI",
+    "figure": 4,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IEI-4",
+    "vote_counts": {
+      "IEI-4": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IEI-4",
+      "IEI-4",
+      "IEI-4",
+      "IEI-4"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IEI-4 (t=0.0)",
+      "IEI-4 (t=0.3)",
+      "IEI-4 (t=0.5)",
+      "IEI-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

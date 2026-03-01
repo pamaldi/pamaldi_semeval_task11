@@ -1,0 +1,76 @@
+{
+  "id": "60609ba7-37db-446f-a53c-e41568217236",
+  "text": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "cloud",
+      "predicate": "white",
+      "raw_text": "It is the case that some clouds are white"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "sheep",
+      "predicate": "white",
+      "raw_text": "There are some sheep that are also white"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "sheep",
+      "predicate": "cloud",
+      "raw_text": "This implies that all sheep are clouds"
+    },
+    "middle_term": "white",
+    "major_term": "cloud",
+    "minor_term": "sheep",
+    "figure": 2,
+    "mood": "IIA",
+    "form": "IIA-2"
+  },
+  "validity_details": {
+    "form": "IIA-2",
+    "mood": "IIA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Undistributed middle term; Illicit minor: 'sheep'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "IIA-2",
+    "vote_counts": {
+      "IIA-2": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "IIA-2",
+      "IIA-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "IIA-2 (t=0.5)",
+      "IIA-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

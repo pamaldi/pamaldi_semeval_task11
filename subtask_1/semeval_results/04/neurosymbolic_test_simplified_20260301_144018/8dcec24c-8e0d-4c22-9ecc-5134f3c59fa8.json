@@ -1,0 +1,68 @@
+{
+  "id": "8dcec24c-8e0d-4c22-9ecc-5134f3c59fa8",
+  "text": "There are no plants that are animals. Every single oak tree is a plant. It is therefore the case that all oak trees are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "There are no plants that are animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "oak tree",
+      "predicate": "plant",
+      "raw_text": "Every single oak tree is a plant"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "oak tree",
+      "predicate": "animal",
+      "raw_text": "It is therefore the case that all oak trees are animals"
+    },
+    "middle_term": "plant",
+    "major_term": "animal",
+    "minor_term": "oak tree",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-1",
+    "figure": 1,
+    "mood": "EAA",
+    "reason": "EAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "oak tree",
+      "P": "animal",
+      "M": "plant"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

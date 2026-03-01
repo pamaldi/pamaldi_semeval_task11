@@ -1,0 +1,70 @@
+{
+  "id": "1d4bc4d0-df5b-4f46-9972-dd906f3c3754",
+  "text": "There are no fish that do not live on the moon. It is the case that no cat is a fish. At least some cats live on the moon.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "thing that lives on the moon",
+      "raw_text": "There are no fish that do not live on the moon"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "fish",
+      "raw_text": "It is the case that no cat is a fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cat",
+      "predicate": "thing that lives on the moon",
+      "raw_text": "At least some cats live on the moon"
+    },
+    "middle_term": "fish",
+    "major_term": "thing that lives on the moon",
+    "minor_term": "cat",
+    "figure": 1,
+    "mood": "EEI",
+    "form": "EEI-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EEI-1",
+    "figure": 1,
+    "mood": "EEI",
+    "reason": "EEI-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "cat",
+      "P": "thing that lives on the moon",
+      "M": "fish"
+    },
+    "postprocessor_corrections": [
+      "Form corrected: EEI- \u2192 EEI-1"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEI": 3
+    },
+    "types_seen": [
+      "AEI",
+      "AEI",
+      "AEI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

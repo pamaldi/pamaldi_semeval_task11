@@ -1,0 +1,68 @@
+{
+  "id": "6a190af4-111a-4b3e-94bc-4a2efa1d8b8d",
+  "text": "Every single four-sided-shape is a rectangle. All four-sided-shapes are squares. It follows from this that some squares are not rectangles.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "four-sided-shape",
+      "predicate": "rectangle",
+      "raw_text": "Every single four-sided-shape is a rectangle"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "four-sided-shape",
+      "predicate": "square",
+      "raw_text": "All four-sided-shapes are squares"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "square",
+      "predicate": "rectangle",
+      "raw_text": "It follows from this that some squares are not rectangles"
+    },
+    "middle_term": "four-sided-shape",
+    "major_term": "rectangle",
+    "minor_term": "square",
+    "figure": 3,
+    "mood": "AAO",
+    "form": "AAO-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-3",
+    "figure": 3,
+    "mood": "AAO",
+    "reason": "AAO-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "square",
+      "P": "rectangle",
+      "M": "four-sided-shape"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

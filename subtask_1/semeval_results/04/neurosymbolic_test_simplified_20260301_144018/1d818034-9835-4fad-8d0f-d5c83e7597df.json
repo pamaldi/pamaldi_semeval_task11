@@ -1,0 +1,68 @@
+{
+  "id": "1d818034-9835-4fad-8d0f-d5c83e7597df",
+  "text": "There are no compounds classified as organic that are made of metal. Every substance that is a sugar is an organic compound. This logically proves that no sugar is made of metal.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "organic compound",
+      "predicate": "compound made of metal",
+      "raw_text": "There are no compounds classified as organic that are made of metal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "sugar",
+      "predicate": "organic compound",
+      "raw_text": "Every substance that is a sugar is an organic compound"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "sugar",
+      "predicate": "compound made of metal",
+      "raw_text": "This logically proves that no sugar is made of metal"
+    },
+    "middle_term": "organic compound",
+    "major_term": "compound made of metal",
+    "minor_term": "sugar",
+    "figure": 1,
+    "mood": "EAE",
+    "form": "EAE-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAE-1",
+    "figure": 1,
+    "mood": "EAE",
+    "reason": "EAE-1 is valid (Celarent)",
+    "form_name": "Celarent",
+    "terms": {
+      "S": "sugar",
+      "P": "compound made of metal",
+      "M": "organic compound"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

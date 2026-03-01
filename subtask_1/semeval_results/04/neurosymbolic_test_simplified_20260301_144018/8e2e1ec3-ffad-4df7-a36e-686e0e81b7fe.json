@@ -1,0 +1,68 @@
+{
+  "id": "8e2e1ec3-ffad-4df7-a36e-686e0e81b7fe",
+  "text": "Some individuals who have degrees are people who work in schools. Some person who works in a school is a teacher. As a result, some teachers are individuals with degrees.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "individual with a degree",
+      "predicate": "person who works in a school",
+      "raw_text": "Some individuals who have degrees are people who work in schools"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "person who works in a school",
+      "predicate": "teacher",
+      "raw_text": "Some person who works in a school is a teacher"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "teacher",
+      "predicate": "individual with a degree",
+      "raw_text": "As a result, some teachers are individuals with degrees"
+    },
+    "middle_term": "person who works in a school",
+    "major_term": "individual with a degree",
+    "minor_term": "teacher",
+    "figure": 4,
+    "mood": "III",
+    "form": "III-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "III-4",
+    "figure": 4,
+    "mood": "III",
+    "reason": "III-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "teacher",
+      "P": "individual with a degree",
+      "M": "person who works in a school"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "III": 3
+    },
+    "types_seen": [
+      "III",
+      "III",
+      "III"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,59 @@
+================================================================================
+TRUE REFLEXION EXECUTION SUMMARY
+(with LLM-generated reflections and persistent memory)
+================================================================================
+
+Reflexion Mode: label_free
+Total Syllogisms: 191
+With Ground Truth: 191
+Successful: 169 (88.5%)
+First Attempt Success: 110 (57.6%)
+Fixed by Reflexion: 59
+
+================================================================================
+REFLECTION METRICS
+================================================================================
+Total Reflections Generated: 115
+Avg Reflections per Success (with retries): 1.2
+Avg Reflection Length: 603 chars
+
+Attempts Distribution:
+  1 attempt(s): 110
+  2 attempt(s): 47
+  3 attempt(s): 34
+
+================================================================================
+SAMPLE GENERATED REFLECTIONS
+================================================================================
+
+[bff2af61-d4b0-4147-8a5b-ff4fe1892559]
+  • Attempt 1: # Analysis of the Syllogism and Code
+
+## STEP 1: Re-analyzing the Syllogism Structure
+
+Premises:
+1. "There are no bikes that can be called cars" - This is an **E-type** premise (No S is P):...
+
+[f36a4ca3-3b69-4869-a152-deaa7e0fdad4]
+  • Attempt 1: ### 1. What undefined predicate or logical error caused the runtime failure?
+
+The runtime failure was caused by two **undefined predicates** and a **misuse of the negation operator**.
+
+####...
+
+[a2fcf47a-5df0-405d-86ce-ed8629f387a9]
+  • Attempt 1: ### Analysis of the Failed Syllogism Attempt
+
+---
+
+#### **1. What undefined predicate or logical error caused the runtime failure?**
+
+The runtime failure is due to the **undefined predicate...
+  • Attempt 2: # Analysis of the Syllogism and Prolog Code
+
+## STEP 1: Syllogism Structure Analysis
+
+Premises:
+1. "Every single fruit is a food" - This is an A-type (All S are P) proposition where S = fru...
+
+================================================================================

@@ -1,0 +1,77 @@
+{
+  "id": "f36a4ca3-3b69-4869-a152-deaa7e0fdad4",
+  "text": "There exist some objects that are books which are not digital files. Every single book is an item with pages. Consequently, some items with pages are digital files.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "book",
+      "predicate": "digital file",
+      "raw_text": "There exist some objects that are books which are not digital files"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "item with pages",
+      "raw_text": "Every single book is an item with pages"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "item with pages",
+      "predicate": "digital file",
+      "raw_text": "Consequently, some items with pages are digital files"
+    },
+    "middle_term": "book",
+    "major_term": "digital file",
+    "minor_term": "item with pages",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "form": "OAI-3",
+    "mood": "OAI",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "OAI-3",
+    "vote_counts": {
+      "OAI-3": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "OAI-3",
+      "OAI-3",
+      "OAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAI-3 (t=0.0)",
+      "OAI-3 (t=0.3)",
+      "FAILED (t=0.5)",
+      "OAI-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

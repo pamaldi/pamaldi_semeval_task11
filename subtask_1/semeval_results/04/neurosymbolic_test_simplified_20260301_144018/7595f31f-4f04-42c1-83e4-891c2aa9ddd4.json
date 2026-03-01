@@ -1,0 +1,70 @@
+{
+  "id": "7595f31f-4f04-42c1-83e4-891c2aa9ddd4",
+  "text": "It is not true that all vegetables are green. All vegetables are, without exception, plants. As a result, it is suggested that some plants are green.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "vegetable",
+      "predicate": "green",
+      "raw_text": "It is not true that all vegetables are green"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "vegetable",
+      "predicate": "plant",
+      "raw_text": "All vegetables are, without exception, plants"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "plant",
+      "predicate": "green",
+      "raw_text": "As a result, it is suggested that some plants are green"
+    },
+    "middle_term": "vegetable",
+    "major_term": "green",
+    "minor_term": "plant",
+    "figure": 3,
+    "mood": "EAI",
+    "form": "EAI-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAI-3",
+    "figure": 3,
+    "mood": "EAI",
+    "reason": "EAI-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "plant",
+      "P": "green",
+      "M": "vegetable"
+    },
+    "postprocessor_corrections": [
+      "Form corrected: EAI- \u2192 EAI-3"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OAI": 3
+    },
+    "types_seen": [
+      "OAI",
+      "OAI",
+      "OAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "7871929a-81a2-40c8-b515-2af727c44b13",
+  "text": "Every single fish lives in water. Any fish is an animal. This means that all animals live in water.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "creature that lives in water",
+      "raw_text": "Every single fish lives in water"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "animal",
+      "raw_text": "Any fish is an animal"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "creature that lives in water",
+      "raw_text": "This means that all animals live in water"
+    },
+    "middle_term": "fish",
+    "major_term": "creature that lives in water",
+    "minor_term": "animal",
+    "figure": 3,
+    "mood": "AAA",
+    "form": "AAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAA-3",
+    "figure": 3,
+    "mood": "AAA",
+    "reason": "AAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "animal",
+      "P": "creature that lives in water",
+      "M": "fish"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAA": 3
+    },
+    "types_seen": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

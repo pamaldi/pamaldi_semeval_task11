@@ -1,0 +1,37 @@
+{
+  "id": "6936ce4a-9e83-488a-947d-66bb574f1789",
+  "text": "It is true that no person who is North American is a European. It is also true that no person who is French is a North American. It is a logical necessity that no French person is a European.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** No person who is North American is a European. (E: No S is P)\n   - **Premise 2:** No person who is French is a North American. (E: No S is P)\n   - **Conclusion:** No French person is a European. (E: No S is P)\n\n2. **Identify the three terms:**\n   - **Middle term:** North American (appears in both premises, not in conclusion)\n   - **Major term:** European (predicate of conclusion)\n   - **Minor term:** French (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** E (No S is P)\n   - **Premise 2:** E (No S is P)\n   - **Conclusion:** E (No S is P)\n\n4. **Determine the figure:**\n   - Premise 1: North American (M) - European (P)\n   - Premise 2: French (S) - North American (M)\n   - This is **Figure 2** (P-M, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: EEE\n   - Figure: 2\n   - The valid moods for Figure 2 are: EAE, AEE, EIO, AOO\n   - **EEE is not a valid syllogism form.**\n\n6. **Check for fallacies:**\n   - **Two negative premises:** Both premises are E (universal negative), and a valid conclusion cannot be drawn from two negative premises.\n\n### Final determination:\nThe syllogism is **INVALID**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

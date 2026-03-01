@@ -1,0 +1,78 @@
+{
+  "id": "03cc2c62-68d9-4f7e-98ea-f3fae01cb2c1",
+  "text": "Every fish is a swimmer. There are a number of birds that are swimmers. It follows from this that there are some birds that are fish.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "swimmer",
+      "raw_text": "Every fish is a swimmer"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "swimmer",
+      "raw_text": "There are a number of birds that are swimmers"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "fish",
+      "raw_text": "It follows from this that there are some birds that are fish"
+    },
+    "middle_term": "swimmer",
+    "major_term": "fish",
+    "minor_term": "bird",
+    "figure": 2,
+    "mood": "AII",
+    "form": "AII-2"
+  },
+  "validity_details": {
+    "form": "AII-2",
+    "mood": "AII",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-2",
+    "vote_counts": {
+      "AII-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AII-2",
+      "AII-2",
+      "AII-2",
+      "AII-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-2 (t=0.0)",
+      "AII-2 (t=0.3)",
+      "AII-2 (t=0.5)",
+      "AII-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

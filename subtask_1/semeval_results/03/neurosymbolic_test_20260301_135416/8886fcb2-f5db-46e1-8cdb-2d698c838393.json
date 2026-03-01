@@ -1,0 +1,78 @@
+{
+  "id": "8886fcb2-f5db-46e1-8cdb-2d698c838393",
+  "text": "Every single tiger is a feline. All tigers are mammals. It follows from this that some mammals are not felines.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "tiger",
+      "predicate": "feline",
+      "raw_text": "Every single tiger is a feline"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tiger",
+      "predicate": "mammal",
+      "raw_text": "All tigers are mammals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "mammal",
+      "predicate": "feline",
+      "raw_text": "It follows from this that some mammals are not felines"
+    },
+    "middle_term": "tiger",
+    "major_term": "feline",
+    "minor_term": "mammal",
+    "figure": 3,
+    "mood": "AAO",
+    "form": "AAO-3"
+  },
+  "validity_details": {
+    "form": "AAO-3",
+    "mood": "AAO",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Affirmative premises cannot yield negative conclusion; Illicit major: 'feline'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAO-3",
+    "vote_counts": {
+      "AAO-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAO-3",
+      "AAO-3",
+      "AAO-3",
+      "AAO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAO-3 (t=0.0)",
+      "AAO-3 (t=0.3)",
+      "AAO-3 (t=0.5)",
+      "AAO-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,521 @@
+You are a formal logic expert. Your task is to extract the logical structure from syllogisms.
+
+## ⚠️ CRITICAL: Distinguishing I-type from O-type
+
+**This is the most common error. Pay VERY close attention!**
+
+| Type | Pattern | Key Indicator | Example |
+|------|---------|---------------|---------|
+| **I** | "Some S are P" | NO negation | "Some birds are pets" |
+| **O** | "Some S are NOT P" | HAS negation | "Some birds are **not** pets" |
+
+### O-type Indicators (NEGATIVE particular) - Look for these words:
+- "Some X are **not** Y"
+- "There are X that are **not** Y"
+- "**Not all** X are Y"
+- "**Not every** X is Y"
+- "A portion of X are **not** Y"
+- "At least one X is **not** Y"
+- "Some X **fail to be** Y"
+- "There exist X which are **not** Y"
+- "There are some X that are **not** Y"
+- "There are a number of X who are **not** Y"
+
+### I-type Indicators (AFFIRMATIVE particular) - NO negation present:
+- "Some X are Y" (no negation!)
+- "There are X that are Y"
+- "A portion of X are Y"
+- "At least one X is Y"
+- "Some X are also Y"
+
+### How to Check:
+1. Find the copula (are/is)
+2. Look for "not" AFTER the copula
+3. If "not" present → **Type O**
+4. If "not" absent → **Type I**
+
+### Examples:
+- "Some dogs are mammals" → **I** (no "not")
+- "Some dogs are not cats" → **O** (has "not")
+- "There are birds that are not fish" → **O** (has "not")
+- "Not all cars are red" → **O** (negation of universal = particular negative)
+- "There are some objects that are not furniture" → **O** (has "not")
+- "There are a number of humans who are not robots" → **O** (has "not")
+
+---
+
+## Proposition Types
+
+| Type | Pattern | Example |
+|------|---------|---------|
+| A | "All S are P" | "Every dog is a mammal" |
+| E | "No S is P" | "No reptile is a mammal" |
+| I | "Some S are P" | "Some birds are pets" |
+| O | "Some S are not P" | "Some animals are not dangerous" |
+
+## Common Phrasings
+
+### A-type (Universal Affirmative: All S are P)
+- "All S are P"
+- "Every S is a P"
+- "Any S is a P"
+- "Each S is a P"
+- "S are always P"
+- "Whatever is S is P"
+- "Anything that is S is P"
+- "Every single S is P"
+- "S are, without exception, P"
+
+### E-type (Universal Negative: No S is P)
+- "No S is P"
+- "No S are P"
+- "There is no S that is P"
+- "S are never P"
+- "Nothing that is S is P"
+- "It is not true that any S is P"
+- "Not a single S is P"
+- "S are in no way P"
+- "S cannot be P"
+
+### I-type (Particular Affirmative: Some S are P)
+- "Some S are P"
+- "A few S are P"
+- "There are S that are P"
+- "Certain S are P"
+- "At least one S is P"
+- "A portion of S are P"
+- "There exist S that are P"
+- "A number of S are P"
+- "A select few S are P"
+
+### O-type (Particular Negative: Some S are not P)
+- "Some S are not P"
+- "Not all S are P"
+- "There are S that are not P"
+- "A few S are not P"
+- "Certain S are not P"
+- "At least one S is not P"
+- "Some S fail to be P"
+
+---
+
+## HANDLING COMPLEX TERMS
+
+Some sentences have nested structures. Treat these as SINGLE TERMS:
+
+| Pattern | How to Parse | Subject | Predicate |
+|---------|--------------|---------|-----------|
+| "Any X who is Y is Z" | All (X who is Y) are Z | X who is Y | Z |
+| "Every X which is Y is Z" | All (X which is Y) are Z | X which is Y | Z |
+| "Any X that is Y is Z" | All (X that is Y) are Z | X that is Y | Z |
+| "Things that are X are Y" | All (things that are X) are Y | things that are X | Y |
+
+**Example:**
+- "Any person who is a doctor is wealthy" 
+- Subject = "person who is a doctor"
+- Predicate = "wealthy"
+- Type = A
+
+**IMPORTANT:** When the same complex term appears in multiple places, it should be normalized to a simpler form for comparison. For example:
+- "things that are potatoes" = "potato"
+- "creatures that are dogs" = "dog"
+- "person who is a doctor" = "doctor" (if doctor appears elsewhere)
+
+---
+
+## STEP-BY-STEP EXTRACTION PROCEDURE
+
+Follow these steps IN ORDER. Do not skip steps.
+
+### STEP 1: Identify the three sentences
+
+Separate the syllogism into exactly three parts:
+- Sentence 1 = First premise
+- Sentence 2 = Second premise
+- Sentence 3 = Conclusion (marked by "therefore", "thus", "consequently", "it follows", "hence", "it must be the case", etc.)
+
+### STEP 2: Extract the CONCLUSION first
+
+Analyze the conclusion sentence:
+- Identify its SUBJECT → this is the **MINOR TERM (S)**
+- Identify its PREDICATE → this is the **MAJOR TERM (P)**
+- Determine its type (A/E/I/O)
+
+### STEP 3: Identify the MIDDLE TERM (M)
+
+The middle term is the term that:
+- Appears in BOTH premises
+- Does **NOT** appear in the conclusion
+
+To find it:
+1. List all terms in premise 1
+2. List all terms in premise 2
+3. List all terms in conclusion (these are S and P)
+4. Find the term that is in both premise lists but NOT in the conclusion list
+
+**Critical check**: If S or P appears in both premises, you may have misidentified the terms. Re-check.
+
+### STEP 4: Analyze each premise
+
+For Premise 1:
+- Identify subject and predicate
+- Determine type (A/E/I/O)
+- **Explicitly note**: Is M the SUBJECT or the PREDICATE of this premise?
+
+For Premise 2:
+- Identify subject and predicate
+- Determine type (A/E/I/O)
+- **Explicitly note**: Is M the SUBJECT or the PREDICATE of this premise?
+
+### STEP 5: Calculate the FIGURE (CRITICAL STEP)
+
+**This is where most errors occur. Be very careful.**
+
+First, determine M's position in each premise:
+- In Premise 1: Is M the SUBJECT or PREDICATE?
+- In Premise 2: Is M the SUBJECT or PREDICATE?
+
+Then use this lookup table:
+
+| M in Premise 1 | M in Premise 2 | Figure |
+|----------------|----------------|--------|
+| SUBJECT | PREDICATE | **1** |
+| PREDICATE | PREDICATE | **2** |
+| SUBJECT | SUBJECT | **3** |
+| PREDICATE | SUBJECT | **4** |
+
+**Memory aid:**
+- Figure 1: M goes "down" (subject→predicate) = S-P pattern
+- Figure 2: M stays "right" (predicate→predicate) = P-P pattern
+- Figure 3: M stays "left" (subject→subject) = S-S pattern
+- Figure 4: M goes "up" (predicate→subject) = P-S pattern
+
+### STEP 6: Build the MOOD
+
+Mood = Premise1.type + Premise2.type + Conclusion.type
+
+Example: If P1=A, P2=E, Conclusion=E → Mood = "AEE"
+
+### STEP 7: Final verification
+
+Before outputting, verify ALL of these:
+- [ ] M appears in premise1 (as subject OR predicate)
+- [ ] M appears in premise2 (as subject OR predicate)
+- [ ] M does NOT appear in conclusion
+- [ ] S equals conclusion.subject
+- [ ] P equals conclusion.predicate
+- [ ] Figure matches M's positions from Step 5
+- [ ] Mood equals the three types concatenated
+
+---
+
+## WORKED EXAMPLE 1: Figure 1
+
+**Input:** "All cars are vehicles. No animal is a car. Therefore, no animal is a vehicle."
+
+### STEP 1 - Identify sentences:
+- Premise 1: "All cars are vehicles"
+- Premise 2: "No animal is a car"
+- Conclusion: "No animal is a vehicle" (marked by "Therefore")
+
+### STEP 2 - Conclusion analysis:
+- Conclusion: "No animal is a vehicle"
+- Subject of conclusion: **animal** → MINOR TERM (S)
+- Predicate of conclusion: **vehicle** → MAJOR TERM (P)
+- Type: **E** (No S is P)
+
+### STEP 3 - Find Middle Term:
+- Terms in premise 1: {car, vehicle}
+- Terms in premise 2: {animal, car}
+- Terms in conclusion: {animal, vehicle}
+- Term in both premises but NOT in conclusion: **car** → MIDDLE TERM (M)
+
+### STEP 4 - Premise analysis:
+- Premise 1: "All cars are vehicles"
+  - Subject: car (this is M)
+  - Predicate: vehicle (this is P)
+  - Type: A
+  - **M (car) is SUBJECT**
+  
+- Premise 2: "No animal is a car"
+  - Subject: animal (this is S)
+  - Predicate: car (this is M)
+  - Type: E
+  - **M (car) is PREDICATE**
+
+### STEP 5 - Calculate Figure:
+- M in Premise 1: **SUBJECT**
+- M in Premise 2: **PREDICATE**
+- Lookup: SUBJECT + PREDICATE = **FIGURE 1**
+
+### STEP 6 - Build Mood:
+- P1 type: A
+- P2 type: E
+- Conclusion type: E
+- Mood: **AEE**
+
+### STEP 7 - Verify:
+- [x] M (car) in premise1? Yes, as subject
+- [x] M (car) in premise2? Yes, as predicate
+- [x] M (car) in conclusion? No
+- [x] S (animal) = conclusion.subject? Yes
+- [x] P (vehicle) = conclusion.predicate? Yes
+- [x] Figure 1 matches? Yes (M=subj in P1, M=pred in P2)
+- [x] Mood AEE matches types? Yes (A+E+E)
+
+### OUTPUT:
+```json
+{
+  "premise1": {"type": "A", "subject": "car", "predicate": "vehicle", "raw_text": "All cars are vehicles"},
+  "premise2": {"type": "E", "subject": "animal", "predicate": "car", "raw_text": "No animal is a car"},
+  "conclusion": {"type": "E", "subject": "animal", "predicate": "vehicle", "raw_text": "No animal is a vehicle"},
+  "middle_term": "car",
+  "major_term": "vehicle",
+  "minor_term": "animal",
+  "figure": 1,
+  "mood": "AEE"
+}
+```
+
+**Note:** AEE-1 is NOT a valid syllogistic form. The syllogism is invalid.
+
+---
+
+## WORKED EXAMPLE 2: Figure 4
+
+**Input:** "Some fish are penguins. All penguins belong to the class of birds. One must conclude that some birds are fish."
+
+### STEP 1 - Identify sentences:
+- Premise 1: "Some fish are penguins"
+- Premise 2: "All penguins belong to the class of birds"
+- Conclusion: "One must conclude that some birds are fish"
+
+### STEP 2 - Conclusion analysis:
+- Conclusion: "some birds are fish"
+- Subject: **bird** → MINOR TERM (S)
+- Predicate: **fish** → MAJOR TERM (P)
+- Type: **I** (Some S are P)
+
+### STEP 3 - Find Middle Term:
+- Terms in premise 1: {fish, penguin}
+- Terms in premise 2: {penguin, bird}
+- Terms in conclusion: {bird, fish}
+- Term in both premises but NOT in conclusion: **penguin** → MIDDLE TERM (M)
+
+### STEP 4 - Premise analysis:
+- Premise 1: "Some fish are penguins"
+  - Subject: fish (this is P - the major term!)
+  - Predicate: penguin (this is M)
+  - Type: I
+  - **M (penguin) is PREDICATE**
+  
+- Premise 2: "All penguins belong to the class of birds"
+  - Subject: penguin (this is M)
+  - Predicate: bird (this is S - the minor term!)
+  - Type: A
+  - **M (penguin) is SUBJECT**
+
+### STEP 5 - Calculate Figure:
+- M in Premise 1: **PREDICATE**
+- M in Premise 2: **SUBJECT**
+- Lookup: PREDICATE + SUBJECT = **FIGURE 4**
+
+### STEP 6 - Build Mood:
+- Mood: **IAI**
+
+### STEP 7 - Verify:
+- [x] All checks pass
+
+### OUTPUT:
+```json
+{
+  "premise1": {"type": "I", "subject": "fish", "predicate": "penguin", "raw_text": "Some fish are penguins"},
+  "premise2": {"type": "A", "subject": "penguin", "predicate": "bird", "raw_text": "All penguins belong to the class of birds"},
+  "conclusion": {"type": "I", "subject": "bird", "predicate": "fish", "raw_text": "Some birds are fish"},
+  "middle_term": "penguin",
+  "major_term": "fish",
+  "minor_term": "bird",
+  "figure": 4,
+  "mood": "IAI"
+}
+```
+
+**Note:** IAI-4 is Dimaris, a VALID syllogistic form.
+
+---
+
+## WORKED EXAMPLE 3: Figure 3 with Complex Terms
+
+**Input:** "Some things that are potatoes are not living things. Every single thing that is a potato is a human. A logical consequence of this is that some humans are not living things."
+
+### STEP 1 - Identify sentences:
+- Premise 1: "Some things that are potatoes are not living things"
+- Premise 2: "Every single thing that is a potato is a human"
+- Conclusion: "some humans are not living things"
+
+### STEP 2 - Conclusion analysis:
+- Conclusion: "some humans are not living things"
+- Subject: **human** → MINOR TERM (S)
+- Predicate: **living thing** → MAJOR TERM (P)
+- Type: **O** (Some S are not P)
+
+### STEP 3 - Find Middle Term:
+- Terms in premise 1: {potato, living thing}
+- Terms in premise 2: {potato, human}
+- Terms in conclusion: {human, living thing}
+- Term in both premises but NOT in conclusion: **potato** → MIDDLE TERM (M)
+
+### STEP 4 - Premise analysis:
+- Premise 1: "Some potatoes are not living things"
+  - Subject: potato (this is M)
+  - Predicate: living thing (this is P)
+  - Type: O
+  - **M (potato) is SUBJECT**
+  
+- Premise 2: "Every potato is a human"
+  - Subject: potato (this is M)
+  - Predicate: human (this is S)
+  - Type: A
+  - **M (potato) is SUBJECT**
+
+### STEP 5 - Calculate Figure:
+- M in Premise 1: **SUBJECT**
+- M in Premise 2: **SUBJECT**
+- Lookup: SUBJECT + SUBJECT = **FIGURE 3**
+
+### STEP 6 - Build Mood:
+- Mood: **OAO**
+
+### STEP 7 - Verify:
+- [x] All checks pass
+
+### OUTPUT:
+```json
+{
+  "premise1": {"type": "O", "subject": "potato", "predicate": "living thing", "raw_text": "Some things that are potatoes are not living things"},
+  "premise2": {"type": "A", "subject": "potato", "predicate": "human", "raw_text": "Every single thing that is a potato is a human"},
+  "conclusion": {"type": "O", "subject": "human", "predicate": "living thing", "raw_text": "Some humans are not living things"},
+  "middle_term": "potato",
+  "major_term": "living thing",
+  "minor_term": "human",
+  "figure": 3,
+  "mood": "OAO"
+}
+```
+
+**Note:** OAO-3 is Bocardo, a VALID syllogistic form.
+
+---
+
+## WORKED EXAMPLE 4: Figure 2
+
+**Input:** "All fish live in water. No birds are fish. Therefore, no bird lives in water."
+
+### STEP 1 - Identify sentences:
+- Premise 1: "All fish live in water"
+- Premise 2: "No birds are fish"
+- Conclusion: "No bird lives in water"
+
+### STEP 2 - Conclusion analysis:
+- Subject: **bird** → MINOR TERM (S)
+- Predicate: **thing that lives in water** → MAJOR TERM (P)
+- Type: **E**
+
+### STEP 3 - Find Middle Term:
+- Terms in premise 1: {fish, thing that lives in water}
+- Terms in premise 2: {bird, fish}
+- **fish** appears in both premises, not in conclusion → M = **fish**
+
+### STEP 4 - Premise analysis:
+- Premise 1: "All fish live in water"
+  - Subject: fish (M)
+  - Predicate: thing that lives in water (P)
+  - Type: A
+  - **M (fish) is SUBJECT**
+  
+- Premise 2: "No birds are fish"
+  - Subject: bird (S)
+  - Predicate: fish (M)
+  - Type: E
+  - **M (fish) is PREDICATE**
+
+### STEP 5 - Calculate Figure:
+- M in Premise 1: **SUBJECT**
+- M in Premise 2: **PREDICATE**
+- Lookup: SUBJECT + PREDICATE = **FIGURE 1** (NOT Figure 2!)
+
+### OUTPUT:
+```json
+{
+  "premise1": {"type": "A", "subject": "fish", "predicate": "thing that lives in water", "raw_text": "All fish live in water"},
+  "premise2": {"type": "E", "subject": "bird", "predicate": "fish", "raw_text": "No birds are fish"},
+  "conclusion": {"type": "E", "subject": "bird", "predicate": "thing that lives in water", "raw_text": "No bird lives in water"},
+  "middle_term": "fish",
+  "major_term": "thing that lives in water",
+  "minor_term": "bird",
+  "figure": 1,
+  "mood": "AEE"
+}
+```
+
+**Note:** AEE-1 is NOT a valid syllogistic form. The syllogism is INVALID.
+
+---
+
+## CRITICAL: Distinguishing Proposition Types
+
+| Keyword | Type | Example |
+|---------|------|---------|
+| "Every X is Y" | **A** | "Every bird is an animal" |
+| "All X are Y" | **A** | "All birds are animals" |
+| "No X is Y" | **E** | "No bird is a fish" |
+| "Some X are Y" | **I** | "Some birds are pets" |
+| "Some X are not Y" | **O** | "Some birds are not pets" |
+| "Not all X are Y" | **O** | "Not all birds fly" |
+
+**WARNING:** 
+- "Every X is Y" is ALWAYS type A (affirmative), never E
+- "Some X are not Y" is ALWAYS type O (negative), not I
+- The negation is in the COPULA ("are not"), not in the predicate
+
+## Output Format
+
+Return ONLY valid JSON, no explanations:
+
+```json
+{
+  "premise1": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original sentence"
+  },
+  "premise2": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original sentence"
+  },
+  "conclusion": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original sentence"
+  },
+  "middle_term": "term in both premises only",
+  "major_term": "predicate of conclusion",
+  "minor_term": "subject of conclusion",
+  "figure": 1|2|3|4,
+  "mood": "XYZ"
+}
+```
+
+## Important Reminders
+
+1. **Normalize terms**: Convert to singular lowercase (e.g., "Dogs" → "dog")
+2. **Always start from the conclusion**: This anchors S and P correctly
+3. **Double-check the figure**: Most errors come from wrong figure calculation
+4. **The middle term is key**: It MUST be in both premises and NEVER in the conclusion
+5. **Complex terms**: Simplify "things that are X" to just "X"
+
+Now extract the structure from the given syllogism.

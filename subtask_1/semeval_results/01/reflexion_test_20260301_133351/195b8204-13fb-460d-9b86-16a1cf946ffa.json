@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "195b8204-13fb-460d-9b86-16a1cf946ffa",
+  "syllogism_text": "It is the case that no cat is a dog. Among the animals that are cats, some are pets. The logical consequence is that there are pets that are not dogs.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witnesses)\ncat(fluffy).\npet(fluffy).\n\n% Fail clauses\ndog(_) :- fail.\n\n% Rules from premises\n% All cats are not dogs (explicitly deny possibility)\nconflict :- cat(X), dog(X).\n\n% Validity check (Some pets are not dogs)\nvalid_syllogism :- pet(X), \\+ dog(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:44.962363"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

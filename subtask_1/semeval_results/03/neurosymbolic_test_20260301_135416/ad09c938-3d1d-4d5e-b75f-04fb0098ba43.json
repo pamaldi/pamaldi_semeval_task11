@@ -1,0 +1,78 @@
+{
+  "id": "ad09c938-3d1d-4d5e-b75f-04fb0098ba43",
+  "text": "There exist some things that are books which do not have pages. Every single book is a living thing. Consequently, some living things have pages.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "book",
+      "predicate": "thing that has pages",
+      "raw_text": "There exist some things that are books which do not have pages"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "living thing",
+      "raw_text": "Every single book is a living thing"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "living thing",
+      "predicate": "thing that has pages",
+      "raw_text": "Consequently, some living things have pages"
+    },
+    "middle_term": "book",
+    "major_term": "thing that has pages",
+    "minor_term": "living thing",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "form": "OAI-3",
+    "mood": "OAI",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "OAI-3",
+    "vote_counts": {
+      "OAI-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "OAI-3",
+      "OAI-3",
+      "OAI-3",
+      "OAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAI-3 (t=0.0)",
+      "OAI-3 (t=0.3)",
+      "OAI-3 (t=0.5)",
+      "OAI-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,7 @@
+**TIMEOUT**: Code took too long to execute (>5 seconds).
+
+Common fixes:
+- Avoid infinite loops in rules
+- Simplify complex queries
+- Check for circular rule definitions
+- Ensure termination conditions exist

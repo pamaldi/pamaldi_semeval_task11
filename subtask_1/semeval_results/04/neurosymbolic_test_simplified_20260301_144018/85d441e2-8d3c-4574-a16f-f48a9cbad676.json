@@ -1,0 +1,70 @@
+{
+  "id": "85d441e2-8d3c-4574-a16f-f48a9cbad676",
+  "text": "Every single cow is a farm animal. The category of wolves does not contain farm animals. A portion of wolves are not cows.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cow",
+      "predicate": "farm animal",
+      "raw_text": "Every single cow is a farm animal"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "wolf",
+      "predicate": "farm animal",
+      "raw_text": "The category of wolves does not contain farm animals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "wolf",
+      "predicate": "cow",
+      "raw_text": "A portion of wolves are not cows"
+    },
+    "middle_term": "farm animal",
+    "major_term": "cow",
+    "minor_term": "wolf",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AOO-2",
+    "figure": 2,
+    "mood": "AOO",
+    "reason": "AOO-2 is valid (Baroco)",
+    "form_name": "Baroco",
+    "terms": {
+      "S": "wolf",
+      "P": "cow",
+      "M": "farm animal"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise2: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEO": 3
+    },
+    "types_seen": [
+      "AEO",
+      "AEO",
+      "AEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

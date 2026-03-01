@@ -1,0 +1,70 @@
+{
+  "id": "b6368b66-a4e2-4b6c-bcc3-7a04a3c0d604",
+  "text": "All things which are metals are conductors. Copper is, without exception, a metal. There exists some copper that is a conductor.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "things which are metals",
+      "predicate": "conductors",
+      "raw_text": "All things which are metals are conductors."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "copper",
+      "predicate": "things which are metals",
+      "raw_text": "Copper is, without exception, a metal."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "some copper",
+      "predicate": "conductors",
+      "raw_text": "There exists some copper that is a conductor."
+    },
+    "middle_term": "things which are metals",
+    "major_term": "conductors",
+    "minor_term": "some copper",
+    "figure": 1,
+    "mood": "AAI",
+    "form": "AAI-1"
+  },
+  "validity_details": {
+    "form": "AAI-1",
+    "mood": "AAI",
+    "figure": 1,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Barbari",
+    "reason": "Valid syllogistic form: Barbari (requires existential import)"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AAI-1",
+    "vote_counts": {
+      "AAI-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "AAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

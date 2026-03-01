@@ -1,0 +1,78 @@
+{
+  "id": "c1c2bdfa-8151-4f68-ac0d-ad67118c1ea3",
+  "text": "There are no creatures with scales who are also mythical creatures. A portion of creatures with scales are fish. It is the case that a few fish are mythical creatures.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "creature with scales",
+      "predicate": "mythical creature",
+      "raw_text": "There are no creatures with scales who are also mythical creatures."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "creature with scales",
+      "predicate": "fish",
+      "raw_text": "A portion of creatures with scales are fish."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fish",
+      "predicate": "mythical creature",
+      "raw_text": "It is the case that a few fish are mythical creatures."
+    },
+    "middle_term": "creature with scales",
+    "major_term": "mythical creature",
+    "minor_term": "fish",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "form": "EII-1",
+    "mood": "EII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-1",
+    "vote_counts": {
+      "EII-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EII-1",
+      "EII-1",
+      "EII-1",
+      "EII-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-1 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-1 (t=0.5)",
+      "EII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

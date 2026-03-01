@@ -1,0 +1,187 @@
+Convert syllogisms to pyDatalog. Output ONLY executable Python code, no explanations.
+
+# CRITICAL RULES
+
+## 1. File Structure
+Every output must be a complete, executable Python file with this structure:
+- Imports
+- Term declarations
+- Facts (with +)
+- Rules (with <=)
+- Validity check
+- Print result
+
+## 2. Proposition Patterns
+| Type | Form | pyDatalog |
+|------|------|-----------|
+| A | "All S are P" | `p(X) <= s(X)` |
+| E | "No S is P" | `conflict(X) <= s(X) & p(X)` |
+| I | "Some S are P" | `+s('w')` and `+p('w')` |
+| O | "Some S are not P" | `+s('w')` (w exists, p('w') NOT asserted) |
+
+## 3. Validity Checks
+| Conclusion | Check |
+|------------|-------|
+| A "All S are P" | `invalid(X) <= s(X) & ~p(X)` then check if empty |
+| E "No S is P" | `invalid(X) <= s(X) & p(X)` then check if empty |
+| I "Some S are P" | `(s(X) & p(X)).data` check if non-empty |
+| O "Some S are not P" | `(s(X) & ~p(X)).data` check if non-empty |
+
+## 4. Valid Forms (memorize)
+Fig1: AAA,EAE,AII,EIO | Fig2: EAE,AEE,EIO,AOO | Fig3: IAI,AII,OAO,EIO | Fig4: AEE,IAI,EIO
+
+# EXAMPLES
+
+## Ex1: EIO-1 (Ferio) - VALID
+Input: "No soda is a juice. Some beverages are juices. Some beverages are not sodas."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('beverage, juice, soda, conflict, X')
++beverage('w')
++juice('w')
+conflict(X) <= soda(X) & juice(X)
+result = (beverage(X) & ~soda(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex2: EAE-1 (Celarent) - VALID
+Input: "No reptile is a mammal. All snakes are reptiles. No snake is a mammal."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('snake, reptile, mammal, conflict, invalid, X')
++snake('s')
+reptile(X) <= snake(X)
+conflict(X) <= reptile(X) & mammal(X)
+invalid(X) <= snake(X) & mammal(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex3: AII-1 (Darii) - VALID
+Input: "Every cat is invisible. Some cats are animals. Some animals are invisible."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('cat, animal, invisible, X')
++cat('w')
++animal('w')
+invisible(X) <= cat(X)
+result = (animal(X) & invisible(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex4: AAA-1 (Barbara) - VALID
+Input: "All vegetables are plants. All carrots are vegetables. All carrots are plants."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('carrot, vegetable, plant, invalid, X')
++carrot('c')
+vegetable(X) <= carrot(X)
+plant(X) <= vegetable(X)
+invalid(X) <= carrot(X) & ~plant(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex5: AAA-2 - INVALID
+Input: "All animals are living things. All humans are living things. All humans are animals."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('human, animal, living, invalid, X')
++human('socrates')
+living(X) <= animal(X)
+living(X) <= human(X)
+invalid(X) <= human(X) & ~animal(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex6: IIE - INVALID
+Input: "Some mammals are dogs. Some cats are mammals. No cat is a dog."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('mammal, dog, cat, invalid, X')
++mammal('fido')
++dog('fido')
++mammal('whiskers')
++cat('whiskers')
++cat('hybrid')
++dog('hybrid')
++mammal('hybrid')
+invalid(X) <= cat(X) & dog(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex7: EIO-2 (Festino) - VALID
+Input: "No rock is an object. Some tables are rocks. Some tables are not objects."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('table, rock, object, conflict, X')
++table('w')
++rock('w')
+conflict(X) <= rock(X) & object(X)
+result = (table(X) & ~object(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex8: AEE-1 - INVALID
+Input: "All dogs are animals. No cats are dogs. No cats are animals."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('dog, cat, animal, conflict, invalid, X')
++cat('whiskers')
++animal('whiskers')
+animal(X) <= dog(X)
+conflict(X) <= cat(X) & dog(X)
+invalid(X) <= cat(X) & animal(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+## Ex9: OAO-3 (Bocardo) - VALID
+Input: "Some cats are not pets. All cats are mammals. Some mammals are not pets."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('cat, mammal, pet, X')
++cat('stray')
+mammal(X) <= cat(X)
+result = (mammal(X) & ~pet(X)).data
+print("VALID" if result else "INVALID")
+```
+
+## Ex10: EEE - INVALID
+Input: "No dogs are cats. No cats are birds. No dogs are birds."
+
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('dog, cat, bird, conflict1, conflict2, invalid, X')
++dog('flying_dog')
++bird('flying_dog')
+conflict1(X) <= dog(X) & cat(X)
+conflict2(X) <= cat(X) & bird(X)
+invalid(X) <= dog(X) & bird(X)
+result = invalid(X).data
+print("VALID" if not result else "INVALID")
+```
+
+# OUTPUT FORMAT
+```python
+from pyDatalog import pyDatalog
+pyDatalog.create_terms('[all predicates and X]')
+[facts with +predicate('witness')]
+[rules with predicate(X) <= ...]
+[counterexample facts if invalid]
+[validity check query]
+print("VALID" if [condition] else "INVALID")
+```
+
+Output ONLY the code block. NO explanations, analysis, or derivation chains.

@@ -1,0 +1,68 @@
+{
+  "id": "370fc136-33be-4129-bf71-b557576fc5d2",
+  "text": "Every piece of fruit grows from plants. There are some apples which are fruits. Therefore, it is the case that some apples grow from plants.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "piece of fruit",
+      "predicate": "plant",
+      "raw_text": "Every piece of fruit grows from plants."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "There are some apples which are fruits."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "apple",
+      "predicate": "plant",
+      "raw_text": "Therefore, it is the case that some apples grow from plants."
+    },
+    "middle_term": "fruit",
+    "major_term": "plant",
+    "minor_term": "apple",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AII-1",
+    "figure": 1,
+    "mood": "AII",
+    "reason": "AII-1 is valid (Darii)",
+    "form_name": "Darii",
+    "terms": {
+      "S": "apple",
+      "P": "plant",
+      "M": "fruit"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

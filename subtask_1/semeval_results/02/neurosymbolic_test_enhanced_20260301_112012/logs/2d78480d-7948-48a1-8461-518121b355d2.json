@@ -1,0 +1,77 @@
+{
+  "id": "2d78480d-7948-48a1-8461-518121b355d2",
+  "text": "A stone is never inanimate. Everything that is a statue is a stone. Therefore, this implies that no statue is inanimate.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "stone",
+      "predicate": "inanimate",
+      "raw_text": "A stone is never inanimate."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "statue",
+      "predicate": "stone",
+      "raw_text": "Everything that is a statue is a stone."
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "statue",
+      "predicate": "inanimate",
+      "raw_text": "Therefore, this implies that no statue is inanimate."
+    },
+    "middle_term": "stone",
+    "major_term": "inanimate",
+    "minor_term": "statue",
+    "figure": 1,
+    "mood": "EAE",
+    "form": "EAE-1"
+  },
+  "validity_details": {
+    "form": "EAE-1",
+    "mood": "EAE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Celarent",
+    "reason": "Valid syllogistic form: Celarent"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EAE-1",
+    "vote_counts": {
+      "EAE-1": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAE-1",
+      "EAE-1",
+      "EAE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-1 (t=0.0)",
+      "FAILED (t=0.3)",
+      "EAE-1 (t=0.5)",
+      "EAE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

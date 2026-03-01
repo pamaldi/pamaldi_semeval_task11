@@ -1,0 +1,64 @@
+You are a formal logic expert. Determine if this syllogism is logically VALID or INVALID.
+
+## Syllogism
+
+{syllogism_text}
+
+## Instructions
+
+A syllogism is VALID if the conclusion NECESSARILY follows from the premises, regardless of whether the statements are true in the real world.
+
+Focus ONLY on logical structure, NOT on real-world truth or plausibility.
+
+### Step-by-step analysis:
+
+1. Identify the three statements (Premise 1, Premise 2, Conclusion)
+2. Identify the three terms:
+   - Middle term (appears in both premises, not in conclusion)
+   - Major term (predicate of conclusion)
+   - Minor term (subject of conclusion)
+3. Determine the type of each statement:
+   - A: "All S are P" (universal affirmative)
+   - E: "No S is P" (universal negative)
+   - I: "Some S are P" (particular affirmative)
+   - O: "Some S are not P" (particular negative)
+4. Determine the figure (position of middle term):
+   - Figure 1: M-P, S-M (middle is subject of P1, predicate of P2)
+   - Figure 2: P-M, S-M (middle is predicate of both)
+   - Figure 3: M-P, M-S (middle is subject of both)
+   - Figure 4: P-M, M-S (middle is predicate of P1, subject of P2)
+5. Check if the mood-figure combination is valid
+
+### Valid syllogism forms (24 total):
+
+Figure 1: AAA (Barbara), EAE (Celarent), AII (Darii), EIO (Ferio)
+Figure 2: EAE (Cesare), AEE (Camestres), EIO (Festino), AOO (Baroco)
+Figure 3: IAI (Disamis), AII (Datisi), OAO (Bocardo), EIO (Ferison)
+Figure 4: AEE (Camenes), IAI (Dimaris), EIO (Fresison)
+
+Plus 9 weakened forms (AAI, EAO variants).
+
+### Common fallacies (INVALID):
+
+- Undistributed middle: Middle term not distributed in either premise
+- Illicit major: Major term distributed in conclusion but not in major premise
+- Illicit minor: Minor term distributed in conclusion but not in minor premise
+- Two negative premises: Cannot derive valid conclusion from two negatives
+- Negative premise with affirmative conclusion: Invalid
+- Two particular premises: Cannot derive valid conclusion
+
+### Distribution rules:
+- A (All S are P): S is distributed, P is not
+- E (No S is P): Both S and P are distributed
+- I (Some S are P): Neither is distributed
+- O (Some S are not P): Only P is distributed
+
+## Output
+
+After your analysis, respond with ONLY one word on the last line:
+
+VALID
+
+or
+
+INVALID

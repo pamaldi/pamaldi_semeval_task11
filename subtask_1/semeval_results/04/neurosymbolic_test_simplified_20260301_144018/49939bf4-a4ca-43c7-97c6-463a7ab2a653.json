@@ -1,0 +1,68 @@
+{
+  "id": "49939bf4-a4ca-43c7-97c6-463a7ab2a653",
+  "text": "Every single person who is a student is also a person. There are no people who are robots. From this, it follows that no robot is a student.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "student",
+      "predicate": "person",
+      "raw_text": "Every single person who is a student is also a person"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "person",
+      "predicate": "robot",
+      "raw_text": "There are no people who are robots"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "robot",
+      "predicate": "student",
+      "raw_text": "From this, it follows that no robot is a student"
+    },
+    "middle_term": "person",
+    "major_term": "student",
+    "minor_term": "robot",
+    "figure": 4,
+    "mood": "AEE",
+    "form": "AEE-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEE-4",
+    "figure": 4,
+    "mood": "AEE",
+    "reason": "AEE-4 is valid (Camenes)",
+    "form_name": "Camenes",
+    "terms": {
+      "S": "robot",
+      "P": "student",
+      "M": "person"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

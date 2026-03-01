@@ -1,0 +1,68 @@
+{
+  "id": "b6368b66-a4e2-4b6c-bcc3-7a04a3c0d604",
+  "text": "All things which are metals are conductors. Copper is, without exception, a metal. There exists some copper that is a conductor.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "metal",
+      "predicate": "conductor",
+      "raw_text": "All things which are metals are conductors"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "copper",
+      "predicate": "metal",
+      "raw_text": "Copper is, without exception, a metal"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "copper",
+      "predicate": "conductor",
+      "raw_text": "There exists some copper that is a conductor"
+    },
+    "middle_term": "metal",
+    "major_term": "conductor",
+    "minor_term": "copper",
+    "figure": 1,
+    "mood": "AAI",
+    "form": "AAI-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-1",
+    "figure": 1,
+    "mood": "AAI",
+    "reason": "AAI-1 is valid (Barbari)",
+    "form_name": "Barbari",
+    "terms": {
+      "S": "copper",
+      "P": "conductor",
+      "M": "metal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

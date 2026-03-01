@@ -1,0 +1,78 @@
+{
+  "id": "49939bf4-a4ca-43c7-97c6-463a7ab2a653",
+  "text": "Every single person who is a student is also a person. There are no people who are robots. From this, it follows that no robot is a student.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "person who is a student",
+      "predicate": "person",
+      "raw_text": "Every single person who is a student is also a person"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "person",
+      "predicate": "robot",
+      "raw_text": "There are no people who are robots"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "robot",
+      "predicate": "student",
+      "raw_text": "From this, it follows that no robot is a student"
+    },
+    "middle_term": "person",
+    "major_term": "student",
+    "minor_term": "robot",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "form": "AEE-2",
+    "mood": "AEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Camestres",
+    "reason": "Valid syllogistic form: Camestres"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-2",
+    "vote_counts": {
+      "AEE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-2",
+      "AEE-2",
+      "AEE-2",
+      "AEE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-2 (t=0.0)",
+      "AEE-2 (t=0.3)",
+      "AEE-2 (t=0.5)",
+      "AEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

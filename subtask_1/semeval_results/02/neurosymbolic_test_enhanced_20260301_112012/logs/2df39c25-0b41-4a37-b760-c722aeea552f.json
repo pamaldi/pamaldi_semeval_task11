@@ -1,0 +1,78 @@
+{
+  "id": "2df39c25-0b41-4a37-b760-c722aeea552f",
+  "text": "Everything that is a tree is a plant. Everything that is a flower is a plant. This implies that some flowers are not trees.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "plant",
+      "raw_text": "Everything that is a tree is a plant"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "flower",
+      "predicate": "plant",
+      "raw_text": "Everything that is a flower is a plant"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "flower",
+      "predicate": "tree",
+      "raw_text": "This implies that some flowers are not trees"
+    },
+    "middle_term": "plant",
+    "major_term": "tree",
+    "minor_term": "flower",
+    "figure": 2,
+    "mood": "AAO",
+    "form": "AAO-2"
+  },
+  "validity_details": {
+    "form": "AAO-2",
+    "mood": "AAO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Affirmative premises cannot yield negative conclusion; Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAO-2",
+    "vote_counts": {
+      "AAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAO-2",
+      "AAO-2",
+      "AAO-2",
+      "AAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAO-2 (t=0.0)",
+      "AAO-2 (t=0.3)",
+      "AAO-2 (t=0.5)",
+      "AAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

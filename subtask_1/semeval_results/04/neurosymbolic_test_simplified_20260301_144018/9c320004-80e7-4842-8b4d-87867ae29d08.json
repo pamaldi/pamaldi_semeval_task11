@@ -1,0 +1,68 @@
+{
+  "id": "9c320004-80e7-4842-8b4d-87867ae29d08",
+  "text": "Anything that is C++ is a programming language. There are no instances of English which are programming languages. It is therefore established that no English is C++.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "c++",
+      "predicate": "programming language",
+      "raw_text": "Anything that is C++ is a programming language"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "english",
+      "predicate": "programming language",
+      "raw_text": "There are no instances of English which are programming languages"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "english",
+      "predicate": "c++",
+      "raw_text": "It is therefore established that no English is C++"
+    },
+    "middle_term": "programming language",
+    "major_term": "c++",
+    "minor_term": "english",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEE-2",
+    "figure": 2,
+    "mood": "AEE",
+    "reason": "AEE-2 is valid (Camestres)",
+    "form_name": "Camestres",
+    "terms": {
+      "S": "english",
+      "P": "c++",
+      "M": "programming language"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "652a6a0e-cef2-4cd8-8562-e4c78589d320",
+  "text": "The set of humans is a subset of the set of legal professionals. At least one doctor is not a legal professional. The entire group of doctors is not humans.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "legal professional",
+      "raw_text": "The set of humans is a subset of the set of legal professionals"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "doctor",
+      "predicate": "legal professional",
+      "raw_text": "At least one doctor is not a legal professional"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "doctor",
+      "predicate": "human",
+      "raw_text": "The entire group of doctors is not humans"
+    },
+    "middle_term": "legal professional",
+    "major_term": "human",
+    "minor_term": "doctor",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AOO-2",
+    "figure": 2,
+    "mood": "AOO",
+    "reason": "AOO-2 is valid (Baroco)",
+    "form_name": "Baroco",
+    "terms": {
+      "S": "doctor",
+      "P": "human",
+      "M": "legal professional"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for conclusion: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AOE": 3
+    },
+    "types_seen": [
+      "AOE",
+      "AOE",
+      "AOE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

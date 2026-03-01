@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "723a274a-a4ff-47f5-8a4f-0cf42e554a5a",
+  "syllogism_text": "It is the case that no adult is a child. Some people are adults. It follows that some people are children.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Fail clause for child/1 (no children exist in this model)\nchild(_) :- fail.\n\n% A-premise: No adult is a child\nconflict :- adult(X), child(X).\n\n% I-premise: Some people are adults\nadult(adult1).\nperson(adult1).\n\n% I-conclusion: Some people are children\nvalid_syllogism :- person(X), child(X).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:48:02.431991"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": true
+}

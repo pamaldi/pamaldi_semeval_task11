@@ -1,0 +1,68 @@
+{
+  "id": "efa6cac1-2f25-4499-a8c3-270cd761f39b",
+  "text": "Every single bird has a beak. It is not true that any bird is a penguin. Therefore, some penguins have beaks.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "beak",
+      "raw_text": "Every single bird has a beak"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "penguin",
+      "raw_text": "It is not true that any bird is a penguin"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "penguin",
+      "predicate": "beak",
+      "raw_text": "Therefore, some penguins have beaks"
+    },
+    "middle_term": "bird",
+    "major_term": "beak",
+    "minor_term": "penguin",
+    "figure": 3,
+    "mood": "AEI",
+    "form": "AEI-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEI-3",
+    "figure": 3,
+    "mood": "AEI",
+    "reason": "AEI-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "penguin",
+      "P": "beak",
+      "M": "bird"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEI": 3
+    },
+    "types_seen": [
+      "AEI",
+      "AEI",
+      "AEI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

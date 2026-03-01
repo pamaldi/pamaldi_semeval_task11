@@ -1,0 +1,68 @@
+{
+  "id": "372bfeea-11fd-47ad-b489-0616b8d2cd30",
+  "text": "Any and all clouds are made of solid iron. There are clouds that are a type of cumulus. This implies that some cumulus clouds are solid iron.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cloud",
+      "predicate": "solid iron",
+      "raw_text": "Any and all clouds are made of solid iron"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "cloud",
+      "predicate": "cumulus",
+      "raw_text": "There are clouds that are a type of cumulus"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cumulus cloud",
+      "predicate": "solid iron",
+      "raw_text": "This implies that some cumulus clouds are solid iron"
+    },
+    "middle_term": "cloud",
+    "major_term": "solid iron",
+    "minor_term": "cumulus cloud",
+    "figure": 3,
+    "mood": "AII",
+    "form": "AII-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AII-3",
+    "figure": 3,
+    "mood": "AII",
+    "reason": "AII-3 is valid (Datisi)",
+    "form_name": "Datisi",
+    "terms": {
+      "S": "cumulus cloud",
+      "P": "solid iron",
+      "M": "cloud"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

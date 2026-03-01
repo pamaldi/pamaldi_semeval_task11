@@ -1,0 +1,22 @@
+{
+  "id": "04996853-61fd-42a9-a624-55022231c633",
+  "text": "Every single pencil is an item of stationery. There are no stationery items that can be described as food. It is therefore true that some items of food are not pencils.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Post-processing failed: ['No middle term found']",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": null,
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: Every single pencil is an item of stationery. (All pencils are stationery items)\n   - Premise 2: There are no stationery items that can be described as food. (No stationery items are food)\n   - Conclusion: Some items of food are not pencils.\n\n2. **Identify the three terms:**\n   - Middle term: \"stationery items\" (appears in both premises)\n   - Major term: \"food\" (predicate of the conclusion)\n   - Minor term: \"pencils\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"All pencils are stationery items\" \u2192 A (universal affirmative)\n   - Premise 2: \"No stationery items are food\" \u2192 E (universal negative)\n   - Conclusion: \"Some items of food are not pencils\" \u2192 O (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: Pencils (S) are stationery items (M) \u2192 M-P\n   - Premise 2: No stationery items (M) are food (P) \u2192 M-P\n   - Figure: **Figure 2** (middle term is predicate of both premises)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: A (Premise 1) and E (Premise 2) \u2192 AE\n   - Figure: 2\n   - Valid forms in Figure 2 include: EAE (Cesare), AEE (Camestres), EIO (Festino), AOO (Baroco)\n   - AE is not a valid mood in Figure 2 (Cesare is EAE, not AE)\n\n6. **Check for fallacies:**\n   - Middle term \"stationery items\" is not distributed in either premise (both are predicates of universal statements), so the **undistributed middle** fallacy occurs.\n\n**Conclusion:** The syllogism is **INVALID**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

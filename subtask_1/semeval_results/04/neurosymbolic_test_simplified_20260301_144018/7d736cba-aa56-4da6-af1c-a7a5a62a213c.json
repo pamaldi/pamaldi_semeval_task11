@@ -1,0 +1,68 @@
+{
+  "id": "7d736cba-aa56-4da6-af1c-a7a5a62a213c",
+  "text": "There are no citrus fruits that are berries. Among the berries, a few are fruits. Not all fruits are citrus.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "citrus fruit",
+      "predicate": "berry",
+      "raw_text": "There are no citrus fruits that are berries"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "berry",
+      "predicate": "fruit",
+      "raw_text": "Among the berries, a few are fruits"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "fruit",
+      "predicate": "citrus",
+      "raw_text": "Not all fruits are citrus"
+    },
+    "middle_term": "berry",
+    "major_term": "citrus",
+    "minor_term": "fruit",
+    "figure": 4,
+    "mood": "EIO",
+    "form": "EIO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-4",
+    "figure": 4,
+    "mood": "EIO",
+    "reason": "EIO-4 is valid (Fresison)",
+    "form_name": "Fresison",
+    "terms": {
+      "S": "fruit",
+      "P": "citrus",
+      "M": "berry"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

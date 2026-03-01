@@ -1,0 +1,78 @@
+{
+  "id": "817cdc8f-77b7-40f0-b530-534ff43e8157",
+  "text": "Any person who is a scientist is also a researcher. It is impossible for a chemist to be a researcher. This means that no chemist is a scientist.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "person who is a scientist",
+      "predicate": "researcher",
+      "raw_text": "Any person who is a scientist is also a researcher"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "chemist",
+      "predicate": "researcher",
+      "raw_text": "It is impossible for a chemist to be a researcher"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "chemist",
+      "predicate": "scientist",
+      "raw_text": "This means that no chemist is a scientist"
+    },
+    "middle_term": "researcher",
+    "major_term": "scientist",
+    "minor_term": "chemist",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "form": "AEE-2",
+    "mood": "AEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Camestres",
+    "reason": "Valid syllogistic form: Camestres"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-2",
+    "vote_counts": {
+      "AEE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-2",
+      "AEE-2",
+      "AEE-2",
+      "AEE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-2 (t=0.0)",
+      "AEE-2 (t=0.3)",
+      "AEE-2 (t=0.5)",
+      "AEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

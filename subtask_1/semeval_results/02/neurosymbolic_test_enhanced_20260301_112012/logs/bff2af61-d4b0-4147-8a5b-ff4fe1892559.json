@@ -1,0 +1,37 @@
+{
+  "id": "bff2af61-d4b0-4147-8a5b-ff4fe1892559",
+  "text": "There are no bikes that can be called cars. It is also true that every bike is a type of vehicle. This has led to the conclusion that a portion of vehicles are bikes.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "Step-by-step analysis:\n\n1. **Identify the three statements:**\n   - Premise 1: *There are no bikes that can be called cars.* \u2192 \"No bikes are cars.\"\n   - Premise 2: *Every bike is a type of vehicle.* \u2192 \"All bikes are vehicles.\"\n   - Conclusion: *A portion of vehicles are bikes.* \u2192 \"Some vehicles are bikes.\"\n\n2. **Identify the three terms:**\n   - Middle term: *bikes* (appears in both premises, not in conclusion)\n   - Major term: *vehicles* (predicate of conclusion)\n   - Minor term: *bikes* (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"No bikes are cars.\" \u2192 **E** (universal negative)\n   - Premise 2: \"All bikes are vehicles.\" \u2192 **A** (universal affirmative)\n   - Conclusion: \"Some vehicles are bikes.\" \u2192 **I** (particular affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (bikes-vehicles)\n   - Premise 2: S-M (cars-bikes)\n   - Figure: **Figure 4** (P-M, M-S)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **EAI**\n   - Figure: **4**\n   - Valid forms in Figure 4: AEE (Camenes), IAI (Dimaris), EIO (Fresison)\n\n   - **EAI** is **not** a valid syllogism form in Figure 4.\n\n6. **Check for fallacies:**\n   - **Undistributed middle**: The middle term \"bikes\" is distributed in Premise 1 (E statement), but not in Premise 2 (A statement). So it is **distributed in one premise**, which is acceptable.\n   - **Illicit major**: The major term \"vehicles\" is **not distributed** in the conclusion (it is the subject of an I statement), and it is **not distributed** in the major premise (Premise 2 is an A statement, where the predicate is not distributed). So it is **not illicit**.\n   - **Illicit minor**: The minor term \"bikes\" is **not distributed** in the conclusion (it is the subject of an I statement), and it **is distributed** in the minor premise (Premise 1 is an E statement). So it is **not illicit**.\n   - **Two negative premises**: Only one premise is negative (Premise 1), so this is **not a problem**.\n   - **Negative premise with affirmative conclusion**: One negative premise and an affirmative conclusion is **not invalid**.\n   - **Two particular premises**: Only one premise is particular (none), so this is **not a problem**.\n\n   However, the **mood-figure combination is invalid**, and the syllogism does not conform to any of the valid forms.\n\n**Conclusion:** The syllogism is **invalid**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

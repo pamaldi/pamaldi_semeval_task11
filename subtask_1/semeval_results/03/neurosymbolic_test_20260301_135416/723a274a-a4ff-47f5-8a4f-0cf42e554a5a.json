@@ -1,0 +1,79 @@
+{
+  "id": "723a274a-a4ff-47f5-8a4f-0cf42e554a5a",
+  "text": "It is the case that no adult is a child. Some people are adults. It follows that some people are children.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "adult",
+      "predicate": "child",
+      "raw_text": "It is the case that no adult is a child"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "people",
+      "predicate": "adult",
+      "raw_text": "Some people are adults"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "people",
+      "predicate": "child",
+      "raw_text": "It follows that some people are children"
+    },
+    "middle_term": "adult",
+    "major_term": "child",
+    "minor_term": "people",
+    "figure": 2,
+    "mood": "EII",
+    "form": "EII-2"
+  },
+  "validity_details": {
+    "form": "EII-2",
+    "mood": "EII",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-2",
+    "vote_counts": {
+      "EII-2": 3,
+      "EII-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EII-2",
+      "EII-1",
+      "EII-2",
+      "EII-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-2 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-2 (t=0.5)",
+      "EII-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

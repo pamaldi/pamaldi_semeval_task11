@@ -1,0 +1,79 @@
+{
+  "id": "d7957921-d384-41d5-aec4-ae0fd8c458a4",
+  "text": "There is not one fish that is a window. Some of the things that are animals are fish. It must be true that some animals are windows.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "window",
+      "raw_text": "There is not one fish that is a window"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "fish",
+      "raw_text": "Some of the things that are animals are fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "window",
+      "raw_text": "It must be true that some animals are windows"
+    },
+    "middle_term": "fish",
+    "major_term": "window",
+    "minor_term": "animal",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "form": "EII-1",
+    "mood": "EII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-1",
+    "vote_counts": {
+      "EII-1": 3,
+      "EII-2": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EII-1",
+      "EII-1",
+      "EII-2",
+      "EII-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-1 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-2 (t=0.5)",
+      "EII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

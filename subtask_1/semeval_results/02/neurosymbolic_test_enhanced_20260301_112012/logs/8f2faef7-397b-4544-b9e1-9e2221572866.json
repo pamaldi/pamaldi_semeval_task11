@@ -1,0 +1,78 @@
+{
+  "id": "8f2faef7-397b-4544-b9e1-9e2221572866",
+  "text": "Every person who is a prime minister is a politician. There are a number of people who are celebrities who are also politicians. It follows from this that there are some celebrities who are prime ministers.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "person who is a prime minister",
+      "predicate": "politician",
+      "raw_text": "Every person who is a prime minister is a politician"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "celebrity",
+      "predicate": "politician",
+      "raw_text": "There are a number of people who are celebrities who are also politicians"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "celebrity",
+      "predicate": "prime minister",
+      "raw_text": "It follows from this that there are some celebrities who are prime ministers"
+    },
+    "middle_term": "politician",
+    "major_term": "prime minister",
+    "minor_term": "celebrity",
+    "figure": 2,
+    "mood": "AII",
+    "form": "AII-2"
+  },
+  "validity_details": {
+    "form": "AII-2",
+    "mood": "AII",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-2",
+    "vote_counts": {
+      "AII-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AII-2",
+      "AII-2",
+      "AII-2",
+      "AII-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-2 (t=0.0)",
+      "AII-2 (t=0.3)",
+      "AII-2 (t=0.5)",
+      "AII-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

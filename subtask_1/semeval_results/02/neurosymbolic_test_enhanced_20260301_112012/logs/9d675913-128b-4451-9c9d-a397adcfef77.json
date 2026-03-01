@@ -1,0 +1,77 @@
+{
+  "id": "9d675913-128b-4451-9c9d-a397adcfef77",
+  "text": "It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "pencil",
+      "predicate": "paper good",
+      "raw_text": "It is not the case that a pencil is a paper good"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "pencil",
+      "predicate": "book",
+      "raw_text": "Not a single pencil is a book"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "paper good",
+      "raw_text": "This makes it true that all books are paper goods"
+    },
+    "middle_term": "pencil",
+    "major_term": "paper good",
+    "minor_term": "book",
+    "figure": 2,
+    "mood": "EEA",
+    "form": "EEA-2"
+  },
+  "validity_details": {
+    "form": "EEA-2",
+    "mood": "EEA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises); Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EEA-2",
+    "vote_counts": {
+      "EEA-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EEA-2",
+      "EEA-2",
+      "EEA-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EEA-2 (t=0.0)",
+      "EEA-2 (t=0.3)",
+      "EEA-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

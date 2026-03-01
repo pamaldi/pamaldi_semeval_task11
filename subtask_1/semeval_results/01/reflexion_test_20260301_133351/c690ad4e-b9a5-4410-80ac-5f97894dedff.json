@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "c690ad4e-b9a5-4410-80ac-5f97894dedff",
+  "syllogism_text": "Not a single car is a bicycle. Vehicles include every single bicycle. It is logically follows that some vehicles are not cars.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for counterexample: a bicycle that is NOT a car\nbicycle(bmx).\ncar(merc).\n\n% Rule: Vehicles include every bicycle\nvehicle(X) :- bicycle(X).\n\n% Rule: No car is a bicycle\nconflict :- car(X), bicycle(X).\n\n% Rule: No bicycle is a car\nconflict :- bicycle(X), car(X).\n\n% Validity check: Some vehicle is not a car\nvalid_syllogism :- vehicle(X), \\+ car(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:47.379867"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "370fc136-33be-4129-bf71-b557576fc5d2",
+  "syllogism_text": "Every piece of fruit grows from plants. There are some apples which are fruits. Therefore, it is the case that some apples grow from plants.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: an apple that is a fruit\napple(a1).\nfruit(a1).\n\n% Rule from first premise: All fruit grow from plants\ngrows_from_plants(X) :- fruit(X).\n\n% Validity check: Some apples grow from plants\nvalid_syllogism :- apple(X), grows_from_plants(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:47.019530"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

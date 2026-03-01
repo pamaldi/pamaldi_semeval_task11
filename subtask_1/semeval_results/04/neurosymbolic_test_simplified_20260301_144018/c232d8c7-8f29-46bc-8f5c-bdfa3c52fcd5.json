@@ -1,0 +1,26 @@
+{
+  "id": "c232d8c7-8f29-46bc-8f5c-bdfa3c52fcd5",
+  "text": "Anything that is a sea is a large body of saltwater. The category of rivers contains no large bodies of saltwater. Every river is a sea.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "All 3 extraction attempts failed",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 0,
+    "failed_samples": 3
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Anything that is a sea is a large body of saltwater. (All seas are large bodies of saltwater.)\n   - **Premise 2:** The category of rivers contains no large bodies of saltwater. (No rivers are large bodies of saltwater.)\n   - **Conclusion:** Every river is a sea. (All rivers are seas.)\n\n2. **Identify the three terms:**\n   - **Middle term:** \"large body of saltwater\" (appears in both premises, not in conclusion)\n   - **Major term:** \"sea\" (predicate of conclusion)\n   - **Minor term:** \"river\" (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All seas are large bodies of saltwater.\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"No rivers are large bodies of saltwater.\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"All rivers are seas.\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (large body of saltwater - sea)\n   - Premise 2: S-M (river - large body of saltwater)\n   - This is **Figure 4** (P-M, M-S).\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **A-E-A**\n   - Figure: **4**\n   - This combination is **not among the valid syllogism forms** listed.\n\n6. **Check for fallacies:**\n   - **Undistributed middle:** The middle term \"large body of saltwater\" is distributed in Premise 2 (E statement), but not in Premise 1 (A statement). So it is **not undistributed**.\n   - **Illicit major:** The major term \"sea\" is distributed in the conclusion (A statement), but not in the major premise (Premise 1 is A, and \"sea\" is the subject, which is distributed in A statements). So this is **not illicit**.\n   - **Illicit minor:** The minor term \"river\" is distributed in the conclusion (A statement), but not in the minor premise (Premise 2 is E, and \"river\" is the subject, which is distributed in E statements). So this is **not illicit**.\n   - **Two negative premises:** Only one premise is negative (Premise 2), so this is **not the case**.\n   - **Negative premise with affirmative conclusion:** One premise is negative, and the conclusion is affirmative. This is **not valid** in syllogistic logic.\n   - **Two particular premises:** Both premises are universal, so this is **not the case**.\n\n7. **Conclusion:**\n   - The syllogism has a **negative premise and an affirmative conclusion**, which is **invalid** in syllogistic logic.\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

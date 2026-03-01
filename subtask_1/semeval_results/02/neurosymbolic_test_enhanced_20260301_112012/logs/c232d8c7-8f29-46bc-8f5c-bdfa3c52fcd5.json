@@ -1,0 +1,37 @@
+{
+  "id": "c232d8c7-8f29-46bc-8f5c-bdfa3c52fcd5",
+  "text": "Anything that is a sea is a large body of saltwater. The category of rivers contains no large bodies of saltwater. Every river is a sea.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: \"Anything that is a sea is a large body of saltwater.\" (All seas are large bodies of saltwater.)\n   - Premise 2: \"The category of rivers contains no large bodies of saltwater.\" (No rivers are large bodies of saltwater.)\n   - Conclusion: \"Every river is a sea.\" (All rivers are seas.)\n\n2. **Identify the three terms:**\n   - **Middle term**: \"large body of saltwater\" (appears in both premises, not in conclusion)\n   - **Major term**: \"sea\" (predicate of conclusion)\n   - **Minor term**: \"river\" (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"All seas are large bodies of saltwater.\" \u2192 **A** (universal affirmative)\n   - Premise 2: \"No rivers are large bodies of saltwater.\" \u2192 **E** (universal negative)\n   - Conclusion: \"All rivers are seas.\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (large body of saltwater - sea)\n   - Premise 2: S-M (river - large body of saltwater)\n   - Figure: **Figure 4** (M-P, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: A-E-A\n   - Figure: 4\n   - This combination is **not** among the valid syllogism forms listed.\n\n6. **Check for fallacies:**\n   - **Two negative premises**: Not applicable (only one premise is negative).\n   - **Negative premise with affirmative conclusion**: Invalid (a negative premise cannot support an affirmative conclusion).\n   - **Undistributed middle**: The middle term \"large body of saltwater\" is distributed in Premise 2 (E statement), but not in Premise 1 (A statement). It is not undistributed in both.\n   - **Illicit major/minor**: The major term \"sea\" is distributed in the conclusion (A statement) but not in the major premise (A statement). This is an **illicit major**.\n\n**Conclusion**: The syllogism is **invalid** due to an **illicit major** and the invalid combination of a negative premise with an affirmative conclusion.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "a50d01a9-97f3-4c5d-a89a-b5f18f91c8b8",
+  "text": "There are no circles that are 4-sided shapes. Every single circle is a square. Some squares fail to be 4-sided shapes.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "4-sided shape",
+      "raw_text": "There are no circles that are 4-sided shapes"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "circle",
+      "predicate": "square",
+      "raw_text": "Every single circle is a square"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "square",
+      "predicate": "4-sided shape",
+      "raw_text": "Some squares fail to be 4-sided shapes"
+    },
+    "middle_term": "circle",
+    "major_term": "4-sided shape",
+    "minor_term": "square",
+    "figure": 3,
+    "mood": "EAO",
+    "form": "EAO-3"
+  },
+  "validity_details": {
+    "form": "EAO-3",
+    "mood": "EAO",
+    "figure": 3,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Felapton",
+    "reason": "Valid syllogistic form: Felapton (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-3",
+    "vote_counts": {
+      "EAO-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-3",
+      "EAO-3",
+      "EAO-3",
+      "EAO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-3 (t=0.0)",
+      "EAO-3 (t=0.3)",
+      "EAO-3 (t=0.5)",
+      "EAO-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

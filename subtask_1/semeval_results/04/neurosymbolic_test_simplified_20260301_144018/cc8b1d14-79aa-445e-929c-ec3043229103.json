@@ -1,0 +1,68 @@
+{
+  "id": "cc8b1d14-79aa-445e-929c-ec3043229103",
+  "text": "Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "vehicle",
+      "predicate": "type of transportation",
+      "raw_text": "Not a single object that is a vehicle is a type of transportation"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "vehicle",
+      "predicate": "bus",
+      "raw_text": "A number of vehicles are buses"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "bus",
+      "predicate": "transportation",
+      "raw_text": "The conclusion that some buses are not transportation necessarily follows"
+    },
+    "middle_term": "vehicle",
+    "major_term": "transportation",
+    "minor_term": "bus",
+    "figure": 3,
+    "mood": "EIO",
+    "form": "EIO-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-3",
+    "figure": 3,
+    "mood": "EIO",
+    "reason": "EIO-3 is valid (Ferison)",
+    "form_name": "Ferison",
+    "terms": {
+      "S": "bus",
+      "P": "transportation",
+      "M": "vehicle"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

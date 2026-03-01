@@ -1,0 +1,37 @@
+{
+  "id": "400d39a6-3666-4806-8143-03dacb844452",
+  "text": "There exist some individuals who are scientists who are not physicists. Every single person who is a scientist is an academic. One can thus conclude that all academics are physicists.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: Some scientists are not physicists. (I/O type)\n   - Premise 2: All scientists are academics. (A type)\n   - Conclusion: All academics are physicists. (A type)\n\n2. **Identify the three terms:**\n   - Middle term: *scientists* (appears in both premises)\n   - Major term: *physicists* (predicate of conclusion)\n   - Minor term: *academics* (subject of conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"Some scientists are not physicists.\" \u2192 **O** (particular negative)\n   - Premise 2: \"All scientists are academics.\" \u2192 **A** (universal affirmative)\n   - Conclusion: \"All academics are physicists.\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: Scientists (M) - Physicists (P)\n   - Premise 2: Scientists (M) - Academics (S)\n   - Conclusion: Academics (S) - Physicists (P)\n   - Middle term (M) is subject in both premises \u2192 **Figure 3**\n\n5. **Mood and figure:**\n   - Mood: **O-A-A**\n   - Figure: **3**\n   - This is **not** a valid syllogism form.\n\n6. **Check for fallacies:**\n   - **Undistributed middle**: The middle term (*scientists*) is not distributed in either premise (it is the subject of both, and in A statements, only the subject is distributed). This is a classic **undistributed middle** fallacy.\n   - The conclusion attempts to link *academics* and *physicists* through *scientists*, but since *scientists* is not distributed in either premise, the link is not logically valid.\n\n**Conclusion:** The syllogism is **invalid**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "5c2f4196-2ce4-41dd-a456-8a5198ba465f",
+  "text": "Every single item that is a number is not an integer. Of the items that are prime numbers, some are integers. It is a correct deduction that some prime numbers are not numbers.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "number",
+      "predicate": "integer",
+      "raw_text": "Every single item that is a number is not an integer"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "prime number",
+      "predicate": "integer",
+      "raw_text": "Of the items that are prime numbers, some are integers"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "prime number",
+      "predicate": "number",
+      "raw_text": "It is a correct deduction that some prime numbers are not numbers"
+    },
+    "middle_term": "integer",
+    "major_term": "number",
+    "minor_term": "prime number",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2",
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

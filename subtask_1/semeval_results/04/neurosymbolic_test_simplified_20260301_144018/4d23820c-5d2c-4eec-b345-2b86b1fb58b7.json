@@ -1,0 +1,68 @@
+{
+  "id": "4d23820c-5d2c-4eec-b345-2b86b1fb58b7",
+  "text": "Every single human is a mammal. Everything that is a doctor is a human. It's the case that some doctors are not mammals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "mammal",
+      "raw_text": "Every single human is a mammal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "doctor",
+      "predicate": "human",
+      "raw_text": "Everything that is a doctor is a human"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "doctor",
+      "predicate": "mammal",
+      "raw_text": "It's the case that some doctors are not mammals"
+    },
+    "middle_term": "human",
+    "major_term": "mammal",
+    "minor_term": "doctor",
+    "figure": 1,
+    "mood": "AAO",
+    "form": "AAO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-1",
+    "figure": 1,
+    "mood": "AAO",
+    "reason": "AAO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "doctor",
+      "P": "mammal",
+      "M": "human"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

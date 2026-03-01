@@ -1,0 +1,78 @@
+{
+  "id": "03ac9985-ef97-4bab-974b-e75918cf6c05",
+  "text": "Anything that is a car is a vehicle. All of the things that are bicycles are vehicles. This means that there are no bicycles that are cars.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "Anything that is a car is a vehicle"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bicycle",
+      "predicate": "vehicle",
+      "raw_text": "All of the things that are bicycles are vehicles"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "bicycle",
+      "predicate": "car",
+      "raw_text": "This means that there are no bicycles that are cars"
+    },
+    "middle_term": "vehicle",
+    "major_term": "car",
+    "minor_term": "bicycle",
+    "figure": 2,
+    "mood": "AAE",
+    "form": "AAE-2"
+  },
+  "validity_details": {
+    "form": "AAE-2",
+    "mood": "AAE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Affirmative premises cannot yield negative conclusion; Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAE-2",
+    "vote_counts": {
+      "AAE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAE-2",
+      "AAE-2",
+      "AAE-2",
+      "AAE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAE-2 (t=0.0)",
+      "AAE-2 (t=0.3)",
+      "AAE-2 (t=0.5)",
+      "AAE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

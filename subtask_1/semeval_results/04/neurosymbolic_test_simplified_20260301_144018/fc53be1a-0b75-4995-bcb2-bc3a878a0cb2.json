@@ -1,0 +1,68 @@
+{
+  "id": "fc53be1a-0b75-4995-bcb2-bc3a878a0cb2",
+  "text": "No animal that is a house pet is a feline. Not a single cat is a house pet. This demonstrates that some cats are not felines.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal that is a house pet",
+      "predicate": "feline",
+      "raw_text": "No animal that is a house pet is a feline"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "house pet",
+      "raw_text": "Not a single cat is a house pet"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "cat",
+      "predicate": "feline",
+      "raw_text": "This demonstrates that some cats are not felines"
+    },
+    "middle_term": "house pet",
+    "major_term": "feline",
+    "minor_term": "cat",
+    "figure": 1,
+    "mood": "EEO",
+    "form": "EEO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EEO-1",
+    "figure": 1,
+    "mood": "EEO",
+    "reason": "EEO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "cat",
+      "P": "feline",
+      "M": "house pet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEO": 3
+    },
+    "types_seen": [
+      "EEO",
+      "EEO",
+      "EEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

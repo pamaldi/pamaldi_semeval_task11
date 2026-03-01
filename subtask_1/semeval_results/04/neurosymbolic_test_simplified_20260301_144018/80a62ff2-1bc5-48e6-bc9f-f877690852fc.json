@@ -1,0 +1,26 @@
+{
+  "id": "80a62ff2-1bc5-48e6-bc9f-f877690852fc",
+  "text": "The entire set of fruits is composed of round objects with a citrus peel. At least one orange is not a round object with a citrus peel. Every single fruit is an orange.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "All 3 extraction attempts failed",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 0,
+    "failed_samples": 3
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** The entire set of fruits is composed of round objects with a citrus peel.  \n     (All fruits are round objects with a citrus peel) \u2192 **A** statement\n   - **Premise 2:** At least one orange is not a round object with a citrus peel.  \n     (Some oranges are not round objects with a citrus peel) \u2192 **O** statement\n   - **Conclusion:** Every single fruit is an orange.  \n     (All fruits are oranges) \u2192 **A** statement\n\n2. **Identify the three terms:**\n   - **Middle term:** \"round objects with a citrus peel\" (appears in both premises, not in conclusion)\n   - **Major term:** \"orange\" (predicate of the conclusion)\n   - **Minor term:** \"fruit\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: **A** (All fruits are round objects with a citrus peel)\n   - Premise 2: **O** (Some oranges are not round objects with a citrus peel)\n   - Conclusion: **A** (All fruits are oranges)\n\n4. **Determine the figure:**\n   - Premise 1: Fruits (S) are round objects with a citrus peel (M) \u2192 **S-M**\n   - Premise 2: Some oranges (P) are not round objects with a citrus peel (M) \u2192 **P-M**\n   - This is **Figure 2** (middle term is predicate of both premises)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **A-O-A**\n   - Figure: **2**\n   - This is **not** a valid syllogism form (none of the valid forms in Figure 2 are A-O-A)\n\n6. **Check for fallacies:**\n   - **Undistributed middle:** The middle term \"round objects with a citrus peel\" is not distributed in either premise (it is the predicate of an A statement and the predicate of an O statement). This is a **fallacy of the undistributed middle**.\n   - **Illicit major/minor:** The conclusion distributes \"fruit\" (as the subject of an A statement), and \"fruit\" is not distributed in the first premise (as the subject of an A statement). This is **not** an illicit minor.\n   - **Two negative premises:** Only one premise is negative (O), so this is not the issue.\n   - **Negative premise with affirmative conclusion:** This is the case (O + A), but it is not necessarily invalid by itself.\n   - **Two particular premises:** One premise is universal (A), one is particular (O), so this is not the issue.\n\n**Conclusion:** The syllogism is **invalid** due to the **undistributed middle**.\n\nINVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

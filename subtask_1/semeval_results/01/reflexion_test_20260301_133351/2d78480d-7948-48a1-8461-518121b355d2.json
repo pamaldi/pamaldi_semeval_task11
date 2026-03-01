@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "2d78480d-7948-48a1-8461-518121b355d2",
+  "syllogism_text": "A stone is never inanimate. Everything that is a statue is a stone. Therefore, this implies that no statue is inanimate.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witnesses)\nstatue(david).\n\n% Rule from A-premise: All statues are stones\nstone(X) :- statue(X).\n\n% Rule from A-premise: All stones are animate (i.e., never inanimate)\n% We encode this as: if something is a stone, it is not inanimate\ninanimate(_) :- fail. % No stone is inanimate\n\n% Validity check for conclusion: No statue is inanimate\nvalid_syllogism :- \\+ (statue(X), inanimate(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:38.154854"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

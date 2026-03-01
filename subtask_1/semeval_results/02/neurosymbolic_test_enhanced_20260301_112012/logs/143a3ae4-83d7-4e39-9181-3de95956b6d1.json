@@ -1,0 +1,78 @@
+{
+  "id": "143a3ae4-83d7-4e39-9181-3de95956b6d1",
+  "text": "Not one single animal is a pet. All dogs are pets. It follows from this that some dogs are not animals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "pet",
+      "raw_text": "Not one single animal is a pet"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "pet",
+      "raw_text": "All dogs are pets"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "dog",
+      "predicate": "animal",
+      "raw_text": "It follows from this that some dogs are not animals"
+    },
+    "middle_term": "pet",
+    "major_term": "animal",
+    "minor_term": "dog",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "form": "EAO-2",
+    "mood": "EAO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Cesaro",
+    "reason": "Valid syllogistic form: Cesaro (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-2",
+    "vote_counts": {
+      "EAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-2",
+      "EAO-2",
+      "EAO-2",
+      "EAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-2 (t=0.0)",
+      "EAO-2 (t=0.3)",
+      "EAO-2 (t=0.5)",
+      "EAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

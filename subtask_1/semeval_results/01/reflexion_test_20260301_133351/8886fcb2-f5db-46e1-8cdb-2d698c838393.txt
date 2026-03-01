@@ -1,0 +1,39 @@
+================================================================================
+TRUE REFLEXION LOG - 8886fcb2-f5db-46e1-8cdb-2d698c838393
+Mode: label_free
+================================================================================
+
+Syllogism:
+Every single tiger is a feline. All tigers are mammals. It follows from this that some mammals are not felines.
+
+Ground Truth: INVALID
+Validity: False
+Plausibility: True
+Final Prediction: INVALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: INVALID
+Failure Type: unknown
+
+Code:
+% Facts (minimal model - only what's needed for premises)
+tiger(simba).
+
+% Rules from premises
+feline(X) :- tiger(X).
+mammal(X) :- tiger(X).
+
+% Mammal is not restricted to tigers (counterexample construction)
+% So no fail clause for mammal/1
+
+% Validity check: Some mammals are NOT felines
+valid_syllogism :- mammal(X), \+ feline(X).
+
+Stdout: RESULT:INVALID
+
+

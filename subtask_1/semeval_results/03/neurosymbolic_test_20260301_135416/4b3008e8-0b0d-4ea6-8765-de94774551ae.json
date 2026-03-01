@@ -1,0 +1,50 @@
+{
+  "id": "4b3008e8-0b0d-4ea6-8765-de94774551ae",
+  "text": "There are no creatures that are non-bipeds that are also living creatures. Everything that is a squirrel is a non-biped. Thus, every squirrel is a living creature.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 5,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "votes": [
+      "INVALID",
+      "INVALID",
+      "VALID"
+    ],
+    "vote_counts": {
+      "VALID": 1,
+      "INVALID": 2
+    },
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5
+    ],
+    "had_disagreement": true
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

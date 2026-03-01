@@ -1,0 +1,68 @@
+{
+  "id": "8465dcda-98cb-4696-b8d5-9f04732f49ec",
+  "text": "There are no numbers that are ideas. Everything that is a liquid is a number. Thus, every liquid is an idea.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "number",
+      "predicate": "idea",
+      "raw_text": "There are no numbers that are ideas"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "liquid",
+      "predicate": "number",
+      "raw_text": "Everything that is a liquid is a number"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "liquid",
+      "predicate": "idea",
+      "raw_text": "Thus, every liquid is an idea"
+    },
+    "middle_term": "number",
+    "major_term": "idea",
+    "minor_term": "liquid",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-1",
+    "figure": 1,
+    "mood": "EAA",
+    "reason": "EAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "liquid",
+      "P": "idea",
+      "M": "number"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

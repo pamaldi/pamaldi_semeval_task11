@@ -1,0 +1,70 @@
+{
+  "id": "50b2444b-686f-487c-8e11-e76b4126b8ff",
+  "text": "There is not a single piece of paper that can be eaten. A portion of all paper is a book. It is the case that some books are edible.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "piece of paper",
+      "predicate": "thing that can be eaten",
+      "raw_text": "There is not a single piece of paper that can be eaten"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "book",
+      "predicate": "piece of paper",
+      "raw_text": "A portion of all paper is a book"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "book",
+      "predicate": "thing that can be eaten",
+      "raw_text": "It is the case that some books are edible"
+    },
+    "middle_term": "piece of paper",
+    "major_term": "thing that can be eaten",
+    "minor_term": "book",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "form": "EII-1",
+    "mood": "EII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "EII-1",
+    "vote_counts": {
+      "EII-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "EII-1 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

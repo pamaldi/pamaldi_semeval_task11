@@ -1,0 +1,39 @@
+================================================================================
+TRUE REFLEXION LOG - 723a274a-a4ff-47f5-8a4f-0cf42e554a5a
+Mode: label_free
+================================================================================
+
+Syllogism:
+It is the case that no adult is a child. Some people are adults. It follows that some people are children.
+
+Ground Truth: INVALID
+Validity: False
+Plausibility: True
+Final Prediction: INVALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: INVALID
+Failure Type: unknown
+
+Code:
+% Fail clause for child/1 (no children exist in this model)
+child(_) :- fail.
+
+% A-premise: No adult is a child
+conflict :- adult(X), child(X).
+
+% I-premise: Some people are adults
+adult(adult1).
+person(adult1).
+
+% I-conclusion: Some people are children
+valid_syllogism :- person(X), child(X).
+
+Stdout: RESULT:INVALID
+
+

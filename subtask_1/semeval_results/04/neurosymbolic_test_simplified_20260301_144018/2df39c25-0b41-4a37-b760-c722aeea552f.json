@@ -1,0 +1,68 @@
+{
+  "id": "2df39c25-0b41-4a37-b760-c722aeea552f",
+  "text": "Everything that is a tree is a plant. Everything that is a flower is a plant. This implies that some flowers are not trees.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "plant",
+      "raw_text": "Everything that is a tree is a plant"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "flower",
+      "predicate": "plant",
+      "raw_text": "Everything that is a flower is a plant"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "flower",
+      "predicate": "tree",
+      "raw_text": "This implies that some flowers are not trees"
+    },
+    "middle_term": "plant",
+    "major_term": "tree",
+    "minor_term": "flower",
+    "figure": 2,
+    "mood": "AAO",
+    "form": "AAO-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-2",
+    "figure": 2,
+    "mood": "AAO",
+    "reason": "AAO-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "flower",
+      "P": "tree",
+      "M": "plant"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

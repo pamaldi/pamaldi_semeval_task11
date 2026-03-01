@@ -1,0 +1,68 @@
+{
+  "id": "88cbe1ec-a2be-40ca-9f5f-db71a17fba20",
+  "text": "Nothing that is a bird is able to fly. Every single bird is a human being. It is therefore true that every human can fly.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "able to fly",
+      "raw_text": "Nothing that is a bird is able to fly"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "human being",
+      "raw_text": "Every single bird is a human being"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "able to fly",
+      "raw_text": "It is therefore true that every human can fly"
+    },
+    "middle_term": "bird",
+    "major_term": "able to fly",
+    "minor_term": "human",
+    "figure": 3,
+    "mood": "EAA",
+    "form": "EAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-3",
+    "figure": 3,
+    "mood": "EAA",
+    "reason": "EAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "human",
+      "P": "able to fly",
+      "M": "bird"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

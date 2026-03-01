@@ -1,0 +1,68 @@
+{
+  "id": "3167dc72-56e1-47ad-8a27-e9883d7cb917",
+  "text": "There are no birds which are aquatic animals. Some animals are things that are birds. It must be true that some animals are aquatic animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "aquatic animal",
+      "raw_text": "There are no birds which are aquatic animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "bird",
+      "raw_text": "Some animals are things that are birds"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "aquatic animal",
+      "raw_text": "It must be true that some animals are aquatic animals"
+    },
+    "middle_term": "bird",
+    "major_term": "aquatic animal",
+    "minor_term": "animal",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-1",
+    "figure": 1,
+    "mood": "EII",
+    "reason": "EII-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "animal",
+      "P": "aquatic animal",
+      "M": "bird"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

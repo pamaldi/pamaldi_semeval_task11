@@ -1,0 +1,68 @@
+{
+  "id": "6936ce4a-9e83-488a-947d-66bb574f1789",
+  "text": "It is true that no person who is North American is a European. It is also true that no person who is French is a North American. It is a logical necessity that no French person is a European.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "north american",
+      "predicate": "european",
+      "raw_text": "It is true that no person who is North American is a European"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "french",
+      "predicate": "north american",
+      "raw_text": "It is also true that no person who is French is a North American"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "french",
+      "predicate": "european",
+      "raw_text": "It is a logical necessity that no French person is a European"
+    },
+    "middle_term": "north american",
+    "major_term": "european",
+    "minor_term": "french",
+    "figure": 1,
+    "mood": "EEE",
+    "form": "EEE-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EEE-1",
+    "figure": 1,
+    "mood": "EEE",
+    "reason": "EEE-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "french",
+      "P": "european",
+      "M": "north american"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEE": 3
+    },
+    "types_seen": [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

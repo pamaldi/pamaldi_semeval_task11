@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "85dd382a-22e5-4c21-9218-33228012e4ad",
+  "syllogism_text": "It is completely false that any fruit is a thing that grows on a tree. A portion of fruits are apples. We must conclude that some apples do not grow on trees.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for the I-proposition: Some fruits are apples (witness)\nfruit(apple1).\napple(apple1).\n\n% Fail clause for \"any fruit is a thing that grows on a tree\"\n% (i.e., \"No fruit grows on a tree\" \u2192 E-proposition)\ngrows_on_tree(_) :- fail.\n\n% Validity check: Some apples do not grow on trees (O-conclusion)\nvalid_syllogism :- apple(X), \\+ grows_on_tree(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:46:40.133103"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

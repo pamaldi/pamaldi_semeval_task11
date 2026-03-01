@@ -1,0 +1,76 @@
+{
+  "id": "3f18c212-16aa-4c72-bde9-d1bb4349ca50",
+  "text": "There are no animals that are non-aquatic and also fish. A portion of the animals that are mammals are also non-aquatic. It must be the case that some mammals are not fish.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal that is non-aquatic",
+      "predicate": "fish",
+      "raw_text": "There are no animals that are non-aquatic and also fish"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal that is mammal",
+      "predicate": "animal that is non-aquatic",
+      "raw_text": "A portion of the animals that are mammals are also non-aquatic"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "mammal",
+      "predicate": "fish",
+      "raw_text": "It must be the case that some mammals are not fish"
+    },
+    "middle_term": "animal that is non-aquatic",
+    "major_term": "fish",
+    "minor_term": "mammal",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

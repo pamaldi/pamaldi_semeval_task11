@@ -1,0 +1,79 @@
+{
+  "id": "92193f8e-bb29-4c19-b647-5050c518f786",
+  "text": "Any and all apples are foods that are delicious. There are some apples which are also fruits. Consequently, a portion of fruits are foods that are delicious.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "food that is delicious",
+      "raw_text": "Any and all apples are foods that are delicious"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "There are some apples which are also fruits"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fruit",
+      "predicate": "food that is delicious",
+      "raw_text": "Consequently, a portion of fruits are foods that are delicious"
+    },
+    "middle_term": "apple",
+    "major_term": "food that is delicious",
+    "minor_term": "fruit",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "form": "AII-1",
+    "mood": "AII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Darii",
+    "reason": "Valid syllogistic form: Darii"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-1",
+    "vote_counts": {
+      "AII-1": 3,
+      "AII-3": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AII-1",
+      "AII-3",
+      "AII-1",
+      "AII-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-1 (t=0.0)",
+      "AII-3 (t=0.3)",
+      "AII-1 (t=0.5)",
+      "AII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

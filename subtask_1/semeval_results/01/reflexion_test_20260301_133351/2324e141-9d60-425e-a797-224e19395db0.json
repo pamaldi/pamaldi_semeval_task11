@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "2324e141-9d60-425e-a797-224e19395db0",
+  "syllogism_text": "Everything that is a planet is a celestial body. Everything that is a planet is a round object. This means that some round objects are celestial bodies.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for witness: an entity that is a planet\nplanet(earth).\n\n% Rules from premises\ncelestial_body(X) :- planet(X).\nround_object(X) :- planet(X).\n\n% Validity check: Some round objects are celestial bodies\nvalid_syllogism :- round_object(X), celestial_body(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:39:08.276421"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

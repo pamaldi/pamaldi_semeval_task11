@@ -1,0 +1,68 @@
+{
+  "id": "f80a357f-3815-474b-b77a-9d1c6a3b9bd2",
+  "text": "It is the case that there are no reptiles that are birds. Some things with furnitures are reptiles. It follows that some things with furnitures are birds.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "reptile",
+      "predicate": "bird",
+      "raw_text": "It is the case that there are no reptiles that are birds"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "thing with furniture",
+      "predicate": "reptile",
+      "raw_text": "Some things with furnitures are reptiles"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "thing with furniture",
+      "predicate": "bird",
+      "raw_text": "It follows that some things with furnitures are birds"
+    },
+    "middle_term": "reptile",
+    "major_term": "bird",
+    "minor_term": "thing with furniture",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-1",
+    "figure": 1,
+    "mood": "EII",
+    "reason": "EII-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "thing with furniture",
+      "P": "bird",
+      "M": "reptile"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

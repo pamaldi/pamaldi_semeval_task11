@@ -1,0 +1,78 @@
+{
+  "id": "84a1bda0-cd40-40ce-bff4-4dffcc19e6f0",
+  "text": "There are no shrubs that are tall plants. Every single item that is a tree is a tall plant. This proves that a number of trees are not shrubs.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "shrub",
+      "predicate": "tall plant",
+      "raw_text": "There are no shrubs that are tall plants"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "tall plant",
+      "raw_text": "Every single item that is a tree is a tall plant"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "tree",
+      "predicate": "shrub",
+      "raw_text": "This proves that a number of trees are not shrubs"
+    },
+    "middle_term": "tall plant",
+    "major_term": "shrub",
+    "minor_term": "tree",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "form": "EAO-2",
+    "mood": "EAO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Cesaro",
+    "reason": "Valid syllogistic form: Cesaro (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-2",
+    "vote_counts": {
+      "EAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-2",
+      "EAO-2",
+      "EAO-2",
+      "EAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-2 (t=0.0)",
+      "EAO-2 (t=0.3)",
+      "EAO-2 (t=0.5)",
+      "EAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

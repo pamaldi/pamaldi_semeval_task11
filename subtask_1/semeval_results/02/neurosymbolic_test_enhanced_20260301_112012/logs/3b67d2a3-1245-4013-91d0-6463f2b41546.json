@@ -1,0 +1,79 @@
+{
+  "id": "3b67d2a3-1245-4013-91d0-6463f2b41546",
+  "text": "It is impossible for an animal to be a rock. A portion of rocks are felines. Some of the felines are not animals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "rock",
+      "raw_text": "It is impossible for an animal to be a rock"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "rock",
+      "predicate": "feline",
+      "raw_text": "A portion of rocks are felines"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "feline",
+      "predicate": "animal",
+      "raw_text": "Some of the felines are not animals"
+    },
+    "middle_term": "rock",
+    "major_term": "animal",
+    "minor_term": "feline",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 3,
+      "EIO-4": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2",
+      "EIO-4",
+      "EIO-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-4 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

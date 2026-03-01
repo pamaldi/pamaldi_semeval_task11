@@ -1,0 +1,68 @@
+{
+  "id": "5da917df-8760-476f-ae79-e20c20c61236",
+  "text": "Nothing that is an organic thing can be said to be a celestial object. Every planet is a type of organic thing. Therefore, there are no planets that are celestial objects.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "organic thing",
+      "predicate": "celestial object",
+      "raw_text": "Nothing that is an organic thing can be said to be a celestial object"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "planet",
+      "predicate": "organic thing",
+      "raw_text": "Every planet is a type of organic thing"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "celestial object",
+      "raw_text": "Therefore, there are no planets that are celestial objects"
+    },
+    "middle_term": "organic thing",
+    "major_term": "celestial object",
+    "minor_term": "planet",
+    "figure": 1,
+    "mood": "EAE",
+    "form": "EAE-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAE-1",
+    "figure": 1,
+    "mood": "EAE",
+    "reason": "EAE-1 is valid (Celarent)",
+    "form_name": "Celarent",
+    "terms": {
+      "S": "planet",
+      "P": "celestial object",
+      "M": "organic thing"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

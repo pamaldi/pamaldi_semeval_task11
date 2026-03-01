@@ -1,0 +1,78 @@
+{
+  "id": "07920681-7c88-4bc7-8664-594779ff5ae4",
+  "text": "There are no plants that are metal objects. Everything that is a flower is a plant. It's the case that some flowers are metal objects.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "metal object",
+      "raw_text": "There are no plants that are metal objects"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "flower",
+      "predicate": "plant",
+      "raw_text": "Everything that is a flower is a plant"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "flower",
+      "predicate": "metal object",
+      "raw_text": "It's the case that some flowers are metal objects"
+    },
+    "middle_term": "plant",
+    "major_term": "metal object",
+    "minor_term": "flower",
+    "figure": 1,
+    "mood": "EAI",
+    "form": "EAI-1"
+  },
+  "validity_details": {
+    "form": "EAI-1",
+    "mood": "EAI",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAI-1",
+    "vote_counts": {
+      "EAI-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAI-1",
+      "EAI-1",
+      "EAI-1",
+      "EAI-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAI-1 (t=0.0)",
+      "EAI-1 (t=0.3)",
+      "EAI-1 (t=0.5)",
+      "EAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

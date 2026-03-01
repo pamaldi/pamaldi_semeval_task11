@@ -1,0 +1,37 @@
+{
+  "id": "d63b3aff-77cd-4c65-9417-be63ce1c733b",
+  "text": "Every piece of fruit is edible. Any apple is a fruit. This means that some apples are not vegetables.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Every piece of fruit is edible. (All fruit are edible.)\n   - **Premise 2:** Any apple is a fruit. (All apples are fruit.)\n   - **Conclusion:** Some apples are not vegetables.\n\n2. **Identify the three terms:**\n   - **Middle term:** *fruit* (appears in both premises)\n   - **Major term:** *vegetables* (predicate of the conclusion)\n   - **Minor term:** *apples* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All fruit are edible.\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"All apples are fruit.\" \u2192 **A** (universal affirmative)\n   - **Conclusion:** \"Some apples are not vegetables.\" \u2192 **O** (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (fruit-edible)\n   - Premise 2: S-M (apples-fruit)\n   - This is **Figure 1**.\n\n5. **Check if the mood-figure combination is valid:**\n   - The mood is **AAO**, and the figure is **1**.\n   - **AAO-1** is **not** a valid syllogism form.\n\n6. **Additional analysis:**\n   - The conclusion is a **particular negative (O)**, but the premises are both **universal affirmative (A)**.\n   - The syllogism commits the **fallacy of illicit major**:\n     - The major term *vegetables* is distributed in the conclusion (\"Some apples are **not** vegetables\") but does **not** appear in the major premise at all.\n   - The syllogism also commits the **fallacy of two affirmative premises with a negative conclusion**, which is invalid in syllogistic logic.\n\n---\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

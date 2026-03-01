@@ -1,0 +1,19 @@
+# Pip dependencies for SemEval 2026 Task 11 notebooks (pamaldi_semeval_11_task1)
+# Install: pip install -r requirements.txt
+
+# AWS and API
+boto3
+
+# Prolog (for prolog_reflexion notebook)
+pyswip
+
+# Data and utilities
+pandas
+tqdm
+matplotlib
+
+# Optional: if using HuggingFace in any notebook
+# torch
+# transformers
+# accelerate
+# bitsandbytes

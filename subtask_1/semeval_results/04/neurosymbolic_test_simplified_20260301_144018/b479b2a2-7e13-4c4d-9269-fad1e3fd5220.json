@@ -1,0 +1,70 @@
+{
+  "id": "b479b2a2-7e13-4c4d-9269-fad1e3fd5220",
+  "text": "The set of objects and spoons do not overlap. A portion of spoons are implements. Some implements are not objects.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "object",
+      "predicate": "spoon",
+      "raw_text": "The set of objects and spoons do not overlap"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "spoon",
+      "predicate": "implement",
+      "raw_text": "A portion of spoons are implements"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "implement",
+      "predicate": "object",
+      "raw_text": "Some implements are not objects"
+    },
+    "middle_term": "spoon",
+    "major_term": "object",
+    "minor_term": "implement",
+    "figure": 4,
+    "mood": "OIO",
+    "form": "OIO-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OIO-4",
+    "figure": 4,
+    "mood": "OIO",
+    "reason": "OIO-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "implement",
+      "P": "object",
+      "M": "spoon"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise1: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "730ad5ee-b19a-4d69-bad3-309f2f2ac775",
+  "text": "It is true that a portion of animals are birds. Among the animals that are penguins, some are also animals. This proves that not every penguin is a bird.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "bird",
+      "raw_text": "a portion of animals are birds"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "penguin",
+      "predicate": "animal",
+      "raw_text": "Among the animals that are penguins, some are also animals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "penguin",
+      "predicate": "bird",
+      "raw_text": "This proves that not every penguin is a bird"
+    },
+    "middle_term": "animal",
+    "major_term": "bird",
+    "minor_term": "penguin",
+    "figure": 1,
+    "mood": "IIO",
+    "form": "IIO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IIO-1",
+    "figure": 1,
+    "mood": "IIO",
+    "reason": "IIO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "penguin",
+      "P": "bird",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IIO": 3
+    },
+    "types_seen": [
+      "IIO",
+      "IIO",
+      "IIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

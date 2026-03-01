@@ -1,0 +1,68 @@
+{
+  "id": "57104ec7-4729-408b-938d-d37ee5d81de8",
+  "text": "There are some buildings which are skyscrapers. A skyscraper is a very tall structure. One can therefore conclude that some tall structures are buildings.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "building",
+      "predicate": "skyscraper",
+      "raw_text": "There are some buildings which are skyscrapers"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "skyscraper",
+      "predicate": "very tall structure",
+      "raw_text": "A skyscraper is a very tall structure"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tall structure",
+      "predicate": "building",
+      "raw_text": "One can therefore conclude that some tall structures are buildings"
+    },
+    "middle_term": "skyscraper",
+    "major_term": "building",
+    "minor_term": "tall structure",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "tall structure",
+      "P": "building",
+      "M": "skyscraper"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

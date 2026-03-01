@@ -1,0 +1,76 @@
+{
+  "id": "5260247f-b290-4bae-8d0c-a6c988d3d610",
+  "text": "Every single item that is a writing instrument is a tool. There are some pens which are writing instruments. Thus, some pens are tools.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "writing instrument",
+      "predicate": "tool",
+      "raw_text": "Every single item that is a writing instrument is a tool"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "pen",
+      "predicate": "writing instrument",
+      "raw_text": "There are some pens which are writing instruments"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "pen",
+      "predicate": "tool",
+      "raw_text": "Thus, some pens are tools"
+    },
+    "middle_term": "writing instrument",
+    "major_term": "tool",
+    "minor_term": "pen",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "form": "AII-1",
+    "mood": "AII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Darii",
+    "reason": "Valid syllogistic form: Darii"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "AII-1",
+    "vote_counts": {
+      "AII-1": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "AII-1",
+      "AII-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "AII-1 (t=0.3)",
+      "AII-1 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

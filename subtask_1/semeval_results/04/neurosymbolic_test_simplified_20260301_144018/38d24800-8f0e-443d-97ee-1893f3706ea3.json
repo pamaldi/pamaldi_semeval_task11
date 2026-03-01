@@ -1,0 +1,68 @@
+{
+  "id": "38d24800-8f0e-443d-97ee-1893f3706ea3",
+  "text": "There are no fish that are creatures. Every single fish is a vertebrate. Some vertebrates fail to be creatures.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "creature",
+      "raw_text": "There are no fish that are creatures"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "vertebrate",
+      "raw_text": "Every single fish is a vertebrate"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "vertebrate",
+      "predicate": "creature",
+      "raw_text": "Some vertebrates fail to be creatures"
+    },
+    "middle_term": "fish",
+    "major_term": "creature",
+    "minor_term": "vertebrate",
+    "figure": 3,
+    "mood": "EAO",
+    "form": "EAO-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-3",
+    "figure": 3,
+    "mood": "EAO",
+    "reason": "EAO-3 is valid (Felapton)",
+    "form_name": "Felapton",
+    "terms": {
+      "S": "vertebrate",
+      "P": "creature",
+      "M": "fish"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

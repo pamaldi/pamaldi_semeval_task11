@@ -1,0 +1,68 @@
+{
+  "id": "581fa853-f1e1-4450-8716-be9e17623a21",
+  "text": "There are no cars that are airplanes. Everything that is a dog is a car. Thus, every dog is an airplane.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "car",
+      "predicate": "airplane",
+      "raw_text": "There are no cars that are airplanes"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "car",
+      "raw_text": "Everything that is a dog is a car"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "airplane",
+      "raw_text": "Thus, every dog is an airplane"
+    },
+    "middle_term": "car",
+    "major_term": "airplane",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-1",
+    "figure": 1,
+    "mood": "EAA",
+    "reason": "EAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "dog",
+      "P": "airplane",
+      "M": "car"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

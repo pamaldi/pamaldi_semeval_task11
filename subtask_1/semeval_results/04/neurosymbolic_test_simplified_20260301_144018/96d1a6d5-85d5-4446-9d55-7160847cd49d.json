@@ -1,0 +1,68 @@
+{
+  "id": "96d1a6d5-85d5-4446-9d55-7160847cd49d",
+  "text": "There is not a single inanimate object that is a writer. A portion of inanimate objects are people. It is the case that some people are writers.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "inanimate object",
+      "predicate": "writer",
+      "raw_text": "There is not a single inanimate object that is a writer"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "inanimate object",
+      "predicate": "person",
+      "raw_text": "A portion of inanimate objects are people"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "person",
+      "predicate": "writer",
+      "raw_text": "It is the case that some people are writers"
+    },
+    "middle_term": "inanimate object",
+    "major_term": "writer",
+    "minor_term": "person",
+    "figure": 3,
+    "mood": "EII",
+    "form": "EII-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-3",
+    "figure": 3,
+    "mood": "EII",
+    "reason": "EII-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "person",
+      "P": "writer",
+      "M": "inanimate object"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

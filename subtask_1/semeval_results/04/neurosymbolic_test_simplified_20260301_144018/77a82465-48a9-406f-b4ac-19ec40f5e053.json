@@ -1,0 +1,68 @@
+{
+  "id": "77a82465-48a9-406f-b4ac-19ec40f5e053",
+  "text": "Every person who is a filmmaker is someone who works in production. The set of directors contains someone who works in production. Consequently, every director is a filmmaker.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "filmmaker",
+      "predicate": "someone who works in production",
+      "raw_text": "Every person who is a filmmaker is someone who works in production"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "director",
+      "predicate": "someone who works in production",
+      "raw_text": "The set of directors contains someone who works in production"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "director",
+      "predicate": "filmmaker",
+      "raw_text": "Consequently, every director is a filmmaker"
+    },
+    "middle_term": "someone who works in production",
+    "major_term": "filmmaker",
+    "minor_term": "director",
+    "figure": 2,
+    "mood": "AIA",
+    "form": "AIA-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AIA-2",
+    "figure": 2,
+    "mood": "AIA",
+    "reason": "AIA-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "director",
+      "P": "filmmaker",
+      "M": "someone who works in production"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AIA": 3
+    },
+    "types_seen": [
+      "AIA",
+      "AIA",
+      "AIA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

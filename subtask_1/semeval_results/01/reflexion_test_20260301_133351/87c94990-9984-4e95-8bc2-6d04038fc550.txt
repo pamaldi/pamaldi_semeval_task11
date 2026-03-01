@@ -1,0 +1,36 @@
+================================================================================
+TRUE REFLEXION LOG - 87c94990-9984-4e95-8bc2-6d04038fc550
+Mode: label_free
+================================================================================
+
+Syllogism:
+Some people are gold. All things which are gold are metals. It must follow that some metals are people.
+
+Ground Truth: VALID
+Validity: True
+Plausibility: False
+Final Prediction: VALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: VALID
+Failure Type: unknown
+
+Code:
+% Facts (witness: someone who is gold)
+person(alice).
+gold(alice).
+
+% Rule from A-premise: All things which are gold are metals
+metal(X) :- gold(X).
+
+% Validity check: Some metals are people
+valid_syllogism :- metal(X), person(X).
+
+Stdout: RESULT:VALID
+
+

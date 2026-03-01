@@ -1,0 +1,78 @@
+{
+  "id": "454ea1b7-bfb1-4a65-a000-c21cbe9b9ef4",
+  "text": "Nothing that is a liquid can be considered a beverage. It is the case that some types of milk are liquids. It follows that some milks are not beverages.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "liquid",
+      "predicate": "beverage",
+      "raw_text": "Nothing that is a liquid can be considered a beverage"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "milk",
+      "predicate": "liquid",
+      "raw_text": "It is the case that some types of milk are liquids"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "milk",
+      "predicate": "beverage",
+      "raw_text": "It follows that some milks are not beverages"
+    },
+    "middle_term": "liquid",
+    "major_term": "beverage",
+    "minor_term": "milk",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2",
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

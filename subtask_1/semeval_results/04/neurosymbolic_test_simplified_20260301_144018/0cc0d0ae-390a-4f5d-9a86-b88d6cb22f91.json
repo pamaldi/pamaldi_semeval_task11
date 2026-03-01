@@ -1,0 +1,68 @@
+{
+  "id": "0cc0d0ae-390a-4f5d-9a86-b88d6cb22f91",
+  "text": "Items that are tables are in no way items designed for sitting. Everything that is a chair is an item designed for sitting. Chairs cannot be classified as tables.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "table",
+      "predicate": "item designed for sitting",
+      "raw_text": "Items that are tables are in no way items designed for sitting"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "chair",
+      "predicate": "item designed for sitting",
+      "raw_text": "Everything that is a chair is an item designed for sitting"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "chair",
+      "predicate": "table",
+      "raw_text": "Chairs cannot be classified as tables"
+    },
+    "middle_term": "item designed for sitting",
+    "major_term": "table",
+    "minor_term": "chair",
+    "figure": 2,
+    "mood": "EAE",
+    "form": "EAE-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAE-2",
+    "figure": 2,
+    "mood": "EAE",
+    "reason": "EAE-2 is valid (Cesare)",
+    "form_name": "Cesare",
+    "terms": {
+      "S": "chair",
+      "P": "table",
+      "M": "item designed for sitting"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

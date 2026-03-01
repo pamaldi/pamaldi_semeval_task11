@@ -1,0 +1,68 @@
+{
+  "id": "2c866578-204c-4f91-a6ef-faad0d188365",
+  "text": "There are some Ferraries that are things with wheels. Everything that is a Ferrari is a car. It follows that every car has wheels.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "ferrari",
+      "predicate": "thing with wheels",
+      "raw_text": "There are some Ferraries that are things with wheels"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "ferrari",
+      "predicate": "car",
+      "raw_text": "Everything that is a Ferrari is a car"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "thing with wheels",
+      "raw_text": "It follows that every car has wheels"
+    },
+    "middle_term": "ferrari",
+    "major_term": "thing with wheels",
+    "minor_term": "car",
+    "figure": 3,
+    "mood": "IAA",
+    "form": "IAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IAA-3",
+    "figure": 3,
+    "mood": "IAA",
+    "reason": "IAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "car",
+      "P": "thing with wheels",
+      "M": "ferrari"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAA": 3
+    },
+    "types_seen": [
+      "IAA",
+      "IAA",
+      "IAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

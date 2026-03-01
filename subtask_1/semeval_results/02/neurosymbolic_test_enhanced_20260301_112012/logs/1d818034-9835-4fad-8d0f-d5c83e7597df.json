@@ -1,0 +1,77 @@
+{
+  "id": "1d818034-9835-4fad-8d0f-d5c83e7597df",
+  "text": "There are no compounds classified as organic that are made of metal. Every substance that is a sugar is an organic compound. This logically proves that no sugar is made of metal.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "organic compound",
+      "predicate": "compound made of metal",
+      "raw_text": "There are no compounds classified as organic that are made of metal."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "substance that is a sugar",
+      "predicate": "organic compound",
+      "raw_text": "Every substance that is a sugar is an organic compound."
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "sugar",
+      "predicate": "compound made of metal",
+      "raw_text": "This logically proves that no sugar is made of metal."
+    },
+    "middle_term": "organic compound",
+    "major_term": "compound made of metal",
+    "minor_term": "sugar",
+    "figure": 2,
+    "mood": "EAE",
+    "form": "EAE-2"
+  },
+  "validity_details": {
+    "form": "EAE-2",
+    "mood": "EAE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Cesare",
+    "reason": "Valid syllogistic form: Cesare"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "EAE-2",
+    "vote_counts": {
+      "EAE-2": 1,
+      "EAE-1": 1
+    },
+    "max_votes": 1,
+    "all_forms": [
+      "EAE-2",
+      "EAE-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-2 (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "EAE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

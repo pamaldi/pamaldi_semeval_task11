@@ -1,0 +1,62 @@
+{
+  "total": 191,
+  "extraction_success": 171,
+  "extraction_rate": 0.8952879581151832,
+  "methods": {
+    "symbolic": 171,
+    "fallback": 20,
+    "failed": 0
+  },
+  "predictions": {
+    "VALID": 93,
+    "INVALID": 98,
+    "ERROR": 0
+  },
+  "failures_logged": {
+    "extraction_errors": 0,
+    "false_valid": 3,
+    "false_invalid": 6,
+    "total_failures": 9
+  },
+  "official_metrics": {
+    "accuracy": 95.288,
+    "content_effect": 6.25,
+    "combined_score": 31.9651
+  },
+  "accuracy_by_method": {
+    "overall": 95.288,
+    "symbolic": 95.9064,
+    "fallback": 90.0
+  },
+  "subgroup_accuracies": {
+    "valid_plausible": {
+      "accuracy": 87.5,
+      "n": 48
+    },
+    "valid_implausible": {
+      "accuracy": 100.0,
+      "n": 48
+    },
+    "invalid_plausible": {
+      "accuracy": 93.617,
+      "n": 47
+    },
+    "invalid_implausible": {
+      "accuracy": 100.0,
+      "n": 48
+    }
+  },
+  "content_effect_breakdown": {
+    "ce_intra": 9.4415,
+    "ce_inter": 3.0585,
+    "total": 6.25
+  },
+  "pipeline_stats": {
+    "total": 191,
+    "symbolic_success": 171,
+    "fallback_used": 20,
+    "fallback_correct": 18,
+    "no_prediction": 0
+  },
+  "timestamp": "2026-03-01T12:12:29.187272"
+}

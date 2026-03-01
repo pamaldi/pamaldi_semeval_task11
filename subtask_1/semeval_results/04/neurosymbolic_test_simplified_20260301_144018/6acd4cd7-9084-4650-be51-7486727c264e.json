@@ -1,0 +1,68 @@
+{
+  "id": "6acd4cd7-9084-4650-be51-7486727c264e",
+  "text": "Anything that is a flower is a stone. There are no stones which are roses. This logically implies that some roses are not flowers.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "flower",
+      "predicate": "stone",
+      "raw_text": "Anything that is a flower is a stone"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "stone",
+      "predicate": "rose",
+      "raw_text": "There are no stones which are roses"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "rose",
+      "predicate": "flower",
+      "raw_text": "This logically implies that some roses are not flowers"
+    },
+    "middle_term": "stone",
+    "major_term": "flower",
+    "minor_term": "rose",
+    "figure": 4,
+    "mood": "AEO",
+    "form": "AEO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEO-4",
+    "figure": 4,
+    "mood": "AEO",
+    "reason": "AEO-4 is valid (Camenop)",
+    "form_name": "Camenop",
+    "terms": {
+      "S": "rose",
+      "P": "flower",
+      "M": "stone"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEO": 3
+    },
+    "types_seen": [
+      "AEO",
+      "AEO",
+      "AEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

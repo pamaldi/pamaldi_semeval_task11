@@ -1,0 +1,78 @@
+{
+  "id": "372bfeea-11fd-47ad-b489-0616b8d2cd30",
+  "text": "Any and all clouds are made of solid iron. There are clouds that are a type of cumulus. This implies that some cumulus clouds are solid iron.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cloud",
+      "predicate": "thing made of solid iron",
+      "raw_text": "Any and all clouds are made of solid iron"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "cloud",
+      "predicate": "cumulus",
+      "raw_text": "There are clouds that are a type of cumulus"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cumulus",
+      "predicate": "thing made of solid iron",
+      "raw_text": "This implies that some cumulus clouds are solid iron"
+    },
+    "middle_term": "cloud",
+    "major_term": "thing made of solid iron",
+    "minor_term": "cumulus",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "form": "AII-1",
+    "mood": "AII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Darii",
+    "reason": "Valid syllogistic form: Darii"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-1",
+    "vote_counts": {
+      "AII-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AII-1",
+      "AII-1",
+      "AII-1",
+      "AII-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-1 (t=0.0)",
+      "AII-1 (t=0.3)",
+      "AII-1 (t=0.5)",
+      "AII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

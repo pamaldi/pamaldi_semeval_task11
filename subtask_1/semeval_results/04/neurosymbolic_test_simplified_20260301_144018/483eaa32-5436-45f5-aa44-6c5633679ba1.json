@@ -1,0 +1,68 @@
+{
+  "id": "483eaa32-5436-45f5-aa44-6c5633679ba1",
+  "text": "There is at least an odd number that is a negative number. A portion of the prime numbers are negative numbers. Consequently, some prime numbers are odd numbers.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "odd number",
+      "predicate": "negative number",
+      "raw_text": "There is at least an odd number that is a negative number"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "prime number",
+      "predicate": "negative number",
+      "raw_text": "A portion of the prime numbers are negative numbers"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "prime number",
+      "predicate": "odd number",
+      "raw_text": "Consequently, some prime numbers are odd numbers"
+    },
+    "middle_term": "negative number",
+    "major_term": "odd number",
+    "minor_term": "prime number",
+    "figure": 2,
+    "mood": "III",
+    "form": "III-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "III-2",
+    "figure": 2,
+    "mood": "III",
+    "reason": "III-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "prime number",
+      "P": "odd number",
+      "M": "negative number"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "III": 3
+    },
+    "types_seen": [
+      "III",
+      "III",
+      "III"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

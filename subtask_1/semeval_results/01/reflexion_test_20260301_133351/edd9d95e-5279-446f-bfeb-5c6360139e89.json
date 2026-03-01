@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "edd9d95e-5279-446f-bfeb-5c6360139e89",
+  "syllogism_text": "Anything that is a cloud is a politician. Every politician is made of cotton candy. Consequently, some things made of cotton candy are clouds.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for witnesses\ncloud(cloud1).\n\n% Rules from premises\npolitician(X) :- cloud(X).\nmade_of_cotton_candy(X) :- politician(X).\n\n% Validity check for conclusion: Some things made of cotton candy are clouds\nvalid_syllogism :- made_of_cotton_candy(X), cloud(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:38:52.776743"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

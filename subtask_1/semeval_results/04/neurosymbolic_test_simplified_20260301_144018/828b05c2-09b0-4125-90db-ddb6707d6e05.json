@@ -1,0 +1,68 @@
+{
+  "id": "828b05c2-09b0-4125-90db-ddb6707d6e05",
+  "text": "Diamonds are in no way soft substances. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "diamond",
+      "predicate": "soft substance",
+      "raw_text": "Diamonds are in no way soft substances"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "diamond",
+      "predicate": "carbon compound",
+      "raw_text": "Everything that is a diamond is a carbon compound"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "carbon compound",
+      "predicate": "soft substance",
+      "raw_text": "There are some carbon compounds which are not soft substances"
+    },
+    "middle_term": "diamond",
+    "major_term": "soft substance",
+    "minor_term": "carbon compound",
+    "figure": 3,
+    "mood": "EAO",
+    "form": "EAO-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-3",
+    "figure": 3,
+    "mood": "EAO",
+    "reason": "EAO-3 is valid (Felapton)",
+    "form_name": "Felapton",
+    "terms": {
+      "S": "carbon compound",
+      "P": "soft substance",
+      "M": "diamond"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

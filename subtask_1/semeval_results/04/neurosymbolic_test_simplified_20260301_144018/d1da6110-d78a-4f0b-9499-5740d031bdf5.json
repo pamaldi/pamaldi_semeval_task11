@@ -1,0 +1,68 @@
+{
+  "id": "d1da6110-d78a-4f0b-9499-5740d031bdf5",
+  "text": "Anything that is a bird is a building. Anything that is a bird is a vehicle. Consequently, some vehicles are buildings.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "building",
+      "raw_text": "Anything that is a bird is a building"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "vehicle",
+      "raw_text": "Anything that is a bird is a vehicle"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vehicle",
+      "predicate": "building",
+      "raw_text": "Consequently, some vehicles are buildings"
+    },
+    "middle_term": "bird",
+    "major_term": "building",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-3",
+    "figure": 3,
+    "mood": "AAI",
+    "reason": "AAI-3 is valid (Darapti)",
+    "form_name": "Darapti",
+    "terms": {
+      "S": "vehicle",
+      "P": "building",
+      "M": "bird"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

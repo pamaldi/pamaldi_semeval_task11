@@ -1,0 +1,68 @@
+{
+  "id": "6e5f055f-06e4-40f3-a45b-52b7d9292d60",
+  "text": "There are no individuals who are elephants that are also people enrolled in kindergarten. All five-year-olds are people enrolled in kindergarten. It can be deduced that some five-year-olds are not elephants.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "individual who is an elephant",
+      "predicate": "person enrolled in kindergarten",
+      "raw_text": "There are no individuals who are elephants that are also people enrolled in kindergarten"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "five-year-old",
+      "predicate": "person enrolled in kindergarten",
+      "raw_text": "All five-year-olds are people enrolled in kindergarten"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "five-year-old",
+      "predicate": "elephant",
+      "raw_text": "It can be deduced that some five-year-olds are not elephants"
+    },
+    "middle_term": "person enrolled in kindergarten",
+    "major_term": "elephant",
+    "minor_term": "five-year-old",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-2",
+    "figure": 2,
+    "mood": "EAO",
+    "reason": "EAO-2 is valid (Cesaro)",
+    "form_name": "Cesaro",
+    "terms": {
+      "S": "five-year-old",
+      "P": "elephant",
+      "M": "person enrolled in kindergarten"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

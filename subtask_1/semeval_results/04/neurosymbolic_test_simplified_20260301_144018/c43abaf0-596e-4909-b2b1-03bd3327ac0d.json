@@ -1,0 +1,68 @@
+{
+  "id": "c43abaf0-596e-4909-b2b1-03bd3327ac0d",
+  "text": "Everything that is a fish has legs. There are no sharks that are not fish. At least some sharks are things that have legs.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "thing that has legs",
+      "raw_text": "Everything that is a fish has legs"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "shark",
+      "predicate": "fish",
+      "raw_text": "There are no sharks that are not fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "shark",
+      "predicate": "thing that has legs",
+      "raw_text": "At least some sharks are things that have legs"
+    },
+    "middle_term": "fish",
+    "major_term": "thing that has legs",
+    "minor_term": "shark",
+    "figure": 1,
+    "mood": "AAI",
+    "form": "AAI-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-1",
+    "figure": 1,
+    "mood": "AAI",
+    "reason": "AAI-1 is valid (Barbari)",
+    "form_name": "Barbari",
+    "terms": {
+      "S": "shark",
+      "P": "thing that has legs",
+      "M": "fish"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

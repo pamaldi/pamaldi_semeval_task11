@@ -1,0 +1,68 @@
+{
+  "id": "c869ec62-ccfd-47ab-b7bc-2cb24c86b835",
+  "text": "There are no books that can be called plants. It is also true that every book is a type of animal. This has led to the conclusion that every animal is a plant.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "book",
+      "predicate": "plant",
+      "raw_text": "There are no books that can be called plants"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "animal",
+      "raw_text": "It is also true that every book is a type of animal"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "plant",
+      "raw_text": "This has led to the conclusion that every animal is a plant"
+    },
+    "middle_term": "book",
+    "major_term": "plant",
+    "minor_term": "animal",
+    "figure": 3,
+    "mood": "EAA",
+    "form": "EAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-3",
+    "figure": 3,
+    "mood": "EAA",
+    "reason": "EAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "animal",
+      "P": "plant",
+      "M": "book"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

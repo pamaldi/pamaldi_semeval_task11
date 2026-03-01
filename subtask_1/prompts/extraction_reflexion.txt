@@ -1,0 +1,196 @@
+You are a formal logic expert. Your previous extraction attempt had errors.
+
+## Your Task
+
+Fix the errors identified below by following the step-by-step procedure carefully.
+
+---
+
+## CRITICAL: FIGURE CALCULATION
+
+**Most errors are figure calculation errors.** Use this procedure:
+
+### Step A: Confirm the Middle Term (M)
+M must appear in BOTH premises and NOT in conclusion.
+
+### Step B: Find M's position in each premise
+For Premise 1: Is M the SUBJECT or PREDICATE?
+For Premise 2: Is M the SUBJECT or PREDICATE?
+
+### Step C: Use the lookup table
+
+| M in Premise 1 | M in Premise 2 | Figure |
+|----------------|----------------|--------|
+| SUBJECT | PREDICATE | **1** |
+| PREDICATE | PREDICATE | **2** |
+| SUBJECT | SUBJECT | **3** |
+| PREDICATE | SUBJECT | **4** |
+
+**DO NOT GUESS.** Look at where M actually appears.
+
+---
+
+## STEP-BY-STEP EXTRACTION PROCEDURE
+
+### STEP 1: Identify the three sentences
+- Sentence 1 = First premise
+- Sentence 2 = Second premise
+- Sentence 3 = Conclusion (after "therefore", "thus", "consequently", etc.)
+
+### STEP 2: Extract the CONCLUSION first
+- Subject of conclusion → **MINOR TERM (S)**
+- Predicate of conclusion → **MAJOR TERM (P)**
+- Determine type (A/E/I/O)
+
+### STEP 3: Identify the MIDDLE TERM (M)
+- M appears in BOTH premises
+- M does NOT appear in conclusion
+- List terms explicitly to find M
+
+### STEP 4: Analyze each premise
+For each premise:
+- Subject and predicate
+- Type (A/E/I/O)
+- **Is M the SUBJECT or PREDICATE?** (write this down!)
+
+### STEP 5: Calculate the FIGURE
+Use the lookup table above. Do not skip this.
+
+### STEP 6: Build the MOOD
+Mood = P1.type + P2.type + Conclusion.type
+
+---
+
+## HANDLING COMPLEX TERMS
+
+Simplify complex terms:
+- "things that are potatoes" → "potato"
+- "creatures that are dogs" → "dog"
+- "person who is a doctor" → "doctor"
+- "any X which is Y" → treat "X which is Y" as a single term, but simplify if possible
+
+---
+
+## Common Mistakes to Avoid
+
+1. **Figure Errors** (MOST COMMON!):
+   - Don't assume the figure - calculate it from M's positions
+   - Figure 1: M=subject in P1, M=predicate in P2
+   - Figure 2: M=predicate in P1, M=predicate in P2
+   - Figure 3: M=subject in P1, M=subject in P2
+   - Figure 4: M=predicate in P1, M=subject in P2
+
+2. **Middle Term Errors**:
+   - M MUST be in both premises
+   - M must NOT be in conclusion
+   - If M is in conclusion, you identified it wrong
+
+3. **Term Identification**:
+   - ALWAYS derive S and P from conclusion FIRST
+   - Major term (P) = predicate of conclusion
+   - Minor term (S) = subject of conclusion
+
+4. **Proposition Type Errors**:
+   - A = "All S are P" (universal affirmative)
+   - E = "No S is P" (universal negative)
+   - I = "Some S are P" (particular affirmative)
+   - O = "Some S are not P" (particular negative)
+   - Watch for: "Not all" = O, "A portion of" = I, "There are no" = E
+
+5. **Premise/Conclusion Confusion**:
+   - Conclusion is LAST (after "therefore", "thus", etc.)
+   - Don't swap premises with conclusion
+
+---
+
+## Quick Examples of Figure Calculation
+
+**Example 1:** M is subject in P1, predicate in P2
+- P1: "All **dogs** are mammals" (M=dogs is SUBJECT)
+- P2: "All poodles are **dogs**" (M=dogs is PREDICATE)
+- → FIGURE 1
+
+**Example 2:** M is predicate in both
+- P1: "All dogs are **mammals**" (M=mammals is PREDICATE)
+- P2: "No reptiles are **mammals**" (M=mammals is PREDICATE)
+- → FIGURE 2
+
+**Example 3:** M is subject in both
+- P1: "All **birds** are animals" (M=birds is SUBJECT)
+- P2: "All **birds** have wings" (M=birds is SUBJECT)
+- → FIGURE 3
+
+**Example 4:** M is predicate in P1, subject in P2
+- P1: "Some animals are **dogs**" (M=dogs is PREDICATE)
+- P2: "All **dogs** are mammals" (M=dogs is SUBJECT)
+- → FIGURE 4
+
+---
+
+## Validation Checklist
+
+Before submitting, verify ALL:
+
+- [ ] M appears in premise1 (as subject OR predicate)
+- [ ] M appears in premise2 (as subject OR predicate)
+- [ ] M does NOT appear in conclusion
+- [ ] major_term equals conclusion.predicate
+- [ ] minor_term equals conclusion.subject
+- [ ] **Figure calculation:**
+  - M in P1 as: SUBJECT / PREDICATE? ____
+  - M in P2 as: SUBJECT / PREDICATE? ____
+  - Lookup table gives figure: ____
+- [ ] mood equals P1.type + P2.type + conclusion.type
+- [ ] all types are A, E, I, or O
+
+---
+
+## CRITICAL: Distinguishing Proposition Types
+
+| Keyword | Type | Example |
+|---------|------|---------|
+| "Every X is Y" | **A** | "Every bird is an animal" |
+| "All X are Y" | **A** | "All birds are animals" |
+| "No X is Y" | **E** | "No bird is a fish" |
+| "Some X are Y" | **I** | "Some birds are pets" |
+| "Some X are not Y" | **O** | "Some birds are not pets" |
+| "Not all X are Y" | **O** | "Not all birds fly" |
+
+**WARNING:** 
+- "Every X is Y" is ALWAYS type A (affirmative), never E
+- "Some X are not Y" is ALWAYS type O (negative), not I
+- The negation is in the COPULA ("are not"), not in the predicate
+
+## Output Format
+
+Return ONLY valid JSON:
+
+```json
+{
+  "premise1": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "premise2": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "conclusion": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "middle_term": "term that appears in both premises only",
+  "major_term": "predicate of conclusion",
+  "minor_term": "subject of conclusion",
+  "figure": 1|2|3|4,
+  "mood": "XYZ"
+}
+```
+
+Now fix the errors and provide the correct extraction.

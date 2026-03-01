@@ -1,0 +1,37 @@
+{
+  "id": "cc8b1d14-79aa-445e-929c-ec3043229103",
+  "text": "Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.",
+  "extraction_success": false,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "VALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Not a single object that is a vehicle is a type of transportation.  \n     (Logical form: **No vehicles are transportation** \u2192 **E** statement)\n   - **Premise 2:** A number of vehicles are buses.  \n     (Logical form: **Some vehicles are buses** \u2192 **I** statement)\n   - **Conclusion:** Some buses are not transportation.  \n     (Logical form: **Some buses are not transportation** \u2192 **O** statement)\n\n2. **Identify the three terms:**\n   - **Middle term:** *vehicle* (appears in both premises, not in conclusion)\n   - **Major term:** *transportation* (predicate of the conclusion)\n   - **Minor term:** *buses* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: **E** (No vehicles are transportation)\n   - Premise 2: **I** (Some vehicles are buses)\n   - Conclusion: **O** (Some buses are not transportation)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (vehicles-transportation)\n   - Premise 2: S-M (buses-vehicles)\n   - This is **Figure 3** (M-P, M-S)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **EIO**\n   - Figure: **3**\n   - **EIO in Figure 3 is valid** (Ferison)\n\n6. **Check for fallacies:**\n   - No two negative premises.\n   - No illicit distribution.\n   - No undistributed middle.\n   - The conclusion is negative, and one premise is negative (valid in syllogistic logic).\n   - The conclusion is particular, and one premise is particular (valid in syllogistic logic).\n\n**Conclusion:** The syllogism is **logically valid**.\n\nVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

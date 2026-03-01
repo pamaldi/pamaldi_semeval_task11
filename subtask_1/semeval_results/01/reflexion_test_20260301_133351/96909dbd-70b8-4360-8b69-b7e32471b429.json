@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "96909dbd-70b8-4360-8b69-b7e32471b429",
+  "syllogism_text": "Some foods that are sweet are berries. All things that are berries are fruits. Consequently, it follows that some fruits are sweet foods.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: a sweet food that is a berry\nsweet_food(strawberry).\nberry(strawberry).\n\n% All berries are fruits\nfruit(X) :- berry(X).\n\n% Validity check: Some fruits are sweet foods\nvalid_syllogism :- fruit(X), sweet_food(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:47:08.188488"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

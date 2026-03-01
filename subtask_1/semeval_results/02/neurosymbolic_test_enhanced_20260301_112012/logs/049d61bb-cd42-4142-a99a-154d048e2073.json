@@ -1,0 +1,78 @@
+{
+  "id": "049d61bb-cd42-4142-a99a-154d048e2073",
+  "text": "A few cars are fish. Every single fish is a swimmer. Consequently, some swimmers are cars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "car",
+      "predicate": "fish",
+      "raw_text": "A few cars are fish"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "swimmer",
+      "raw_text": "Every single fish is a swimmer"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "swimmer",
+      "predicate": "car",
+      "raw_text": "Consequently, some swimmers are cars"
+    },
+    "middle_term": "fish",
+    "major_term": "car",
+    "minor_term": "swimmer",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "form": "IAI-4",
+    "mood": "IAI",
+    "figure": 4,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Dimaris",
+    "reason": "Valid syllogistic form: Dimaris"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAI-4",
+    "vote_counts": {
+      "IAI-4": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IAI-4",
+      "IAI-4",
+      "IAI-4",
+      "IAI-4"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAI-4 (t=0.0)",
+      "IAI-4 (t=0.3)",
+      "IAI-4 (t=0.5)",
+      "IAI-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

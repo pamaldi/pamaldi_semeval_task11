@@ -1,0 +1,78 @@
+{
+  "id": "5da02e7d-f0ca-462a-9517-061b16eb5248",
+  "text": "It is impossible for a mammal to be an eagle. Some of the eagles are birds. There are a few birds which are not mammals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "eagle",
+      "raw_text": "It is impossible for a mammal to be an eagle"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "eagle",
+      "predicate": "bird",
+      "raw_text": "Some of the eagles are birds"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "bird",
+      "predicate": "mammal",
+      "raw_text": "There are a few birds which are not mammals"
+    },
+    "middle_term": "eagle",
+    "major_term": "mammal",
+    "minor_term": "bird",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIO-2",
+      "EIO-2",
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-2 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "EIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+  "text": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "car",
+      "predicate": "truck",
+      "raw_text": "It is not the case that every single car is a truck"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "All cars are vehicles"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "vehicle",
+      "predicate": "truck",
+      "raw_text": "One can logically conclude that some vehicles are not trucks"
+    },
+    "middle_term": "car",
+    "major_term": "truck",
+    "minor_term": "vehicle",
+    "figure": 1,
+    "mood": "OAO",
+    "form": "OAO-1"
+  },
+  "validity_details": {
+    "form": "OAO-1",
+    "mood": "OAO",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Form OAO-1 is not valid"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "OAO-1",
+    "vote_counts": {
+      "OAO-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "OAO-1 (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

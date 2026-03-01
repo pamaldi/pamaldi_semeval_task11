@@ -1,0 +1,68 @@
+{
+  "id": "48a96158-28f0-4e60-8802-3a7a9767cacb",
+  "text": "There are some mammals that are animals. All dogs are mammals. Thus, all dogs are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "mammal",
+      "predicate": "animal",
+      "raw_text": "There are some mammals that are animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "All dogs are mammals"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "animal",
+      "raw_text": "Thus, all dogs are animals"
+    },
+    "middle_term": "mammal",
+    "major_term": "animal",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "IAA",
+    "form": "IAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IAA-1",
+    "figure": 1,
+    "mood": "IAA",
+    "reason": "IAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "dog",
+      "P": "animal",
+      "M": "mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAA": 3
+    },
+    "types_seen": [
+      "IAA",
+      "IAA",
+      "IAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

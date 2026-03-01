@@ -1,0 +1,78 @@
+{
+  "id": "362cdfd6-8602-406f-ac7a-bc837fa96545",
+  "text": "There are no plants that are animals. It is the case that some flower is a plant. No flowers are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "There are no plants that are animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "flower",
+      "predicate": "plant",
+      "raw_text": "It is the case that some flower is a plant"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "flower",
+      "predicate": "animal",
+      "raw_text": "No flowers are animals"
+    },
+    "middle_term": "plant",
+    "major_term": "animal",
+    "minor_term": "flower",
+    "figure": 1,
+    "mood": "EIE",
+    "form": "EIE-1"
+  },
+  "validity_details": {
+    "form": "EIE-1",
+    "mood": "EIE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit minor: 'flower'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIE-1",
+    "vote_counts": {
+      "EIE-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EIE-1",
+      "EIE-1",
+      "EIE-1",
+      "EIE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIE-1 (t=0.0)",
+      "EIE-1 (t=0.3)",
+      "EIE-1 (t=0.5)",
+      "EIE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

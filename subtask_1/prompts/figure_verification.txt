@@ -1,0 +1,49 @@
+You are verifying the figure of a syllogism extraction.
+
+## The Extraction to Verify
+
+Premise 1: "{premise1_raw_text}"
+  - Subject: {premise1_subject}
+  - Predicate: {premise1_predicate}
+
+Premise 2: "{premise2_raw_text}"
+  - Subject: {premise2_subject}
+  - Predicate: {premise2_predicate}
+
+Middle Term: {middle_term}
+
+## Your Task
+
+Answer these questions step by step:
+
+1. In Premise 1, is "{middle_term}" the SUBJECT or the PREDICATE?
+   - Compare "{middle_term}" with subject "{premise1_subject}" and predicate "{premise1_predicate}"
+   - Answer: [SUBJECT/PREDICATE]
+
+2. In Premise 2, is "{middle_term}" the SUBJECT or the PREDICATE?
+   - Compare "{middle_term}" with subject "{premise2_subject}" and predicate "{premise2_predicate}"
+   - Answer: [SUBJECT/PREDICATE]
+
+3. Based on your answers, what is the figure?
+
+   | M in Premise 1 | M in Premise 2 | Figure |
+   |----------------|----------------|--------|
+   | SUBJECT        | PREDICATE      | 1      |
+   | PREDICATE      | PREDICATE      | 2      |
+   | SUBJECT        | SUBJECT        | 3      |
+   | PREDICATE      | SUBJECT        | 4      |
+
+   Answer: [1/2/3/4]
+
+## Output Format
+
+Return ONLY a JSON object:
+
+```json
+{
+  "m_in_premise1": "SUBJECT or PREDICATE",
+  "m_in_premise2": "SUBJECT or PREDICATE",
+  "figure": 1,
+  "reasoning": "Brief explanation"
+}
+```

@@ -1,0 +1,79 @@
+{
+  "id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+  "text": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "car",
+      "predicate": "truck",
+      "raw_text": "It is not the case that every single car is a truck"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "All cars are vehicles"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "vehicle",
+      "predicate": "truck",
+      "raw_text": "One can logically conclude that some vehicles are not trucks"
+    },
+    "middle_term": "car",
+    "major_term": "truck",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "OAO",
+    "form": "OAO-3"
+  },
+  "validity_details": {
+    "form": "OAO-3",
+    "mood": "OAO",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Bocardo",
+    "reason": "Valid syllogistic form: Bocardo"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "OAO-3",
+    "vote_counts": {
+      "OAO-3": 3,
+      "OAO-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "OAO-3",
+      "OAO-3",
+      "OAO-3",
+      "OAO-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAO-3 (t=0.0)",
+      "OAO-3 (t=0.3)",
+      "OAO-3 (t=0.5)",
+      "OAO-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

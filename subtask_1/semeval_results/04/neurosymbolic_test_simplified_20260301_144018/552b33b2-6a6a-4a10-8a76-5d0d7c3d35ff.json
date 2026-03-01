@@ -1,0 +1,68 @@
+{
+  "id": "552b33b2-6a6a-4a10-8a76-5d0d7c3d35ff",
+  "text": "There are no birds that are triangles. Every triangle is, by definition, a shape. Thus, some shapes are birds.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "triangle",
+      "raw_text": "There are no birds that are triangles"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "triangle",
+      "predicate": "shape",
+      "raw_text": "Every triangle is, by definition, a shape"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "shape",
+      "predicate": "bird",
+      "raw_text": "Thus, some shapes are birds"
+    },
+    "middle_term": "triangle",
+    "major_term": "bird",
+    "minor_term": "shape",
+    "figure": 4,
+    "mood": "EAI",
+    "form": "EAI-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAI-4",
+    "figure": 4,
+    "mood": "EAI",
+    "reason": "EAI-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "shape",
+      "P": "bird",
+      "M": "triangle"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAI": 3
+    },
+    "types_seen": [
+      "EAI",
+      "EAI",
+      "EAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

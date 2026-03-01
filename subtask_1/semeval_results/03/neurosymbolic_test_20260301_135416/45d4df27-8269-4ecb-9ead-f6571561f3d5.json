@@ -1,0 +1,78 @@
+{
+  "id": "45d4df27-8269-4ecb-9ead-f6571561f3d5",
+  "text": "There is at least one spoon that is a kitchen tool. Some of the utensils are spoons. Consequently, some of the utensils are kitchen tools.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "spoon",
+      "predicate": "kitchen tool",
+      "raw_text": "There is at least one spoon that is a kitchen tool"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "utensil",
+      "predicate": "spoon",
+      "raw_text": "Some of the utensils are spoons"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "utensil",
+      "predicate": "kitchen tool",
+      "raw_text": "Consequently, some of the utensils are kitchen tools"
+    },
+    "middle_term": "spoon",
+    "major_term": "kitchen tool",
+    "minor_term": "utensil",
+    "figure": 1,
+    "mood": "III",
+    "form": "III-1"
+  },
+  "validity_details": {
+    "form": "III-1",
+    "mood": "III",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "III-1",
+    "vote_counts": {
+      "III-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "III-1",
+      "III-1",
+      "III-1",
+      "III-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "III-1 (t=0.0)",
+      "III-1 (t=0.3)",
+      "III-1 (t=0.5)",
+      "III-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

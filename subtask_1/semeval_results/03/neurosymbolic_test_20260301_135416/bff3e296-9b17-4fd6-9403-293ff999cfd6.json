@@ -1,0 +1,70 @@
+{
+  "id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+  "text": "Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cat",
+      "predicate": "fish",
+      "raw_text": "Every single creature that is a cat is a fish"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "tiger",
+      "predicate": "cat",
+      "raw_text": "A number of tigers are cats"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tiger",
+      "predicate": "fish",
+      "raw_text": "This means that there are some tigers which are fish"
+    },
+    "middle_term": "cat",
+    "major_term": "fish",
+    "minor_term": "tiger",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "form": "AII-1",
+    "mood": "AII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Darii",
+    "reason": "Valid syllogistic form: Darii"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AII-1",
+    "vote_counts": {
+      "AII-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "AII-1 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "5ebfe44f-39a9-43eb-b8c0-17f997639cd2",
+  "text": "Every single tree has leaves. Any object that is an oak is a tree. Consequently, all oaks are objects that have leaves.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "object that has leaves",
+      "raw_text": "Every single tree has leaves"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "oak",
+      "predicate": "tree",
+      "raw_text": "Any object that is an oak is a tree"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "oak",
+      "predicate": "object that has leaves",
+      "raw_text": "Consequently, all oaks are objects that have leaves"
+    },
+    "middle_term": "tree",
+    "major_term": "object that has leaves",
+    "minor_term": "oak",
+    "figure": 1,
+    "mood": "AAA",
+    "form": "AAA-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAA-1",
+    "figure": 1,
+    "mood": "AAA",
+    "reason": "AAA-1 is valid (Barbara)",
+    "form_name": "Barbara",
+    "terms": {
+      "S": "oak",
+      "P": "object that has leaves",
+      "M": "tree"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAA": 3
+    },
+    "types_seen": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

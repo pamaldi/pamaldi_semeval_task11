@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "837c9501-97f6-4bbd-bd87-ca004225d437",
+  "syllogism_text": "It is known that there are no stars which are planets. Every single thing that is the Earth is a planet. As such, some things on Earth are stars.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witnesses or counterexample entities)\nearth(earth1).\n\n% planet has no facts directly because it is defined via rules\n% star has no facts and no rules, so it must use fail clause\nstar(_) :- fail.\n\n% Rules from premises\nplanet(X) :- earth(X).\n\n% Validity check: Some things on Earth are stars\nvalid_syllogism :- earth(X), star(X).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:38:32.791969"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": false
+}

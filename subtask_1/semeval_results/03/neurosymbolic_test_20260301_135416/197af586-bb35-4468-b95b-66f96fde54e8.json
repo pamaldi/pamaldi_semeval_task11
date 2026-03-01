@@ -1,0 +1,78 @@
+{
+  "id": "197af586-bb35-4468-b95b-66f96fde54e8",
+  "text": "Spiders are in no way mammals. Anything that is a spider is an arachnid. It's the case that some arachnids fail to be mammals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "spider",
+      "predicate": "mammal",
+      "raw_text": "Spiders are in no way mammals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "spider",
+      "predicate": "arachnid",
+      "raw_text": "Anything that is a spider is an arachnid"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "arachnid",
+      "predicate": "mammal",
+      "raw_text": "It's the case that some arachnids fail to be mammals"
+    },
+    "middle_term": "spider",
+    "major_term": "mammal",
+    "minor_term": "arachnid",
+    "figure": 3,
+    "mood": "EAO",
+    "form": "EAO-3"
+  },
+  "validity_details": {
+    "form": "EAO-3",
+    "mood": "EAO",
+    "figure": 3,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Felapton",
+    "reason": "Valid syllogistic form: Felapton (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-3",
+    "vote_counts": {
+      "EAO-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-3",
+      "EAO-3",
+      "EAO-3",
+      "EAO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-3 (t=0.0)",
+      "EAO-3 (t=0.3)",
+      "EAO-3 (t=0.5)",
+      "EAO-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

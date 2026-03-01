@@ -1,0 +1,78 @@
+{
+  "id": "48a96158-28f0-4e60-8802-3a7a9767cacb",
+  "text": "There are some mammals that are animals. All dogs are mammals. Thus, all dogs are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "mammal",
+      "predicate": "animal",
+      "raw_text": "There are some mammals that are animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "All dogs are mammals"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "animal",
+      "raw_text": "Thus, all dogs are animals"
+    },
+    "middle_term": "mammal",
+    "major_term": "animal",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "IAA",
+    "form": "IAA-1"
+  },
+  "validity_details": {
+    "form": "IAA-1",
+    "mood": "IAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAA-1",
+    "vote_counts": {
+      "IAA-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IAA-1",
+      "IAA-1",
+      "IAA-1",
+      "IAA-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAA-1 (t=0.0)",
+      "IAA-1 (t=0.3)",
+      "IAA-1 (t=0.5)",
+      "IAA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

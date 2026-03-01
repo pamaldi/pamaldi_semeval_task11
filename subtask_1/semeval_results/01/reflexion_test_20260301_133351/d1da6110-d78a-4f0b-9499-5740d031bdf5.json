@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "d1da6110-d78a-4f0b-9499-5740d031bdf5",
+  "syllogism_text": "Anything that is a bird is a building. Anything that is a bird is a vehicle. Consequently, some vehicles are buildings.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witness: a bird that is both a vehicle and a building)\nbird(sparrow).\n\n% Rules from premises\nbuilding(X) :- bird(X).\nvehicle(X) :- bird(X).\n\n% Validity check: Some vehicles are buildings\nvalid_syllogism :- vehicle(X), building(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:37.811766"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

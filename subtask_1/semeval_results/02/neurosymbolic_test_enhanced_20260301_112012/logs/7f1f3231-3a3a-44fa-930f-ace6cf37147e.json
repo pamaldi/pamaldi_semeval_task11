@@ -1,0 +1,37 @@
+{
+  "id": "7f1f3231-3a3a-44fa-930f-ace6cf37147e",
+  "text": "No item that is a polygon with seven sides is a square. There are no triangles which are polygons with seven sides. Thus, a portion of triangles are not squares.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** No item that is a polygon with seven sides is a square.\n   - **Premise 2:** There are no triangles which are polygons with seven sides.\n   - **Conclusion:** A portion of triangles are not squares.\n\n2. **Identify the three terms:**\n   - **Middle term:** \"polygon with seven sides\" (appears in both premises, not in conclusion)\n   - **Major term:** \"square\" (predicate of the conclusion)\n   - **Minor term:** \"triangles\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"No item that is a polygon with seven sides is a square.\" \u2192 **E** (universal negative)\n   - **Premise 2:** \"There are no triangles which are polygons with seven sides.\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"A portion of triangles are not squares.\" \u2192 **O** (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: P-M (square is predicate, polygon with seven sides is subject)\n   - Premise 2: S-M (triangles is subject, polygon with seven sides is predicate)\n   - **Figure 4:** P-M, M-S\n\n5. **Check if the mood-figure combination is valid:**\n   - **Mood:** E-E-O\n   - **Figure:** 4\n   - This combination is **not** among the 24 valid syllogistic forms.\n\n6. **Check for fallacies:**\n   - **Two negative premises:** Both premises are E (universal negative), and a valid syllogism cannot be derived from two negative premises.\n   - **Conclusion is negative**, but the premises are both negative, which is not a valid configuration.\n\n### Final determination:\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

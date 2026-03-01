@@ -1,0 +1,79 @@
+{
+  "id": "c62f852d-16fd-4eda-b380-b85d9a17f9e2",
+  "text": "Every single creature is a mammal. It is true that no mammal is an amphibian. Therefore, it's the case that no amphibian is a creature.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "creature",
+      "predicate": "mammal",
+      "raw_text": "Every single creature is a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "amphibian",
+      "raw_text": "It is true that no mammal is an amphibian"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "amphibian",
+      "predicate": "creature",
+      "raw_text": "Therefore, it's the case that no amphibian is a creature"
+    },
+    "middle_term": "mammal",
+    "major_term": "creature",
+    "minor_term": "amphibian",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "form": "AEE-2",
+    "mood": "AEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Camestres",
+    "reason": "Valid syllogistic form: Camestres"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-2",
+    "vote_counts": {
+      "AEE-2": 3,
+      "AEE-4": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AEE-2",
+      "AEE-2",
+      "AEE-4",
+      "AEE-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-2 (t=0.0)",
+      "AEE-2 (t=0.3)",
+      "AEE-4 (t=0.5)",
+      "AEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

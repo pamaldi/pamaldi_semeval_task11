@@ -1,0 +1,68 @@
+{
+  "id": "03cc2c62-68d9-4f7e-98ea-f3fae01cb2c1",
+  "text": "Every fish is a swimmer. There are a number of birds that are swimmers. It follows from this that there are some birds that are fish.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "swimmer",
+      "raw_text": "Every fish is a swimmer"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "swimmer",
+      "raw_text": "There are a number of birds that are swimmers"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "bird",
+      "predicate": "fish",
+      "raw_text": "It follows from this that there are some birds that are fish"
+    },
+    "middle_term": "swimmer",
+    "major_term": "fish",
+    "minor_term": "bird",
+    "figure": 2,
+    "mood": "AII",
+    "form": "AII-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AII-2",
+    "figure": 2,
+    "mood": "AII",
+    "reason": "AII-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "bird",
+      "P": "fish",
+      "M": "swimmer"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

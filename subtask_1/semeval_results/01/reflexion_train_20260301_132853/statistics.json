@@ -1,0 +1,22 @@
+{
+  "total_syllogisms": 1,
+  "total_with_ground_truth": 1,
+  "successful": 1,
+  "success_rate": 1.0,
+  "first_attempt_success": 1,
+  "first_attempt_success_rate": 1.0,
+  "reflexion_helped": 0,
+  "reflexion_improvement_rate": null,
+  "attempts_distribution": {
+    "1": 1
+  },
+  "failure_types": {
+    "unknown": 1
+  },
+  "reflexion_mode": "label_free",
+  "total_reflections_generated": 0,
+  "avg_reflections_per_success": 0,
+  "avg_reflection_length": 0,
+  "min_reflection_length": 0,
+  "max_reflection_length": 0
+}

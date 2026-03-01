@@ -1,0 +1,68 @@
+{
+  "id": "1426d859-baa5-484a-aa05-2615e8776499",
+  "text": "Some member of the group of fish is not in the group of mammals. At least one dog is a mammal. At least one dog is not a fish.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "fish",
+      "predicate": "mammal",
+      "raw_text": "Some member of the group of fish is not in the group of mammals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "At least one dog is a mammal"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "dog",
+      "predicate": "fish",
+      "raw_text": "At least one dog is not a fish"
+    },
+    "middle_term": "mammal",
+    "major_term": "fish",
+    "minor_term": "dog",
+    "figure": 2,
+    "mood": "OIO",
+    "form": "OIO-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OIO-2",
+    "figure": 2,
+    "mood": "OIO",
+    "reason": "OIO-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "dog",
+      "P": "fish",
+      "M": "mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OIO": 3
+    },
+    "types_seen": [
+      "OIO",
+      "OIO",
+      "OIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

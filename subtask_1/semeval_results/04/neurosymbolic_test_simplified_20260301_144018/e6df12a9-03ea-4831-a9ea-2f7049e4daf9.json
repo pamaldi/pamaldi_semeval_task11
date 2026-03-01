@@ -1,0 +1,68 @@
+{
+  "id": "e6df12a9-03ea-4831-a9ea-2f7049e4daf9",
+  "text": "Every single bus driver is not a person who wears a uniform. A portion of the people who are doctors are people who wear uniforms. The result of this is that some doctors are bus drivers.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bus driver",
+      "predicate": "person who wears a uniform",
+      "raw_text": "Every single bus driver is not a person who wears a uniform"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "doctor",
+      "predicate": "person who wears a uniform",
+      "raw_text": "A portion of the people who are doctors are people who wear uniforms"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "doctor",
+      "predicate": "bus driver",
+      "raw_text": "The result of this is that some doctors are bus drivers"
+    },
+    "middle_term": "person who wears a uniform",
+    "major_term": "bus driver",
+    "minor_term": "doctor",
+    "figure": 2,
+    "mood": "EII",
+    "form": "EII-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-2",
+    "figure": 2,
+    "mood": "EII",
+    "reason": "EII-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "doctor",
+      "P": "bus driver",
+      "M": "person who wears a uniform"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

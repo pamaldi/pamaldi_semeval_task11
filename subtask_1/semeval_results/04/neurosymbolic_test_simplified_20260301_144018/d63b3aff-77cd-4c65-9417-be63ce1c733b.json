@@ -1,0 +1,68 @@
+{
+  "id": "d63b3aff-77cd-4c65-9417-be63ce1c733b",
+  "text": "Every piece of fruit is edible. Any apple is a fruit. This means that some apples are not vegetables.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "piece of fruit",
+      "predicate": "edible",
+      "raw_text": "Every piece of fruit is edible"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "Any apple is a fruit"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "apple",
+      "predicate": "vegetable",
+      "raw_text": "This means that some apples are not vegetables"
+    },
+    "middle_term": "fruit",
+    "major_term": "vegetable",
+    "minor_term": "apple",
+    "figure": 1,
+    "mood": "AAO",
+    "form": "AAO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAO-1",
+    "figure": 1,
+    "mood": "AAO",
+    "reason": "AAO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "apple",
+      "P": "vegetable",
+      "M": "fruit"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAO": 3
+    },
+    "types_seen": [
+      "AAO",
+      "AAO",
+      "AAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

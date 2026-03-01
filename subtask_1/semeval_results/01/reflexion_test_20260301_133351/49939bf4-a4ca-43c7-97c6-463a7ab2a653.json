@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "49939bf4-a4ca-43c7-97c6-463a7ab2a653",
+  "syllogism_text": "Every single person who is a student is also a person. There are no people who are robots. From this, it follows that no robot is a student.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: a student who is also a person\nstudent(alice).\nperson(alice).\n\n% person has NO facts besides from student\nperson(X) :- student(X).\n\n% robot has NO facts and is disjoint from person\nrobot(_) :- fail.\n\n% Validity check\nvalid_syllogism :- \\+ (robot(X), student(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:48:02.775557"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": true
+}

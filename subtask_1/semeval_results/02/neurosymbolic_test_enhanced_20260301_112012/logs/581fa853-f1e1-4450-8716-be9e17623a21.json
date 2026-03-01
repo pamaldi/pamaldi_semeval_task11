@@ -1,0 +1,70 @@
+{
+  "id": "581fa853-f1e1-4450-8716-be9e17623a21",
+  "text": "There are no cars that are airplanes. Everything that is a dog is a car. Thus, every dog is an airplane.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "car",
+      "predicate": "airplane",
+      "raw_text": "There are no cars that are airplanes."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "car",
+      "raw_text": "Everything that is a dog is a car."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "airplane",
+      "raw_text": "Thus, every dog is an airplane."
+    },
+    "middle_term": "car",
+    "major_term": "airplane",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "form": "EAA-1",
+    "mood": "EAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "EAA-1",
+    "vote_counts": {
+      "EAA-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-1 (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

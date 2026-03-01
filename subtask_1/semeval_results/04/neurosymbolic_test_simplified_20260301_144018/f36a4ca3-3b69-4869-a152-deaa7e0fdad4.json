@@ -1,0 +1,68 @@
+{
+  "id": "f36a4ca3-3b69-4869-a152-deaa7e0fdad4",
+  "text": "There exist some objects that are books which are not digital files. Every single book is an item with pages. Consequently, some items with pages are digital files.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "book",
+      "predicate": "digital file",
+      "raw_text": "There exist some objects that are books which are not digital files"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "item with pages",
+      "raw_text": "Every single book is an item with pages"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "item with pages",
+      "predicate": "digital file",
+      "raw_text": "Consequently, some items with pages are digital files"
+    },
+    "middle_term": "book",
+    "major_term": "digital file",
+    "minor_term": "item with pages",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OAI-3",
+    "figure": 3,
+    "mood": "OAI",
+    "reason": "OAI-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "item with pages",
+      "P": "digital file",
+      "M": "book"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OAI": 3
+    },
+    "types_seen": [
+      "OAI",
+      "OAI",
+      "OAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "837c9501-97f6-4bbd-bd87-ca004225d437",
+  "text": "It is known that there are no stars which are planets. Every single thing that is the Earth is a planet. As such, some things on Earth are stars.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "star",
+      "predicate": "planet",
+      "raw_text": "It is known that there are no stars which are planets"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "earth",
+      "predicate": "planet",
+      "raw_text": "Every single thing that is the Earth is a planet"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "thing on earth",
+      "predicate": "star",
+      "raw_text": "As such, some things on Earth are stars"
+    },
+    "middle_term": "planet",
+    "major_term": "star",
+    "minor_term": "thing on earth",
+    "figure": 2,
+    "mood": "EAI",
+    "form": "EAI-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAI-2",
+    "figure": 2,
+    "mood": "EAI",
+    "reason": "EAI-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "thing on earth",
+      "P": "star",
+      "M": "planet"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAI": 3
+    },
+    "types_seen": [
+      "EAI",
+      "EAI",
+      "EAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

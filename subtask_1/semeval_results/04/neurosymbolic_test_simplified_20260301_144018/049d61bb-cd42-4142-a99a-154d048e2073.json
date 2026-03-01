@@ -1,0 +1,68 @@
+{
+  "id": "049d61bb-cd42-4142-a99a-154d048e2073",
+  "text": "A few cars are fish. Every single fish is a swimmer. Consequently, some swimmers are cars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "car",
+      "predicate": "fish",
+      "raw_text": "A few cars are fish"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "fish",
+      "predicate": "swimmer",
+      "raw_text": "Every single fish is a swimmer"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "swimmer",
+      "predicate": "car",
+      "raw_text": "Consequently, some swimmers are cars"
+    },
+    "middle_term": "fish",
+    "major_term": "car",
+    "minor_term": "swimmer",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "swimmer",
+      "P": "car",
+      "M": "fish"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

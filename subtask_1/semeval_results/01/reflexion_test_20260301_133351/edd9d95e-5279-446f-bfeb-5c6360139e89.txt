@@ -1,0 +1,36 @@
+================================================================================
+TRUE REFLEXION LOG - edd9d95e-5279-446f-bfeb-5c6360139e89
+Mode: label_free
+================================================================================
+
+Syllogism:
+Anything that is a cloud is a politician. Every politician is made of cotton candy. Consequently, some things made of cotton candy are clouds.
+
+Ground Truth: VALID
+Validity: True
+Plausibility: False
+Final Prediction: VALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: VALID
+Failure Type: unknown
+
+Code:
+% Facts for witnesses
+cloud(cloud1).
+
+% Rules from premises
+politician(X) :- cloud(X).
+made_of_cotton_candy(X) :- politician(X).
+
+% Validity check for conclusion: Some things made of cotton candy are clouds
+valid_syllogism :- made_of_cotton_candy(X), cloud(X).
+
+Stdout: RESULT:VALID
+
+

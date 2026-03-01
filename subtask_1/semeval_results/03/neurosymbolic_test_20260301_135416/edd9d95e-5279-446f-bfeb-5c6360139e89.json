@@ -1,0 +1,70 @@
+{
+  "id": "edd9d95e-5279-446f-bfeb-5c6360139e89",
+  "text": "Anything that is a cloud is a politician. Every politician is made of cotton candy. Consequently, some things made of cotton candy are clouds.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cloud",
+      "predicate": "politician",
+      "raw_text": "Anything that is a cloud is a politician."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "politician",
+      "predicate": "made of cotton candy",
+      "raw_text": "Every politician is made of cotton candy."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "things made of cotton candy",
+      "predicate": "cloud",
+      "raw_text": "Consequently, some things made of cotton candy are clouds."
+    },
+    "middle_term": "politician",
+    "major_term": "cloud",
+    "minor_term": "things made of cotton candy",
+    "figure": 4,
+    "mood": "AAI",
+    "form": "AAI-4"
+  },
+  "validity_details": {
+    "form": "AAI-4",
+    "mood": "AAI",
+    "figure": 4,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Bramantip",
+    "reason": "Valid syllogistic form: Bramantip (requires existential import)"
+  },
+  "extraction_attempts": 5,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AAI-4",
+    "vote_counts": {
+      "AAI-4": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "AAI-4 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+  "text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "robot",
+      "predicate": "dolphin",
+      "raw_text": "Some robots are dolphins"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dolphin",
+      "predicate": "fish",
+      "raw_text": "Every single dolphin is a fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fish",
+      "predicate": "robot",
+      "raw_text": "It must be true that some fish are robots"
+    },
+    "middle_term": "dolphin",
+    "major_term": "robot",
+    "minor_term": "fish",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "fish",
+      "P": "robot",
+      "M": "dolphin"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "d7957921-d384-41d5-aec4-ae0fd8c458a4",
+  "text": "There is not one fish that is a window. Some of the things that are animals are fish. It must be true that some animals are windows.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "fish",
+      "predicate": "window",
+      "raw_text": "There is not one fish that is a window"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "fish",
+      "raw_text": "Some of the things that are animals are fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "animal",
+      "predicate": "window",
+      "raw_text": "It must be true that some animals are windows"
+    },
+    "middle_term": "fish",
+    "major_term": "window",
+    "minor_term": "animal",
+    "figure": 1,
+    "mood": "OII",
+    "form": "OII-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OII-1",
+    "figure": 1,
+    "mood": "OII",
+    "reason": "OII-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "animal",
+      "P": "window",
+      "M": "fish"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise1: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

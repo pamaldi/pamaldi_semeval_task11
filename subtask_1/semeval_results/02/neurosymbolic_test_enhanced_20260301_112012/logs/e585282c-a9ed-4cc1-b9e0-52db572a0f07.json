@@ -1,0 +1,78 @@
+{
+  "id": "e585282c-a9ed-4cc1-b9e0-52db572a0f07",
+  "text": "Every instance of chess is a board game. The game of tag is never a board game. Therefore, tag is not chess.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "instance of chess",
+      "predicate": "board game",
+      "raw_text": "Every instance of chess is a board game"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "game of tag",
+      "predicate": "board game",
+      "raw_text": "The game of tag is never a board game"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "tag",
+      "predicate": "chess",
+      "raw_text": "Therefore, tag is not chess"
+    },
+    "middle_term": "board game",
+    "major_term": "chess",
+    "minor_term": "tag",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "form": "AEE-2",
+    "mood": "AEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Camestres",
+    "reason": "Valid syllogistic form: Camestres"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-2",
+    "vote_counts": {
+      "AEE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-2",
+      "AEE-2",
+      "AEE-2",
+      "AEE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-2 (t=0.0)",
+      "AEE-2 (t=0.3)",
+      "AEE-2 (t=0.5)",
+      "AEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

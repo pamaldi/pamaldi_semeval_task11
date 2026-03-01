@@ -1,0 +1,68 @@
+{
+  "id": "aba58977-4f05-4852-a433-720010a97208",
+  "text": "Anything which is a shoe is also an idea. All ideas are insects. We can infer that some insects are shoes.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "shoe",
+      "predicate": "idea",
+      "raw_text": "Anything which is a shoe is also an idea"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "idea",
+      "predicate": "insect",
+      "raw_text": "All ideas are insects"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "insect",
+      "predicate": "shoe",
+      "raw_text": "We can infer that some insects are shoes"
+    },
+    "middle_term": "idea",
+    "major_term": "shoe",
+    "minor_term": "insect",
+    "figure": 4,
+    "mood": "AAI",
+    "form": "AAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-4",
+    "figure": 4,
+    "mood": "AAI",
+    "reason": "AAI-4 is valid (Bramantip)",
+    "form_name": "Bramantip",
+    "terms": {
+      "S": "insect",
+      "P": "shoe",
+      "M": "idea"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

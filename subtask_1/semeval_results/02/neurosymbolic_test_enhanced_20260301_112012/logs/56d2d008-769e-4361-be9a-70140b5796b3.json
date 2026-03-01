@@ -1,0 +1,78 @@
+{
+  "id": "56d2d008-769e-4361-be9a-70140b5796b3",
+  "text": "Every single square is a shape. Every single circle is a shape. As such, every circle is a square.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "square",
+      "predicate": "shape",
+      "raw_text": "Every single square is a shape"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "circle",
+      "predicate": "shape",
+      "raw_text": "Every single circle is a shape"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "circle",
+      "predicate": "square",
+      "raw_text": "As such, every circle is a square"
+    },
+    "middle_term": "shape",
+    "major_term": "square",
+    "minor_term": "circle",
+    "figure": 2,
+    "mood": "AAA",
+    "form": "AAA-2"
+  },
+  "validity_details": {
+    "form": "AAA-2",
+    "mood": "AAA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAA-2",
+    "vote_counts": {
+      "AAA-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAA-2",
+      "AAA-2",
+      "AAA-2",
+      "AAA-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAA-2 (t=0.0)",
+      "AAA-2 (t=0.3)",
+      "AAA-2 (t=0.5)",
+      "AAA-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

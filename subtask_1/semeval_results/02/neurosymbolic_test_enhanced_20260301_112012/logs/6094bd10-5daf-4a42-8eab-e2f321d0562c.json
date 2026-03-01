@@ -1,0 +1,79 @@
+{
+  "id": "6094bd10-5daf-4a42-8eab-e2f321d0562c",
+  "text": "There are no animals that can be called chairs. It is also true that every animal is a type of human. This has led to the conclusion that all humans are chairs.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "chair",
+      "raw_text": "There are no animals that can be called chairs"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "human",
+      "raw_text": "It is also true that every animal is a type of human"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "chair",
+      "raw_text": "This has led to the conclusion that all humans are chairs"
+    },
+    "middle_term": "animal",
+    "major_term": "chair",
+    "minor_term": "human",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "form": "EAA-1",
+    "mood": "EAA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion; Illicit minor: 'human'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAA-1",
+    "vote_counts": {
+      "EAA-2": 1,
+      "EAA-1": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAA-2",
+      "EAA-1",
+      "EAA-1",
+      "EAA-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-2 (t=0.0)",
+      "EAA-1 (t=0.3)",
+      "EAA-1 (t=0.5)",
+      "EAA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

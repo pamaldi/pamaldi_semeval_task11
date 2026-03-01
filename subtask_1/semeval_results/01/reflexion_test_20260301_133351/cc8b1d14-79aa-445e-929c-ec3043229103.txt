@@ -1,0 +1,41 @@
+================================================================================
+TRUE REFLEXION LOG - cc8b1d14-79aa-445e-929c-ec3043229103
+Mode: label_free
+================================================================================
+
+Syllogism:
+Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.
+
+Ground Truth: VALID
+Validity: True
+Plausibility: False
+Final Prediction: VALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: VALID
+Failure Type: unknown
+
+Code:
+% Facts for buses (some vehicles are buses)
+vehicle(b1).
+vehicle(b2).
+vehicle(b3).
+
+bus(b1).
+bus(b2).
+
+% vehicle is not a type of transportation (E-premise)
+% So transportation has no facts, and we add a fail clause
+transportation(_) :- fail.
+
+% Validity check for conclusion "Some buses are not transportation"
+valid_syllogism :- bus(X), \+ transportation(X).
+
+Stdout: RESULT:VALID
+
+

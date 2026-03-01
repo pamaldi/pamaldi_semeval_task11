@@ -1,0 +1,78 @@
+{
+  "id": "b1ee7c4f-fb73-4e19-a675-7577cb81bc0c",
+  "text": "Some plants are living things. There are some trees that are plants. It is therefore the case that every tree is a living thing.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "plants",
+      "predicate": "living things",
+      "raw_text": "Some plants are living things."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "trees",
+      "predicate": "plants",
+      "raw_text": "There are some trees that are plants."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "trees",
+      "predicate": "living things",
+      "raw_text": "It is therefore the case that every tree is a living thing."
+    },
+    "middle_term": "plants",
+    "major_term": "living things",
+    "minor_term": "trees",
+    "figure": 1,
+    "mood": "IIA",
+    "form": "IIA-1"
+  },
+  "validity_details": {
+    "form": "IIA-1",
+    "mood": "IIA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Undistributed middle term; Illicit minor: 'trees'"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IIA-1",
+    "vote_counts": {
+      "IIA-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IIA-1",
+      "IIA-1",
+      "IIA-1",
+      "IIA-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IIA-1 (t=0.0)",
+      "IIA-1 (t=0.3)",
+      "IIA-1 (t=0.5)",
+      "IIA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

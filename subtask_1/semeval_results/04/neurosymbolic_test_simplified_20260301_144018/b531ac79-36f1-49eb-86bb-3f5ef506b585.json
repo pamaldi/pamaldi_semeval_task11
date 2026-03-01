@@ -1,0 +1,68 @@
+{
+  "id": "b531ac79-36f1-49eb-86bb-3f5ef506b585",
+  "text": "A few of the lizards are dogs. There are no dogs that are felines. As a result, some felines are lizards.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "lizard",
+      "predicate": "dog",
+      "raw_text": "A few of the lizards are dogs"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "dog",
+      "predicate": "feline",
+      "raw_text": "There are no dogs that are felines"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "feline",
+      "predicate": "lizard",
+      "raw_text": "As a result, some felines are lizards"
+    },
+    "middle_term": "dog",
+    "major_term": "lizard",
+    "minor_term": "feline",
+    "figure": 4,
+    "mood": "IEI",
+    "form": "IEI-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IEI-4",
+    "figure": 4,
+    "mood": "IEI",
+    "reason": "IEI-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "feline",
+      "P": "lizard",
+      "M": "dog"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IEI": 3
+    },
+    "types_seen": [
+      "IEI",
+      "IEI",
+      "IEI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

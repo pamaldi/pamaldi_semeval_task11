@@ -1,0 +1,68 @@
+{
+  "id": "e4fb7540-5e00-4c53-9dfd-4e7050ae4dc6",
+  "text": "Not a single piece of furniture is an animal. Every animal is a chair. It must be that a portion of chairs are not furniture.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "piece of furniture",
+      "predicate": "animal",
+      "raw_text": "Not a single piece of furniture is an animal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "chair",
+      "raw_text": "Every animal is a chair"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "chair",
+      "predicate": "furniture",
+      "raw_text": "It must be that a portion of chairs are not furniture"
+    },
+    "middle_term": "animal",
+    "major_term": "furniture",
+    "minor_term": "chair",
+    "figure": 4,
+    "mood": "EAO",
+    "form": "EAO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-4",
+    "figure": 4,
+    "mood": "EAO",
+    "reason": "EAO-4 is valid (Fesapo)",
+    "form_name": "Fesapo",
+    "terms": {
+      "S": "chair",
+      "P": "furniture",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

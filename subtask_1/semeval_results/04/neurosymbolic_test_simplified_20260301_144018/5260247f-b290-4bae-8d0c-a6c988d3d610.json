@@ -1,0 +1,68 @@
+{
+  "id": "5260247f-b290-4bae-8d0c-a6c988d3d610",
+  "text": "Every single item that is a writing instrument is a tool. There are some pens which are writing instruments. Thus, some pens are tools.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "writing instrument",
+      "predicate": "tool",
+      "raw_text": "Every single item that is a writing instrument is a tool"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "pen",
+      "predicate": "writing instrument",
+      "raw_text": "There are some pens which are writing instruments"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "pen",
+      "predicate": "tool",
+      "raw_text": "Thus, some pens are tools"
+    },
+    "middle_term": "writing instrument",
+    "major_term": "tool",
+    "minor_term": "pen",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AII-1",
+    "figure": 1,
+    "mood": "AII",
+    "reason": "AII-1 is valid (Darii)",
+    "form_name": "Darii",
+    "terms": {
+      "S": "pen",
+      "P": "tool",
+      "M": "writing instrument"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

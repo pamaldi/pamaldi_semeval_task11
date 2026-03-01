@@ -1,0 +1,68 @@
+{
+  "id": "a5992a44-d98f-46f0-831e-bddd22281a67",
+  "text": "Each and every dog is a star. All dogs are made of cheese. Therefore, it is the case that some things made of cheese are stars.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "star",
+      "raw_text": "Each and every dog is a star"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "thing made of cheese",
+      "raw_text": "All dogs are made of cheese"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "thing made of cheese",
+      "predicate": "star",
+      "raw_text": "Therefore, it is the case that some things made of cheese are stars"
+    },
+    "middle_term": "dog",
+    "major_term": "star",
+    "minor_term": "thing made of cheese",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-3",
+    "figure": 3,
+    "mood": "AAI",
+    "reason": "AAI-3 is valid (Darapti)",
+    "form_name": "Darapti",
+    "terms": {
+      "S": "thing made of cheese",
+      "P": "star",
+      "M": "dog"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

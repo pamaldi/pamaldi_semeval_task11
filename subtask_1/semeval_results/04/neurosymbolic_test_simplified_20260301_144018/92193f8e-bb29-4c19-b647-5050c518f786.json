@@ -1,0 +1,68 @@
+{
+  "id": "92193f8e-bb29-4c19-b647-5050c518f786",
+  "text": "Any and all apples are foods that are delicious. There are some apples which are also fruits. Consequently, a portion of fruits are foods that are delicious.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "food that is delicious",
+      "raw_text": "Any and all apples are foods that are delicious"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "There are some apples which are also fruits"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fruit",
+      "predicate": "food that is delicious",
+      "raw_text": "Consequently, a portion of fruits are foods that are delicious"
+    },
+    "middle_term": "apple",
+    "major_term": "food that is delicious",
+    "minor_term": "fruit",
+    "figure": 3,
+    "mood": "AII",
+    "form": "AII-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AII-3",
+    "figure": 3,
+    "mood": "AII",
+    "reason": "AII-3 is valid (Datisi)",
+    "form_name": "Datisi",
+    "terms": {
+      "S": "fruit",
+      "P": "food that is delicious",
+      "M": "apple"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AII": 3
+    },
+    "types_seen": [
+      "AII",
+      "AII",
+      "AII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

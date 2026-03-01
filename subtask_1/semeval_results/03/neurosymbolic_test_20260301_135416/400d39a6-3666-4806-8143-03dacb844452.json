@@ -1,0 +1,70 @@
+{
+  "id": "400d39a6-3666-4806-8143-03dacb844452",
+  "text": "There exist some individuals who are scientists who are not physicists. Every single person who is a scientist is an academic. One can thus conclude that all academics are physicists.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "scientists",
+      "predicate": "physicists",
+      "raw_text": "There exist some individuals who are scientists who are not physicists."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "scientists",
+      "predicate": "academics",
+      "raw_text": "Every single person who is a scientist is an academic."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "academics",
+      "predicate": "physicists",
+      "raw_text": "One can thus conclude that all academics are physicists."
+    },
+    "middle_term": "scientists",
+    "major_term": "physicists",
+    "minor_term": "academics",
+    "figure": 4,
+    "mood": "OAA",
+    "form": "OAA-4"
+  },
+  "validity_details": {
+    "form": "OAA-4",
+    "mood": "OAA",
+    "figure": 4,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion; Illicit minor: 'academics'"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "OAA-4",
+    "vote_counts": {
+      "OAA-4": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "OAA-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

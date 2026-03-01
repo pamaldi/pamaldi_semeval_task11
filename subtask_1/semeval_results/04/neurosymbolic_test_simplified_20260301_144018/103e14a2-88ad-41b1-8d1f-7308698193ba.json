@@ -1,0 +1,69 @@
+{
+  "id": "103e14a2-88ad-41b1-8d1f-7308698193ba",
+  "text": "There are no pianos that are not musical instruments. All musical instruments are objects. From this, it can be derived that some objects are pianos.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "piano",
+      "predicate": "musical instrument",
+      "raw_text": "There are no pianos that are not musical instruments"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "musical instrument",
+      "predicate": "object",
+      "raw_text": "All musical instruments are objects"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "object",
+      "predicate": "piano",
+      "raw_text": "From this, it can be derived that some objects are pianos"
+    },
+    "middle_term": "musical instrument",
+    "major_term": "piano",
+    "minor_term": "object",
+    "figure": 4,
+    "mood": "AAI",
+    "form": "AAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-4",
+    "figure": 4,
+    "mood": "AAI",
+    "reason": "AAI-4 is valid (Bramantip)",
+    "form_name": "Bramantip",
+    "terms": {
+      "S": "object",
+      "P": "piano",
+      "M": "musical instrument"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 2,
+      "EAI": 1
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "EAI"
+    ],
+    "had_disagreement": true
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

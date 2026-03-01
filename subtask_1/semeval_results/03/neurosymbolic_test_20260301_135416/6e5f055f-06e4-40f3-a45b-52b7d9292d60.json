@@ -1,0 +1,78 @@
+{
+  "id": "6e5f055f-06e4-40f3-a45b-52b7d9292d60",
+  "text": "There are no individuals who are elephants that are also people enrolled in kindergarten. All five-year-olds are people enrolled in kindergarten. It can be deduced that some five-year-olds are not elephants.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "individual who is an elephant",
+      "predicate": "person enrolled in kindergarten",
+      "raw_text": "There are no individuals who are elephants that are also people enrolled in kindergarten."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "five-year-old",
+      "predicate": "person enrolled in kindergarten",
+      "raw_text": "All five-year-olds are people enrolled in kindergarten."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "five-year-old",
+      "predicate": "elephant",
+      "raw_text": "It can be deduced that some five-year-olds are not elephants."
+    },
+    "middle_term": "person enrolled in kindergarten",
+    "major_term": "elephant",
+    "minor_term": "five-year-old",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "form": "EAO-2",
+    "mood": "EAO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Cesaro",
+    "reason": "Valid syllogistic form: Cesaro (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAO-2",
+    "vote_counts": {
+      "EAO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EAO-2",
+      "EAO-2",
+      "EAO-2",
+      "EAO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAO-2 (t=0.0)",
+      "EAO-2 (t=0.3)",
+      "EAO-2 (t=0.5)",
+      "EAO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

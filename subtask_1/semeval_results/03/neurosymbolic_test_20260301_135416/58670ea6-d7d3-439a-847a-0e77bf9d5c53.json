@@ -1,0 +1,78 @@
+{
+  "id": "58670ea6-d7d3-439a-847a-0e77bf9d5c53",
+  "text": "Every single dog is a thing with fur. It is the case that no cat is a dog. This implies that some cats have fur.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "thing with fur",
+      "raw_text": "Every single dog is a thing with fur."
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "dog",
+      "raw_text": "It is the case that no cat is a dog."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cat",
+      "predicate": "thing with fur",
+      "raw_text": "This implies that some cats have fur."
+    },
+    "middle_term": "dog",
+    "major_term": "thing with fur",
+    "minor_term": "cat",
+    "figure": 2,
+    "mood": "AEI",
+    "form": "AEI-2"
+  },
+  "validity_details": {
+    "form": "AEI-2",
+    "mood": "AEI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEI-2",
+    "vote_counts": {
+      "AEI-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEI-2",
+      "AEI-2",
+      "AEI-2",
+      "AEI-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEI-2 (t=0.0)",
+      "AEI-2 (t=0.3)",
+      "AEI-2 (t=0.5)",
+      "AEI-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

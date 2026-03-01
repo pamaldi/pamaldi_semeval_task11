@@ -1,0 +1,77 @@
+{
+  "id": "2c0190c9-f98c-46ce-88d2-275ee83f3b48",
+  "text": "Anything that is a flower is also an insect. There exist some daisies which are not insects. This necessarily means that some daisies are not flowers.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "flower",
+      "predicate": "insect",
+      "raw_text": "Anything that is a flower is also an insect"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "daisy",
+      "predicate": "insect",
+      "raw_text": "There exist some daisies which are not insects"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "daisy",
+      "predicate": "flower",
+      "raw_text": "This necessarily means that some daisies are not flowers"
+    },
+    "middle_term": "insect",
+    "major_term": "flower",
+    "minor_term": "daisy",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "form": "AOO-2",
+    "mood": "AOO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Baroco",
+    "reason": "Valid syllogistic form: Baroco"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AOO-2",
+    "vote_counts": {
+      "AOO-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AOO-2",
+      "AOO-2",
+      "AOO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOO-2 (t=0.0)",
+      "AOO-2 (t=0.3)",
+      "FAILED (t=0.5)",
+      "AOO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

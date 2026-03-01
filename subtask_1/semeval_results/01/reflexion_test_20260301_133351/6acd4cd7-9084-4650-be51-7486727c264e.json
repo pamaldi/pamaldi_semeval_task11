@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "6acd4cd7-9084-4650-be51-7486727c264e",
+  "syllogism_text": "Anything that is a flower is a stone. There are no stones which are roses. This logically implies that some roses are not flowers.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Witness: a rose that is NOT a stone\nrose(rose1).\n\n% flower has NO facts in this model\nflower(_) :- fail.\n\n% stone has NO facts in this model\nstone(_) :- fail.\n\n% Rule from A-premise: All flowers are stones\nstone(X) :- flower(X).\n\n% E-premise constraint: No stone is a rose\nconflict :- stone(X), rose(X).\n\n% O-conclusion: Some roses are not flowers\nvalid_syllogism :- rose(X), \\+ flower(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:42:41.708469"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

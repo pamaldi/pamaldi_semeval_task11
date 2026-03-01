@@ -1,0 +1,68 @@
+{
+  "id": "a2fcf47a-5df0-405d-86ce-ed8629f387a9",
+  "text": "Every single fruit is a food. Nothing that is a vegetable is a food. It follows from this that every vegetable is a fruit.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fruit",
+      "predicate": "food",
+      "raw_text": "Every single fruit is a food"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "vegetable",
+      "predicate": "food",
+      "raw_text": "Nothing that is a vegetable is a food"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "vegetable",
+      "predicate": "fruit",
+      "raw_text": "It follows from this that every vegetable is a fruit"
+    },
+    "middle_term": "food",
+    "major_term": "fruit",
+    "minor_term": "vegetable",
+    "figure": 2,
+    "mood": "AEA",
+    "form": "AEA-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEA-2",
+    "figure": 2,
+    "mood": "AEA",
+    "reason": "AEA-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "vegetable",
+      "P": "fruit",
+      "M": "food"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEA": 3
+    },
+    "types_seen": [
+      "AEA",
+      "AEA",
+      "AEA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

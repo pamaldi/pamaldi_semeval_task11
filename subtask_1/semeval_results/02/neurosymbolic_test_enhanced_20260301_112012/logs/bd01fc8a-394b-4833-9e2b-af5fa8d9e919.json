@@ -1,0 +1,76 @@
+{
+  "id": "bd01fc8a-394b-4833-9e2b-af5fa8d9e919",
+  "text": "No item that is a state is a government seat. A portion of cities are not government seats. Therefore, every single city is a state.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "item that is a state",
+      "predicate": "government seat",
+      "raw_text": "No item that is a state is a government seat"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "city",
+      "predicate": "government seat",
+      "raw_text": "A portion of cities are not government seats"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "city",
+      "predicate": "state",
+      "raw_text": "Therefore, every single city is a state"
+    },
+    "middle_term": "government seat",
+    "major_term": "state",
+    "minor_term": "city",
+    "figure": 2,
+    "mood": "EOA",
+    "form": "EOA-2"
+  },
+  "validity_details": {
+    "form": "EOA-2",
+    "mood": "EOA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises); Negative premise with affirmative conclusion; Illicit minor: 'city'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "EOA-2",
+    "vote_counts": {
+      "EOA-2": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EOA-2",
+      "EOA-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "EOA-2 (t=0.3)",
+      "EOA-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "87c94990-9984-4e95-8bc2-6d04038fc550",
+  "text": "Some people are gold. All things which are gold are metals. It must follow that some metals are people.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "person",
+      "predicate": "gold",
+      "raw_text": "Some people are gold"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "gold",
+      "predicate": "metal",
+      "raw_text": "All things which are gold are metals"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "metal",
+      "predicate": "person",
+      "raw_text": "It must follow that some metals are people"
+    },
+    "middle_term": "gold",
+    "major_term": "person",
+    "minor_term": "metal",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "metal",
+      "P": "person",
+      "M": "gold"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

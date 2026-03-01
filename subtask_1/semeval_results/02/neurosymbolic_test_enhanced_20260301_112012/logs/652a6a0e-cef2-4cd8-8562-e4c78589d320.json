@@ -1,0 +1,78 @@
+{
+  "id": "652a6a0e-cef2-4cd8-8562-e4c78589d320",
+  "text": "The set of humans is a subset of the set of legal professionals. At least one doctor is not a legal professional. The entire group of doctors is not humans.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "legal professional",
+      "raw_text": "The set of humans is a subset of the set of legal professionals"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "doctor",
+      "predicate": "legal professional",
+      "raw_text": "At least one doctor is not a legal professional"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "doctor",
+      "predicate": "human",
+      "raw_text": "The entire group of doctors is not humans"
+    },
+    "middle_term": "legal professional",
+    "major_term": "human",
+    "minor_term": "doctor",
+    "figure": 2,
+    "mood": "AOE",
+    "form": "AOE-2"
+  },
+  "validity_details": {
+    "form": "AOE-2",
+    "mood": "AOE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit minor: 'doctor'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AOE-2",
+    "vote_counts": {
+      "AOE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AOE-2",
+      "AOE-2",
+      "AOE-2",
+      "AOE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOE-2 (t=0.0)",
+      "AOE-2 (t=0.3)",
+      "AOE-2 (t=0.5)",
+      "AOE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

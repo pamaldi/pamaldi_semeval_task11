@@ -1,0 +1,37 @@
+{
+  "id": "370fc136-33be-4129-bf71-b557576fc5d2",
+  "text": "Every piece of fruit grows from plants. There are some apples which are fruits. Therefore, it is the case that some apples grow from plants.",
+  "extraction_success": false,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "VALID",
+    "raw_response": "1. **Identify the three statements:**\n   - Premise 1: Every piece of fruit grows from plants. (All fruit are things that grow from plants)\n   - Premise 2: There are some apples which are fruits. (Some apples are fruits)\n   - Conclusion: Therefore, it is the case that some apples grow from plants. (Some apples are things that grow from plants)\n\n2. **Identify the three terms:**\n   - Middle term: **fruit**\n   - Major term: **things that grow from plants** (predicate of the conclusion)\n   - Minor term: **apples** (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - Premise 1: \"All fruit are things that grow from plants\" \u2192 **A** (universal affirmative)\n   - Premise 2: \"Some apples are fruits\" \u2192 **I** (particular affirmative)\n   - Conclusion: \"Some apples are things that grow from plants\" \u2192 **I** (particular affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (fruit - things that grow from plants)\n   - Premise 2: S-M (apples - fruit)\n   - This is **Figure 1** (M-P, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **A-I-I**\n   - Figure: **1**\n   - The mood **AII** in Figure 1 is a valid syllogism (Darii).\n\n6. **Check for fallacies:**\n   - Middle term \"fruit\" is distributed in Premise 1 (A-type, subject is distributed).\n   - Major term \"things that grow from plants\" is not distributed in the conclusion (I-type, predicate is not distributed), and it is not distributed in the major premise either (A-type, predicate is not distributed) \u2192 **no illicit major**.\n   - Minor term \"apples\" is not distributed in the conclusion (I-type, subject is not distributed), and it is not distributed in the minor premise (I-type, subject is not distributed) \u2192 **no illicit minor**.\n   - No negative premises.\n   - Conclusion is affirmative, which is valid with two affirmative premises.\n   - No fallacies are present.\n\n**Conclusion:** The syllogism is **VALID**.\n\nVALID",
+    "temperature": 0.0
+  },
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,36 @@
+================================================================================
+TRUE REFLEXION LOG - 5da02e7d-f0ca-462a-9517-061b16eb5248
+Mode: label_free
+================================================================================
+
+Syllogism:
+It is impossible for a mammal to be an eagle. Some of the eagles are birds. There are a few birds which are not mammals.
+
+Ground Truth: VALID
+Validity: True
+Plausibility: True
+Final Prediction: VALID
+Success: True
+Total Attempts: 1
+Total Reflections Generated: 0
+
+--------------------------------------------------------------------------------
+ATTEMPT 1
+--------------------------------------------------------------------------------
+Prediction: VALID
+Failure Type: unknown
+
+Code:
+% Facts for eagles that are birds
+eagle(hawk1).
+bird(hawk1).
+
+% No mammal is an eagle
+mammal(_) :- fail.
+
+% Some birds are not mammals (eagle is a bird but not a mammal)
+valid_syllogism :- bird(X), \+ mammal(X).
+
+Stdout: RESULT:VALID
+
+

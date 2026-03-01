@@ -1,0 +1,68 @@
+{
+  "id": "7e250e86-12a5-441f-8a5c-bd65f2cc79bf",
+  "text": "Nothing that is a living thing is also a stone. Every single stone is a human. Therefore, a subset of humans is not composed of living things.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "living thing",
+      "predicate": "stone",
+      "raw_text": "Nothing that is a living thing is also a stone"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "stone",
+      "predicate": "human",
+      "raw_text": "Every single stone is a human"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "human",
+      "predicate": "living thing",
+      "raw_text": "Therefore, a subset of humans is not composed of living things"
+    },
+    "middle_term": "stone",
+    "major_term": "living thing",
+    "minor_term": "human",
+    "figure": 4,
+    "mood": "EAO",
+    "form": "EAO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-4",
+    "figure": 4,
+    "mood": "EAO",
+    "reason": "EAO-4 is valid (Fesapo)",
+    "form_name": "Fesapo",
+    "terms": {
+      "S": "human",
+      "P": "living thing",
+      "M": "stone"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

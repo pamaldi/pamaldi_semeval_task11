@@ -1,0 +1,79 @@
+{
+  "id": "ad259739-10fe-472e-87bb-6a8d488acfeb",
+  "text": "Something that is a chair is a table. A thing that is a table cannot be a building. It follows that a building is never a chair.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "chair",
+      "predicate": "table",
+      "raw_text": "Something that is a chair is a table"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "table",
+      "predicate": "building",
+      "raw_text": "A thing that is a table cannot be a building"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "building",
+      "predicate": "chair",
+      "raw_text": "It follows that a building is never a chair"
+    },
+    "middle_term": "table",
+    "major_term": "chair",
+    "minor_term": "building",
+    "figure": 2,
+    "mood": "IEE",
+    "form": "IEE-2"
+  },
+  "validity_details": {
+    "form": "IEE-2",
+    "mood": "IEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit major: 'chair'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IEE-2",
+    "vote_counts": {
+      "IEE-2": 3,
+      "IEE-4": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "IEE-2",
+      "IEE-2",
+      "IEE-2",
+      "IEE-4"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IEE-2 (t=0.0)",
+      "IEE-2 (t=0.3)",
+      "IEE-2 (t=0.5)",
+      "IEE-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

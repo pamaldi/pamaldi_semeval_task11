@@ -1,0 +1,70 @@
+{
+  "id": "41ee96a0-4400-4ba7-a4b3-54d49b5942cc",
+  "text": "It is the case that no lakes are flowing bodies of water. Every single river is, by its nature, a flowing body of water. Rivers are not lakes.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "lake",
+      "predicate": "flowing body of water",
+      "raw_text": "It is the case that no lakes are flowing bodies of water"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "river",
+      "predicate": "flowing body of water",
+      "raw_text": "Every single river is, by its nature, a flowing body of water"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "river",
+      "predicate": "lake",
+      "raw_text": "Rivers are not lakes"
+    },
+    "middle_term": "flowing body of water",
+    "major_term": "lake",
+    "minor_term": "river",
+    "figure": 2,
+    "mood": "EAO",
+    "form": "EAO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-2",
+    "figure": 2,
+    "mood": "EAO",
+    "reason": "EAO-2 is valid (Cesaro)",
+    "form_name": "Cesaro",
+    "terms": {
+      "S": "river",
+      "P": "lake",
+      "M": "flowing body of water"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for conclusion: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAE": 3
+    },
+    "types_seen": [
+      "EAE",
+      "EAE",
+      "EAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

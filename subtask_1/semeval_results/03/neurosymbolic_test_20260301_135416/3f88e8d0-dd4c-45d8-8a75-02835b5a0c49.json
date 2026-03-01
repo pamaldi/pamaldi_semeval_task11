@@ -1,0 +1,78 @@
+{
+  "id": "3f88e8d0-dd4c-45d8-8a75-02835b5a0c49",
+  "text": "All things that are birds are animals. It is also true that every single bird is an insect. This proves that all insects are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "animal",
+      "raw_text": "All things that are birds are animals"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "insect",
+      "raw_text": "It is also true that every single bird is an insect"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "insect",
+      "predicate": "animal",
+      "raw_text": "This proves that all insects are animals"
+    },
+    "middle_term": "bird",
+    "major_term": "animal",
+    "minor_term": "insect",
+    "figure": 3,
+    "mood": "AAA",
+    "form": "AAA-3"
+  },
+  "validity_details": {
+    "form": "AAA-3",
+    "mood": "AAA",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit minor: 'insect'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAA-3",
+    "vote_counts": {
+      "AAA-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAA-3",
+      "AAA-3",
+      "AAA-3",
+      "AAA-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAA-3 (t=0.0)",
+      "AAA-3 (t=0.3)",
+      "AAA-3 (t=0.5)",
+      "AAA-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

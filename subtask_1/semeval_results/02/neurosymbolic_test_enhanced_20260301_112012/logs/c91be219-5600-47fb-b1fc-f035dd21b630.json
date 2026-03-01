@@ -1,0 +1,79 @@
+{
+  "id": "c91be219-5600-47fb-b1fc-f035dd21b630",
+  "text": "It is true that no athletes are lazy. A number of people are athletes. Consequently, some people are lazy.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "athlete",
+      "predicate": "lazy",
+      "raw_text": "It is true that no athletes are lazy"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "people",
+      "predicate": "athlete",
+      "raw_text": "A number of people are athletes"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "people",
+      "predicate": "lazy",
+      "raw_text": "Consequently, some people are lazy"
+    },
+    "middle_term": "athlete",
+    "major_term": "lazy",
+    "minor_term": "people",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "form": "EII-1",
+    "mood": "EII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EII-1",
+    "vote_counts": {
+      "EII-1": 3,
+      "EII-2": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EII-1",
+      "EII-1",
+      "EII-2",
+      "EII-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EII-1 (t=0.0)",
+      "EII-1 (t=0.3)",
+      "EII-2 (t=0.5)",
+      "EII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

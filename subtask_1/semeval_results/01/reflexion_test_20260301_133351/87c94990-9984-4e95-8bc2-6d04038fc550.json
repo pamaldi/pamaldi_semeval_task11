@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "87c94990-9984-4e95-8bc2-6d04038fc550",
+  "syllogism_text": "Some people are gold. All things which are gold are metals. It must follow that some metals are people.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (witness: someone who is gold)\nperson(alice).\ngold(alice).\n\n% Rule from A-premise: All things which are gold are metals\nmetal(X) :- gold(X).\n\n% Validity check: Some metals are people\nvalid_syllogism :- metal(X), person(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:48:25.057990"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

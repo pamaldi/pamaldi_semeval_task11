@@ -1,0 +1,78 @@
+{
+  "id": "1d4bc4d0-df5b-4f46-9972-dd906f3c3754",
+  "text": "There are no fish that do not live on the moon. It is the case that no cat is a fish. At least some cats live on the moon.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "things that live on the moon",
+      "raw_text": "There are no fish that do not live on the moon."
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "fish",
+      "raw_text": "It is the case that no cat is a fish."
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "cats",
+      "predicate": "things that live on the moon",
+      "raw_text": "At least some cats live on the moon."
+    },
+    "middle_term": "fish",
+    "major_term": "things that live on the moon",
+    "minor_term": "cats",
+    "figure": 2,
+    "mood": "EEI",
+    "form": "EEI-2"
+  },
+  "validity_details": {
+    "form": "EEI-2",
+    "mood": "EEI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises); Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EEI-2",
+    "vote_counts": {
+      "EEI-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "EEI-2",
+      "EEI-2",
+      "EEI-2",
+      "EEI-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EEI-2 (t=0.0)",
+      "EEI-2 (t=0.3)",
+      "EEI-2 (t=0.5)",
+      "EEI-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

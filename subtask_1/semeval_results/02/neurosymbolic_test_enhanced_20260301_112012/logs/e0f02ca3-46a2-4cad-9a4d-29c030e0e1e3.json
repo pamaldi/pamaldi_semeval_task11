@@ -1,0 +1,76 @@
+{
+  "id": "e0f02ca3-46a2-4cad-9a4d-29c030e0e1e3",
+  "text": "Some bicycles cannot move. It is also true that every bicycle is a vehicle. Consequently, some vehicles cannot move.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "bicycle",
+      "predicate": "thing that can move",
+      "raw_text": "Some bicycles cannot move"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bicycle",
+      "predicate": "vehicle",
+      "raw_text": "It is also true that every bicycle is a vehicle"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "vehicle",
+      "predicate": "thing that can move",
+      "raw_text": "Consequently, some vehicles cannot move"
+    },
+    "middle_term": "bicycle",
+    "major_term": "thing that can move",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "OAO",
+    "form": "OAO-3"
+  },
+  "validity_details": {
+    "form": "OAO-3",
+    "mood": "OAO",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Bocardo",
+    "reason": "Valid syllogistic form: Bocardo"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "OAO-3",
+    "vote_counts": {
+      "OAO-3": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "OAO-3",
+      "OAO-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "OAO-3 (t=0.0)",
+      "FAILED (t=0.3)",
+      "OAO-3 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

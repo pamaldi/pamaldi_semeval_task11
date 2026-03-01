@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "049d61bb-cd42-4142-a99a-154d048e2073",
+  "syllogism_text": "A few cars are fish. Every single fish is a swimmer. Consequently, some swimmers are cars.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for I-proposition (Some cars are fish)\ncar(f1).\nfish(f1).\n\n% Rules for E-proposition (All fish are swimmers)\nswimmer(X) :- fish(X).\n\n% Validity check for I-conclusion (Some swimmers are cars)\nvalid_syllogism :- swimmer(X), car(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:46:18.910640"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

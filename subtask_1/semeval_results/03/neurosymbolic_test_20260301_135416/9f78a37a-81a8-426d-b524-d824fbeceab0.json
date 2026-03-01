@@ -1,0 +1,70 @@
+{
+  "id": "9f78a37a-81a8-426d-b524-d824fbeceab0",
+  "text": "Every single apple is a fruit. Nothing that is a banana is an apple. It follows from this that every banana is a fruit.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "apple",
+      "predicate": "fruit",
+      "raw_text": "Every single apple is a fruit"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "banana",
+      "predicate": "apple",
+      "raw_text": "Nothing that is a banana is an apple"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "banana",
+      "predicate": "fruit",
+      "raw_text": "It follows from this that every banana is a fruit"
+    },
+    "middle_term": "apple",
+    "major_term": "fruit",
+    "minor_term": "banana",
+    "figure": 1,
+    "mood": "AEA",
+    "form": "AEA-1"
+  },
+  "validity_details": {
+    "form": "AEA-1",
+    "mood": "AEA",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AEA-1",
+    "vote_counts": {
+      "AEA-1": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "AEA-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "45fc2b0d-433e-407f-a574-cac2caa54b90",
+  "text": "Anything that is a planet is a celestial body. The category of comets contains no celestial bodies. Every comet is a planet.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "planet",
+      "predicate": "celestial body",
+      "raw_text": "Anything that is a planet is a celestial body"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "comet",
+      "predicate": "celestial body",
+      "raw_text": "The category of comets contains no celestial bodies"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "comet",
+      "predicate": "planet",
+      "raw_text": "Every comet is a planet"
+    },
+    "middle_term": "celestial body",
+    "major_term": "planet",
+    "minor_term": "comet",
+    "figure": 2,
+    "mood": "AEA",
+    "form": "AEA-2"
+  },
+  "validity_details": {
+    "form": "AEA-2",
+    "mood": "AEA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "AEA-2",
+    "vote_counts": {
+      "AEA-2": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "AEA-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

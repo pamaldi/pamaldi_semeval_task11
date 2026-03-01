@@ -1,0 +1,68 @@
+{
+  "id": "78a473a3-d129-4c4d-8434-a0fce13d0024",
+  "text": "Every single river is a thing that flows towards the sea. The Amazon River is a river. A number of parts of the Amazon River flow towards the sea.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "river",
+      "predicate": "thing that flows towards the sea",
+      "raw_text": "Every single river is a thing that flows towards the sea"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "amazon river",
+      "predicate": "river",
+      "raw_text": "The Amazon River is a river"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "part of the amazon river",
+      "predicate": "thing that flows towards the sea",
+      "raw_text": "A number of parts of the Amazon River flow towards the sea"
+    },
+    "middle_term": "river",
+    "major_term": "thing that flows towards the sea",
+    "minor_term": "part of the amazon river",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-3",
+    "figure": 3,
+    "mood": "AAI",
+    "reason": "AAI-3 is valid (Darapti)",
+    "form_name": "Darapti",
+    "terms": {
+      "S": "part of the amazon river",
+      "P": "thing that flows towards the sea",
+      "M": "river"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

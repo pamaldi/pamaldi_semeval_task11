@@ -1,0 +1,77 @@
+{
+  "id": "04996853-61fd-42a9-a624-55022231c633",
+  "text": "Every single pencil is an item of stationery. There are no stationery items that can be described as food. It is therefore true that some items of food are not pencils.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "pencil",
+      "predicate": "item of stationery",
+      "raw_text": "Every single pencil is an item of stationery"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "item of stationery",
+      "predicate": "item of food",
+      "raw_text": "There are no stationery items that can be described as food"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "item of food",
+      "predicate": "pencil",
+      "raw_text": "It is therefore true that some items of food are not pencils"
+    },
+    "middle_term": "item of stationery",
+    "major_term": "pencil",
+    "minor_term": "item of food",
+    "figure": 2,
+    "mood": "AEO",
+    "form": "AEO-2"
+  },
+  "validity_details": {
+    "form": "AEO-2",
+    "mood": "AEO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Camestrop",
+    "reason": "Valid syllogistic form: Camestrop (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AEO-2",
+    "vote_counts": {
+      "AEO-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AEO-2",
+      "AEO-2",
+      "AEO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEO-2 (t=0.0)",
+      "AEO-2 (t=0.3)",
+      "AEO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

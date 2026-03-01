@@ -1,0 +1,71 @@
+{
+  "id": "af77d792-0970-4650-8ccf-4218f7685b37",
+  "text": "There are no cars that are not alive. It is the case that no horse is alive. At least some horses are cars.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "not alive",
+      "raw_text": "There are no cars that are not alive"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "horse",
+      "predicate": "alive",
+      "raw_text": "It is the case that no horse is alive"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "horse",
+      "predicate": "car",
+      "raw_text": "At least some horses are cars"
+    },
+    "middle_term": "alive",
+    "major_term": "car",
+    "minor_term": "horse",
+    "figure": 2,
+    "mood": "AEI",
+    "form": "AEI-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEI-2",
+    "figure": 2,
+    "mood": "AEI",
+    "reason": "AEI-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "horse",
+      "P": "car",
+      "M": "alive"
+    },
+    "postprocessor_corrections": [
+      "Form corrected: AEI- \u2192 AEI-2"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEI": 2,
+      "AEI": 1
+    },
+    "types_seen": [
+      "EEI",
+      "EEI",
+      "AEI"
+    ],
+    "had_disagreement": true
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

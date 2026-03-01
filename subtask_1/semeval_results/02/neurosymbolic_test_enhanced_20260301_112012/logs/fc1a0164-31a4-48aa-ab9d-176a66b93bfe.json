@@ -1,0 +1,78 @@
+{
+  "id": "fc1a0164-31a4-48aa-ab9d-176a66b93bfe",
+  "text": "Anything that is a square is also a quadrilateral. No circle is a square. It follows that no circle is a quadrilateral.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "square",
+      "predicate": "quadrilateral",
+      "raw_text": "Anything that is a square is also a quadrilateral"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "square",
+      "raw_text": "No circle is a square"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "quadrilateral",
+      "raw_text": "It follows that no circle is a quadrilateral"
+    },
+    "middle_term": "square",
+    "major_term": "quadrilateral",
+    "minor_term": "circle",
+    "figure": 1,
+    "mood": "AEE",
+    "form": "AEE-1"
+  },
+  "validity_details": {
+    "form": "AEE-1",
+    "mood": "AEE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Illicit major: 'quadrilateral'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-1",
+    "vote_counts": {
+      "AEE-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-1",
+      "AEE-1",
+      "AEE-1",
+      "AEE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-1 (t=0.0)",
+      "AEE-1 (t=0.3)",
+      "AEE-1 (t=0.5)",
+      "AEE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

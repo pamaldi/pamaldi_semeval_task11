@@ -1,0 +1,68 @@
+{
+  "id": "03ac9985-ef97-4bab-974b-e75918cf6c05",
+  "text": "Anything that is a car is a vehicle. All of the things that are bicycles are vehicles. This means that there are no bicycles that are cars.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "Anything that is a car is a vehicle"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bicycle",
+      "predicate": "vehicle",
+      "raw_text": "All of the things that are bicycles are vehicles"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "bicycle",
+      "predicate": "car",
+      "raw_text": "This means that there are no bicycles that are cars"
+    },
+    "middle_term": "vehicle",
+    "major_term": "car",
+    "minor_term": "bicycle",
+    "figure": 2,
+    "mood": "AAE",
+    "form": "AAE-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AAE-2",
+    "figure": 2,
+    "mood": "AAE",
+    "reason": "AAE-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "bicycle",
+      "P": "car",
+      "M": "vehicle"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAE": 3
+    },
+    "types_seen": [
+      "AAE",
+      "AAE",
+      "AAE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

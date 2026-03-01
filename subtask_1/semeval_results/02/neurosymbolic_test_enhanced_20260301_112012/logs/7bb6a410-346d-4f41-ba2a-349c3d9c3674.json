@@ -1,0 +1,79 @@
+{
+  "id": "7bb6a410-346d-4f41-ba2a-349c3d9c3674",
+  "text": "No cat is a dog. All dogs are mammals without exception. A number of mammals are cats.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "dog",
+      "raw_text": "No cat is a dog"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "All dogs are mammals without exception"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "mammal",
+      "predicate": "cat",
+      "raw_text": "A number of mammals are cats"
+    },
+    "middle_term": "dog",
+    "major_term": "cat",
+    "minor_term": "mammal",
+    "figure": 2,
+    "mood": "EAI",
+    "form": "EAI-2"
+  },
+  "validity_details": {
+    "form": "EAI-2",
+    "mood": "EAI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAI-2",
+    "vote_counts": {
+      "EAI-2": 3,
+      "EAI-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAI-2",
+      "EAI-2",
+      "EAI-2",
+      "EAI-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAI-2 (t=0.0)",
+      "EAI-2 (t=0.3)",
+      "EAI-2 (t=0.5)",
+      "EAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

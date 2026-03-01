@@ -1,0 +1,68 @@
+{
+  "id": "0b4b4991-85ef-45dd-981a-4ab75398a0e7",
+  "text": "No stars are celestial bodies. All suns are things that are stars. It follows that some suns are not celestial bodies.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "star",
+      "predicate": "celestial body",
+      "raw_text": "No stars are celestial bodies"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "sun",
+      "predicate": "star",
+      "raw_text": "All suns are things that are stars"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "sun",
+      "predicate": "celestial body",
+      "raw_text": "It follows that some suns are not celestial bodies"
+    },
+    "middle_term": "star",
+    "major_term": "celestial body",
+    "minor_term": "sun",
+    "figure": 1,
+    "mood": "EAO",
+    "form": "EAO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-1",
+    "figure": 1,
+    "mood": "EAO",
+    "reason": "EAO-1 is valid (Celaront)",
+    "form_name": "Celaront",
+    "terms": {
+      "S": "sun",
+      "P": "celestial body",
+      "M": "star"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

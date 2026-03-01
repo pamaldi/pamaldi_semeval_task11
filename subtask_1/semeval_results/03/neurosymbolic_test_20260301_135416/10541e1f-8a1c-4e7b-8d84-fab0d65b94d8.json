@@ -1,0 +1,78 @@
+{
+  "id": "10541e1f-8a1c-4e7b-8d84-fab0d65b94d8",
+  "text": "Anything that is a cat is also a feline. Under no circumstances is a feline a canine. It can thus be inferred that certain canines are not cats.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "cat",
+      "predicate": "feline",
+      "raw_text": "Anything that is a cat is also a feline"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "feline",
+      "predicate": "canine",
+      "raw_text": "Under no circumstances is a feline a canine"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "canine",
+      "predicate": "cat",
+      "raw_text": "It can thus be inferred that certain canines are not cats"
+    },
+    "middle_term": "feline",
+    "major_term": "cat",
+    "minor_term": "canine",
+    "figure": 2,
+    "mood": "AEO",
+    "form": "AEO-2"
+  },
+  "validity_details": {
+    "form": "AEO-2",
+    "mood": "AEO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Camestrop",
+    "reason": "Valid syllogistic form: Camestrop (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEO-2",
+    "vote_counts": {
+      "AEO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEO-2",
+      "AEO-2",
+      "AEO-2",
+      "AEO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEO-2 (t=0.0)",
+      "AEO-2 (t=0.3)",
+      "AEO-2 (t=0.5)",
+      "AEO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

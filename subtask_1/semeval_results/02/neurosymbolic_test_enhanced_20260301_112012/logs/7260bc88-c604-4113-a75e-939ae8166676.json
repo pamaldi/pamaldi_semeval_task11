@@ -1,0 +1,79 @@
+{
+  "id": "7260bc88-c604-4113-a75e-939ae8166676",
+  "text": "Absolutely no creature classified as a mammal is an animal with feathers. A portion of dogs are mammals. This demonstrates that some dogs are not animals with feathers.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "animal with feathers",
+      "raw_text": "Absolutely no creature classified as a mammal is an animal with feathers."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "A portion of dogs are mammals."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "dog",
+      "predicate": "animal with feathers",
+      "raw_text": "This demonstrates that some dogs are not animals with feathers."
+    },
+    "middle_term": "mammal",
+    "major_term": "animal with feathers",
+    "minor_term": "dog",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "form": "EIO-1",
+    "mood": "EIO",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Ferio",
+    "reason": "Valid syllogistic form: Ferio"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EIO-1",
+    "vote_counts": {
+      "EIO-1": 3,
+      "EIO-4": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EIO-1",
+      "EIO-1",
+      "EIO-4",
+      "EIO-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-1 (t=0.0)",
+      "EIO-1 (t=0.3)",
+      "EIO-4 (t=0.5)",
+      "EIO-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

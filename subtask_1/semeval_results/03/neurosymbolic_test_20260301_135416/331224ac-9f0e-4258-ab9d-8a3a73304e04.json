@@ -1,0 +1,76 @@
+{
+  "id": "331224ac-9f0e-4258-ab9d-8a3a73304e04",
+  "text": "Not a single animal with wings is an aquatic mammal. Anything that is an aquatic mammal is a fish. It is necessarily true that no fish are animals with wings.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal with wings",
+      "predicate": "aquatic mammal",
+      "raw_text": "Not a single animal with wings is an aquatic mammal"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "aquatic mammal",
+      "predicate": "fish",
+      "raw_text": "Anything that is an aquatic mammal is a fish"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "animal with wings",
+      "raw_text": "It is necessarily true that no fish are animals with wings"
+    },
+    "middle_term": "aquatic mammal",
+    "major_term": "animal with wings",
+    "minor_term": "fish",
+    "figure": 2,
+    "mood": "EAE",
+    "form": "EAE-2"
+  },
+  "validity_details": {
+    "form": "EAE-2",
+    "mood": "EAE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Cesare",
+    "reason": "Valid syllogistic form: Cesare"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 2,
+    "failed_samples": 2,
+    "selected_form": "EAE-2",
+    "vote_counts": {
+      "EAE-2": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EAE-2",
+      "EAE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-2 (t=0.0)",
+      "FAILED (t=0.3)",
+      "EAE-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

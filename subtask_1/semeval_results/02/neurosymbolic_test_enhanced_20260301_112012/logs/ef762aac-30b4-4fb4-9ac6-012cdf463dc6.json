@@ -1,0 +1,78 @@
+{
+  "id": "ef762aac-30b4-4fb4-9ac6-012cdf463dc6",
+  "text": "Any shape that is a square is also a quadrilateral. No quadrilateral is a circle. It is a necessary conclusion that no circle is a square.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "shape that is a square",
+      "predicate": "quadrilateral",
+      "raw_text": "Any shape that is a square is also a quadrilateral"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "quadrilateral",
+      "predicate": "circle",
+      "raw_text": "No quadrilateral is a circle"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "circle",
+      "predicate": "square",
+      "raw_text": "It is a necessary conclusion that no circle is a square"
+    },
+    "middle_term": "quadrilateral",
+    "major_term": "square",
+    "minor_term": "circle",
+    "figure": 2,
+    "mood": "AEE",
+    "form": "AEE-2"
+  },
+  "validity_details": {
+    "form": "AEE-2",
+    "mood": "AEE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Camestres",
+    "reason": "Valid syllogistic form: Camestres"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEE-2",
+    "vote_counts": {
+      "AEE-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEE-2",
+      "AEE-2",
+      "AEE-2",
+      "AEE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEE-2 (t=0.0)",
+      "AEE-2 (t=0.3)",
+      "AEE-2 (t=0.5)",
+      "AEE-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

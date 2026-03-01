@@ -1,0 +1,68 @@
+{
+  "id": "5f9dc1fd-7296-4337-bd26-73b8b1734c54",
+  "text": "There exist some things which are cars that are not expensive things. It is true that all cars are vehicles. It follows that some vehicles are expensive things.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "car",
+      "predicate": "expensive thing",
+      "raw_text": "There exist some things which are cars that are not expensive things"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "car",
+      "predicate": "vehicle",
+      "raw_text": "It is true that all cars are vehicles"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "vehicle",
+      "predicate": "expensive thing",
+      "raw_text": "It follows that some vehicles are expensive things"
+    },
+    "middle_term": "car",
+    "major_term": "expensive thing",
+    "minor_term": "vehicle",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OAI-3",
+    "figure": 3,
+    "mood": "OAI",
+    "reason": "OAI-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "vehicle",
+      "P": "expensive thing",
+      "M": "car"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OAI": 3
+    },
+    "types_seen": [
+      "OAI",
+      "OAI",
+      "OAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

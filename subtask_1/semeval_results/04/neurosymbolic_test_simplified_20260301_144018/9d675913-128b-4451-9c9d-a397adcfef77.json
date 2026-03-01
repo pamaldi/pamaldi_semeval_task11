@@ -1,0 +1,70 @@
+{
+  "id": "9d675913-128b-4451-9c9d-a397adcfef77",
+  "text": "It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "pencil",
+      "predicate": "paper good",
+      "raw_text": "It is not the case that a pencil is a paper good"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "pencil",
+      "predicate": "book",
+      "raw_text": "Not a single pencil is a book"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "paper good",
+      "raw_text": "This makes it true that all books are paper goods"
+    },
+    "middle_term": "pencil",
+    "major_term": "paper good",
+    "minor_term": "book",
+    "figure": 3,
+    "mood": "OEA",
+    "form": "OEA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OEA-3",
+    "figure": 3,
+    "mood": "OEA",
+    "reason": "OEA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "book",
+      "P": "paper good",
+      "M": "pencil"
+    },
+    "postprocessor_corrections": [
+      "Type corrected for premise1: E \u2192 O"
+    ]
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EEA": 3
+    },
+    "types_seen": [
+      "EEA",
+      "EEA",
+      "EEA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

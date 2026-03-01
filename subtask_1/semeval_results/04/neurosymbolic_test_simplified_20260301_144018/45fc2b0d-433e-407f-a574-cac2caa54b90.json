@@ -1,0 +1,26 @@
+{
+  "id": "45fc2b0d-433e-407f-a574-cac2caa54b90",
+  "text": "Anything that is a planet is a celestial body. The category of comets contains no celestial bodies. Every comet is a planet.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "All 3 extraction attempts failed",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 0,
+    "failed_samples": 3
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Anything that is a planet is a celestial body. (All planets are celestial bodies)\n   - **Premise 2:** The category of comets contains no celestial bodies. (No comets are celestial bodies)\n   - **Conclusion:** Every comet is a planet. (All comets are planets)\n\n2. **Identify the three terms:**\n   - **Middle term:** \"celestial bodies\" (appears in both premises, not in conclusion)\n   - **Major term:** \"celestial bodies\" (predicate of the conclusion)\n   - **Minor term:** \"comets\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All planets are celestial bodies\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"No comets are celestial bodies\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"All comets are planets\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (planets - celestial bodies)\n   - Premise 2: S-M (comets - celestial bodies)\n   - This is **Figure 2** (middle term is predicate of both premises)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **A (Premise 1), E (Premise 2), A (Conclusion)** \u2192 **AEA**\n   - Figure 2 valid moods: **EAE, AEE, EIO, AOO**\n   - **AEA is not a valid mood in Figure 2**\n\n6. **Check for fallacies:**\n   - **Two negative premises?** No \u2014 only one premise is negative (Premise 2).\n   - **Negative premise with affirmative conclusion?** Yes \u2014 this is a fallacy.\n   - **Undistributed middle?** Middle term \"celestial bodies\" is distributed in Premise 2 (E), but not in Premise 1 (A). So it is distributed in at least one premise \u2014 not a fallacy.\n   - **Illicit major/minor?** \n     - Major term \"celestial bodies\" is distributed in the conclusion (A), but not in the major premise (A). This is an **illicit major**.\n     - Minor term \"comets\" is distributed in the conclusion (A), but not in the minor premise (E). This is an **illicit minor**.\n\n### Final determination:\nThe syllogism is **invalid** due to the **illicit major**, **illicit minor**, and the **fallacy of drawing an affirmative conclusion from a negative premise**.\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

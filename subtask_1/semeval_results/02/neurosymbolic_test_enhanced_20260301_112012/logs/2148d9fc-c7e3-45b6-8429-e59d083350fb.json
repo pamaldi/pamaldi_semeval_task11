@@ -1,0 +1,78 @@
+{
+  "id": "2148d9fc-c7e3-45b6-8429-e59d083350fb",
+  "text": "Any part of the year is a day. There are no months which are days. It can be said that a portion of months are not parts of the year.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "part of the year",
+      "predicate": "day",
+      "raw_text": "Any part of the year is a day"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "month",
+      "predicate": "day",
+      "raw_text": "There are no months which are days"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "month",
+      "predicate": "part of the year",
+      "raw_text": "It can be said that a portion of months are not parts of the year"
+    },
+    "middle_term": "day",
+    "major_term": "part of the year",
+    "minor_term": "month",
+    "figure": 2,
+    "mood": "AEO",
+    "form": "AEO-2"
+  },
+  "validity_details": {
+    "form": "AEO-2",
+    "mood": "AEO",
+    "figure": 2,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Camestrop",
+    "reason": "Valid syllogistic form: Camestrop (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AEO-2",
+    "vote_counts": {
+      "AEO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AEO-2",
+      "AEO-2",
+      "AEO-2",
+      "AEO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AEO-2 (t=0.0)",
+      "AEO-2 (t=0.3)",
+      "AEO-2 (t=0.5)",
+      "AEO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

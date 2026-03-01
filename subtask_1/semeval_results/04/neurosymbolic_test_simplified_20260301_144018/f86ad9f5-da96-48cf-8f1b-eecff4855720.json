@@ -1,0 +1,68 @@
+{
+  "id": "f86ad9f5-da96-48cf-8f1b-eecff4855720",
+  "text": "Anything that is a human is also a mammal. No animal is a human. This means that no animal is a mammal.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "mammal",
+      "raw_text": "Anything that is a human is also a mammal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "human",
+      "raw_text": "No animal is a human"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "mammal",
+      "raw_text": "This means that no animal is a mammal"
+    },
+    "middle_term": "human",
+    "major_term": "mammal",
+    "minor_term": "animal",
+    "figure": 1,
+    "mood": "AEE",
+    "form": "AEE-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "AEE-1",
+    "figure": 1,
+    "mood": "AEE",
+    "reason": "AEE-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "animal",
+      "P": "mammal",
+      "M": "human"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEE": 3
+    },
+    "types_seen": [
+      "AEE",
+      "AEE",
+      "AEE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

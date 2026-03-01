@@ -1,0 +1,70 @@
+{
+  "id": "1426d859-baa5-484a-aa05-2615e8776499",
+  "text": "Some member of the group of fish is not in the group of mammals. At least one dog is a mammal. At least one dog is not a fish.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "fish",
+      "predicate": "mammal",
+      "raw_text": "Some member of the group of fish is not in the group of mammals."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "dog",
+      "predicate": "mammal",
+      "raw_text": "At least one dog is a mammal."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "dog",
+      "predicate": "fish",
+      "raw_text": "At least one dog is not a fish."
+    },
+    "middle_term": "mammal",
+    "major_term": "fish",
+    "minor_term": "dog",
+    "figure": 2,
+    "mood": "OIO",
+    "form": "OIO-2"
+  },
+  "validity_details": {
+    "form": "OIO-2",
+    "mood": "OIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Illicit major: 'fish'"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "OIO-2",
+    "vote_counts": {
+      "OIO-2": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "OIO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

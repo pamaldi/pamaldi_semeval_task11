@@ -1,0 +1,78 @@
+{
+  "id": "eae77932-d7db-4ce8-b5b1-6c3c951ef553",
+  "text": "It is the case that some pencils are white. There are some sheets of paper that are not white. This implies that some sheets of paper are not pencils.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "pencil",
+      "predicate": "white",
+      "raw_text": "It is the case that some pencils are white"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "sheet of paper",
+      "predicate": "white",
+      "raw_text": "There are some sheets of paper that are not white"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "sheet of paper",
+      "predicate": "pencil",
+      "raw_text": "This implies that some sheets of paper are not pencils"
+    },
+    "middle_term": "white",
+    "major_term": "pencil",
+    "minor_term": "sheet of paper",
+    "figure": 2,
+    "mood": "IOO",
+    "form": "IOO-2"
+  },
+  "validity_details": {
+    "form": "IOO-2",
+    "mood": "IOO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Illicit major: 'pencil'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IOO-2",
+    "vote_counts": {
+      "IOO-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "IOO-2",
+      "IOO-2",
+      "IOO-2",
+      "IOO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IOO-2 (t=0.0)",
+      "IOO-2 (t=0.3)",
+      "IOO-2 (t=0.5)",
+      "IOO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

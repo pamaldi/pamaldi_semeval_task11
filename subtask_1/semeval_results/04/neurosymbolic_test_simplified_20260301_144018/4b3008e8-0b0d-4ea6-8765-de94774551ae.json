@@ -1,0 +1,68 @@
+{
+  "id": "4b3008e8-0b0d-4ea6-8765-de94774551ae",
+  "text": "There are no creatures that are non-bipeds that are also living creatures. Everything that is a squirrel is a non-biped. Thus, every squirrel is a living creature.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "creature that is a non-biped",
+      "predicate": "living creature",
+      "raw_text": "There are no creatures that are non-bipeds that are also living creatures"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "squirrel",
+      "predicate": "non-biped",
+      "raw_text": "Everything that is a squirrel is a non-biped"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "squirrel",
+      "predicate": "living creature",
+      "raw_text": "Thus, every squirrel is a living creature"
+    },
+    "middle_term": "non-biped",
+    "major_term": "living creature",
+    "minor_term": "squirrel",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-1",
+    "figure": 1,
+    "mood": "EAA",
+    "reason": "EAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "squirrel",
+      "P": "living creature",
+      "M": "non-biped"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

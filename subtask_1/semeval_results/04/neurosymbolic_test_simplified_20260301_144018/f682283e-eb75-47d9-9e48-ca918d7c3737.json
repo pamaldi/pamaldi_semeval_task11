@@ -1,0 +1,68 @@
+{
+  "id": "f682283e-eb75-47d9-9e48-ca918d7c3737",
+  "text": "No animal is a tree. All trees are plants without exception. A number of plants are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "tree",
+      "raw_text": "No animal is a tree"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "tree",
+      "predicate": "plant",
+      "raw_text": "All trees are plants without exception"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "A number of plants are animals"
+    },
+    "middle_term": "tree",
+    "major_term": "animal",
+    "minor_term": "plant",
+    "figure": 4,
+    "mood": "EAI",
+    "form": "EAI-4"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAI-4",
+    "figure": 4,
+    "mood": "EAI",
+    "reason": "EAI-4 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "plant",
+      "P": "animal",
+      "M": "tree"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAI": 3
+    },
+    "types_seen": [
+      "EAI",
+      "EAI",
+      "EAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

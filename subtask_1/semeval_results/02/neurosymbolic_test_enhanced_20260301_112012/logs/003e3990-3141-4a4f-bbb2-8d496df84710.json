@@ -1,0 +1,78 @@
+{
+  "id": "003e3990-3141-4a4f-bbb2-8d496df84710",
+  "text": "It is certain that no item categorized as a percussion instrument has strings. A certain group of percussion instruments are musical instruments. Based on this, it must be the case that a portion of musical instruments do not have strings.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "item categorized as a percussion instrument",
+      "predicate": "item with strings",
+      "raw_text": "It is certain that no item categorized as a percussion instrument has strings."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "musical instrument",
+      "predicate": "item categorized as a percussion instrument",
+      "raw_text": "A certain group of percussion instruments are musical instruments."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "musical instrument",
+      "predicate": "item with strings",
+      "raw_text": "Based on this, it must be the case that a portion of musical instruments do not have strings."
+    },
+    "middle_term": "item categorized as a percussion instrument",
+    "major_term": "item with strings",
+    "minor_term": "musical instrument",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "form": "EIO-2",
+    "mood": "EIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Festino",
+    "reason": "Valid syllogistic form: Festino"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EIO-2",
+    "vote_counts": {
+      "EIO-1": 1,
+      "EIO-2": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EIO-1",
+      "EIO-2",
+      "EIO-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EIO-1 (t=0.0)",
+      "EIO-2 (t=0.3)",
+      "EIO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

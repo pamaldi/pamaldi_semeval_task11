@@ -1,0 +1,68 @@
+{
+  "id": "c1c2bdfa-8151-4f68-ac0d-ad67118c1ea3",
+  "text": "There are no creatures with scales who are also mythical creatures. A portion of creatures with scales are fish. It is the case that a few fish are mythical creatures.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "creature with scales",
+      "predicate": "mythical creature",
+      "raw_text": "There are no creatures with scales who are also mythical creatures"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "creature with scales",
+      "predicate": "fish",
+      "raw_text": "A portion of creatures with scales are fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fish",
+      "predicate": "mythical creature",
+      "raw_text": "It is the case that a few fish are mythical creatures"
+    },
+    "middle_term": "creature with scales",
+    "major_term": "mythical creature",
+    "minor_term": "fish",
+    "figure": 3,
+    "mood": "EII",
+    "form": "EII-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-3",
+    "figure": 3,
+    "mood": "EII",
+    "reason": "EII-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "fish",
+      "P": "mythical creature",
+      "M": "creature with scales"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

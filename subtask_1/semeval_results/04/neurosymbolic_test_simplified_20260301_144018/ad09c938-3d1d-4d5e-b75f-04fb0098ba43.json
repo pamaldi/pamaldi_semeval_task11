@@ -1,0 +1,68 @@
+{
+  "id": "ad09c938-3d1d-4d5e-b75f-04fb0098ba43",
+  "text": "There exist some things that are books which do not have pages. Every single book is a living thing. Consequently, some living things have pages.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "O",
+      "subject": "book",
+      "predicate": "thing with pages",
+      "raw_text": "There exist some things that are books which do not have pages"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "book",
+      "predicate": "living thing",
+      "raw_text": "Every single book is a living thing"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "living thing",
+      "predicate": "thing with pages",
+      "raw_text": "Consequently, some living things have pages"
+    },
+    "middle_term": "book",
+    "major_term": "thing with pages",
+    "minor_term": "living thing",
+    "figure": 3,
+    "mood": "OAI",
+    "form": "OAI-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "OAI-3",
+    "figure": 3,
+    "mood": "OAI",
+    "reason": "OAI-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "living thing",
+      "P": "thing with pages",
+      "M": "book"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "OAI": 3
+    },
+    "types_seen": [
+      "OAI",
+      "OAI",
+      "OAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

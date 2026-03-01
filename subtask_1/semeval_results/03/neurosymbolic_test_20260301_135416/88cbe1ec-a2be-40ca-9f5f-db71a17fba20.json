@@ -1,0 +1,79 @@
+{
+  "id": "88cbe1ec-a2be-40ca-9f5f-db71a17fba20",
+  "text": "Nothing that is a bird is able to fly. Every single bird is a human being. It is therefore true that every human can fly.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "bird",
+      "predicate": "able to fly",
+      "raw_text": "Nothing that is a bird is able to fly."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "bird",
+      "predicate": "human being",
+      "raw_text": "Every single bird is a human being."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "able to fly",
+      "raw_text": "It is therefore true that every human can fly."
+    },
+    "middle_term": "bird",
+    "major_term": "able to fly",
+    "minor_term": "human",
+    "figure": 3,
+    "mood": "EAA",
+    "form": "EAA-3"
+  },
+  "validity_details": {
+    "form": "EAA-3",
+    "mood": "EAA",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion; Illicit minor: 'human'"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "EAA-3",
+    "vote_counts": {
+      "EAA-3": 3,
+      "EAA-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAA-3",
+      "EAA-3",
+      "EAA-1",
+      "EAA-3"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAA-3 (t=0.0)",
+      "EAA-3 (t=0.3)",
+      "EAA-1 (t=0.5)",
+      "EAA-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

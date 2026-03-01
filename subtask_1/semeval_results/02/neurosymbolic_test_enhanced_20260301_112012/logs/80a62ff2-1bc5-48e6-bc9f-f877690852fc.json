@@ -1,0 +1,77 @@
+{
+  "id": "80a62ff2-1bc5-48e6-bc9f-f877690852fc",
+  "text": "The entire set of fruits is composed of round objects with a citrus peel. At least one orange is not a round object with a citrus peel. Every single fruit is an orange.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "fruit",
+      "predicate": "round object with a citrus peel",
+      "raw_text": "The entire set of fruits is composed of round objects with a citrus peel."
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "orange",
+      "predicate": "round object with a citrus peel",
+      "raw_text": "At least one orange is not a round object with a citrus peel."
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "fruit",
+      "predicate": "orange",
+      "raw_text": "Every single fruit is an orange."
+    },
+    "middle_term": "round object with a citrus peel",
+    "major_term": "orange",
+    "minor_term": "fruit",
+    "figure": 2,
+    "mood": "AOA",
+    "form": "AOA-2"
+  },
+  "validity_details": {
+    "form": "AOA-2",
+    "mood": "AOA",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AOA-2",
+    "vote_counts": {
+      "AOA-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AOA-2",
+      "AOA-2",
+      "AOA-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOA-2 (t=0.0)",
+      "AOA-2 (t=0.3)",
+      "FAILED (t=0.5)",
+      "AOA-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "589ace73-14ef-480f-b0e0-77df273129d5",
+  "text": "Every single building is a structure that has wheels. Anything that is a house is a building. Consequently, all houses are structures with wheels.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "building",
+      "predicate": "structure that has wheels",
+      "raw_text": "Every single building is a structure that has wheels"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "house",
+      "predicate": "building",
+      "raw_text": "Anything that is a house is a building"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "house",
+      "predicate": "structure with wheels",
+      "raw_text": "Consequently, all houses are structures with wheels"
+    },
+    "middle_term": "building",
+    "major_term": "structure with wheels",
+    "minor_term": "house",
+    "figure": 1,
+    "mood": "AAA",
+    "form": "AAA-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAA-1",
+    "figure": 1,
+    "mood": "AAA",
+    "reason": "AAA-1 is valid (Barbara)",
+    "form_name": "Barbara",
+    "terms": {
+      "S": "house",
+      "P": "structure with wheels",
+      "M": "building"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAA": 3
+    },
+    "types_seen": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

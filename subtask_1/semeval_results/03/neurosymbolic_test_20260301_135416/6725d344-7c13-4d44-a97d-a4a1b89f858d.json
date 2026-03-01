@@ -1,0 +1,78 @@
+{
+  "id": "6725d344-7c13-4d44-a97d-a4a1b89f858d",
+  "text": "The category of celestial bodies and the category of planets are mutually exclusive. Not a single planet is a star. It must be the case that a portion of stars are not celestial bodies.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "celestial body",
+      "raw_text": "The category of celestial bodies and the category of planets are mutually exclusive"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "planet",
+      "predicate": "star",
+      "raw_text": "Not a single planet is a star"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "star",
+      "predicate": "celestial body",
+      "raw_text": "It must be the case that a portion of stars are not celestial bodies"
+    },
+    "middle_term": "planet",
+    "major_term": "celestial body",
+    "minor_term": "star",
+    "figure": 2,
+    "mood": "EEO",
+    "form": "EEO-2"
+  },
+  "validity_details": {
+    "form": "EEO-2",
+    "mood": "EEO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EEO-2",
+    "vote_counts": {
+      "EEO-2": 2,
+      "EEO-3": 1
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "EEO-2",
+      "EEO-3",
+      "EEO-2"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EEO-2 (t=0.0)",
+      "EEO-3 (t=0.3)",
+      "EEO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

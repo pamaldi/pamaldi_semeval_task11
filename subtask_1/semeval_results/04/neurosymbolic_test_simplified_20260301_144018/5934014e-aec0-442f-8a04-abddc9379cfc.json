@@ -1,0 +1,26 @@
+{
+  "id": "5934014e-aec0-442f-8a04-abddc9379cfc",
+  "text": "Anything that is a rose is a flower. There are no tulips that are roses. Every tulip is a flower.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "All 3 extraction attempts failed",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 0,
+    "failed_samples": 3
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Anything that is a rose is a flower. (All roses are flowers)\n   - **Premise 2:** There are no tulips that are roses. (No tulips are roses)\n   - **Conclusion:** Every tulip is a flower. (All tulips are flowers)\n\n2. **Identify the three terms:**\n   - **Middle term:** *rose* (appears in both premises, not in conclusion)\n   - **Major term:** *flower* (predicate of the conclusion)\n   - **Minor term:** *tulip* (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"All roses are flowers\" \u2192 **A** (universal affirmative)\n   - **Premise 2:** \"No tulips are roses\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"All tulips are flowers\" \u2192 **A** (universal affirmative)\n\n4. **Determine the figure:**\n   - Premise 1: M-P (roses-flower)\n   - Premise 2: S-M (tulips-roses)\n   - This is **Figure 1** (M-P, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **A-E-A**\n   - Figure: **1**\n   - The valid moods for Figure 1 are: **AAA, EAE, AII, EIO**\n   - **A-E-A** is **not** a valid mood in Figure 1.\n\n6. **Check for fallacies:**\n   - **Undistributed middle:** The middle term \"rose\" is not distributed in either premise (it is the predicate of a universal affirmative in Premise 1 and the predicate of a universal negative in Premise 2). This is a **fallacy of the undistributed middle**.\n   - **Illicit major/minor:** The conclusion distributes \"tulip\" (as the subject of a universal affirmative), and \"tulip\" is not distributed in the minor premise (Premise 2 is a universal negative, and \"tulip\" is the subject, which is distributed in a universal negative). So, **no illicit major/minor**.\n   - **Two negative premises:** Only one premise is negative (Premise 2), so this is not the issue.\n   - **Negative premise with affirmative conclusion:** Not the case here.\n   - **Two particular premises:** Not the case here.\n\nThe syllogism is invalid due to the **fallacy of the undistributed middle**.\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ad609a5a-b03c-4924-b217-680c76614f03",
+  "text": "Every writing utensil is an animal. The set of pencils contains no animals. It is the case that some writing utensils are not pencils.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "writing utensil",
+      "predicate": "animal",
+      "raw_text": "Every writing utensil is an animal"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "pencil",
+      "predicate": "animal",
+      "raw_text": "The set of pencils contains no animals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "writing utensil",
+      "predicate": "pencil",
+      "raw_text": "It is the case that some writing utensils are not pencils"
+    },
+    "middle_term": "animal",
+    "major_term": "pencil",
+    "minor_term": "writing utensil",
+    "figure": 2,
+    "mood": "AEO",
+    "form": "AEO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AEO-2",
+    "figure": 2,
+    "mood": "AEO",
+    "reason": "AEO-2 is valid (Camestrop)",
+    "form_name": "Camestrop",
+    "terms": {
+      "S": "writing utensil",
+      "P": "pencil",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AEO": 3
+    },
+    "types_seen": [
+      "AEO",
+      "AEO",
+      "AEO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

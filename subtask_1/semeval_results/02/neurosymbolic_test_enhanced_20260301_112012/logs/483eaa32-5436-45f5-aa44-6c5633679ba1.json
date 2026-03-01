@@ -1,0 +1,78 @@
+{
+  "id": "483eaa32-5436-45f5-aa44-6c5633679ba1",
+  "text": "There is at least an odd number that is a negative number. A portion of the prime numbers are negative numbers. Consequently, some prime numbers are odd numbers.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "odd number",
+      "predicate": "negative number",
+      "raw_text": "There is at least an odd number that is a negative number"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "prime number",
+      "predicate": "negative number",
+      "raw_text": "A portion of the prime numbers are negative numbers"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "prime number",
+      "predicate": "odd number",
+      "raw_text": "Consequently, some prime numbers are odd numbers"
+    },
+    "middle_term": "negative number",
+    "major_term": "odd number",
+    "minor_term": "prime number",
+    "figure": 2,
+    "mood": "III",
+    "form": "III-2"
+  },
+  "validity_details": {
+    "form": "III-2",
+    "mood": "III",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two particular premises (Fallacy of Two Particulars); Undistributed middle term"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "III-2",
+    "vote_counts": {
+      "III-2": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "III-2",
+      "III-2",
+      "III-2",
+      "III-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "III-2 (t=0.0)",
+      "III-2 (t=0.3)",
+      "III-2 (t=0.5)",
+      "III-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

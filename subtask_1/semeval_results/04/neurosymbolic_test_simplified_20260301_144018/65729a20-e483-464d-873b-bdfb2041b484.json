@@ -1,0 +1,68 @@
+{
+  "id": "65729a20-e483-464d-873b-bdfb2041b484",
+  "text": "There are no metals that are a gas. Every single piece of iron is a metal. It is therefore the case that all iron is a gas.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "metal",
+      "predicate": "gas",
+      "raw_text": "There are no metals that are a gas"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "piece of iron",
+      "predicate": "metal",
+      "raw_text": "Every single piece of iron is a metal"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "iron",
+      "predicate": "gas",
+      "raw_text": "It is therefore the case that all iron is a gas"
+    },
+    "middle_term": "metal",
+    "major_term": "gas",
+    "minor_term": "iron",
+    "figure": 1,
+    "mood": "EAA",
+    "form": "EAA-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-1",
+    "figure": 1,
+    "mood": "EAA",
+    "reason": "EAA-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "iron",
+      "P": "gas",
+      "M": "metal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

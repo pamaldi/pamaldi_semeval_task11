@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "8886fcb2-f5db-46e1-8cdb-2d698c838393",
+  "syllogism_text": "Every single tiger is a feline. All tigers are mammals. It follows from this that some mammals are not felines.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (minimal model - only what's needed for premises)\ntiger(simba).\n\n% Rules from premises\nfeline(X) :- tiger(X).\nmammal(X) :- tiger(X).\n\n% Mammal is not restricted to tigers (counterexample construction)\n% So no fail clause for mammal/1\n\n% Validity check: Some mammals are NOT felines\nvalid_syllogism :- mammal(X), \\+ feline(X).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:36:03.406954"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": true
+}

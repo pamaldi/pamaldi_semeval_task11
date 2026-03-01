@@ -1,0 +1,565 @@
+================================================================================
+NEURO-SYMBOLIC PIPELINE - ALL PROMPTS
+================================================================================
+
+This file contains all prompts used in the neuro-symbolic syllogism validator.
+
+================================================================================
+PROMPT 1: STRUCTURE EXTRACTION (structure_extraction.txt)
+================================================================================
+
+You are a formal logic expert. Your task is to extract the logical structure from syllogisms.
+
+## Proposition Types
+
+| Type | Pattern | Example |
+|------|---------|---------|
+| A | "All S are P" | "Every dog is a mammal" |
+| E | "No S is P" | "No reptile is a mammal" |
+| I | "Some S are P" | "Some birds are pets" |
+| O | "Some S are not P" | "Some animals are not dangerous" |
+
+## Common Phrasings
+
+### A-type (Universal Affirmative: All S are P)
+- "All S are P"
+- "Every S is a P"
+- "Any S is a P"
+- "Each S is a P"
+- "S are always P"
+- "Whatever is S is P"
+- "Anything that is S is P"
+- "Every single S is P"
+- "S are, without exception, P"
+
+### E-type (Universal Negative: No S is P)
+- "No S is P"
+- "No S are P"
+- "There is no S that is P"
+- "S are never P"
+- "Nothing that is S is P"
+- "It is not true that any S is P"
+- "Not a single S is P"
+
+### I-type (Particular Affirmative: Some S are P)
+- "Some S are P"
+- "A few S are P"
+- "There are S that are P"
+- "Certain S are P"
+- "At least one S is P"
+- "A portion of S are P"
+- "There exist S that are P"
+- "A number of S are P"
+- "A select few S are P"
+
+### O-type (Particular Negative: Some S are not P)
+- "Some S are not P"
+- "Not all S are P"
+- "There are S that are not P"
+- "A few S are not P"
+- "Certain S are not P"
+- "At least one S is not P"
+- "Some S fail to be P"
+
+## Syllogism Figures
+
+The figure is determined by the position of the middle term (M):
+
+| Figure | Premise 1 | Premise 2 |
+|--------|-----------|-----------|
+| 1 | M - P | S - M |
+| 2 | P - M | S - M |
+| 3 | M - P | M - S |
+| 4 | P - M | M - S |
+
+Where:
+- M = Middle term (appears in both premises, not in conclusion)
+- P = Major term (predicate of conclusion)
+- S = Minor term (subject of conclusion)
+
+## Your Task
+
+Given a syllogism, extract:
+1. Each proposition's type (A/E/I/O)
+2. Each proposition's subject and predicate
+3. The middle term
+4. The major term (predicate of conclusion)
+5. The minor term (subject of conclusion)
+6. The figure (1/2/3/4)
+
+## Output Format
+
+Return ONLY valid JSON, no explanations:
+
+```json
+{
+  "premise1": {
+    "type": "A",
+    "subject": "dogs",
+    "predicate": "mammals",
+    "raw_text": "All dogs are mammals"
+  },
+  "premise2": {
+    "type": "A",
+    "subject": "mammals",
+    "predicate": "animals",
+    "raw_text": "All mammals are animals"
+  },
+  "conclusion": {
+    "type": "A",
+    "subject": "dogs",
+    "predicate": "animals",
+    "raw_text": "All dogs are animals"
+  },
+  "middle_term": "mammals",
+  "major_term": "animals",
+  "minor_term": "dogs",
+  "figure": 1,
+  "mood": "AAA"
+}
+```
+
+## Examples
+
+### Example 1
+Input: "Every mammal is an animal. All dogs are mammals. Therefore, all dogs are animals."
+
+Output:
+```json
+{
+  "premise1": {"type": "A", "subject": "mammals", "predicate": "animals", "raw_text": "Every mammal is an animal"},
+  "premise2": {"type": "A", "subject": "dogs", "predicate": "mammals", "raw_text": "All dogs are mammals"},
+  "conclusion": {"type": "A", "subject": "dogs", "predicate": "animals", "raw_text": "All dogs are animals"},
+  "middle_term": "mammals",
+  "major_term": "animals",
+  "minor_term": "dogs",
+  "figure": 1,
+  "mood": "AAA"
+}
+```
+
+### Example 2
+Input: "No reptiles are mammals. Some animals are reptiles. Therefore, some animals are not mammals."
+
+Output:
+```json
+{
+  "premise1": {"type": "E", "subject": "reptiles", "predicate": "mammals", "raw_text": "No reptiles are mammals"},
+  "premise2": {"type": "I", "subject": "animals", "predicate": "reptiles", "raw_text": "Some animals are reptiles"},
+  "conclusion": {"type": "O", "subject": "animals", "predicate": "mammals", "raw_text": "Some animals are not mammals"},
+  "middle_term": "reptiles",
+  "major_term": "mammals",
+  "minor_term": "animals",
+  "figure": 1,
+  "mood": "EIO"
+}
+```
+
+## Important Notes
+
+1. **Normalize terms**: Convert to singular lowercase (e.g., "Dogs" → "dog", "Mammals" → "mammal")
+2. **Handle synonyms**: "creatures", "things", "beings" should be identified with their referent
+3. **Identify implicit structure**: Sometimes the conclusion uses "thus", "therefore", "consequently", etc.
+4. **Be precise**: The middle term MUST appear in both premises and NOT in the conclusion
+5. **Mood**: Concatenate the types of premise1 + premise2 + conclusion (e.g., "AAA", "EIO")
+
+Now extract the structure from the given syllogism.
+
+
+================================================================================
+PROMPT 2: EXTRACTION REFLEXION (extraction_reflexion.txt)
+================================================================================
+
+You are a formal logic expert. Your previous extraction attempt had errors.
+
+## Your Task
+
+Fix the errors identified below and provide a CORRECT extraction.
+
+## Common Mistakes to Avoid
+
+1. **Middle Term Errors**:
+   - The middle term MUST appear in BOTH premises
+   - The middle term must NOT appear in the conclusion
+   - Check that you identified the correct middle term
+
+2. **Mood Errors**:
+   - Mood = premise1.type + premise2.type + conclusion.type
+   - Example: If premise1 is A, premise2 is E, conclusion is E → mood is "AEE"
+   - Make sure the mood string matches the actual proposition types
+
+3. **Figure Errors**:
+   - Figure 1: Middle is SUBJECT of premise1, PREDICATE of premise2
+   - Figure 2: Middle is PREDICATE of both premises
+   - Figure 3: Middle is SUBJECT of both premises
+   - Figure 4: Middle is PREDICATE of premise1, SUBJECT of premise2
+
+4. **Proposition Type Errors**:
+   - A = "All S are P" (universal affirmative)
+   - E = "No S is P" (universal negative)
+   - I = "Some S are P" (particular affirmative)
+   - O = "Some S are not P" (particular negative)
+   - Watch for tricky phrasings like "Not all" = O, "A portion of" = I
+
+5. **Term Identification Errors**:
+   - Major term = predicate of conclusion
+   - Minor term = subject of conclusion
+   - Normalize terms to lowercase singular form
+
+## Output Format
+
+Return ONLY valid JSON:
+
+```json
+{
+  "premise1": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "premise2": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "conclusion": {
+    "type": "A|E|I|O",
+    "subject": "term",
+    "predicate": "term",
+    "raw_text": "original text"
+  },
+  "middle_term": "term that appears in both premises only",
+  "major_term": "predicate of conclusion",
+  "minor_term": "subject of conclusion",
+  "figure": 1|2|3|4,
+  "mood": "XYZ"
+}
+```
+
+## Validation Checklist
+
+Before submitting, verify:
+- [ ] middle_term appears in premise1 (as subject OR predicate)
+- [ ] middle_term appears in premise2 (as subject OR predicate)
+- [ ] middle_term does NOT appear in conclusion
+- [ ] major_term equals conclusion.predicate
+- [ ] minor_term equals conclusion.subject
+- [ ] mood equals premise1.type + premise2.type + conclusion.type
+- [ ] figure is 1, 2, 3, or 4
+- [ ] all types are A, E, I, or O
+
+Now fix the errors and provide the correct extraction.
+
+
+================================================================================
+PROMPT 3: REFLEXION ERROR FEEDBACK TEMPLATE
+================================================================================
+
+Used when building the reflexion prompt with previous attempt errors.
+
+Template:
+---------
+Extract the structure from this syllogism:
+
+{syllogism_text}
+
+============================================================
+PREVIOUS ATTEMPTS HAD ERRORS - PLEASE CORRECT:
+============================================================
+
+### Attempt {N}:
+Errors found:
+  - {error_1}
+  - {error_2}
+  - ...
+
+Please fix these errors and provide a correct extraction.
+Remember:
+- Middle term must appear in BOTH premises but NOT in conclusion
+- Mood must match the concatenation of premise1.type + premise2.type + conclusion.type
+- Figure must be 1, 2, 3, or 4
+- Types must be A, E, I, or O
+
+
+================================================================================
+VALID SYLLOGISTIC FORMS REFERENCE
+================================================================================
+
+The validity checker uses these 24 classical valid forms:
+
+FIGURE 1 (M-P, S-M):
+- AAA-1 (Barbara)    - All M are P. All S are M. ∴ All S are P.
+- EAE-1 (Celarent)   - No M is P. All S are M. ∴ No S is P.
+- AII-1 (Darii)      - All M are P. Some S are M. ∴ Some S are P.
+- EIO-1 (Ferio)      - No M is P. Some S are M. ∴ Some S are not P.
+- AAI-1 (Barbari)*   - All M are P. All S are M. ∴ Some S are P.
+- EAO-1 (Celaront)*  - No M is P. All S are M. ∴ Some S are not P.
+
+FIGURE 2 (P-M, S-M):
+- EAE-2 (Cesare)     - No P is M. All S are M. ∴ No S is P.
+- AEE-2 (Camestres)  - All P are M. No S is M. ∴ No S is P.
+- EIO-2 (Festino)    - No P is M. Some S are M. ∴ Some S are not P.
+- AOO-2 (Baroco)     - All P are M. Some S are not M. ∴ Some S are not P.
+- EAO-2 (Cesaro)*    - No P is M. All S are M. ∴ Some S are not P.
+- AEO-2 (Camestrop)* - All P are M. No S is M. ∴ Some S are not P.
+
+FIGURE 3 (M-P, M-S):
+- IAI-3 (Disamis)    - Some M are P. All M are S. ∴ Some S are P.
+- AII-3 (Datisi)     - All M are P. Some M are S. ∴ Some S are P.
+- OAO-3 (Bocardo)    - Some M are not P. All M are S. ∴ Some S are not P.
+- EIO-3 (Ferison)    - No M is P. Some M are S. ∴ Some S are not P.
+- AAI-3 (Darapti)*   - All M are P. All M are S. ∴ Some S are P.
+- EAO-3 (Felapton)*  - No M is P. All M are S. ∴ Some S are not P.
+
+FIGURE 4 (P-M, M-S):
+- AEE-4 (Camenes)    - All P are M. No M is S. ∴ No S is P.
+- IAI-4 (Dimaris)    - Some P are M. All M are S. ∴ Some S are P.
+- EIO-4 (Fresison)   - No P is M. Some M are S. ∴ Some S are not P.
+- AEO-4 (Camenop)*   - All P are M. No M is S. ∴ Some S are not P.
+- EAO-4 (Fesapo)*    - No P is M. All M are S. ∴ Some S are not P.
+- AAI-4 (Bramantip)* - All P are M. All M are S. ∴ Some S are P.
+
+* = Requires existential import (assumes subject class is non-empty)
+
+
+================================================================================
+FALLACY DETECTION RULES
+================================================================================
+
+The validity checker detects these fallacies for invalid syllogisms:
+
+1. FALLACY OF EXCLUSIVE PREMISES
+   - Two negative premises (E or O)
+   - No valid conclusion possible
+
+2. FALLACY OF DRAWING AFFIRMATIVE FROM NEGATIVE
+   - Negative premise (E or O) with affirmative conclusion (A or I)
+   - Invalid
+
+3. FALLACY OF DRAWING NEGATIVE FROM AFFIRMATIVES
+   - Two affirmative premises (A or I) with negative conclusion (E or O)
+   - Invalid
+
+4. FALLACY OF TWO PARTICULARS
+   - Two particular premises (I or O)
+   - No valid conclusion possible
+
+5. ILLICIT PROCESS
+   - Particular premise with universal conclusion
+   - Invalid
+
+6. UNDISTRIBUTED MIDDLE
+   - Middle term not distributed in any premise
+   - Distribution rules:
+     - A: Subject distributed
+     - E: Both distributed
+     - I: Neither distributed
+     - O: Predicate distributed
+
+7. ILLICIT MAJOR / ILLICIT MINOR
+   - Term distributed in conclusion but not in premises
+   - Major term = predicate of conclusion
+   - Minor term = subject of conclusion
+
+
+================================================================================
+END OF PROMPTS FILE
+================================================================================
+
+
+================================================================================
+PROMPT 4: FIGURE VERIFICATION (figure_verification.txt)
+================================================================================
+
+You are verifying the figure of a syllogism extraction.
+
+## The Extraction to Verify
+
+Premise 1: "{premise1_raw_text}"
+  - Subject: {premise1_subject}
+  - Predicate: {premise1_predicate}
+
+Premise 2: "{premise2_raw_text}"
+  - Subject: {premise2_subject}
+  - Predicate: {premise2_predicate}
+
+Middle Term: {middle_term}
+
+## Your Task
+
+Answer these questions step by step:
+
+1. In Premise 1, is "{middle_term}" the SUBJECT or the PREDICATE?
+   - Compare "{middle_term}" with subject "{premise1_subject}" and predicate "{premise1_predicate}"
+   - Answer: [SUBJECT/PREDICATE]
+
+2. In Premise 2, is "{middle_term}" the SUBJECT or the PREDICATE?
+   - Compare "{middle_term}" with subject "{premise2_subject}" and predicate "{premise2_predicate}"
+   - Answer: [SUBJECT/PREDICATE]
+
+3. Based on your answers, what is the figure?
+
+   | M in Premise 1 | M in Premise 2 | Figure |
+   |----------------|----------------|--------|
+   | SUBJECT        | PREDICATE      | 1      |
+   | PREDICATE      | PREDICATE      | 2      |
+   | SUBJECT        | SUBJECT        | 3      |
+   | PREDICATE      | SUBJECT        | 4      |
+
+   Answer: [1/2/3/4]
+
+## Output Format
+
+Return ONLY a JSON object:
+
+```json
+{
+  "m_in_premise1": "SUBJECT or PREDICATE",
+  "m_in_premise2": "SUBJECT or PREDICATE",
+  "figure": 1,
+  "reasoning": "Brief explanation"
+}
+```
+
+
+================================================================================
+FIGURE VERIFICATION EXPLANATION
+================================================================================
+
+Figure verification is a dedicated, low-cost LLM call that explicitly verifies
+the figure calculation after the initial extraction.
+
+WHY IT'S NEEDED:
+- The LLM often correctly identifies the middle term
+- But then miscalculates the figure from this information
+- The figure is critical because the same mood can be valid in one figure
+  and invalid in another (e.g., AEE-2 is valid, AEE-1 is invalid)
+
+HOW IT WORKS:
+1. After initial extraction, build a focused prompt asking:
+   - "Where is the middle term in Premise 1? (SUBJECT or PREDICATE)"
+   - "Where is the middle term in Premise 2? (SUBJECT or PREDICATE)"
+2. Use the figure table to compute the correct figure
+3. If different from original, update the extraction
+
+FIGURE TABLE:
+| M in Premise 1 | M in Premise 2 | Figure |
+|----------------|----------------|--------|
+| SUBJECT        | PREDICATE      | 1      |
+| PREDICATE      | PREDICATE      | 2      |
+| SUBJECT        | SUBJECT        | 3      |
+| PREDICATE      | SUBJECT        | 4      |
+
+COST:
+- Adds 1 API call per syllogism
+- Very short response (~200 tokens)
+- Can be combined with self-consistency
+
+
+
+================================================================================
+PROMPT 5: VALIDITY FALLBACK (validity_fallback.txt)
+================================================================================
+
+You are a formal logic expert. Determine if this syllogism is logically VALID or INVALID.
+
+## Syllogism
+
+{syllogism_text}
+
+## Instructions
+
+A syllogism is VALID if the conclusion NECESSARILY follows from the premises, regardless of whether the statements are true in the real world.
+
+Focus ONLY on logical structure, NOT on real-world truth or plausibility.
+
+### Step-by-step analysis:
+
+1. Identify the three statements (Premise 1, Premise 2, Conclusion)
+2. Identify the three terms:
+   - Middle term (appears in both premises, not in conclusion)
+   - Major term (predicate of conclusion)
+   - Minor term (subject of conclusion)
+3. Determine the type of each statement:
+   - A: "All S are P" (universal affirmative)
+   - E: "No S is P" (universal negative)
+   - I: "Some S are P" (particular affirmative)
+   - O: "Some S are not P" (particular negative)
+4. Determine the figure (position of middle term):
+   - Figure 1: M-P, S-M (middle is subject of P1, predicate of P2)
+   - Figure 2: P-M, S-M (middle is predicate of both)
+   - Figure 3: M-P, M-S (middle is subject of both)
+   - Figure 4: P-M, M-S (middle is predicate of P1, subject of P2)
+5. Check if the mood-figure combination is valid
+
+### Valid syllogism forms (24 total):
+
+Figure 1: AAA (Barbara), EAE (Celarent), AII (Darii), EIO (Ferio)
+Figure 2: EAE (Cesare), AEE (Camestres), EIO (Festino), AOO (Baroco)
+Figure 3: IAI (Disamis), AII (Datisi), OAO (Bocardo), EIO (Ferison)
+Figure 4: AEE (Camenes), IAI (Dimaris), EIO (Fresison)
+
+Plus 9 weakened forms (AAI, EAO variants).
+
+### Common fallacies (INVALID):
+
+- Undistributed middle: Middle term not distributed in either premise
+- Illicit major: Major term distributed in conclusion but not in major premise
+- Illicit minor: Minor term distributed in conclusion but not in minor premise
+- Two negative premises: Cannot derive valid conclusion from two negatives
+- Negative premise with affirmative conclusion: Invalid
+- Two particular premises: Cannot derive valid conclusion
+
+### Distribution rules:
+- A (All S are P): S is distributed, P is not
+- E (No S is P): Both S and P are distributed
+- I (Some S are P): Neither is distributed
+- O (Some S are not P): Only P is distributed
+
+## Output
+
+After your analysis, respond with ONLY one word on the last line:
+
+VALID
+
+or
+
+INVALID
+
+
+================================================================================
+FALLBACK EXPLANATION
+================================================================================
+
+The LLM Fallback is used when structure extraction fails (even after reflexion).
+Instead of returning no prediction, the fallback asks the LLM to directly
+evaluate validity using chain-of-thought reasoning.
+
+WHY IT'S NEEDED:
+- Some syllogisms have complex/ambiguous phrasing that extraction can't handle
+- Without fallback, extraction failures = 0% accuracy on those items
+- With fallback, we get ~70-80% accuracy on failed extractions
+
+HOW IT WORKS:
+1. Extraction fails after max reflexion attempts
+2. Fallback prompt asks LLM to analyze the syllogism step-by-step
+3. LLM identifies terms, types, figure, and checks validity
+4. Response is parsed for VALID/INVALID
+5. If unclear, defaults to INVALID (conservative)
+
+CONFIDENCE:
+- Symbolic validation: 95% confidence (deterministic rules)
+- Fallback validation: 70% confidence (LLM reasoning)
+
+SELF-CONSISTENCY FOR FALLBACK:
+- Can optionally use self-consistency voting for fallback
+- Runs multiple evaluations with graduated temperatures
+- Majority vote determines final prediction
+- Improves fallback accuracy at cost of more API calls
+
+
+================================================================================
+END OF PROMPTS FILE
+================================================================================

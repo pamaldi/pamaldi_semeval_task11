@@ -1,0 +1,68 @@
+{
+  "id": "3864b331-e27b-45c0-9df1-2277f6c3bcf6",
+  "text": "All things which are violins are string instruments. All things which are violins are musical instruments. It follows that some musical instruments are string instruments.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "thing which is violin",
+      "predicate": "string instrument",
+      "raw_text": "All things which are violins are string instruments"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "thing which is violin",
+      "predicate": "musical instrument",
+      "raw_text": "All things which are violins are musical instruments"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "musical instrument",
+      "predicate": "string instrument",
+      "raw_text": "It follows that some musical instruments are string instruments"
+    },
+    "middle_term": "violin",
+    "major_term": "string instrument",
+    "minor_term": "musical instrument",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "AAI-3",
+    "figure": 3,
+    "mood": "AAI",
+    "reason": "AAI-3 is valid (Darapti)",
+    "form_name": "Darapti",
+    "terms": {
+      "S": "musical instrument",
+      "P": "string instrument",
+      "M": "violin"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "AAI": 3
+    },
+    "types_seen": [
+      "AAI",
+      "AAI",
+      "AAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

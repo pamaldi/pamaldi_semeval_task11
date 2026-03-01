@@ -1,0 +1,68 @@
+{
+  "id": "9ee7aff6-1237-4e93-b3e4-08434de41ede",
+  "text": "There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "canine",
+      "predicate": "feline",
+      "raw_text": "There is no canine that is a feline"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "canine",
+      "predicate": "dog",
+      "raw_text": "Everything that is a canine is also a dog"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "dog",
+      "predicate": "cat",
+      "raw_text": "This makes it true that all dogs are cats"
+    },
+    "middle_term": "canine",
+    "major_term": "cat",
+    "minor_term": "dog",
+    "figure": 3,
+    "mood": "EAA",
+    "form": "EAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-3",
+    "figure": 3,
+    "mood": "EAA",
+    "reason": "EAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "dog",
+      "P": "cat",
+      "M": "canine"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

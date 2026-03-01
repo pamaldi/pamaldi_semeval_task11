@@ -1,0 +1,68 @@
+{
+  "id": "e1a54f18-8d34-4a45-ae80-85de65382e9d",
+  "text": "Not a single state within the USA is Canada. Every single instance of Canada is a country. It is necessary that a portion of countries are not states in the USA.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "state within the usa",
+      "predicate": "canada",
+      "raw_text": "Not a single state within the USA is Canada"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "instance of canada",
+      "predicate": "country",
+      "raw_text": "Every single instance of Canada is a country"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "country",
+      "predicate": "state in the usa",
+      "raw_text": "It is necessary that a portion of countries are not states in the USA"
+    },
+    "middle_term": "canada",
+    "major_term": "state in the usa",
+    "minor_term": "country",
+    "figure": 4,
+    "mood": "EAO",
+    "form": "EAO-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-4",
+    "figure": 4,
+    "mood": "EAO",
+    "reason": "EAO-4 is valid (Fesapo)",
+    "form_name": "Fesapo",
+    "terms": {
+      "S": "country",
+      "P": "state in the usa",
+      "M": "canada"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

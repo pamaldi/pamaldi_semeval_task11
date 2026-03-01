@@ -1,0 +1,79 @@
+{
+  "id": "5f8d85f1-6ffc-47d1-bb8b-bcba0dca1a9d",
+  "text": "Anything that is a hammer is also an instrument. Some hammers are considered to be tools. A certain number of tools, therefore, are instruments.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "hammer",
+      "predicate": "instrument",
+      "raw_text": "Anything that is a hammer is also an instrument"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "hammer",
+      "predicate": "tool",
+      "raw_text": "Some hammers are considered to be tools"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "tool",
+      "predicate": "instrument",
+      "raw_text": "A certain number of tools, therefore, are instruments"
+    },
+    "middle_term": "hammer",
+    "major_term": "instrument",
+    "minor_term": "tool",
+    "figure": 3,
+    "mood": "AII",
+    "form": "AII-3"
+  },
+  "validity_details": {
+    "form": "AII-3",
+    "mood": "AII",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Datisi",
+    "reason": "Valid syllogistic form: Datisi"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-3",
+    "vote_counts": {
+      "AII-3": 3,
+      "AII-1": 1
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AII-3",
+      "AII-3",
+      "AII-3",
+      "AII-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-3 (t=0.0)",
+      "AII-3 (t=0.3)",
+      "AII-3 (t=0.5)",
+      "AII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

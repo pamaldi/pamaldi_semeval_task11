@@ -1,0 +1,77 @@
+{
+  "id": "fd552276-66bf-45da-8cea-67192fe99fc3",
+  "text": "There is no piece of furniture that can be called a planet. Each and every chair is a piece of furniture. Consequently, no chair is a planet.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "piece of furniture",
+      "predicate": "planet",
+      "raw_text": "There is no piece of furniture that can be called a planet"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "chair",
+      "predicate": "piece of furniture",
+      "raw_text": "Each and every chair is a piece of furniture"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "chair",
+      "predicate": "planet",
+      "raw_text": "Consequently, no chair is a planet"
+    },
+    "middle_term": "piece of furniture",
+    "major_term": "planet",
+    "minor_term": "chair",
+    "figure": 1,
+    "mood": "EAE",
+    "form": "EAE-1"
+  },
+  "validity_details": {
+    "form": "EAE-1",
+    "mood": "EAE",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Celarent",
+    "reason": "Valid syllogistic form: Celarent"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EAE-1",
+    "vote_counts": {
+      "EAE-1": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAE-1",
+      "EAE-1",
+      "EAE-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-1 (t=0.0)",
+      "FAILED (t=0.3)",
+      "EAE-1 (t=0.5)",
+      "EAE-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

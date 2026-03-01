@@ -1,0 +1,37 @@
+{
+  "id": "fc53be1a-0b75-4995-bcb2-bc3a878a0cb2",
+  "text": "No animal that is a house pet is a feline. Not a single cat is a house pet. This demonstrates that some cats are not felines.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** No animal that is a house pet is a feline.\n   - **Premise 2:** Not a single cat is a house pet.\n   - **Conclusion:** Some cats are not felines.\n\n2. **Identify the three terms:**\n   - **Middle term:** \"house pet\" (appears in both premises, not in conclusion)\n   - **Major term:** \"feline\" (predicate of the conclusion)\n   - **Minor term:** \"cat\" (subject of the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"No animal that is a house pet is a feline.\" \u2192 **E** (universal negative)\n   - **Premise 2:** \"Not a single cat is a house pet.\" \u2192 **E** (universal negative)\n   - **Conclusion:** \"Some cats are not felines.\" \u2192 **O** (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: \"No [house pet] is a [feline]\" \u2192 M-P\n   - Premise 2: \"No [cat] is a [house pet]\" \u2192 S-M\n   - This is **Figure 2** (P-M, S-M)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **EEO**\n   - Figure: **2**\n   - The valid moods for Figure 2 are: **EAE, AEE, EIO, AOO**\n   - **EEO** is **not** a valid mood.\n\n6. **Check for fallacies:**\n   - **Two negative premises:** Both premises are E (universal negative), and a valid syllogism cannot have two negative premises.\n   - **Conclusion is negative**, but the premises are both negative, which is invalid.\n\n### Final determination:\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

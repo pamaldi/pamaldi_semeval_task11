@@ -1,0 +1,26 @@
+{
+  "total_syllogisms": 191,
+  "total_with_ground_truth": 191,
+  "successful": 169,
+  "success_rate": 0.8848167539267016,
+  "first_attempt_success": 110,
+  "first_attempt_success_rate": 0.5759162303664922,
+  "reflexion_helped": 59,
+  "reflexion_improvement_rate": 0.7283950617283951,
+  "attempts_distribution": {
+    "2": 47,
+    "1": 110,
+    "3": 34
+  },
+  "failure_types": {
+    "wrong_prediction": 72,
+    "unknown": 169,
+    "runtime_error": 65
+  },
+  "reflexion_mode": "label_free",
+  "total_reflections_generated": 115,
+  "avg_reflections_per_success": 1.2,
+  "avg_reflection_length": 603.0,
+  "min_reflection_length": 603,
+  "max_reflection_length": 603
+}

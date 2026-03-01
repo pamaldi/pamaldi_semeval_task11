@@ -1,0 +1,77 @@
+{
+  "id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+  "text": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "square",
+      "predicate": "rectangle",
+      "raw_text": "Every square is a rectangle"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "triangle",
+      "predicate": "rectangle",
+      "raw_text": "There exist some triangles which are not rectangles"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "triangle",
+      "predicate": "square",
+      "raw_text": "It follows that some triangles are not squares"
+    },
+    "middle_term": "rectangle",
+    "major_term": "square",
+    "minor_term": "triangle",
+    "figure": 2,
+    "mood": "AOO",
+    "form": "AOO-2"
+  },
+  "validity_details": {
+    "form": "AOO-2",
+    "mood": "AOO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Baroco",
+    "reason": "Valid syllogistic form: Baroco"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "AOO-2",
+    "vote_counts": {
+      "AOO-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "AOO-2",
+      "AOO-2",
+      "AOO-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AOO-2 (t=0.0)",
+      "AOO-2 (t=0.3)",
+      "AOO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

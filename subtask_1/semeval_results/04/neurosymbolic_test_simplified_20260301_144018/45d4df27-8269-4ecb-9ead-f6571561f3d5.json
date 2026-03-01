@@ -1,0 +1,68 @@
+{
+  "id": "45d4df27-8269-4ecb-9ead-f6571561f3d5",
+  "text": "There is at least one spoon that is a kitchen tool. Some of the utensils are spoons. Consequently, some of the utensils are kitchen tools.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "spoon",
+      "predicate": "kitchen tool",
+      "raw_text": "There is at least one spoon that is a kitchen tool"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "utensil",
+      "predicate": "spoon",
+      "raw_text": "Some of the utensils are spoons"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "utensil",
+      "predicate": "kitchen tool",
+      "raw_text": "Consequently, some of the utensils are kitchen tools"
+    },
+    "middle_term": "spoon",
+    "major_term": "kitchen tool",
+    "minor_term": "utensil",
+    "figure": 1,
+    "mood": "III",
+    "form": "III-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "III-1",
+    "figure": 1,
+    "mood": "III",
+    "reason": "III-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "utensil",
+      "P": "kitchen tool",
+      "M": "spoon"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "III": 3
+    },
+    "types_seen": [
+      "III",
+      "III",
+      "III"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "3864b331-e27b-45c0-9df1-2277f6c3bcf6",
+  "text": "All things which are violins are string instruments. All things which are violins are musical instruments. It follows that some musical instruments are string instruments.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "thing which is a violin",
+      "predicate": "string instrument",
+      "raw_text": "All things which are violins are string instruments"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "thing which is a violin",
+      "predicate": "musical instrument",
+      "raw_text": "All things which are violins are musical instruments"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "musical instrument",
+      "predicate": "string instrument",
+      "raw_text": "It follows that some musical instruments are string instruments"
+    },
+    "middle_term": "thing which is a violin",
+    "major_term": "string instrument",
+    "minor_term": "musical instrument",
+    "figure": 3,
+    "mood": "AAI",
+    "form": "AAI-3"
+  },
+  "validity_details": {
+    "form": "AAI-3",
+    "mood": "AAI",
+    "figure": 3,
+    "requires_existential_import": true,
+    "valid": true,
+    "form_name": "Darapti",
+    "reason": "Valid syllogistic form: Darapti (requires existential import)"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AAI-3",
+    "vote_counts": {
+      "AAI-3": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AAI-3",
+      "AAI-3",
+      "AAI-3",
+      "AAI-3"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AAI-3 (t=0.0)",
+      "AAI-3 (t=0.3)",
+      "AAI-3 (t=0.5)",
+      "AAI-3 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

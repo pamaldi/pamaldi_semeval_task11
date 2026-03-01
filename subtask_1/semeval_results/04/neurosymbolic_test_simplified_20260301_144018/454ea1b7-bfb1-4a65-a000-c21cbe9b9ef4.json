@@ -1,0 +1,68 @@
+{
+  "id": "454ea1b7-bfb1-4a65-a000-c21cbe9b9ef4",
+  "text": "Nothing that is a liquid can be considered a beverage. It is the case that some types of milk are liquids. It follows that some milks are not beverages.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "liquid",
+      "predicate": "beverage",
+      "raw_text": "Nothing that is a liquid can be considered a beverage"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "milk",
+      "predicate": "liquid",
+      "raw_text": "It is the case that some types of milk are liquids"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "milk",
+      "predicate": "beverage",
+      "raw_text": "It follows that some milks are not beverages"
+    },
+    "middle_term": "liquid",
+    "major_term": "beverage",
+    "minor_term": "milk",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-1",
+    "figure": 1,
+    "mood": "EIO",
+    "reason": "EIO-1 is valid (Ferio)",
+    "form_name": "Ferio",
+    "terms": {
+      "S": "milk",
+      "P": "beverage",
+      "M": "liquid"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

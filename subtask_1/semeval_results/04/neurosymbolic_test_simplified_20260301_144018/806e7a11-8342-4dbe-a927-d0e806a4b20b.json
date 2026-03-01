@@ -1,0 +1,68 @@
+{
+  "id": "806e7a11-8342-4dbe-a927-d0e806a4b20b",
+  "text": "There are no fish which are mammals. Some reptiles are things that are fish. It follows that some reptiles are mammals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "mammal",
+      "raw_text": "There are no fish which are mammals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "reptile",
+      "predicate": "fish",
+      "raw_text": "Some reptiles are things that are fish"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "reptile",
+      "predicate": "mammal",
+      "raw_text": "It follows that some reptiles are mammals"
+    },
+    "middle_term": "fish",
+    "major_term": "mammal",
+    "minor_term": "reptile",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-1",
+    "figure": 1,
+    "mood": "EII",
+    "reason": "EII-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "reptile",
+      "P": "mammal",
+      "M": "fish"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

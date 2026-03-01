@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "60609ba7-37db-446f-a53c-e41568217236",
+  "syllogism_text": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for the premises\ncloud(whitestorm).\nsheep(lamb1).\n\n% Facts for the common attribute (white)\nwhite(whitestorm).\nwhite(lamb1).\n\n% Validity check: All sheep are clouds \u2192 For all sheep, they must also be clouds\nvalid_syllogism :- \\+ (sheep(X), \\+ cloud(X)).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:40:19.095218"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": false
+}

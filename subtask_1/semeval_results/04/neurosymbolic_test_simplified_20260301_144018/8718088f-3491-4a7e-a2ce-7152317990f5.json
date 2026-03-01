@@ -1,0 +1,68 @@
+{
+  "id": "8718088f-3491-4a7e-a2ce-7152317990f5",
+  "text": "Nothing that is a fish is also a mammal. The set of creatures that are whales includes some that are mammals. A conclusion that can be drawn is that some whales are not fish.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "fish",
+      "predicate": "mammal",
+      "raw_text": "Nothing that is a fish is also a mammal"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "whale",
+      "predicate": "mammal",
+      "raw_text": "The set of creatures that are whales includes some that are mammals"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "whale",
+      "predicate": "fish",
+      "raw_text": "A conclusion that can be drawn is that some whales are not fish"
+    },
+    "middle_term": "mammal",
+    "major_term": "fish",
+    "minor_term": "whale",
+    "figure": 2,
+    "mood": "EIO",
+    "form": "EIO-2"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-2",
+    "figure": 2,
+    "mood": "EIO",
+    "reason": "EIO-2 is valid (Festino)",
+    "form_name": "Festino",
+    "terms": {
+      "S": "whale",
+      "P": "fish",
+      "M": "mammal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

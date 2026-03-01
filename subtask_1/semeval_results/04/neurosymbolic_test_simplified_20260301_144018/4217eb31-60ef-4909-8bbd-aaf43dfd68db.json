@@ -1,0 +1,68 @@
+{
+  "id": "4217eb31-60ef-4909-8bbd-aaf43dfd68db",
+  "text": "There is no software that is hardware. Every program is a form of software. It must be concluded that some programs are not hardware.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "software",
+      "predicate": "hardware",
+      "raw_text": "There is no software that is hardware"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "program",
+      "predicate": "software",
+      "raw_text": "Every program is a form of software"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "program",
+      "predicate": "hardware",
+      "raw_text": "It must be concluded that some programs are not hardware"
+    },
+    "middle_term": "software",
+    "major_term": "hardware",
+    "minor_term": "program",
+    "figure": 1,
+    "mood": "EAO",
+    "form": "EAO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EAO-1",
+    "figure": 1,
+    "mood": "EAO",
+    "reason": "EAO-1 is valid (Celaront)",
+    "form_name": "Celaront",
+    "terms": {
+      "S": "program",
+      "P": "hardware",
+      "M": "software"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAO": 3
+    },
+    "types_seen": [
+      "EAO",
+      "EAO",
+      "EAO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

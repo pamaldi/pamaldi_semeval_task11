@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "597a91fd-1f07-45d9-9278-a8660622accc",
+  "syllogism_text": "There are some oceans which are insects. Every insect is an animal. It follows that some animals are oceans.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts (counterexample entities)\nocean(ant1).\ninsect(ant1).\nanimal(ant1).\n\n% Rules from premises\nanimal(X) :- insect(X).\n\n% Validity check: Some animals are oceans\nvalid_syllogism :- animal(X), ocean(X).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:35:38.859317"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

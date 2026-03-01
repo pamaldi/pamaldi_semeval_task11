@@ -1,0 +1,68 @@
+{
+  "id": "96909dbd-70b8-4360-8b69-b7e32471b429",
+  "text": "Some foods that are sweet are berries. All things that are berries are fruits. Consequently, it follows that some fruits are sweet foods.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "sweet food",
+      "predicate": "berry",
+      "raw_text": "Some foods that are sweet are berries"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "berry",
+      "predicate": "fruit",
+      "raw_text": "All things that are berries are fruits"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "fruit",
+      "predicate": "sweet food",
+      "raw_text": "Consequently, it follows that some fruits are sweet foods"
+    },
+    "middle_term": "berry",
+    "major_term": "sweet food",
+    "minor_term": "fruit",
+    "figure": 4,
+    "mood": "IAI",
+    "form": "IAI-4"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "IAI-4",
+    "figure": 4,
+    "mood": "IAI",
+    "reason": "IAI-4 is valid (Dimaris)",
+    "form_name": "Dimaris",
+    "terms": {
+      "S": "fruit",
+      "P": "sweet food",
+      "M": "berry"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IAI": 3
+    },
+    "types_seen": [
+      "IAI",
+      "IAI",
+      "IAI"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "bd01fc8a-394b-4833-9e2b-af5fa8d9e919",
+  "text": "No item that is a state is a government seat. A portion of cities are not government seats. Therefore, every single city is a state.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "state",
+      "predicate": "government seat",
+      "raw_text": "No item that is a state is a government seat"
+    },
+    "premise2": {
+      "type": "O",
+      "subject": "city",
+      "predicate": "government seat",
+      "raw_text": "A portion of cities are not government seats"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "city",
+      "predicate": "state",
+      "raw_text": "Therefore, every single city is a state"
+    },
+    "middle_term": "government seat",
+    "major_term": "state",
+    "minor_term": "city",
+    "figure": 2,
+    "mood": "EOA",
+    "form": "EOA-2"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EOA-2",
+    "figure": 2,
+    "mood": "EOA",
+    "reason": "EOA-2 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "city",
+      "P": "state",
+      "M": "government seat"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EOA": 3
+    },
+    "types_seen": [
+      "EOA",
+      "EOA",
+      "EOA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "c62f852d-16fd-4eda-b380-b85d9a17f9e2",
+  "syllogism_text": "Every single creature is a mammal. It is true that no mammal is an amphibian. Therefore, it's the case that no amphibian is a creature.",
+  "ground_truth": "VALID",
+  "final_prediction": "VALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for witnesses\ncreature(w).\n\n% Fail clause for amphibian (no facts)\namphibian(_) :- fail.\n\n% Rule from \"Every creature is a mammal\"\nmammal(X) :- creature(X).\n\n% Rule from \"No mammal is an amphibian\"\nconflict :- mammal(X), amphibian(X).\n\n% Validity check: \"No amphibian is a creature\" = \\+ (amphibian(X), creature(X))\nvalid_syllogism :- \\+ (amphibian(X), creature(X)).",
+      "prediction": "VALID",
+      "stdout": "RESULT:VALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:36:50.601355"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": true,
+  "plausibility": false
+}

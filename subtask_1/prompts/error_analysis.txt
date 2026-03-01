@@ -1,0 +1,62 @@
+You are an expert in formal logic and syllogistic reasoning. Analyze these errors from a syllogism validity prediction system.
+
+The system extracts syllogism structure (premises, conclusion, mood, figure) and then uses formal logic rules to determine validity. Errors occur when:
+1. The structure is extracted incorrectly
+2. The middle term is misidentified
+3. The figure is calculated wrong
+4. Proposition types (A/E/I/O) are misclassified
+
+## Errors to Analyze
+
+{errors}
+
+## Your Task
+
+Analyze these errors and provide:
+
+### 1. Error Pattern Categories
+
+Group the errors by their root cause. Common patterns include:
+- **Premise/Conclusion Confusion**: The conclusion was mistaken for a premise or vice versa
+- **Figure Calculation Error**: The middle term position was misidentified, leading to wrong figure
+- **Proposition Type Error**: A/E/I/O classification was wrong (e.g., "Some" classified as "All")
+- **Middle Term Error**: Wrong term identified as the middle term
+- **Complex Term Handling**: Phrases like "anything that is X" not properly simplified
+- **Negation Handling**: Double negatives or "not all" misinterpreted
+
+For each pattern, explain:
+- What went wrong
+- How to detect this pattern
+- How to fix it
+
+### 2. Corrected Examples (Few-Shots)
+
+For the most instructive errors, provide the CORRECT extraction. These will be used as few-shot examples.
+
+Format each example with:
+- The original syllogism
+- What mistake was likely made
+- The correct extraction with reasoning
+- The correct validity judgment
+
+### 3. Warning Signs
+
+List specific phrases or patterns that should trigger extra caution:
+- Phrases that often cause premise/conclusion confusion
+- Complex term structures that need simplification
+- Ambiguous wordings
+
+### 4. Updated Guidelines
+
+Write specific guidelines to add to the extraction prompt to prevent these errors.
+
+## Output Format
+
+Return valid JSON with this structure:
+
+- "error_patterns": array of objects with pattern_name, description, frequency, detection, fix
+- "few_shot_examples": array of objects with syllogism, correct_extraction, reasoning, validity, common_mistake
+- "warning_signs": array of objects with pattern, risk, action
+- "new_guidelines": array of strings
+
+IMPORTANT: Return ONLY valid JSON. Do not include any text before or after the JSON.

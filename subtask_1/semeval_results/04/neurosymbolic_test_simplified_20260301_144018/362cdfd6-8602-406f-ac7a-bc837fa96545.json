@@ -1,0 +1,68 @@
+{
+  "id": "362cdfd6-8602-406f-ac7a-bc837fa96545",
+  "text": "There are no plants that are animals. It is the case that some flower is a plant. No flowers are animals.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "plant",
+      "predicate": "animal",
+      "raw_text": "There are no plants that are animals"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "flower",
+      "predicate": "plant",
+      "raw_text": "It is the case that some flower is a plant"
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "flower",
+      "predicate": "animal",
+      "raw_text": "No flowers are animals"
+    },
+    "middle_term": "plant",
+    "major_term": "animal",
+    "minor_term": "flower",
+    "figure": 1,
+    "mood": "EIE",
+    "form": "EIE-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EIE-1",
+    "figure": 1,
+    "mood": "EIE",
+    "reason": "EIE-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "flower",
+      "P": "animal",
+      "M": "plant"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIE": 3
+    },
+    "types_seen": [
+      "EIE",
+      "EIE",
+      "EIE"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

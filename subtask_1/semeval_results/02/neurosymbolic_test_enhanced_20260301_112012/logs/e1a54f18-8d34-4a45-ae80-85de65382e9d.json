@@ -1,0 +1,37 @@
+{
+  "id": "e1a54f18-8d34-4a45-ae80-85de65382e9d",
+  "text": "Not a single state within the USA is Canada. Every single instance of Canada is a country. It is necessary that a portion of countries are not states in the USA.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "Max attempts reached",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 3,
+  "self_consistency": {
+    "successful_samples": 0,
+    "failed_samples": 4,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": {
+    "success": true,
+    "prediction": "INVALID",
+    "raw_response": "1. **Identify the three statements:**\n   - **Premise 1:** Not a single state within the USA is Canada. (No S is P)\n   - **Premise 2:** Every single instance of Canada is a country. (All P is Q)\n   - **Conclusion:** It is necessary that a portion of countries are not states in the USA. (Some Q are not S)\n\n2. **Identify the three terms:**\n   - **Middle term (M):** Canada (P in Premise 1, S in Premise 2)\n   - **Major term (P):** Countries (Q in the conclusion)\n   - **Minor term (S):** States in the USA (S in the conclusion)\n\n3. **Determine the type of each statement:**\n   - **Premise 1:** \"No S is P\" \u2192 **E** (universal negative)\n   - **Premise 2:** \"All P is Q\" \u2192 **A** (universal affirmative)\n   - **Conclusion:** \"Some Q are not S\" \u2192 **O** (particular negative)\n\n4. **Determine the figure:**\n   - Premise 1: S-M (States in the USA - Canada)\n   - Premise 2: M-Q (Canada - Countries)\n   - Figure: **4** (Middle term is predicate of P1, subject of P2)\n\n5. **Check if the mood-figure combination is valid:**\n   - Mood: **EOO**\n   - Figure: **4**\n   - This combination is **not** among the 24 valid syllogistic forms.\n\n6. **Check for fallacies:**\n   - **Undistributed middle:** The middle term \"Canada\" is distributed in Premise 1 (E statement), but not in Premise 2 (A statement). The middle term is distributed in at least one premise, so this is not a fallacy.\n   - **Illicit major:** The major term \"countries\" is distributed in the conclusion (O statement), but not in the major premise (A statement). This is an **illicit major** fallacy.\n   - **Illicit minor:** The minor term \"states in the USA\" is not distributed in the conclusion (O statement) and is not distributed in the minor premise (E statement). No issue here.\n   - **Two negative premises:** Only one premise is negative (Premise 1), so this is not a problem.\n   - **Negative premise with affirmative conclusion:** The conclusion is negative, so this is not a problem.\n   - **Two particular premises:** Only one premise is particular (Premise 1 is universal), so this is not a problem.\n\nSince the syllogism commits the **illicit major** fallacy, it is **invalid**.\n\n**INVALID**",
+    "temperature": 0.0
+  },
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "1f38851f-b43f-42ee-a77a-dafeb7a3b29d",
+  "text": "Every human is over 10 feet tall. Some basketball players are humans. It follows, then, that some basketball players are over 10 feet tall.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "over 10 feet tall",
+      "raw_text": "Every human is over 10 feet tall"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "basketball player",
+      "predicate": "human",
+      "raw_text": "Some basketball players are humans"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "basketball player",
+      "predicate": "over 10 feet tall",
+      "raw_text": "It follows, then, that some basketball players are over 10 feet tall"
+    },
+    "middle_term": "human",
+    "major_term": "over 10 feet tall",
+    "minor_term": "basketball player",
+    "figure": 1,
+    "mood": "AII",
+    "form": "AII-1"
+  },
+  "validity_details": {
+    "form": "AII-1",
+    "mood": "AII",
+    "figure": 1,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Darii",
+    "reason": "Valid syllogistic form: Darii"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "AII-1",
+    "vote_counts": {
+      "AII-1": 4
+    },
+    "max_votes": 4,
+    "all_forms": [
+      "AII-1",
+      "AII-1",
+      "AII-1",
+      "AII-1"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "AII-1 (t=0.0)",
+      "AII-1 (t=0.3)",
+      "AII-1 (t=0.5)",
+      "AII-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

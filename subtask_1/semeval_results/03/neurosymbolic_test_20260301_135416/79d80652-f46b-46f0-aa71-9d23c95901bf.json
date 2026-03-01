@@ -1,0 +1,70 @@
+{
+  "id": "79d80652-f46b-46f0-aa71-9d23c95901bf",
+  "text": "A portion of things that are paper objects are books. Among the items known as notebooks, some are paper objects. This allows us to state that not all notebooks are books.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "paper object",
+      "predicate": "book",
+      "raw_text": "A portion of things that are paper objects are books."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "notebook",
+      "predicate": "paper object",
+      "raw_text": "Among the items known as notebooks, some are paper objects."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "notebook",
+      "predicate": "book",
+      "raw_text": "This allows us to state that not all notebooks are books."
+    },
+    "middle_term": "paper object",
+    "major_term": "book",
+    "minor_term": "notebook",
+    "figure": 2,
+    "mood": "IIO",
+    "form": "IIO-2"
+  },
+  "validity_details": {
+    "form": "IIO-2",
+    "mood": "IIO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Affirmative premises cannot yield negative conclusion; Two particular premises (Fallacy of Two Particulars); Undistributed middle term; Illicit major: 'book'"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "IIO-2",
+    "vote_counts": {
+      "IIO-2": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "IIO-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "79d80652-f46b-46f0-aa71-9d23c95901bf",
+  "text": "A portion of things that are paper objects are books. Among the items known as notebooks, some are paper objects. This allows us to state that not all notebooks are books.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "paper object",
+      "predicate": "book",
+      "raw_text": "A portion of things that are paper objects are books"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "notebook",
+      "predicate": "paper object",
+      "raw_text": "Among the items known as notebooks, some are paper objects"
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "notebook",
+      "predicate": "book",
+      "raw_text": "This allows us to state that not all notebooks are books"
+    },
+    "middle_term": "paper object",
+    "major_term": "book",
+    "minor_term": "notebook",
+    "figure": 1,
+    "mood": "IIO",
+    "form": "IIO-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "IIO-1",
+    "figure": 1,
+    "mood": "IIO",
+    "reason": "IIO-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "notebook",
+      "P": "book",
+      "M": "paper object"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "IIO": 3
+    },
+    "types_seen": [
+      "IIO",
+      "IIO",
+      "IIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

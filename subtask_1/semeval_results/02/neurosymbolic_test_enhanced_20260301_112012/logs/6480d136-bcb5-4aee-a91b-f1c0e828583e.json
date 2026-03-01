@@ -1,0 +1,77 @@
+{
+  "id": "6480d136-bcb5-4aee-a91b-f1c0e828583e",
+  "text": "There is no overlap between mammals and felines. It is the case that every single cat is a feline. Cats cannot be considered mammals.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "mammal",
+      "predicate": "feline",
+      "raw_text": "There is no overlap between mammals and felines."
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "cat",
+      "predicate": "feline",
+      "raw_text": "It is the case that every single cat is a feline."
+    },
+    "conclusion": {
+      "type": "E",
+      "subject": "cat",
+      "predicate": "mammal",
+      "raw_text": "Cats cannot be considered mammals."
+    },
+    "middle_term": "feline",
+    "major_term": "mammal",
+    "minor_term": "cat",
+    "figure": 2,
+    "mood": "EAE",
+    "form": "EAE-2"
+  },
+  "validity_details": {
+    "form": "EAE-2",
+    "mood": "EAE",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Cesare",
+    "reason": "Valid syllogistic form: Cesare"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 3,
+    "failed_samples": 1,
+    "selected_form": "EAE-2",
+    "vote_counts": {
+      "EAE-2": 3
+    },
+    "max_votes": 3,
+    "all_forms": [
+      "EAE-2",
+      "EAE-2",
+      "EAE-2"
+    ],
+    "had_disagreement": false,
+    "had_tie": false,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "EAE-2 (t=0.0)",
+      "EAE-2 (t=0.3)",
+      "EAE-2 (t=0.5)",
+      "FAILED (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "IMPLAUSIBLE"
+}

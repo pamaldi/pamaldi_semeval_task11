@@ -1,0 +1,79 @@
+{
+  "id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+  "text": "It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "rose",
+      "predicate": "yellow",
+      "raw_text": "It is true that some roses are yellow"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "rose",
+      "predicate": "flower",
+      "raw_text": "A rose is a type of flower"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "flower",
+      "predicate": "yellow",
+      "raw_text": "Thus, some flowers are yellow"
+    },
+    "middle_term": "rose",
+    "major_term": "yellow",
+    "minor_term": "flower",
+    "figure": 3,
+    "mood": "IAI",
+    "form": "IAI-3"
+  },
+  "validity_details": {
+    "form": "IAI-3",
+    "mood": "IAI",
+    "figure": 3,
+    "requires_existential_import": false,
+    "valid": true,
+    "form_name": "Disamis",
+    "reason": "Valid syllogistic form: Disamis"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IAI-3",
+    "vote_counts": {
+      "IAI-3": 2,
+      "IAI-1": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "IAI-3",
+      "IAI-1",
+      "IAI-3",
+      "IAI-1"
+    ],
+    "had_disagreement": true,
+    "had_tie": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IAI-3 (t=0.0)",
+      "IAI-1 (t=0.3)",
+      "IAI-3 (t=0.5)",
+      "IAI-1 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

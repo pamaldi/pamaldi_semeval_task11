@@ -1,0 +1,79 @@
+{
+  "id": "b531ac79-36f1-49eb-86bb-3f5ef506b585",
+  "text": "A few of the lizards are dogs. There are no dogs that are felines. As a result, some felines are lizards.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "I",
+      "subject": "lizard",
+      "predicate": "dog",
+      "raw_text": "A few of the lizards are dogs"
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "dog",
+      "predicate": "feline",
+      "raw_text": "There are no dogs that are felines"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "feline",
+      "predicate": "lizard",
+      "raw_text": "As a result, some felines are lizards"
+    },
+    "middle_term": "dog",
+    "major_term": "lizard",
+    "minor_term": "feline",
+    "figure": 2,
+    "mood": "IEI",
+    "form": "IEI-2"
+  },
+  "validity_details": {
+    "form": "IEI-2",
+    "mood": "IEI",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Negative premise with affirmative conclusion"
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "successful_samples": 4,
+    "failed_samples": 0,
+    "selected_form": "IEI-2",
+    "vote_counts": {
+      "IEI-2": 2,
+      "IEI-4": 2
+    },
+    "max_votes": 2,
+    "all_forms": [
+      "IEI-2",
+      "IEI-4",
+      "IEI-2",
+      "IEI-4"
+    ],
+    "had_disagreement": true,
+    "had_tie": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "IEI-2 (t=0.0)",
+      "IEI-4 (t=0.3)",
+      "IEI-2 (t=0.5)",
+      "IEI-4 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

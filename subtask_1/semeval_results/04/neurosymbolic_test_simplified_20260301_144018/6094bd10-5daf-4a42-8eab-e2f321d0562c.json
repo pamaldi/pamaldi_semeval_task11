@@ -1,0 +1,68 @@
+{
+  "id": "6094bd10-5daf-4a42-8eab-e2f321d0562c",
+  "text": "There are no animals that can be called chairs. It is also true that every animal is a type of human. This has led to the conclusion that all humans are chairs.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal",
+      "predicate": "chair",
+      "raw_text": "There are no animals that can be called chairs"
+    },
+    "premise2": {
+      "type": "A",
+      "subject": "animal",
+      "predicate": "human",
+      "raw_text": "It is also true that every animal is a type of human"
+    },
+    "conclusion": {
+      "type": "A",
+      "subject": "human",
+      "predicate": "chair",
+      "raw_text": "This has led to the conclusion that all humans are chairs"
+    },
+    "middle_term": "animal",
+    "major_term": "chair",
+    "minor_term": "human",
+    "figure": 3,
+    "mood": "EAA",
+    "form": "EAA-3"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EAA-3",
+    "figure": 3,
+    "mood": "EAA",
+    "reason": "EAA-3 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "human",
+      "P": "chair",
+      "M": "animal"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EAA": 3
+    },
+    "types_seen": [
+      "EAA",
+      "EAA",
+      "EAA"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "IMPLAUSIBLE"
+}

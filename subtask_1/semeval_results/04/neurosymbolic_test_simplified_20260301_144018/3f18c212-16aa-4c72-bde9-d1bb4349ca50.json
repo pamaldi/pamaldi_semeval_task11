@@ -1,0 +1,68 @@
+{
+  "id": "3f18c212-16aa-4c72-bde9-d1bb4349ca50",
+  "text": "There are no animals that are non-aquatic and also fish. A portion of the animals that are mammals are also non-aquatic. It must be the case that some mammals are not fish.",
+  "extraction_success": true,
+  "validity": "VALID",
+  "prediction": "VALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "animal that is non-aquatic",
+      "predicate": "fish",
+      "raw_text": "There are no animals that are non-aquatic and also fish."
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "animal that is mammal",
+      "predicate": "non-aquatic",
+      "raw_text": "A portion of the animals that are mammals are also non-aquatic."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "mammal",
+      "predicate": "fish",
+      "raw_text": "It must be the case that some mammals are not fish."
+    },
+    "middle_term": "non-aquatic",
+    "major_term": "fish",
+    "minor_term": "mammal",
+    "figure": 1,
+    "mood": "EIO",
+    "form": "EIO-1"
+  },
+  "validity_details": {
+    "valid": true,
+    "form": "EIO-1",
+    "figure": 1,
+    "mood": "EIO",
+    "reason": "EIO-1 is valid (Ferio)",
+    "form_name": "Ferio",
+    "terms": {
+      "S": "mammal",
+      "P": "fish",
+      "M": "non-aquatic"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EIO": 3
+    },
+    "types_seen": [
+      "EIO",
+      "EIO",
+      "EIO"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "VALID",
+  "plausibility": "PLAUSIBLE"
+}

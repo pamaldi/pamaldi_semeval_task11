@@ -1,0 +1,70 @@
+{
+  "id": "7f1f3231-3a3a-44fa-930f-ace6cf37147e",
+  "text": "No item that is a polygon with seven sides is a square. There are no triangles which are polygons with seven sides. Thus, a portion of triangles are not squares.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "polygon with seven sides",
+      "predicate": "square",
+      "raw_text": "No item that is a polygon with seven sides is a square."
+    },
+    "premise2": {
+      "type": "E",
+      "subject": "triangle",
+      "predicate": "polygon with seven sides",
+      "raw_text": "There are no triangles which are polygons with seven sides."
+    },
+    "conclusion": {
+      "type": "O",
+      "subject": "triangles",
+      "predicate": "squares",
+      "raw_text": "Thus, a portion of triangles are not squares."
+    },
+    "middle_term": "polygon with seven sides",
+    "major_term": "square",
+    "minor_term": "triangle",
+    "figure": 2,
+    "mood": "EEO",
+    "form": "EEO-2"
+  },
+  "validity_details": {
+    "form": "EEO-2",
+    "mood": "EEO",
+    "figure": 2,
+    "requires_existential_import": false,
+    "valid": false,
+    "form_name": null,
+    "reason": "Two negative premises (Fallacy of Exclusive Premises)"
+  },
+  "extraction_attempts": 2,
+  "self_consistency": {
+    "successful_samples": 1,
+    "failed_samples": 3,
+    "selected_form": "EEO-2",
+    "vote_counts": {
+      "EEO-2": 1
+    },
+    "no_voting_needed": true,
+    "temperatures_used": [
+      0.0,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "forms_seen": [
+      "FAILED (t=0.0)",
+      "FAILED (t=0.3)",
+      "FAILED (t=0.5)",
+      "EEO-2 (t=0.7)"
+    ]
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

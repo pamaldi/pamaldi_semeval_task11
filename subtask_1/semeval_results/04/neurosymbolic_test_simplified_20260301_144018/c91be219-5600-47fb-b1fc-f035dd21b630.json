@@ -1,0 +1,68 @@
+{
+  "id": "c91be219-5600-47fb-b1fc-f035dd21b630",
+  "text": "It is true that no athletes are lazy. A number of people are athletes. Consequently, some people are lazy.",
+  "extraction_success": true,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "symbolic",
+  "confidence": 0.95,
+  "error": null,
+  "structure": {
+    "premise1": {
+      "type": "E",
+      "subject": "athlete",
+      "predicate": "lazy",
+      "raw_text": "It is true that no athletes are lazy"
+    },
+    "premise2": {
+      "type": "I",
+      "subject": "person",
+      "predicate": "athlete",
+      "raw_text": "A number of people are athletes"
+    },
+    "conclusion": {
+      "type": "I",
+      "subject": "person",
+      "predicate": "lazy",
+      "raw_text": "Consequently, some people are lazy"
+    },
+    "middle_term": "athlete",
+    "major_term": "lazy",
+    "minor_term": "person",
+    "figure": 1,
+    "mood": "EII",
+    "form": "EII-1"
+  },
+  "validity_details": {
+    "valid": false,
+    "form": "EII-1",
+    "figure": 1,
+    "mood": "EII",
+    "reason": "EII-1 is not in the 24 valid syllogistic forms",
+    "form_name": null,
+    "terms": {
+      "S": "person",
+      "P": "lazy",
+      "M": "athlete"
+    },
+    "postprocessor_corrections": []
+  },
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 3,
+    "failed_samples": 0,
+    "vote_counts": {
+      "EII": 3
+    },
+    "types_seen": [
+      "EII",
+      "EII",
+      "EII"
+    ],
+    "had_disagreement": false
+  },
+  "fallback_info": null,
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}

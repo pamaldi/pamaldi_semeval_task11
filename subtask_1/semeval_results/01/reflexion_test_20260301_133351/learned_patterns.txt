@@ -1,0 +1,131 @@
+================================================================================
+LEARNED FAILURE PATTERNS
+Generated: 2026-03-01 13:50:03
+Use this to augment the Prolog prompt during test phase
+================================================================================
+
+```
+# Learned Failure Patterns Summary
+
+**Report analyzed**: 2026-03-01 13:48:27
+**Total cases**: 22
+**Failure breakdown**:
+- Logic errors: 14
+- Encoding errors: 6
+- Plausibility bias: 13
+- Runtime errors: 6
+
+---
+
+## Pattern 1: Undistributed Middle Fallacy
+
+**Frequency**: 6 out of 22 cases
+**Cases**: 2, 3, 4, 10, 17, 21
+
+**What happened**: 
+The model repeatedly failed to detect the "undistributed middle" fallacy, where the middle term is not distributed in at least one premise, making the syllogism invalid.
+
+**Rule violated**:
+The middle term must be distributed in at least one premise for a valid syllogism.
+
+**Lesson learned**:
+Always check whether the middle term is distributed in at least one premise. If not, the syllogism is automatically invalid.
+
+---
+
+## Pattern 2: Two Negative Premises
+
+**Frequency**: 2 out of 22 cases
+**Cases**: 13, 19
+
+**What happened**: 
+The model incorrectly validated syllogisms with two negative premises, which is logically invalid as no valid conclusion can be drawn from two negative premises.
+
+**Rule violated**:
+A syllogism cannot have two negative premises and still produce a valid conclusion.
+
+**Lesson learned**:
+Immediately reject syllogisms with two negative premises as invalid without attempting to construct a model.
+
+---
+
+## Pattern 3: Undefined Predicate in Negation
+
+**Frequency**: 6 out of 22 cases
+**Cases**: 5, 6, 7, 12, 18, 20
+
+**What happened**: 
+The model frequently failed to define predicates used in negation, leading to runtime errors and incorrect predictions.
+
+**Rule violated**:
+All predicates used in logical expressions must be defined to ensure the Prolog interpreter can evaluate them.
+
+**Lesson learned**:
+Before using a predicate in a logical expression, ensure it is defined with appropriate facts or rules. Negated expressions (`\+ P`) require the predicate `P` to be defined.
+
+---
+
+## Pattern 4: Built Satisfying Model Instead of Counterexample
+
+**Frequency**: 5 out of 22 cases
+**Cases**: 1, 2, 3, 10, 17
+
+**What happened**: 
+The model incorrectly validated syllogisms by constructing models where the conclusion is satisfied, rather than attempting to find a counterexample where the premises are true but the conclusion is false.
+
+**Rule violated**:
+To prove a syllogism is valid, the conclusion must follow from the premises in all possible models. To prove it is invalid, construct a counterexample.
+
+**Lesson learned**:
+For invalid syllogisms, always attempt to construct a counterexample where the premises are true but the conclusion is false. For valid syllogisms, ensure the conclusion is entailed in all models.
+
+---
+
+## Pattern 5: Plausibility Bias
+
+**Frequency**: 13 out of 22 cases
+**Cases**: 1, 2, 3, 4, 5, 8, 9, 10, 13, 17, 19, 21, 22
+
+**What happened**: 
+The model was frequently influenced by the plausibility of the conclusion in the real world, leading to incorrect predictions about the logical validity of the syllogism.
+
+**Rule violated**:
+Logical validity must be determined solely by the structure of the syllogism, not by real-world plausibility.
+
+**Lesson learned**:
+Ignore real-world plausibility when evaluating logical validity. Focus strictly on the logical form and distribution of terms.
+
+---
+
+## Quick Reference Checklist
+
+Before generating code, verify:
+- [ ] Check whether the middle term is distributed in at least one premise.
+- [ ] Reject syllogisms with two negative premises as invalid.
+- [ ] Define all predicates used in logical expressions, especially in negations.
+- [ ] For invalid syllogisms, construct a counterexample where the premises are true but the conclusion is false.
+- [ ] Ignore real-world plausibility when evaluating logical validity.
+
+---
+
+## Automatic INVALID Patterns Identified
+
+| Pattern | Cases | Rule |
+|---------|-------|------|
+| Two negative premises | 13, 19 | Invalid - Two negative premises cannot produce a valid conclusion |
+| Undistributed middle | 2, 3, 4, 10, 17, 21 | Invalid - Middle term must be distributed in at least one premise |
+| Illicit major/minor | 1, 5, 19 | Invalid - A term distributed in the conclusion must also be distributed in the premises |
+| Invalid conclusion type | 8, 17 | Invalid - Conclusion must match the logical form derived from the premises |
+| Illicit process | 13, 19 | Invalid - A term distributed in the conclusion must be distributed in the premises |
+
+---
+
+## Code-Level Fixes Needed
+
+| Error Type | Cases | Fix |
+|------------|-------|-----|
+| Undefined predicate in negation | 5, 6, 7, 12, 18, 20 | Define all predicates used in logical expressions before using them |
+| Built satisfying model instead of counterexample | 1, 2, 3, 10, 17 | Construct a counterexample where the premises are true but the conclusion is false |
+| Incorrect validity check for universal conclusion | 19, 22 | Use `\+ (X, \+ P(X))` to test for universal affirmative conclusions |
+| Invalid Prolog syntax for negated facts | 15 | Use rules or witnesses to encode negated propositions |
+| Misuse of particular premises | 4, 21 | Two I-type premises cannot lead to a valid conclusion |

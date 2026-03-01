@@ -1,0 +1,25 @@
+{
+  "syllogism_id": "9d675913-128b-4451-9c9d-a397adcfef77",
+  "syllogism_text": "It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.",
+  "ground_truth": "INVALID",
+  "final_prediction": "INVALID",
+  "success": true,
+  "total_attempts": 1,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "code": "% Facts for pencils and books\npencil(pencil1).\nbook(book1).\n\n% Fail clause for paper_good if no facts exist\npaper_good(_) :- fail.\n\n% E-premise: No pencil is a paper good (via conflict)\nconflict :- pencil(pencil1), paper_good(pencil1).\n\n% E-premise: No pencil is a book (via conflict)\nconflict :- pencil(pencil1), book(pencil1).\n\n% A-conclusion: All books are paper goods\nvalid_syllogism :- \\+ (book(book1), \\+ paper_good(book1)).",
+      "prediction": "INVALID",
+      "stdout": "RESULT:INVALID\n",
+      "stderr": "",
+      "failure_type": "unknown",
+      "reflection_prompt": null,
+      "generated_reflection": null,
+      "timestamp": "2026-03-01T13:42:42.055047"
+    }
+  ],
+  "first_attempt_success": true,
+  "reflections_memory": [],
+  "validity": false,
+  "plausibility": true
+}
