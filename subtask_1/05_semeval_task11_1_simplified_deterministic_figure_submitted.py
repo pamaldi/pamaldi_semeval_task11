@@ -154,7 +154,16 @@ def main():
     test_results = None
     test_pipeline = None
     test_data = []
-    if NUM_TEST != 0 and TEST_DATA_PATH.exists():
+
+    # Mirror notebook semantics:
+    #   NUM_TEST = 0  -> skip test
+    #   NUM_TEST > 0  -> run on first NUM_TEST examples
+    #   NUM_TEST = -1 -> run on all examples
+    if NUM_TEST == 0:
+        print("Skipping test (NUM_TEST = 0)")
+    elif not TEST_DATA_PATH.exists():
+        print(f"Test data not found: {TEST_DATA_PATH}")
+    else:
         with open(TEST_DATA_PATH, "r", encoding="utf-8") as f:
             test_data = json.load(f)
         if NUM_TEST > 0:
@@ -205,11 +214,6 @@ def main():
             reference_file, predictions_file, results_file,
             MODEL_ID, len(test_data), phase_name="RESULTS (TEST)"
         )
-    else:
-        if NUM_TEST == 0:
-            print("Skipping test (NUM_TEST = 0)")
-        else:
-            print(f"Test data not found: {TEST_DATA_PATH}")
 
     print("\n✓ Simplified pipeline script complete.")
 
