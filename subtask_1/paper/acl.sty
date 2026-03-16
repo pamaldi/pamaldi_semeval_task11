@@ -1,0 +1,99 @@
+% acl.sty - ACL 2025 compatible style
+% Based on official ACL formatting requirements
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{acl}[2025/01/01 ACL 2025 Style]
+
+% Options
+\newif\if@acl@preprint
+\DeclareOption{preprint}{\@acl@preprinttrue}
+\DeclareOption{review}{\@acl@preprintfalse}
+\DeclareOption{final}{\@acl@preprinttrue}
+\ProcessOptions\relax
+
+% Required packages
+\RequirePackage{natbib}
+\setcitestyle{authoryear,round,semicolon,aysep={,},yysep={,}}
+\bibliographystyle{plainnat}
+
+% ========================================
+% PAGE GEOMETRY - ACL 2025 requirements
+% Letter paper: 8.5 x 11 inches
+% Top margin: 1 inch (2.54cm)
+% Bottom margin: 1 inch (2.54cm) 
+% Left margin: 1 inch (2.54cm)
+% Right margin: 1 inch (2.54cm)
+% Two-column with 0.25 inch (0.64cm) gutter
+% ========================================
+\RequirePackage[
+  a4paper,
+  top=2.8cm,
+  bottom=2.8cm,
+  left=3.1cm,
+  right=3.1cm,
+  columnsep=0.64cm,
+  includefoot,
+  footskip=1.2cm
+]{geometry}
+
+% Two-column layout
+\twocolumn
+
+% ========================================
+% SECTION FORMATTING
+% ========================================
+\RequirePackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titlespacing*{\section}{0pt}{2.0ex plus 0.8ex minus 0.2ex}{1.0ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 0.6ex minus 0.2ex}{0.8ex plus 0.2ex}
+
+% ========================================
+% TITLE AND AUTHOR
+% ========================================
+\def\@maketitle{%
+  \newpage
+  \null
+  \begin{center}%
+    {\Large\bfseries \@title \par}%
+    \vskip 1.5em%
+    {\normalsize
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+
+% ========================================
+% ABSTRACT
+% ========================================
+\renewenvironment{abstract}%
+  {\centerline{\bfseries\normalsize Abstract}%
+   \vspace{0.5ex}%
+   \begin{quote}\small}%
+  {\end{quote}}
+
+% ========================================
+% FOOTNOTES - ensure they don't overflow bottom margin
+% ========================================
+\renewcommand{\footnotesize}{\fontsize{9}{11}\selectfont}
+
+% ========================================
+% FLOATS - prevent them from going into margins
+% ========================================
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+
+% Prevent overfull hboxes
+\tolerance=1000
+\emergencystretch=1em
+\sloppy
+
+% ========================================
+% HEADERS/FOOTERS
+% ========================================
+\pagestyle{plain}
