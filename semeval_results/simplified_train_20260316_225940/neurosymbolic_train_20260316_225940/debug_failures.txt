@@ -1,0 +1,52 @@
+====================================================================================================
+DEBUG LOG - ERRORI E MISMATCH (scritto in tempo reale)
+Timestamp: 2026-03-16 22:59:40
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+[FALLBACK_USED] ID: 50146f21-d265-4e3a-8d93-8165cdbe89a3
+----------------------------------------------------------------------------------------------------
+
+### SILLOGISMO:
+All cars are a type of vehicle. No animal is a car. Therefore, no animal can be a vehicle.
+
+### GROUND TRUTH:
+  Validity: INVALID
+  Plausibility: PLAUSIBLE
+
+### METODO:
+  Method: fallback
+  Confidence: 0.70
+
+### STRUTTURA ESTRATTA: FALLITA (usato fallback LLM)
+  Errore estrazione: All 3 extraction attempts failed
+  Tentativi: 1
+
+### FALLBACK INFO:
+
+### RISULTATO:
+  Prediction: INVALID
+  Ground Truth: INVALID
+  Match: ✓ CORRETTO
+
+### SELF-CONSISTENCY (Extraction):
+  Successful samples: 0
+  Failed samples: 3
+  Selected form: N/A
+
+### ANALISI:
+  Estrazione fallita, usato fallback LLM per valutazione diretta.
+  Il fallback ha predetto correttamente.
+
+
+
+====================================================================================================
+RIEPILOGO FINALE
+====================================================================================================
+Methods: 0 symbolic, 1 fallback, 0 failed
+
+FAILURES:
+  Extraction Errors: 0
+  False VALID:       0
+  False INVALID:     0
+  TOTAL:             0

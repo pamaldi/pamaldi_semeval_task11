@@ -1,0 +1,26 @@
+{
+  "id": "50146f21-d265-4e3a-8d93-8165cdbe89a3",
+  "text": "All cars are a type of vehicle. No animal is a car. Therefore, no animal can be a vehicle.",
+  "extraction_success": false,
+  "validity": "INVALID",
+  "prediction": "INVALID",
+  "method": "fallback",
+  "confidence": 0.7,
+  "error": "All 3 extraction attempts failed",
+  "structure": null,
+  "validity_details": null,
+  "extraction_attempts": 1,
+  "self_consistency": {
+    "num_samples": 3,
+    "successful_samples": 0,
+    "failed_samples": 3
+  },
+  "fallback_info": {
+    "success": false,
+    "prediction": "INVALID",
+    "error": "Bedrock error 403: {\"Message\":\"Authentication failed: Please make sure your API Key is valid.\"}",
+    "temperature": 0.0
+  },
+  "ground_truth": "INVALID",
+  "plausibility": "PLAUSIBLE"
+}
