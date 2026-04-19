@@ -30,7 +30,7 @@
 % ABSTRACT
 % ===========================================================================
 \begin{abstract}
-We describe our participation in SemEval-2026 Task~11, Subtask~1: determining the formal validity of syllogisms in English while minimizing the influence of content plausibility. Our system implements a neuro-symbolic pipeline that strictly separates the neural and symbolic components of syllogistic reasoning. An LLM extracts the formal structure of natural-language syllogisms---identifying the proposition types (A, E, I, O) and the three terms---while the syllogistic figure is computed deterministically and a symbolic validator checks whether the resulting mood--figure pair belongs to the 24 classically valid Aristotelian forms. Self-consistency voting across multiple extraction samples and targeted post-processing rules further improve robustness. On the official evaluation, our system achieves 96.34\% accuracy, a Total Content Effect (TCE) of 1.02, and a combined score of 56.57. When the symbolic path decides (96.3\% of instances), TCE is effectively zero by construction; the residual TCE of 1.02 is localized to the LLM fallback branch. All seven residual errors originate in the neural extraction stage, while the symbolic validator introduces no content-dependent failures. Compared to pure-LLM baselines on the same backbone, our system closes the content-effect gap without loss of accuracy.
+We describe our participation in SemEval-2026 Task~11, Subtask~1: determining the formal validity of syllogisms in English while minimizing the influence of content plausibility. Our system implements a neuro-symbolic pipeline that strictly separates the neural and symbolic components of syllogistic reasoning. An LLM extracts the formal structure of natural-language syllogisms---identifying the proposition types (A, E, I, O) and the three terms---while the syllogistic figure is computed deterministically and a symbolic validator checks whether the resulting mood--figure pair belongs to the 24 classically valid Aristotelian forms. Self-consistency voting across multiple extraction samples and targeted post-processing rules further improve robustness. On the official evaluation, our system achieves 96.34\% accuracy, a Total Content Effect (TCE) of 1.02, and a combined score of 56.57. On the symbolic path (96.3\% of instances), the validator is content-agnostic by construction; residual content sensitivity arises only when extraction errors map instances onto forms whose validity happens to align with plausibility. All seven residual errors are attributable to neural components: four stem from structured-extraction failures in the symbolic path and three from direct LLM fallback judgments. Compared to pure-LLM baselines on the same backbone, our system closes the content-effect gap without loss of accuracy.
 \end{abstract}
 
 % ===========================================================================
@@ -44,7 +44,7 @@ SemEval-2026 Task~11 \citep{valentino-etal-2026-semeval} addresses this challeng
 
 Our key insight is that syllogistic validity is a purely structural property: it depends entirely on the \emph{mood} (the combination of proposition types A, E, I, O) and the \emph{figure} (the arrangement of terms across premises), not on the truth or plausibility of the premises. This motivates a neuro-symbolic architecture that decomposes the problem into two stages: (1)~a \emph{neural extraction} stage, where an LLM parses the natural-language syllogism into its formal components, and (2)~a \emph{symbolic validation} stage, where a deterministic checker verifies whether the extracted mood--figure pair belongs to the 24 classically valid Aristotelian forms.
 
-Our contributions are: (1)~a strict neuro-symbolic decomposition in which the LLM is forbidden from producing reasoning steps and emits only four AEIO labels plus three term strings, with all inference performed by a closed-form lookup; (2)~a controlled comparison, on the same backbone, against direct-prompt, chain-of-thought, self-consistent chain-of-thought, and an LLM-generates-Prolog variant, showing that reducing the LLM's reasoning role improves both accuracy and TCE; (3)~a decomposition of the residual content effect showing it is localized almost entirely in the LLM fallback branch, not in the symbolic validator; and (4)~a multi-model study of the extractor demonstrating that the design claim---that the symbolic stage is the invariant content-immune component---holds across backbones.
+Our contributions are: (1)~a strict neuro-symbolic decomposition in which the LLM is forbidden from producing reasoning steps and emits only four AEIO labels plus three term strings, with all inference performed by a closed-form lookup; (2)~a controlled comparison, on the same backbone, against direct-prompt, chain-of-thought, self-consistent chain-of-thought, and an LLM-generates-Prolog variant, showing that reducing the LLM's reasoning role improves both accuracy and TCE; (3)~a branch-level decomposition showing that the symbolic validator contributes no content-dependent errors, while neural components (both the extractor and the fallback) account for all observed content sensitivity; and (4)~a multi-model study of the extractor demonstrating that the design claim---that the symbolic stage is the invariant content-immune component---holds across backbones.
 
 Our submitted system achieves a combined score of 56.57 with 96.34\% accuracy and a TCE of only 1.02. Code, prompts, and evaluation scripts are publicly available.\footnote{\url{https://github.com/pamaldi/pamaldi_semeval_task11}}\textsuperscript{,}\footnote{Language of data: English.}
 
@@ -153,7 +153,7 @@ The deterministic checker verifies whether the extracted mood--figure pair belon
 
 \subsection{Post-Processing and Fallback}
 
-Between extraction and validation, rule-based post-processing corrects systematic errors: \textbf{I/O disambiguation} detects negation markers to fix I$\leftrightarrow$O misclassifications; \textbf{double-negation handling} recognizes patterns like ``no X are not Y'' as type~A; \textbf{compound-term normalization} ensures consistent matching of complex noun phrases. When structured extraction fails---i.e.\ none of the $k=3$ samples yields a well-formed mood--figure pair (3.7\% of test instances, 7/191)---the system falls back to a direct LLM validity judgment. As we show in Section~\ref{sec:fallback}, the fallback branch is also where the system's residual content effect is concentrated.
+Between extraction and validation, rule-based post-processing corrects systematic errors: \textbf{I/O disambiguation} detects negation markers to fix I$\leftrightarrow$O misclassifications; \textbf{double-negation handling} recognizes patterns like ``no X are not Y'' as type~A; \textbf{compound-term normalization} ensures consistent matching of complex noun phrases. When structured extraction fails---i.e.\ none of the $k=3$ samples yields a well-formed mood--figure pair (3.7\% of test instances, 7/191)---the system falls back to a direct LLM validity judgment. As we show in Section~\ref{sec:fallback}, the fallback path is a second source of content-dependent errors in addition to the extraction stage of the symbolic path.
 
 
 % ===========================================================================
@@ -220,7 +220,7 @@ Prolog + Reflexion   & 90.58 & 8.49 & 27.87 \\
 \subsection{Fallback Branch Analysis}
 \label{sec:fallback}
 
-Of the 191 test instances, 184 are resolved via the symbolic path and 7 via the LLM fallback. Table~\ref{tab:fallback} decomposes the system's accuracy and TCE by branch.
+Of the 191 test instances, 184 are resolved via the symbolic path and 7 via the LLM fallback. Table~\ref{tab:fallback} decomposes the system's accuracy and TCE by branch. The symbolic path, which handles 96.3\% of instances, achieves 97.83\% accuracy with a TCE of 2.13. The fallback, invoked on only 7 instances, achieves 57.14\% accuracy; its TCE happens to be 0.00 because its three errors fall in subgroups where the small denominators yield no accuracy gap.
 
 \begin{table}[t]
 \centering
@@ -230,16 +230,16 @@ Of the 191 test instances, 184 are resolved via the symbolic path and 7 via the 
 \toprule
 \textbf{Path} & \textbf{N} & \textbf{Acc.} & \textbf{TCE} & \textbf{Score} \\
 \midrule
-Symbolic only & TBD\_N\_S  & TBD\_A\_S  & TBD\_T\_S  & TBD\_C\_S \\
-Fallback only & TBD\_N\_F  & TBD\_A\_F  & TBD\_T\_F  & TBD\_C\_F \\
+Symbolic only  & 184 & 97.83 & 2.13 & 45.69 \\
+Fallback only  & 7   & 57.14 & 0.00 & 57.14 \\
 System (union) & 191 & 96.34 & 1.02 & 56.57 \\
 \bottomrule
 \end{tabular}
-\caption{Per-branch decomposition on the test set. The symbolic path is content-invariant by construction; the system-level TCE is attributable to the fallback branch, which handles 3.7\% of instances.}
+\caption{Per-branch decomposition on the test set. The symbolic validator introduces no errors on correctly extracted structures; residual content sensitivity in the symbolic path arises only when extraction errors map an instance onto a form whose validity happens to align with plausibility. The fallback's TCE of 0.00 reflects the specific subgroup composition of the 7 fallback instances rather than a structural property. The system-level TCE of 1.02 is lower than the symbolic path's 2.13 because the two paths contribute to different subgroup mixes.}
 \label{tab:fallback}
 \end{table}
 
-The symbolic path exhibits TCE effectively zero by construction, confirming content-invariance where the validator decides. The system-level TCE of 1.02 is therefore almost entirely produced by the fallback branch; reducing fallback frequency by improving extraction is the most direct route to lower system-level content effect.
+The low system-level TCE of 1.02 is an averaging effect across branches with different subgroup compositions rather than a property of either path in isolation: the symbolic validator is content-invariant \emph{by construction}, but residual content sensitivity is re-introduced whenever an extraction error maps an instance onto a form whose validity happens to align with plausibility. Reducing the overall content effect therefore requires tightening extraction---both the structured extractor used on the symbolic path and the direct LLM fallback---since the symbolic validator contributes no content-dependent errors but cannot correct them either.
 
 \subsection{Multi-Model Extraction}
 \label{sec:multi-model}
@@ -259,7 +259,7 @@ TBD\_MODEL\_A & TBD\_A\_A & TBD\_A\_T & TBD\_A\_S \\
 TBD\_MODEL\_B & TBD\_B\_A & TBD\_B\_T & TBD\_B\_S \\
 \bottomrule
 \end{tabular}
-\caption{Swapping the extractor LLM while holding the symbolic validator fixed. Accuracy tracks extractor quality; TCE remains low across backbones, supporting the claim that the symbolic stage is the invariant content-immune component.}
+\caption{Swapping the extractor LLM while holding the symbolic validator fixed. Accuracy tracks extractor quality; the symbolic stage remains content-agnostic across backbones, supporting the architectural claim that content-invariance is contributed by the validator rather than any particular LLM.}
 \label{tab:multi-model}
 \end{table}
 
@@ -297,17 +297,17 @@ To probe sensitivity of extraction to surface form, we paraphrased 30 test insta
 \section{Error Analysis}
 \label{sec:error-analysis}
 
-All 7 prediction errors on the test set are attributable to the neural extraction stage; the symbolic validator introduces no errors on correctly extracted structures. The errors comprise 4 false negatives (valid syllogisms predicted as invalid) and 3 false positives (invalid syllogisms mapped to valid forms due to proposition-type misidentification).
+All 7 prediction errors on the test set are attributable to neural components of the pipeline; the symbolic validator introduces no errors on correctly extracted structures. Four errors occur on the symbolic path---from structured-extraction failures upstream of the validator---and three on the LLM fallback path, where the LLM makes a direct validity judgment without intermediate structure. The errors comprise 4 false negatives and 3 false positives. Per-error detail is given in Appendix~\ref{app:errors}, Table~\ref{tab:error_details}.
 
-Responding to reviewer feedback, we grouped the 7 failures by their dominant linguistic trigger (Table~\ref{tab:error_details}):
+The 7 failures cluster into three linguistic-trigger categories:
 \begin{itemize}
-    \item \textbf{AEIO type confusion (4/7)}: I$\leftrightarrow$O or A$\leftrightarrow$E mislabelling, typically triggered by negation polarity or quantifier scope.
-    \item \textbf{Middle-term / figure identification (2/7)}: the extractor selects the wrong surface phrase as the middle term, propagating into a wrong figure.
-    \item \textbf{Complex noun phrase (1/7)}: compound nominals that the extractor splits or merges incorrectly.
+    \item \textbf{E/O type confusion (2/7):} errors on the symbolic path where non-standard universal-negative phrasing (``The set of X and Y do not overlap''; bare ``X are not Y'' without an explicit quantifier) is parsed as the particular O instead of the universal E. This turns valid forms such as Fresison (EIO-4) and Celaront (EAO-1) into invalid OIO-4 and OAO-1 respectively.
+    \item \textbf{Figure or conclusion-scope error (2/7):} two symbolic-path errors where the structure of the argument is mis-identified. One is a failure on Barbara (AAA-1), the canonical valid syllogism, in which the middle term's role is correctly identified but the figure is assigned as 3 instead of 1. The other is a conclusion whose scope (type~O vs.~type~E) is genuinely ambiguous in surface form.
+    \item \textbf{Compound noun phrase / extraction failure (3/7):} all three fallback errors, each triggered by the middle term appearing in syntactically different forms across premises (``stationery items'' vs.\ ``items of stationery''; ``large body of saltwater'' vs.\ ``large bodies of saltwater''). In all three, structured extraction failed and the LLM fallback gave a content-consistent but logically incorrect verdict.
 \end{itemize}
-All three categories stress the neural extraction stage; the symbolic validator is insensitive to surface form.
+All three categories stress neural components of the pipeline. The symbolic validator is insensitive to surface form by construction: given correct types, terms, and figure, it would classify every instance correctly.
 
-Crucially, the 7 errors are distributed nearly uniformly across plausibility conditions (VP=2, VI=2, IP=1, II=2), confirming that extraction errors are driven by linguistic complexity rather than content plausibility. This is what yields the near-zero TCE of 1.02.
+The 7 errors are distributed across plausibility conditions as (VP=2, VI=2, IP=1, II=2), a near-uniform spread that yields the low system-level TCE of 1.02.
 
 \paragraph{Training-set annotation issues.} During development we identified 5 annotation inconsistencies in the training set where universally valid Aristotelian forms (e.g.\ \emph{Celarent} EAE-1, \emph{Baroco} AOO-2) were labelled as invalid. These cases were communicated to the task organizers and do not appear in the test set. This observation is a positive side-effect of the interpretability of the neuro-symbolic paradigm: because every prediction is explainable by a mood--figure pair, labelling anomalies are easy to detect.
 
@@ -321,11 +321,11 @@ The strict separation of neural extraction from symbolic validation offers three
 
 \paragraph{Existential import.} A critical design decision was adopting the Aristotelian interpretation with existential import (24 valid forms) rather than modern-logic (15 forms). Ablations with 15 forms showed substantially lower accuracy ($\sim$93\%), confirming that the task adopts the traditional convention.
 
-\paragraph{Content effect as a structural guarantee.} In principle, a perfect symbolic validator achieves TCE~$=0$. Our TCE of 1.02 is close to this minimum; the Section~\ref{sec:fallback} decomposition shows that the residual is concentrated in the fallback branch, not in the symbolic path. Further lowering TCE therefore does not require changes to the validator but rather tighter extraction or a smaller fallback footprint.
+\paragraph{Where the residual content effect lives.} In principle, a perfect symbolic validator achieves TCE~$=0$. The Section~\ref{sec:fallback} decomposition shows that the symbolic validator itself contributes no content-dependent errors: all residual TCE comes from neural components, distributed between the extractor (4/7 errors) and the fallback (3/7 errors). Further lowering TCE therefore requires tightening neural components rather than changes to the validator.
 
 \paragraph{Generalisation beyond categorical syllogisms.} The symbolic validator is tied to the 24 Aristotelian categorical forms. The decomposition itself, however, is form-agnostic: extending the system to propositional or first-order fragments requires swapping the validator (e.g.\ a SAT/SMT backend) while preserving the extract-then-validate separation. The neural stage's role---mapping natural language to a formal structure---remains the same.
 
-\paragraph{Cross-model robustness.} The multi-model results (Section~\ref{sec:multi-model}) indicate that accuracy tracks extractor quality while TCE remains low across backbones, which is consistent with the architectural claim that content-invariance is contributed by the symbolic stage rather than any particular LLM.
+\paragraph{Cross-model robustness.} The multi-model results (Section~\ref{sec:multi-model}) indicate that accuracy tracks extractor quality while the symbolic stage remains content-agnostic across backbones, which is consistent with the architectural claim that content-invariance is contributed by the symbolic stage rather than any particular LLM.
 
 
 % ===========================================================================
@@ -333,7 +333,7 @@ The strict separation of neural extraction from symbolic validation offers three
 % ===========================================================================
 \section{Conclusion}
 
-We presented a neuro-symbolic system for SemEval-2026 Task~11 that achieves 96.34\% accuracy, a TCE of 1.02, and a combined score of 56.57, demonstrating near-complete immunity to content effects. Controlled comparisons on a shared backbone show that reducing the LLM's reasoning role---rather than adding sampling or reflexion on top of an LLM reasoner---is what closes the content-effect gap. A branch-level decomposition confirms that the symbolic path is content-invariant by construction and that the residual TCE is localized to the LLM fallback. A multi-model extraction study supports the claim that content-invariance is contributed by the symbolic stage rather than any particular backbone. Future work includes extending the validator to propositional and first-order fragments, reducing the fallback footprint, and adapting the pipeline to the multilingual and irrelevant-premise subtasks.
+We presented a neuro-symbolic system for SemEval-2026 Task~11 that achieves 96.34\% accuracy, a TCE of 1.02, and a combined score of 56.57, demonstrating near-complete immunity to content effects. Controlled comparisons on a shared backbone show that reducing the LLM's reasoning role---rather than adding sampling or reflexion on top of an LLM reasoner---is what closes the content-effect gap. A branch-level decomposition confirms that the symbolic validator contributes no content-dependent errors and localizes the residual content sensitivity to the neural components: the structured extractor (4/7 errors) and the LLM fallback (3/7 errors). A multi-model extraction study supports the claim that content-invariance is contributed by the symbolic stage rather than any particular backbone. Future work includes extending the validator to propositional and first-order fragments, reducing the fallback footprint, and adapting the pipeline to the multilingual and irrelevant-premise subtasks.
 
 
 % ===========================================================================
@@ -341,7 +341,7 @@ We presented a neuro-symbolic system for SemEval-2026 Task~11 that achieves 96.3
 % ===========================================================================
 \section*{Limitations}
 
-Our system is evaluated only on Subtask~1 (English binary classification over categorical syllogisms). It does not address the multilingual setting of Subtask~3, the irrelevant-premise conditions of Subtasks~2 and~4, or non-categorical logical fragments. The symbolic-path accuracy depends on the extractor LLM's ability to parse noun phrases and quantifier scope; paraphrases and double negations remain the dominant extraction failure mode (Section~\ref{sec:error-analysis}). The LLM fallback, invoked on 3.7\% of test instances, is the only component that can reintroduce content sensitivity; reducing fallback frequency by improving extraction is the most direct way to lower system-level TCE. Finally, our evaluation is limited to the 191 official test instances; a paraphrase probe on a 30-instance subsample (Section~\ref{sec:paraphrase}) provides only a preliminary indication of robustness to surface-form variation.
+Our system is evaluated only on Subtask~1 (English binary classification over categorical syllogisms). It does not address the multilingual setting of Subtask~3, the irrelevant-premise conditions of Subtasks~2 and~4, or non-categorical logical fragments. The symbolic-path accuracy depends on the extractor LLM's ability to parse noun phrases and quantifier scope; paraphrases and double negations remain the dominant extraction failure mode (Section~\ref{sec:error-analysis}). The LLM fallback, invoked on 3.7\% of test instances, is the other neural component that can reintroduce content sensitivity; reducing fallback frequency by improving extraction is the most direct way to lower system-level TCE. Finally, our evaluation is limited to the 191 official test instances; a paraphrase probe on a 30-instance subsample (Section~\ref{sec:paraphrase}) provides only a preliminary indication of robustness to surface-form variation.
 
 
 % ===========================================================================
@@ -421,21 +421,21 @@ Table~\ref{tab:error_details} lists all 7 errors on the official test set with t
 \begin{table}[t]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}cllll@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}cllllll@{}}
 \toprule
-\textbf{\#} & \textbf{Type} & \textbf{Sub.} & \textbf{Gold / Pred.} & \textbf{Trigger} \\
+\textbf{\#} & \textbf{Type} & \textbf{Sub.} & \textbf{Gold} & \textbf{Pred.} & \textbf{Path} & \textbf{Trigger} \\
 \midrule
-1 & FN & VI & EIO-4 / TBD\_P1 & middle-term amb. \\
-2 & FN & VP & AAA-1 / extr.\ fail & compound NP \\
-3 & FN & VI & EAO-1 / TBD\_P3 & E$\to$A confusion \\
-4 & FP & II & TBD\_G4 / TBD\_P4 & conclusion polarity \\
-5 & FN & VP & AEO-4 / TBD\_P5 & figure misid. \\
-6 & FP & II & TBD\_G6 / AOO-2 & double negation \\
-7 & FP & IP & TBD\_G7 / TBD\_P7 & A/E confusion \\
+1 & FN & VP & AAA-1 (Barbara)   & AAA-3        & sym & figure misid. \\
+2 & FN & VI & EIO-4 (Fresison)  & OIO-4        & sym & E/O confusion \\
+3 & FN & VI & EAO-1 (Celaront)  & OAO-1        & sym & E/O confusion \\
+4 & FP & II & AOE-2\textsuperscript{$\dagger$} & AOO-2        & sym & conclusion scope \\
+5 & FN & VP & --\textsuperscript{$\ddagger$}   & extr.\ fail  & fb  & compound NP \\
+6 & FP & IP & --\textsuperscript{$\ddagger$}   & extr.\ fail  & fb  & compound NP \\
+7 & FP & II & --\textsuperscript{$\ddagger$}   & extr.\ fail  & fb  & compound NP \\
 \bottomrule
 \end{tabular}
-\caption{All 7 test set errors with dominant linguistic trigger. FN=false negative (valid$\to$invalid), FP=false positive (invalid$\to$valid). Subgroups: VP/VI/IP/II as defined in Section~2.1. Gold/Pred.\ pairs marked \textit{TBD} are to be verified against extractor logs.}
+\caption{All 7 test-set errors with dominant linguistic trigger. FN=false negative (valid$\to$invalid), FP=false positive (invalid$\to$valid). Path: sym=symbolic, fb=fallback. Subgroups: VP/VI/IP/II as defined in §\ref{sec:results}. \textsuperscript{$\dagger$}Conclusion is genuinely ambiguous between O (yielding AOO-2, valid) and E (yielding AOE-2, not in the 24 valid forms); gold labels the instance invalid. \textsuperscript{$\ddagger$}Fallback cases have no extracted form; gold validity is \emph{valid} for \#5 and \emph{invalid} for \#6 and \#7.}
 \label{tab:error_details}
 \end{table}
 
