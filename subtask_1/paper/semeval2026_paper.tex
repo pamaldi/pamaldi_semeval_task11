@@ -355,4 +355,96 @@ We presented a neuro-symbolic system for SemEval-2026 Task~11 that achieves 96.3
 % ===========================================================================
 \section*{Acknowledgments}
 
-We thank the SemEval-2026 Task~11 organizers for their prompt clarifications duri
+We thank the SemEval-2026 Task~11 organizers for their prompt clarifications during the evaluation phase, and the anonymous reviewers for suggestions that shaped the camera-ready version, in particular the baseline comparison, the fallback-branch decomposition, and the error-pattern analysis.
+
+
+% ===========================================================================
+% REFERENCES
+% ===========================================================================
+\bibliography{references}
+
+
+% ===========================================================================
+% APPENDIX
+% ===========================================================================
+\appendix
+\section{Extraction Prompt Template}
+\label{app:prompt}
+
+The extraction prompt instructs the LLM to:
+\begin{enumerate}
+    \item Identify the two premises and the conclusion.
+    \item For each proposition, determine the type (A, E, I, or O), paying special attention to the distinction between I (``Some S are P'') and O (``Some S are \emph{not} P'').
+    \item Identify the three terms (S, P, M) based on their distribution: S appears in the minor premise and the conclusion; P appears in the major premise and the conclusion; M appears in both premises but not in the conclusion.
+    \item Output the proposition types for the two premises and the conclusion (e.g.\ ``EIO''), together with the three terms in a structured format.
+\end{enumerate}
+The syllogistic figure (1--4) is then computed deterministically from the position of M in the two premises:
+\begin{itemize}
+    \item Figure 1: M is subject in P1, predicate in P2.
+    \item Figure 2: M is predicate in both premises.
+    \item Figure 3: M is subject in both premises.
+    \item Figure 4: M is predicate in P1, subject in P2.
+\end{itemize}
+
+\section{Complete List of Development Iterations}
+\label{app:iterations}
+
+Table~\ref{tab:iterations} summarizes the progression of system performance through iterative development on the training set.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}clcc@{}}
+\toprule
+\textbf{It.} & \textbf{Change} & \textbf{Acc.} & \textbf{Score} \\
+\midrule
+0 & Baseline prompt & 70\% & 20 \\
+1 & Structured extraction & 90\% & 33 \\
+2 & Self-consistency voting & 94\% & 33.8 \\
+3 & I/O post-processing & 96\% & 40 \\
+4 & 24 Aristotelian forms & 97\% & 41.7 \\
+5 & Compound-term handling & 97.5\% & 45 \\
+6 & Double-negation handling & 98\% & 48 \\
+\bottomrule
+\end{tabular}
+\caption{Development progression on the training set (200 instances). Values are approximate.}
+\label{tab:iterations}
+\end{table}
+
+\section{Test Set Error Details}
+\label{app:errors}
+
+Table~\ref{tab:error_details} lists all 7 errors on the official test set with their dominant linguistic trigger.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{@{}cllll@{}}
+\toprule
+\textbf{\#} & \textbf{Type} & \textbf{Sub.} & \textbf{Gold / Pred.} & \textbf{Trigger} \\
+\midrule
+1 & FN & VI & EIO-4 / TBD\_P1 & middle-term ambiguity \\
+2 & FN & VP & AAA-1 / extr.\ fail & compound noun phrase \\
+3 & FN & VI & EAO-1 / TBD\_P3 & E$\to$A type confusion \\
+4 & FP & II & TBD\_G4 / TBD\_P4 & conclusion polarity \\
+5 & FN & VP & AEO-4 / TBD\_P5 & figure misidentification \\
+6 & FP & II & TBD\_G6 / AOO-2 & double negation (O vs E) \\
+7 & FP & IP & TBD\_G7 / TBD\_P7 & A/E type confusion \\
+\bottomrule
+\end{tabular}
+\caption{All 7 test set errors with dominant linguistic trigger. FN=false negative (valid$\to$invalid), FP=false positive (invalid$\to$valid). Subgroups: VP/VI/IP/II as defined in §2.1. Gold/Pred.\ pairs marked \textit{TBD} are to be verified against extractor logs.}
+\label{tab:error_details}
+\end{table}
+
+\section{Multi-Model Extractor Details}
+\label{app:multi-model}
+
+The multi-model study (§\ref{sec:multi-model}) uses the following backbones, all accessed via Amazon Bedrock with the same prompt template and sampling configuration ($k=3$, temperatures 0.1, 0.3, 0.5):
+\begin{itemize}
+    \item Qwen3-32B (\textit{the submitted system's extractor})
+    \item TBD\_MODEL\_A (model ID: \texttt{TBD\_MODEL\_A\_ID})
+    \item TBD\_MODEL\_B (model ID: \texttt{TBD\_MODEL\_B\_ID})
+\end{itemize}
+The symbolic validator, post-processing rules, and fallback handler are identical across all three configurations.
+
+\end{document}
