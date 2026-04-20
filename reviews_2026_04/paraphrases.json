@@ -1,0 +1,872 @@
+[
+  {
+    "id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+    "paraphrases": {
+      "voice": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+      "synonym": "Every square is a rectangle. There exist some triangles which are not quadrilaterals with four right angles. It follows that some triangles are not squares.",
+      "reorder": "There exist some triangles which are not rectangles. Every square is a rectangle. It follows that some triangles are not squares."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "65729a20-e483-464d-873b-bdfb2041b484",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "There are no metals that are a gas. Every single piece of iron is a metal. It is therefore the case that all iron is a gas.",
+    "paraphrases": {
+      "voice": "No gas is a metal. Every single piece of iron is a metal. It is therefore the case that all iron is a gas.",
+      "synonym": "There are no metals that are a gas. Every single piece of iron is a metallic element. It is therefore the case that all iron is a gas.",
+      "reorder": "Every single piece of iron is a metal. There are no metals that are a gas. It is therefore the case that all iron is a gas."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "e773bd8c-fa53-4e9c-8ec6-7d978e0601ac",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Every single object can fly. It is known that some boats cannot fly. It follows that some boats are not objects.",
+    "paraphrases": {
+      "voice": "Every single object can fly. It is known that flying cannot be done by some boats. It follows that some boats are not objects.",
+      "synonym": "Every single object can fly. It is known that some boats cannot take flight. It follows that some boats are not objects.",
+      "reorder": "It is known that some boats cannot fly. Every single object can fly. It follows that some boats are not objects."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "3277e556-ec97-447f-8c23-97bdcf9a2b5d",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no snakes are mammals.",
+    "paraphrases": {
+      "voice": "No mammal is a metal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no mammals are snakes.",
+      "synonym": "Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metallic elements. It must be concluded that no snakes are mammals.",
+      "reorder": "Among the creatures that are snakes, there are none that are metals. Nothing that is a metal is a mammal. It must be concluded that no snakes are mammals."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+    "paraphrases": {
+      "voice": "No shirts are things that are clothing. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+      "synonym": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are garments. It follows that some apparel is not clothing.",
+      "reorder": "The group of items known as apparel has members that are shirts. Anything that is clothing is not a shirt. It follows that some apparel is not clothing."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "3c944a90-a461-4136-99dc-8ed0cf1d04b0",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.",
+    "paraphrases": {
+      "voice": "Every person who is a doctor is also a medical professional. Degrees are possessed by all medical professionals. We can logically conclude that some people with degrees are doctors.",
+      "synonym": "Every person who is a doctor is also a healthcare practitioner. All healthcare practitioners are people with degrees. We can logically conclude that some people with degrees are doctors.",
+      "reorder": "All medical professionals are people with degrees. Every person who is a doctor is also a medical professional. We can logically conclude that some people with degrees are doctors."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+    "paraphrases": {
+      "voice": "Some dolphins are robots. Every single fish is a dolphin. It must be true that some fish are robots.",
+      "synonym": "Some robots are dolphins. Every single cetacean is a fish. It must be true that some fish are robots.",
+      "reorder": "Every single dolphin is a fish. Some robots are dolphins. It must be true that some fish are robots."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.",
+    "paraphrases": {
+      "voice": "It is true that some roses are yellow. A flower is a type that includes roses. Thus, some flowers are yellow.",
+      "synonym": "It is true that some roses are yellow. A rose is a type of blossom. Thus, some flowers are yellow.",
+      "reorder": "A rose is a type of flower. It is true that some roses are yellow. Thus, some flowers are yellow."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "2c0190c9-f98c-46ce-88d2-275ee83f3b48",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Anything that is a flower is also an insect. There exist some daisies which are not insects. This necessarily means that some daisies are not flowers.",
+    "paraphrases": {
+      "voice": "Insects are what all flowers are. There exist some daisies which are not insects. This necessarily means that flowers are not what some daisies are.",
+      "synonym": "Anything that is a flower is also a bug. There exist some daisies which are not bugs. This necessarily means that some daisies are not flowers.",
+      "reorder": "There exist some daisies which are not insects. Anything that is a flower is also an insect. This necessarily means that some daisies are not flowers."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "4d23820c-5d2c-4eec-b345-2b86b1fb58b7",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Every single human is a mammal. Everything that is a doctor is a human. It's the case that some doctors are not mammals.",
+    "paraphrases": {
+      "voice": "Every single mammal is something that a human is. Everything that is a human is something that a doctor is. It's the case that some mammals are not doctors.",
+      "synonym": "Every single human is a mammal. Everything that is a doctor is a person. It's the case that some doctors are not mammals.",
+      "reorder": "Everything that is a doctor is a human. Every single human is a mammal. It's the case that some doctors are not mammals."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "9ee7aff6-1237-4e93-b3e4-08434de41ede",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+    "paraphrases": {
+      "voice": "No feline is a canine. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+      "synonym": "There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+      "reorder": "Everything that is a canine is also a dog. There is no canine that is a feline. This makes it true that all dogs are cats."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "4a405609-338a-4f3e-ba58-bc6690f121db",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "All things that are cars are fruits. No fruit is a vehicle. This proves that no vehicle is a car.",
+    "paraphrases": {
+      "voice": "All things that are cars are fruits. No fruit is a vehicle. This proves that no car is a vehicle.",
+      "synonym": "All things that are cars are fruits. No fruit is a vehicle. This proves that no vehicle is a car.",
+      "reorder": "No fruit is a vehicle. All things that are cars are fruits. This proves that no vehicle is a car."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "1426d859-baa5-484a-aa05-2615e8776499",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Some member of the group of fish is not in the group of mammals. At least one dog is a mammal. At least one dog is not a fish.",
+    "paraphrases": {
+      "voice": "Some member of the group of fish is not included in the group of mammals. At least one dog is included in the group of mammals. At least one dog is not included in the group of fish.",
+      "synonym": "Some member of the group of fish is not in the group of warm-blooded vertebrates. At least one dog is a warm-blooded vertebrate. At least one dog is not a fish.",
+      "reorder": "At least one dog is a mammal. Some member of the group of fish is not in the group of mammals. At least one dog is not a fish."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "8041eb99-e73f-46ca-a2d7-9aefd2c6c0b1",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Every single vehicle can be considered an object. There are no cars that are objects. Therefore, no car is a vehicle.",
+    "paraphrases": {
+      "voice": "Every single vehicle can be considered an object. There are no objects that are cars. Therefore, no car is a vehicle.",
+      "synonym": "Every single vehicle can be considered a thing. There are no cars that are things. Therefore, no car is a vehicle.",
+      "reorder": "There are no cars that are objects. Every single vehicle can be considered an object. Therefore, no car is a vehicle."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "0cc0d0ae-390a-4f5d-9a86-b88d6cb22f91",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Items that are tables are in no way items designed for sitting. Everything that is a chair is an item designed for sitting. Chairs cannot be classified as tables.",
+    "paraphrases": {
+      "voice": "Items designed for sitting are in no way items that are tables. An item designed for sitting is what every chair is. Chairs cannot be classified as tables.",
+      "synonym": "Items that are tables are in no way items made for sitting. Everything that is a chair is an item made for sitting. Chairs cannot be classified as tables.",
+      "reorder": "Everything that is a chair is an item designed for sitting. Items that are tables are in no way items designed for sitting. Chairs cannot be classified as tables."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "8e2e1ec3-ffad-4df7-a36e-686e0e81b7fe",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Some individuals who have degrees are people who work in schools. Some person who works in a school is a teacher. As a result, some teachers are individuals with degrees.",
+    "paraphrases": {
+      "voice": "Some individuals who have degrees are people by whom schools are worked in. Some person by whom a school is worked in is a teacher. As a result, some teachers are individuals with degrees.",
+      "synonym": "Some individuals who have degrees are people who work in schools. Some person who is employed in an educational institution is a teacher. As a result, some teachers are individuals with degrees.",
+      "reorder": "Some person who works in a school is a teacher. Some individuals who have degrees are people who work in schools. As a result, some teachers are individuals with degrees."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "77a82465-48a9-406f-b4ac-19ec40f5e053",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Every person who is a filmmaker is someone who works in production. The set of directors contains someone who works in production. Consequently, every director is a filmmaker.",
+    "paraphrases": {
+      "voice": "Every person who is a filmmaker is someone by whom production work is done. The set of directors contains someone by whom production work is done. Consequently, every director is a filmmaker.",
+      "synonym": "Every person who is a filmmaker is someone who works in production. The set of directors contains someone who is employed in production. Consequently, every director is a filmmaker.",
+      "reorder": "The set of directors contains someone who works in production. Every person who is a filmmaker is someone who works in production. Consequently, every director is a filmmaker."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "806e7a11-8342-4dbe-a927-d0e806a4b20b",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "There are no fish which are mammals. Some reptiles are things that are fish. It follows that some reptiles are mammals.",
+    "paraphrases": {
+      "voice": "No mammals are fish. Some reptiles are things that are fish. It follows that some reptiles are mammals.",
+      "synonym": "There are no fish which are aquatic vertebrates with gills. Some reptiles are things that are aquatic vertebrates with gills. It follows that some reptiles are mammals.",
+      "reorder": "Some reptiles are things that are fish. There are no fish which are mammals. It follows that some reptiles are mammals."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "9d675913-128b-4451-9c9d-a397adcfef77",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.",
+    "paraphrases": {
+      "voice": "It is not the case that a paper good is what a pencil is. Not a single book is what a pencil is. This makes it true that paper goods are what all books are.",
+      "synonym": "It is not the case that a pencil is a paper good. Not a single pencil is a volume. This makes it true that all books are paper goods.",
+      "reorder": "Not a single pencil is a book. It is not the case that a pencil is a paper good. This makes it true that all books are paper goods."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "03ac9985-ef97-4bab-974b-e75918cf6c05",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Anything that is a car is a vehicle. All of the things that are bicycles are vehicles. This means that there are no bicycles that are cars.",
+    "paraphrases": {
+      "voice": "Anything that is a car is a vehicle. Vehicles include all of the things that are bicycles. This means that there are no bicycles that are cars.",
+      "synonym": "Anything that is a car is a mode of transportation. All of the things that are bicycles are modes of transportation. This means that there are no bicycles that are cars.",
+      "reorder": "All of the things that are bicycles are vehicles. Anything that is a car is a vehicle. This means that there are no bicycles that are cars."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "711debd8-26fc-42bc-916e-a7144ce10c7c",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Any object that is a house is a building. Some tents are not buildings. This implies that some tents are not houses.",
+    "paraphrases": {
+      "voice": "Any house is a building. Some tents are not buildings. This implies that some tents are not houses.",
+      "synonym": "Any object that is a house is a structure. Some tents are not structures. This implies that some tents are not houses.",
+      "reorder": "Some tents are not buildings. Any object that is a house is a building. This implies that some tents are not houses."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "3628765c-fee6-4acf-8209-532629663003",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "There are no celestial bodies that are giant balls of gas. All stars are giant balls of gas. It follows from this that some stars are not celestial bodies.",
+    "paraphrases": {
+      "voice": "No giant balls of gas are celestial bodies. All stars are giant balls of gas. It follows from this that some stars are not celestial bodies.",
+      "synonym": "There are no celestial bodies that are massive spheres of gas. All stars are massive spheres of gas. It follows from this that some stars are not celestial bodies.",
+      "reorder": "All stars are giant balls of gas. There are no celestial bodies that are giant balls of gas. It follows from this that some stars are not celestial bodies."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+    "paraphrases": {
+      "voice": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+      "synonym": "It is not the case that every single car is a truck. All cars are automobiles. One can logically conclude that some vehicles are not trucks.",
+      "reorder": "All cars are vehicles. It is not the case that every single car is a truck. One can logically conclude that some vehicles are not trucks."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "03cc2c62-68d9-4f7e-98ea-f3fae01cb2c1",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Every fish is a swimmer. There are a number of birds that are swimmers. It follows from this that there are some birds that are fish.",
+    "paraphrases": {
+      "voice": "Every fish is a swimmer. Swimming is done by a number of birds. It follows from this that there are some birds that are fish.",
+      "synonym": "Every fish is a swimmer. There are a number of birds that are aquatic animals. It follows from this that there are some birds that are fish.",
+      "reorder": "There are a number of birds that are swimmers. Every fish is a swimmer. It follows from this that there are some birds that are fish."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "7d736cba-aa56-4da6-af1c-a7a5a62a213c",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "There are no citrus fruits that are berries. Among the berries, a few are fruits. Not all fruits are citrus.",
+    "paraphrases": {
+      "voice": "No berries are citrus fruits. A few berries are among the fruits. Not all fruits are citrus.",
+      "synonym": "There are no citrus fruits that are drupes. Among the drupes, a few are fruits. Not all fruits are citrus.",
+      "reorder": "Among the berries, a few are fruits. There are no citrus fruits that are berries. Not all fruits are citrus."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "828b05c2-09b0-4125-90db-ddb6707d6e05",
+    "subgroup": "VP",
+    "gold_validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Diamonds are in no way soft substances. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.",
+    "paraphrases": {
+      "voice": "Soft substances are in no way what diamonds are. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.",
+      "synonym": "Diamonds are in no way soft substances. Everything that is a diamond is a carbon-based material. There are some carbon-based materials which are not soft substances.",
+      "reorder": "Everything that is a diamond is a carbon compound. Diamonds are in no way soft substances. There are some carbon compounds which are not soft substances."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "60609ba7-37db-446f-a53c-e41568217236",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+    "paraphrases": {
+      "voice": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+      "synonym": "It is the case that some clouds are white. There are some sheep that are also pale. This implies that all sheep are clouds.",
+      "reorder": "There are some sheep that are also white. It is the case that some clouds are white. This implies that all sheep are clouds."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "b1ee7c4f-fb73-4e19-a675-7577cb81bc0c",
+    "subgroup": "IP",
+    "gold_validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "original": "Some plants are living things. There are some trees that are plants. It is therefore the case that every tree is a living thing.",
+    "paraphrases": {
+      "voice": "Some living things are plants. There are some plants that are trees. It is therefore the case that every tree is a living thing.",
+      "synonym": "Some flora are living things. There are some trees that are flora. It is therefore the case that every tree is a living thing.",
+      "reorder": "There are some trees that are plants. Some plants are living things. It is therefore the case that every tree is a living thing."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "267064a3-db1a-4c57-a571-ce5c0c8f141e",
+    "subgroup": "II",
+    "gold_validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.",
+    "paraphrases": {
+      "voice": "A few mammals are reptiles. There are no fish that are mammals. As a result, some fish are reptiles.",
+      "synonym": "A few reptiles are mammals. There are no warm-blooded vertebrates that are fish. As a result, some fish are reptiles.",
+      "reorder": "There are no mammals that are fish. A few reptiles are mammals. As a result, some fish are reptiles."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  },
+  {
+    "id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+    "subgroup": "VI",
+    "gold_validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "original": "Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.",
+    "paraphrases": {
+      "voice": "Every single creature that is a cat is a fish. A number of cats are tigers. This means that there are some tigers which are fish.",
+      "synonym": "Every single creature that is a feline is a fish. A number of tigers are felines. This means that there are some tigers which are fish.",
+      "reorder": "A number of tigers are cats. Every single creature that is a cat is a fish. This means that there are some tigers which are fish."
+    },
+    "generation_raw": {
+      "voice": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "synonym": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      },
+      "reorder": {
+        "prompt_tokens": null,
+        "completion_tokens": null,
+        "error": null
+      }
+    }
+  }
+]

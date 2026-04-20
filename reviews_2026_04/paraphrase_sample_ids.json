@@ -1,0 +1,212 @@
+[
+  {
+    "id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+    "original_text": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "65729a20-e483-464d-873b-bdfb2041b484",
+    "original_text": "There are no metals that are a gas. Every single piece of iron is a metal. It is therefore the case that all iron is a gas.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "e773bd8c-fa53-4e9c-8ec6-7d978e0601ac",
+    "original_text": "Every single object can fly. It is known that some boats cannot fly. It follows that some boats are not objects.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "3277e556-ec97-447f-8c23-97bdcf9a2b5d",
+    "original_text": "Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no snakes are mammals.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+    "original_text": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "3c944a90-a461-4136-99dc-8ed0cf1d04b0",
+    "original_text": "Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+    "original_text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+    "original_text": "It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "2c0190c9-f98c-46ce-88d2-275ee83f3b48",
+    "original_text": "Anything that is a flower is also an insect. There exist some daisies which are not insects. This necessarily means that some daisies are not flowers.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "4d23820c-5d2c-4eec-b345-2b86b1fb58b7",
+    "original_text": "Every single human is a mammal. Everything that is a doctor is a human. It's the case that some doctors are not mammals.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "9ee7aff6-1237-4e93-b3e4-08434de41ede",
+    "original_text": "There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "4a405609-338a-4f3e-ba58-bc6690f121db",
+    "original_text": "All things that are cars are fruits. No fruit is a vehicle. This proves that no vehicle is a car.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "1426d859-baa5-484a-aa05-2615e8776499",
+    "original_text": "Some member of the group of fish is not in the group of mammals. At least one dog is a mammal. At least one dog is not a fish.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "8041eb99-e73f-46ca-a2d7-9aefd2c6c0b1",
+    "original_text": "Every single vehicle can be considered an object. There are no cars that are objects. Therefore, no car is a vehicle.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "0cc0d0ae-390a-4f5d-9a86-b88d6cb22f91",
+    "original_text": "Items that are tables are in no way items designed for sitting. Everything that is a chair is an item designed for sitting. Chairs cannot be classified as tables.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "8e2e1ec3-ffad-4df7-a36e-686e0e81b7fe",
+    "original_text": "Some individuals who have degrees are people who work in schools. Some person who works in a school is a teacher. As a result, some teachers are individuals with degrees.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "77a82465-48a9-406f-b4ac-19ec40f5e053",
+    "original_text": "Every person who is a filmmaker is someone who works in production. The set of directors contains someone who works in production. Consequently, every director is a filmmaker.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "806e7a11-8342-4dbe-a927-d0e806a4b20b",
+    "original_text": "There are no fish which are mammals. Some reptiles are things that are fish. It follows that some reptiles are mammals.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "9d675913-128b-4451-9c9d-a397adcfef77",
+    "original_text": "It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "03ac9985-ef97-4bab-974b-e75918cf6c05",
+    "original_text": "Anything that is a car is a vehicle. All of the things that are bicycles are vehicles. This means that there are no bicycles that are cars.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "711debd8-26fc-42bc-916e-a7144ce10c7c",
+    "original_text": "Any object that is a house is a building. Some tents are not buildings. This implies that some tents are not houses.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "3628765c-fee6-4acf-8209-532629663003",
+    "original_text": "There are no celestial bodies that are giant balls of gas. All stars are giant balls of gas. It follows from this that some stars are not celestial bodies.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  },
+  {
+    "id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+    "original_text": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "03cc2c62-68d9-4f7e-98ea-f3fae01cb2c1",
+    "original_text": "Every fish is a swimmer. There are a number of birds that are swimmers. It follows from this that there are some birds that are fish.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "7d736cba-aa56-4da6-af1c-a7a5a62a213c",
+    "original_text": "There are no citrus fruits that are berries. Among the berries, a few are fruits. Not all fruits are citrus.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "828b05c2-09b0-4125-90db-ddb6707d6e05",
+    "original_text": "Diamonds are in no way soft substances. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.",
+    "validity": "VALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "VP"
+  },
+  {
+    "id": "60609ba7-37db-446f-a53c-e41568217236",
+    "original_text": "It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "b1ee7c4f-fb73-4e19-a675-7577cb81bc0c",
+    "original_text": "Some plants are living things. There are some trees that are plants. It is therefore the case that every tree is a living thing.",
+    "validity": "INVALID",
+    "plausibility": "PLAUSIBLE",
+    "subgroup": "IP"
+  },
+  {
+    "id": "267064a3-db1a-4c57-a571-ce5c0c8f141e",
+    "original_text": "A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.",
+    "validity": "INVALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "II"
+  },
+  {
+    "id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+    "original_text": "Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.",
+    "validity": "VALID",
+    "plausibility": "IMPLAUSIBLE",
+    "subgroup": "VI"
+  }
+]

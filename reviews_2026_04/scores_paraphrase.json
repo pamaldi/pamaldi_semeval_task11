@@ -1,0 +1,949 @@
+{
+  "n_original_instances": 30,
+  "n_paraphrases_generated": 90,
+  "n_paraphrases_scored": 90,
+  "generation_failures": {
+    "voice": 0,
+    "synonym": 0,
+    "reorder": 0
+  },
+  "original_30_baseline": {
+    "accuracy": 100.0,
+    "correct": 30,
+    "subgroup_accuracy": {
+      "VP": 100.0,
+      "VI": 100.0,
+      "IP": 100.0,
+      "II": 100.0
+    },
+    "tce": 0.0,
+    "combined_score": 100.0
+  },
+  "paraphrase_accuracy": {
+    "voice": {
+      "accuracy": 93.33,
+      "correct": 28,
+      "n": 30,
+      "subgroup_accuracy": {
+        "VP": 87.5,
+        "VI": 87.5,
+        "IP": 100.0,
+        "II": 100.0
+      },
+      "tce": 0.0,
+      "combined_score": 93.33
+    },
+    "synonym": {
+      "accuracy": 90.0,
+      "correct": 27,
+      "n": 30,
+      "subgroup_accuracy": {
+        "VP": 87.5,
+        "VI": 75.0,
+        "IP": 100.0,
+        "II": 100.0
+      },
+      "tce": 6.25,
+      "combined_score": 30.19
+    },
+    "reorder": {
+      "accuracy": 73.33,
+      "correct": 22,
+      "n": 30,
+      "subgroup_accuracy": {
+        "VP": 37.5,
+        "VI": 62.5,
+        "IP": 100.0,
+        "II": 100.0
+      },
+      "tce": 12.5,
+      "combined_score": 20.36
+    },
+    "pooled": {
+      "accuracy": 85.56,
+      "correct": 77,
+      "n": 90,
+      "subgroup_accuracy": {
+        "VP": 70.83,
+        "VI": 75.0,
+        "IP": 100.0,
+        "II": 100.0
+      },
+      "tce": 2.08,
+      "combined_score": 40.24
+    }
+  },
+  "accuracy_delta_pp": {
+    "voice_minus_original": -6.67,
+    "synonym_minus_original": -10.0,
+    "reorder_minus_original": -26.67,
+    "pooled_minus_original": -14.44
+  },
+  "consistency_with_original": {
+    "voice_agreement_rate": 0.9333,
+    "synonym_agreement_rate": 0.9,
+    "reorder_agreement_rate": 0.7333,
+    "pooled_agreement_rate": 0.8556
+  },
+  "method_distribution": {
+    "voice": {
+      "symbolic": 29,
+      "fallback": 1,
+      "error": 0
+    },
+    "synonym": {
+      "symbolic": 21,
+      "fallback": 9,
+      "error": 0
+    },
+    "reorder": {
+      "symbolic": 30,
+      "fallback": 0,
+      "error": 0
+    },
+    "pooled": {
+      "symbolic": 80,
+      "fallback": 10,
+      "error": 0
+    }
+  },
+  "fallback_rate": {
+    "original_30": 0.0,
+    "voice": 0.0333,
+    "synonym": 0.3,
+    "reorder": 0.0,
+    "pooled": 0.1111
+  },
+  "extraction_failures": {
+    "original_30": 0,
+    "voice": 1,
+    "synonym": 9,
+    "reorder": 0
+  },
+  "confusion_matrices": {
+    "original_30": {
+      "V->V": 16,
+      "V->I": 0,
+      "I->V": 0,
+      "I->I": 14
+    },
+    "voice": {
+      "V->V": 14,
+      "V->I": 2,
+      "I->V": 0,
+      "I->I": 14
+    },
+    "synonym": {
+      "V->V": 13,
+      "V->I": 3,
+      "I->V": 0,
+      "I->I": 14
+    },
+    "reorder": {
+      "V->V": 8,
+      "V->I": 8,
+      "I->V": 0,
+      "I->I": 14
+    },
+    "pooled": {
+      "V->V": 35,
+      "V->I": 13,
+      "I->V": 0,
+      "I->I": 42
+    }
+  },
+  "error_breakdown": [
+    {
+      "original_id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+      "variant": "synonym",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "fallback",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "extraction failure",
+      "original_text": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+      "paraphrased_text": "Every square is a rectangle. There exist some triangles which are not quadrilaterals with four right angles. It follows that some triangles are not squares.",
+      "extracted_structure": null
+    },
+    {
+      "original_id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+      "variant": "reorder",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.",
+      "paraphrased_text": "There exist some triangles which are not rectangles. Every square is a rectangle. It follows that some triangles are not squares.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "O",
+          "subject": "triangle",
+          "predicate": "rectangle",
+          "raw_text": "There exist some triangles which are not rectangles"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "square",
+          "predicate": "rectangle",
+          "raw_text": "Every square is a rectangle"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "triangle",
+          "predicate": "square",
+          "raw_text": "It follows that some triangles are not squares"
+        },
+        "middle_term": "rectangle",
+        "major_term": "square",
+        "minor_term": "triangle",
+        "figure": 2,
+        "mood": "OAO",
+        "form": "OAO-2"
+      }
+    },
+    {
+      "original_id": "e773bd8c-fa53-4e9c-8ec6-7d978e0601ac",
+      "variant": "reorder",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Every single object can fly. It is known that some boats cannot fly. It follows that some boats are not objects.",
+      "paraphrased_text": "It is known that some boats cannot fly. Every single object can fly. It follows that some boats are not objects.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "O",
+          "subject": "boat",
+          "predicate": "thing that can fly",
+          "raw_text": "It is known that some boats cannot fly"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "object",
+          "predicate": "thing that can fly",
+          "raw_text": "Every single object can fly"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "boat",
+          "predicate": "object",
+          "raw_text": "It follows that some boats are not objects"
+        },
+        "middle_term": "thing that can fly",
+        "major_term": "object",
+        "minor_term": "boat",
+        "figure": 2,
+        "mood": "OAO",
+        "form": "OAO-2"
+      }
+    },
+    {
+      "original_id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+      "variant": "synonym",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "fallback",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "extraction failure",
+      "original_text": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+      "paraphrased_text": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are garments. It follows that some apparel is not clothing.",
+      "extracted_structure": null
+    },
+    {
+      "original_id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+      "variant": "reorder",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.",
+      "paraphrased_text": "The group of items known as apparel has members that are shirts. Anything that is clothing is not a shirt. It follows that some apparel is not clothing.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "I",
+          "subject": "apparel",
+          "predicate": "shirt",
+          "raw_text": "The group of items known as apparel has members that are shirts"
+        },
+        "premise2": {
+          "type": "E",
+          "subject": "clothing",
+          "predicate": "shirt",
+          "raw_text": "Anything that is clothing is not a shirt"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "apparel",
+          "predicate": "clothing",
+          "raw_text": "It follows that some apparel is not clothing"
+        },
+        "middle_term": "shirt",
+        "major_term": "clothing",
+        "minor_term": "apparel",
+        "figure": 2,
+        "mood": "IEO",
+        "form": "IEO-2"
+      }
+    },
+    {
+      "original_id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+      "variant": "voice",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+      "paraphrased_text": "Some dolphins are robots. Every single fish is a dolphin. It must be true that some fish are robots.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "I",
+          "subject": "dolphin",
+          "predicate": "robot",
+          "raw_text": "Some dolphins are robots"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "fish",
+          "predicate": "dolphin",
+          "raw_text": "Every single fish is a dolphin"
+        },
+        "conclusion": {
+          "type": "I",
+          "subject": "fish",
+          "predicate": "robot",
+          "raw_text": "It must be true that some fish are robots"
+        },
+        "middle_term": "dolphin",
+        "major_term": "robot",
+        "minor_term": "fish",
+        "figure": 1,
+        "mood": "IAI",
+        "form": "IAI-1"
+      }
+    },
+    {
+      "original_id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+      "variant": "synonym",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "fallback",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "extraction failure",
+      "original_text": "Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.",
+      "paraphrased_text": "Some robots are dolphins. Every single cetacean is a fish. It must be true that some fish are robots.",
+      "extracted_structure": null
+    },
+    {
+      "original_id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+      "variant": "voice",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.",
+      "paraphrased_text": "It is true that some roses are yellow. A flower is a type that includes roses. Thus, some flowers are yellow.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "I",
+          "subject": "rose",
+          "predicate": "yellow",
+          "raw_text": "It is true that some roses are yellow"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "flower",
+          "predicate": "rose",
+          "raw_text": "A flower is a type that includes roses"
+        },
+        "conclusion": {
+          "type": "I",
+          "subject": "flower",
+          "predicate": "yellow",
+          "raw_text": "Thus, some flowers are yellow"
+        },
+        "middle_term": "rose",
+        "major_term": "yellow",
+        "minor_term": "flower",
+        "figure": 1,
+        "mood": "IAI",
+        "form": "IAI-1"
+      }
+    },
+    {
+      "original_id": "2c0190c9-f98c-46ce-88d2-275ee83f3b48",
+      "variant": "reorder",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Anything that is a flower is also an insect. There exist some daisies which are not insects. This necessarily means that some daisies are not flowers.",
+      "paraphrased_text": "There exist some daisies which are not insects. Anything that is a flower is also an insect. This necessarily means that some daisies are not flowers.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "O",
+          "subject": "daisy",
+          "predicate": "insect",
+          "raw_text": "There exist some daisies which are not insects"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "flower",
+          "predicate": "insect",
+          "raw_text": "Anything that is a flower is also an insect"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "daisy",
+          "predicate": "flower",
+          "raw_text": "This necessarily means that some daisies are not flowers"
+        },
+        "middle_term": "insect",
+        "major_term": "flower",
+        "minor_term": "daisy",
+        "figure": 2,
+        "mood": "OAO",
+        "form": "OAO-2"
+      }
+    },
+    {
+      "original_id": "711debd8-26fc-42bc-916e-a7144ce10c7c",
+      "variant": "reorder",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Any object that is a house is a building. Some tents are not buildings. This implies that some tents are not houses.",
+      "paraphrased_text": "Some tents are not buildings. Any object that is a house is a building. This implies that some tents are not houses.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "O",
+          "subject": "tent",
+          "predicate": "building",
+          "raw_text": "Some tents are not buildings"
+        },
+        "premise2": {
+          "type": "A",
+          "subject": "house",
+          "predicate": "building",
+          "raw_text": "Any object that is a house is a building"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "tent",
+          "predicate": "house",
+          "raw_text": "This implies that some tents are not houses"
+        },
+        "middle_term": "building",
+        "major_term": "house",
+        "minor_term": "tent",
+        "figure": 2,
+        "mood": "OAO",
+        "form": "OAO-2"
+      }
+    },
+    {
+      "original_id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+      "variant": "reorder",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.",
+      "paraphrased_text": "All cars are vehicles. It is not the case that every single car is a truck. One can logically conclude that some vehicles are not trucks.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "A",
+          "subject": "car",
+          "predicate": "vehicle",
+          "raw_text": "All cars are vehicles"
+        },
+        "premise2": {
+          "type": "O",
+          "subject": "car",
+          "predicate": "truck",
+          "raw_text": "It is not the case that every single car is a truck"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "vehicle",
+          "predicate": "truck",
+          "raw_text": "One can logically conclude that some vehicles are not trucks"
+        },
+        "middle_term": "car",
+        "major_term": "truck",
+        "minor_term": "vehicle",
+        "figure": 3,
+        "mood": "AOO",
+        "form": "AOO-3"
+      }
+    },
+    {
+      "original_id": "7d736cba-aa56-4da6-af1c-a7a5a62a213c",
+      "variant": "reorder",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "There are no citrus fruits that are berries. Among the berries, a few are fruits. Not all fruits are citrus.",
+      "paraphrased_text": "Among the berries, a few are fruits. There are no citrus fruits that are berries. Not all fruits are citrus.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "I",
+          "subject": "berry",
+          "predicate": "fruit",
+          "raw_text": "Among the berries, a few are fruits"
+        },
+        "premise2": {
+          "type": "E",
+          "subject": "citrus fruit",
+          "predicate": "berry",
+          "raw_text": "There are no citrus fruits that are berries"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "fruit",
+          "predicate": "citrus",
+          "raw_text": "Not all fruits are citrus"
+        },
+        "middle_term": "berry",
+        "major_term": "citrus",
+        "minor_term": "fruit",
+        "figure": 1,
+        "mood": "IEO",
+        "form": "IEO-1"
+      }
+    },
+    {
+      "original_id": "828b05c2-09b0-4125-90db-ddb6707d6e05",
+      "variant": "reorder",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_paraphrase": "INVALID",
+      "pred_original": "VALID",
+      "method": "symbolic",
+      "original_method": "symbolic",
+      "same_error_as_original": false,
+      "newly_introduced_by_paraphrase": true,
+      "trigger_hypothesis": "other",
+      "original_text": "Diamonds are in no way soft substances. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.",
+      "paraphrased_text": "Everything that is a diamond is a carbon compound. Diamonds are in no way soft substances. There are some carbon compounds which are not soft substances.",
+      "extracted_structure": {
+        "premise1": {
+          "type": "A",
+          "subject": "diamond",
+          "predicate": "carbon compound",
+          "raw_text": "Everything that is a diamond is a carbon compound"
+        },
+        "premise2": {
+          "type": "E",
+          "subject": "diamond",
+          "predicate": "soft substance",
+          "raw_text": "Diamonds are in no way soft substances"
+        },
+        "conclusion": {
+          "type": "O",
+          "subject": "carbon compound",
+          "predicate": "soft substance",
+          "raw_text": "There are some carbon compounds which are not soft substances"
+        },
+        "middle_term": "diamond",
+        "major_term": "soft substance",
+        "minor_term": "carbon compound",
+        "figure": 3,
+        "mood": "AEO",
+        "form": "AEO-3"
+      }
+    }
+  ],
+  "instances_newly_wrong_due_to_paraphrase": 13,
+  "instances_newly_right_due_to_paraphrase": 0,
+  "per_instance_summary": [
+    {
+      "id": "7b2cf5cc-01ef-4c55-bba5-14b8554c88e7",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 1
+    },
+    {
+      "id": "65729a20-e483-464d-873b-bdfb2041b484",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "e773bd8c-fa53-4e9c-8ec6-7d978e0601ac",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "3277e556-ec97-447f-8c23-97bdcf9a2b5d",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "5fc96a8e-c3a3-467e-bca1-dfbc18827de1",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 1
+    },
+    {
+      "id": "3c944a90-a461-4136-99dc-8ed0cf1d04b0",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "e1b00475-03d2-4149-9ca3-2ab601f34aea",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 1
+    },
+    {
+      "id": "ed73250f-c7ad-4976-8c45-d9bf6ece787b",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "2c0190c9-f98c-46ce-88d2-275ee83f3b48",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "4d23820c-5d2c-4eec-b345-2b86b1fb58b7",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "9ee7aff6-1237-4e93-b3e4-08434de41ede",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "4a405609-338a-4f3e-ba58-bc6690f121db",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "1426d859-baa5-484a-aa05-2615e8776499",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "8041eb99-e73f-46ca-a2d7-9aefd2c6c0b1",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "0cc0d0ae-390a-4f5d-9a86-b88d6cb22f91",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "8e2e1ec3-ffad-4df7-a36e-686e0e81b7fe",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "77a82465-48a9-406f-b4ac-19ec40f5e053",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "806e7a11-8342-4dbe-a927-d0e806a4b20b",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "9d675913-128b-4451-9c9d-a397adcfef77",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "03ac9985-ef97-4bab-974b-e75918cf6c05",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "711debd8-26fc-42bc-916e-a7144ce10c7c",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "3628765c-fee6-4acf-8209-532629663003",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "3a2acb10-9c38-4a52-a0a0-b2bf04e3759a",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "03cc2c62-68d9-4f7e-98ea-f3fae01cb2c1",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "7d736cba-aa56-4da6-af1c-a7a5a62a213c",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "828b05c2-09b0-4125-90db-ddb6707d6e05",
+      "subgroup": "VP",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": false,
+      "how_many_correct": 2
+    },
+    {
+      "id": "60609ba7-37db-446f-a53c-e41568217236",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "b1ee7c4f-fb73-4e19-a675-7577cb81bc0c",
+      "subgroup": "IP",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "267064a3-db1a-4c57-a571-ce5c0c8f141e",
+      "subgroup": "II",
+      "gold": "INVALID",
+      "pred_original": "INVALID",
+      "pred_voice": "INVALID",
+      "pred_synonym": "INVALID",
+      "pred_reorder": "INVALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    },
+    {
+      "id": "bff3e296-9b17-4fd6-9403-293ff999cfd6",
+      "subgroup": "VI",
+      "gold": "VALID",
+      "pred_original": "VALID",
+      "pred_voice": "VALID",
+      "pred_synonym": "VALID",
+      "pred_reorder": "VALID",
+      "all_three_agree_with_original": true,
+      "how_many_correct": 3
+    }
+  ]
+}
