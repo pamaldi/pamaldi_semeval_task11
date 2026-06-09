@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuro-Symbolic Syllogism Pipeline — SemEval-2026 Task 11</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel2: #1c2330;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --green: #3fb950;
+    --red: #f85149;
+    --yellow: #d29922;
+    --purple: #bc8cff;
+    --orange: #ffa657;
+    --neural: #bc8cff;
+    --symbolic: #58a6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5; min-height: 100vh;
+  }
+  header {
+    padding: 24px 32px 16px; border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #131a26 0%, var(--bg) 100%);
+  }
+  header h1 { font-size: 22px; font-weight: 600; }
+  header h1 span.team { color: var(--blue); }
+  header p.sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .badges { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .badge {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 20px;
+    padding: 4px 14px; font-size: 13px; color: var(--muted);
+  }
+  .badge b { color: var(--green); font-weight: 600; }
+  nav.tabs { display: flex; gap: 4px; padding: 0 32px; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 50; }
+  nav.tabs button {
+    background: none; border: none; color: var(--muted); font-size: 14px;
+    padding: 12px 18px; cursor: pointer; border-bottom: 2px solid transparent;
+    font-family: inherit;
+  }
+  nav.tabs button:hover { color: var(--text); }
+  nav.tabs button.active { color: var(--blue); border-bottom-color: var(--blue); }
+  main { padding: 24px 32px 80px; max-width: 1280px; margin: 0 auto; }
+  .tab-page { display: none; }
+  .tab-page.active { display: block; }
+
+  /* ============ FLOW DIAGRAM ============ */
+  .demo-layout { display: grid; grid-template-columns: minmax(380px, 1fr) minmax(420px, 1.2fr); gap: 24px; align-items: start; }
+  @media (max-width: 980px) { .demo-layout { grid-template-columns: 1fr; } }
+
+  .flow { display: flex; flex-direction: column; gap: 0; }
+  .stage-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;
+    margin: 14px 0 6px; font-weight: 700;
+  }
+  .stage-label.neural { color: var(--neural); }
+  .stage-label.symbolic { color: var(--symbolic); }
+  .stage-label.io { color: var(--muted); }
+
+  .node {
+    background: var(--panel); border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 12px 16px; position: relative; transition: all .3s;
+    cursor: default;
+  }
+  .node .ntitle { font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  .node .ndesc { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+  .node.neural-node { border-left: 4px solid var(--neural); }
+  .node.symbolic-node { border-left: 4px solid var(--symbolic); }
+  .node.io-node { border-left: 4px solid var(--muted); }
+  .node.fallback-node { border-left: 4px solid var(--orange); opacity: .55; }
+  .node.active {
+    border-color: var(--yellow); box-shadow: 0 0 0 1px var(--yellow), 0 0 24px rgba(210,153,34,.25);
+    transform: translateX(4px);
+  }
+  .node.done { border-color: var(--green); }
+  .node.done .check { display: inline; }
+  .check { display: none; color: var(--green); font-weight: 700; }
+  .arrow {
+    width: 2px; height: 22px; background: var(--border); margin-left: 32px; position: relative;
+  }
+  .arrow::after {
+    content: ""; position: absolute; bottom: -1px; left: -4px;
+    border-left: 5px solid transparent; border-right: 5px solid transparent;
+    border-top: 7px solid var(--border);
+  }
+  .arrow.lit { background: var(--green); }
+  .arrow.lit::after { border-top-color: var(--green); }
+
+  .fallback-wrap { margin-top: 14px; padding: 10px 14px; border: 1px dashed var(--orange); border-radius: 10px; }
+  .fallback-wrap .fl-label { font-size: 11px; color: var(--orange); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-bottom: 6px; }
+  .fallback-wrap .fl-note { font-size: 12px; color: var(--muted); }
+
+  /* ============ INSPECTOR PANEL ============ */
+  .inspector {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; position: sticky; top: 64px;
+  }
+  .inspector h3 { font-size: 15px; margin-bottom: 4px; }
+  .inspector .step-counter { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+  .controls { display: flex; gap: 8px; margin: 14px 0; flex-wrap: wrap; }
+  button.btn {
+    background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit;
+  }
+  button.btn:hover { border-color: var(--blue); }
+  button.btn.primary { background: #1f6feb; border-color: #1f6feb; }
+  button.btn.primary:hover { background: #388bfd; }
+  button.btn:disabled { opacity: .4; cursor: not-allowed; }
+  select, input[type=text] {
+    background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 12px; font-size: 13px; font-family: inherit;
+  }
+  .inspect-body { min-height: 240px; }
+  .syl-text {
+    background: var(--panel2); border-radius: 8px; padding: 12px 14px; font-size: 14px;
+    font-style: italic; border: 1px solid var(--border); margin-bottom: 12px;
+  }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 13px; margin: 8px 0; }
+  .kv dt { color: var(--muted); }
+  .kv dd { font-family: Consolas, monospace; }
+  .mono { font-family: Consolas, "Courier New", monospace; }
+  .chip {
+    display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px;
+    font-family: Consolas, monospace; border: 1px solid var(--border); background: var(--panel2);
+    margin: 2px;
+  }
+  .chip.A { color: #79c0ff; } .chip.E { color: #ff7b72; }
+  .chip.I { color: #7ee787; } .chip.O { color: #ffa657; }
+  .verdict { font-size: 22px; font-weight: 700; padding: 14px; border-radius: 10px; text-align: center; margin-top: 10px; }
+  .verdict.valid { background: rgba(63,185,80,.12); color: var(--green); border: 1px solid rgba(63,185,80,.4); }
+  .verdict.invalid { background: rgba(248,81,73,.12); color: var(--red); border: 1px solid rgba(248,81,73,.4); }
+  .gt-row { display: flex; gap: 14px; justify-content: center; margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .gt-row b.ok { color: var(--green); } .gt-row b.bad { color: var(--red); }
+  .note-box {
+    background: rgba(188,140,255,.07); border: 1px solid rgba(188,140,255,.3); border-radius: 8px;
+    padding: 10px 14px; font-size: 13px; margin-top: 12px; color: #d2bbf5;
+  }
+  .vote-row { display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: var(--panel2); border-radius: 8px; margin: 5px 0; font-size: 13px; }
+  .vote-row .temp { color: var(--muted); font-size: 12px; min-width: 60px; }
+  table.figtable { border-collapse: collapse; font-size: 13px; width: 100%; margin: 8px 0; }
+  table.figtable th, table.figtable td { border: 1px solid var(--border); padding: 6px 12px; text-align: center; }
+  table.figtable th { background: var(--panel2); color: var(--muted); font-weight: 600; }
+  table.figtable tr.hl td { background: rgba(210,153,34,.18); color: var(--yellow); font-weight: 700; }
+  .mini-forms { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin: 10px 0; }
+  .mini-forms .mf { font-family: Consolas, monospace; font-size: 11.5px; text-align: center; padding: 5px 2px; border-radius: 6px; background: var(--panel2); border: 1px solid var(--border); color: var(--muted); }
+  .mini-forms .mf.match { background: rgba(63,185,80,.2); border-color: var(--green); color: var(--green); font-weight: 700; }
+  .pos-tag { font-size: 10.5px; padding: 1px 7px; border-radius: 8px; background: var(--panel2); border: 1px solid var(--border); color: var(--yellow); font-family: Consolas, monospace; }
+
+  /* ============ FORMS TAB ============ */
+  .forms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 16px; }
+  .fig-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .fig-card h4 { font-size: 14px; margin-bottom: 4px; color: var(--blue); }
+  .fig-card .pattern { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .form-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 8px; margin: 3px 0; background: var(--panel2); font-size: 13px; cursor: pointer; border: 1px solid transparent; }
+  .form-row:hover { border-color: var(--blue); }
+  .form-row .fname { color: var(--muted); font-style: italic; }
+  .ei-mark { color: var(--yellow); font-size: 11px; }
+
+  /* ============ TRY IT TAB ============ */
+  .try-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+  @media (max-width: 900px) { .try-layout { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .panel h3 { font-size: 15px; margin-bottom: 12px; }
+  .prop-builder { display: grid; grid-template-columns: 110px 1fr; gap: 10px 14px; align-items: center; margin-bottom: 8px; }
+  .prop-builder label { font-size: 13px; color: var(--muted); }
+  .sentence-preview { background: var(--panel2); border-radius: 8px; padding: 12px 14px; font-style: italic; font-size: 14px; margin-top: 12px; border: 1px solid var(--border); }
+  .terms-inputs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  .terms-inputs label { font-size: 11.5px; color: var(--muted); display: block; margin-bottom: 3px; }
+  .terms-inputs input { width: 100%; }
+  .reason-box { font-size: 13px; margin-top: 10px; padding: 10px 14px; border-radius: 8px; background: var(--panel2); border: 1px solid var(--border); }
+  .reason-box ul { margin-left: 18px; }
+
+  /* ============ ARCHITECTURE TAB ============ */
+  .arch-section { margin-top: 20px; }
+  .arch-section h3 { font-size: 16px; color: var(--blue); margin-bottom: 8px; }
+  .arch-section p { font-size: 14px; color: var(--text); max-width: 860px; margin-bottom: 8px; }
+  table.results { border-collapse: collapse; font-size: 13.5px; margin: 12px 0; }
+  table.results th, table.results td { border: 1px solid var(--border); padding: 8px 16px; text-align: left; }
+  table.results th { background: var(--panel); color: var(--muted); }
+  table.results tr.submitted td { background: rgba(63,185,80,.08); font-weight: 600; }
+  .formula { font-family: Consolas, monospace; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; display: inline-block; margin: 8px 0; font-size: 14px; }
+  .legend { display: flex; gap: 18px; margin: 10px 0 16px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span class="team">pamaldi</span> at SemEval-2026 Task 11 — Neuro-Symbolic Syllogistic Reasoning</h1>
+  <p class="sub">LLM-guided structure extraction + deterministic symbolic validation. The LLM never reasons — it only labels.</p>
+  <div class="badges">
+    <span class="badge">Accuracy <b>96.34%</b></span>
+    <span class="badge">Total Content Effect <b>1.02</b></span>
+    <span class="badge">Combined Score <b>56.57</b></span>
+    <span class="badge">Subtask 1 · Formal Validity (EN)</span>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="active" data-tab="demo">▶ Pipeline Demo</button>
+  <button data-tab="try">🔧 Try the Validator</button>
+  <button data-tab="forms">📜 24 Valid Forms</button>
+  <button data-tab="arch">🏛 Architecture &amp; Results</button>
+</nav>
+
+<main>
+
+<!-- ==================== TAB: DEMO ==================== -->
+<section id="tab-demo" class="tab-page active">
+  <div class="legend">
+    <span><span class="dot" style="background:var(--neural)"></span>Neural (LLM)</span>
+    <span><span class="dot" style="background:var(--symbolic)"></span>Symbolic (deterministic Python — re-implemented live in this page)</span>
+    <span><span class="dot" style="background:var(--orange)"></span>Fallback (only if extraction fails)</span>
+  </div>
+
+  <div class="demo-layout">
+    <div class="flow" id="flow">
+      <div class="stage-label io">Input</div>
+      <div class="node io-node" data-step="0">
+        <div class="ntitle">📥 Natural-language syllogism <span class="check">✓</span></div>
+        <div class="ndesc">Two premises + one conclusion, in English</div>
+      </div>
+      <div class="arrow" data-arrow="0"></div>
+
+      <div class="stage-label neural">Stage 1 — Neural extraction (LLM)</div>
+      <div class="node neural-node" data-step="1">
+        <div class="ntitle">🧠 Self-consistency sampling <span class="check">✓</span></div>
+        <div class="ndesc">N extraction calls at graduated temperatures (0.0, 0.3, 0.5 …)</div>
+      </div>
+      <div class="arrow" data-arrow="1"></div>
+      <div class="node neural-node" data-step="2">
+        <div class="ntitle">🗳 Majority vote → structure JSON <span class="check">✓</span></div>
+        <div class="ndesc">Output is <i>only</i>: 3 AEIO types + 3 term strings. No reasoning allowed.</div>
+      </div>
+      <div class="arrow" data-arrow="2"></div>
+
+      <div class="stage-label symbolic">Stage 2 — Deterministic post-processor</div>
+      <div class="node symbolic-node" data-step="3">
+        <div class="ntitle">🔍 Validate types &amp; normalize terms <span class="check">✓</span></div>
+        <div class="ndesc">Regex patterns check each AEIO label against the raw sentence</div>
+      </div>
+      <div class="arrow" data-arrow="3"></div>
+      <div class="node symbolic-node" data-step="4">
+        <div class="ntitle">🏷 Identify S, P, M <span class="check">✓</span></div>
+        <div class="ndesc">S = conclusion subject, P = conclusion predicate, M = the remaining term</div>
+      </div>
+      <div class="arrow" data-arrow="4"></div>
+      <div class="node symbolic-node" data-step="5">
+        <div class="ntitle">📐 Compute figure — lookup table <span class="check">✓</span></div>
+        <div class="ndesc">Position of M in each premise → figure 1–4. No LLM involved (the key fix).</div>
+      </div>
+      <div class="arrow" data-arrow="5"></div>
+      <div class="node symbolic-node" data-step="6">
+        <div class="ntitle">🧩 Build mood &amp; form <span class="check">✓</span></div>
+        <div class="ndesc">Mood = type triple (e.g. EIO); form = mood-figure (e.g. EIO-2)</div>
+      </div>
+      <div class="arrow" data-arrow="6"></div>
+
+      <div class="stage-label symbolic">Stage 3 — Symbolic validator</div>
+      <div class="node symbolic-node" data-step="7">
+        <div class="ntitle">⚖️ Membership in 24 valid Aristotelian forms <span class="check">✓</span></div>
+        <div class="ndesc">Closed-form set lookup; invalid forms get a fallacy diagnosis</div>
+      </div>
+      <div class="arrow" data-arrow="7"></div>
+
+      <div class="stage-label io">Output</div>
+      <div class="node io-node" data-step="8">
+        <div class="ntitle">📤 Prediction: VALID / INVALID <span class="check">✓</span></div>
+        <div class="ndesc">Symbolic path → confidence 0.95</div>
+      </div>
+
+      <div class="fallback-wrap">
+        <div class="fl-label">Escape hatch — LLM fallback</div>
+        <div class="node fallback-node">
+          <div class="ntitle">🪂 Direct LLM judgment</div>
+          <div class="ndesc">Only if structure extraction fails entirely. Confidence 0.70. This is the main residual source of content effect.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inspector">
+      <h3>Step inspector</h3>
+      <div class="step-counter" id="stepCounter">Pick an example, then press ▶ Step</div>
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <select id="exampleSelect"></select>
+      </div>
+      <div class="controls">
+        <button class="btn primary" id="btnStep">▶ Step</button>
+        <button class="btn" id="btnRun">⏩ Run all</button>
+        <button class="btn" id="btnReset">↺ Reset</button>
+      </div>
+      <div class="inspect-body" id="inspectBody">
+        <p style="color:var(--muted); font-size:13.5px;">
+          These are real instances from the official SemEval training data. The LLM extraction step is
+          shown with recorded outputs (there is no LLM in this page); everything from the post-processor
+          onward is the <b>actual symbolic algorithm</b> from <span class="mono">postprocessor.py</span> /
+          <span class="mono">validity_checker.py</span>, ported to JavaScript and computed live.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TAB: TRY ==================== -->
+<section id="tab-try" class="tab-page">
+  <p style="color:var(--muted); font-size:14px; max-width:860px;">
+    This is the live symbolic validator — the same logic the system runs after LLM extraction.
+    Choose the three proposition types and the figure; the validator computes the form, checks it against
+    the 24 valid Aristotelian forms, and if invalid, diagnoses which classical rule of the syllogism is violated.
+  </p>
+  <div class="try-layout">
+    <div class="panel">
+      <h3>Build a syllogism structure</h3>
+      <div class="terms-inputs">
+        <div><label>Minor term S (conclusion subject)</label><input type="text" id="termS" value="whales"></div>
+        <div><label>Major term P (conclusion predicate)</label><input type="text" id="termP" value="warm-blooded"></div>
+        <div><label>Middle term M</label><input type="text" id="termM" value="mammals"></div>
+      </div>
+      <div class="prop-builder">
+        <label>Major premise</label>
+        <select id="selT1">
+          <option value="A">A — universal affirmative (All … are …)</option>
+          <option value="E">E — universal negative (No … are …)</option>
+          <option value="I">I — particular affirmative (Some … are …)</option>
+          <option value="O">O — particular negative (Some … are not …)</option>
+        </select>
+        <label>Minor premise</label>
+        <select id="selT2">
+          <option value="A">A — universal affirmative</option>
+          <option value="E">E — universal negative</option>
+          <option value="I">I — particular affirmative</option>
+          <option value="O">O — particular negative</option>
+        </select>
+        <label>Conclusion</label>
+        <select id="selT3">
+          <option value="A">A — universal affirmative</option>
+          <option value="E">E — universal negative</option>
+          <option value="I">I — particular affirmative</option>
+          <option value="O">O — particular negative</option>
+        </select>
+        <label>Figure</label>
+        <select id="selFig">
+          <option value="1">1 — M-P / S-M</option>
+          <option value="2">2 — P-M / S-M</option>
+          <option value="3">3 — M-P / M-S</option>
+          <option value="4">4 — P-M / M-S</option>
+        </select>
+      </div>
+      <div class="sentence-preview" id="sentencePreview"></div>
+    </div>
+    <div class="panel">
+      <h3>Validator output (live)</h3>
+      <div id="tryOutput"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TAB: FORMS ==================== -->
+<section id="tab-forms" class="tab-page">
+  <p style="color:var(--muted); font-size:14px;">
+    The entire "knowledge base" of the symbolic validator: 24 mood–figure pairs valid under the
+    traditional Aristotelian interpretation (with existential import, per task guidelines).
+    <span class="ei-mark">◆</span> = requires existential import. Click any form to load it into the validator.
+  </p>
+  <div class="forms-grid" id="formsGrid"></div>
+</section>
+
+<!-- ==================== TAB: ARCHITECTURE ==================== -->
+<section id="tab-arch" class="tab-page">
+  <div class="arch-section">
+    <h3>The core idea</h3>
+    <p>
+      Syllogistic validity is a <b>purely structural</b> property: it depends only on the <b>mood</b>
+      (the AEIO type triple) and the <b>figure</b> (where the middle term sits in each premise) — never on
+      whether the premises are true. LLMs suffer from <i>content effects</i>: they accept invalid-but-plausible
+      arguments and reject valid-but-implausible ones. So the system forbids the LLM from reasoning at all:
+      it emits only four labels and three term strings, and <b>all inference is closed-form lookup</b>.
+    </p>
+  </div>
+
+  <div class="arch-section">
+    <h3>Design evolution (re-run on official test set)</h3>
+    <table class="results">
+      <tr><th>Approach</th><th>Accuracy</th><th>TCE ↓</th><th>What changed</th></tr>
+      <tr><td>LLM-generated Prolog + Reflexion</td><td>90.58%</td><td>8.49</td><td>LLM writes code; self-corrects on errors</td></tr>
+      <tr><td>Full LLM extraction</td><td>97.91%</td><td>2.13</td><td>LLM extracts types, terms <i>and</i> figure</td></tr>
+      <tr><td>Simplified extraction</td><td>97.38%</td><td>2.08</td><td>Figure moved from LLM to deterministic lookup</td></tr>
+      <tr><td>Incremental meta-learning</td><td>95.29%</td><td>6.25</td><td>Prompt grown automatically from training errors — overfit</td></tr>
+      <tr class="submitted"><td>Submitted system</td><td>96.34%</td><td>1.02</td><td>Simplified extraction + self-consistency voting + post-processing + LLM fallback</td></tr>
+    </table>
+    <p style="color:var(--muted); font-size:13px;">
+      Note the trade-off: full LLM extraction is slightly <i>more accurate</i>, but the submitted system halves
+      the content effect — and the ranking metric rewards exactly that.
+    </p>
+  </div>
+
+  <div class="arch-section">
+    <h3>Ranking metric</h3>
+    <div class="formula">Score = ACC / (1 + ln(1 + TCE))</div>
+    <p>
+      TCE (Total Content Effect) measures accuracy gaps across the four validity × plausibility conditions
+      (VP, VI, IP, II). A content-blind system scores the same on plausible and implausible items.
+      The submitted system: 96.34 / (1 + ln(2.02)) = <b>56.57</b> — more than double the pure-LLM
+      baseline (26.52) on the same backbone.
+    </p>
+  </div>
+
+  <div class="arch-section">
+    <h3>Where the residual content effect lives</h3>
+    <p>
+      A branch-level decomposition showed the validator is perfectly content-invariant (it's a set lookup);
+      all residual sensitivity comes from the <b>neural</b> components — the extractor (slightly sensitive to
+      premise ordering) and the LLM fallback. Swapping the extractor backbone (e.g. to Claude Sonnet 4.5)
+      preserves both score and TCE, confirming the symbolic stage is what delivers content-invariance.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<script>
+"use strict";
+
+/* =====================================================================
+   SYMBOLIC CORE — faithful JS port of validity_checker.py / postprocessor.py
+   ===================================================================== */
+
+const VALID_FORMS = new Set([
+  "AAA-1","EAE-1","AII-1","EIO-1","AAI-1","EAO-1",
+  "EAE-2","AEE-2","EIO-2","AOO-2","EAO-2","AEO-2",
+  "IAI-3","AII-3","OAO-3","EIO-3","AAI-3","EAO-3",
+  "AEE-4","IAI-4","EIO-4","AEO-4","EAO-4","AAI-4"
+]);
+
+const FORM_NAMES = {
+  "AAA-1":"Barbara","EAE-1":"Celarent","AII-1":"Darii","EIO-1":"Ferio","AAI-1":"Barbari","EAO-1":"Celaront",
+  "EAE-2":"Cesare","AEE-2":"Camestres","EIO-2":"Festino","AOO-2":"Baroco","EAO-2":"Cesaro","AEO-2":"Camestrop",
+  "IAI-3":"Disamis","AII-3":"Datisi","OAO-3":"Bocardo","EIO-3":"Ferison","AAI-3":"Darapti","EAO-3":"Felapton",
+  "AEE-4":"Camenes","IAI-4":"Dimaris","EIO-4":"Fresison","AEO-4":"Camenop","EAO-4":"Fesapo","AAI-4":"Bramantip"
+};
+
+const EXISTENTIAL_IMPORT = new Set(["AAI-1","EAO-1","EAO-2","AEO-2","AAI-3","EAO-3","AEO-4","EAO-4","AAI-4"]);
+
+// Figure lookup table: [position of M in major premise, position of M in minor premise]
+const FIGURE_TABLE = { "SUBJECT,PREDICATE":1, "PREDICATE,PREDICATE":2, "SUBJECT,SUBJECT":3, "PREDICATE,SUBJECT":4 };
+
+// Premise term layout per figure: [major premise [subj,pred], minor premise [subj,pred]]
+function premiseLayout(figure) {
+  switch (figure) {
+    case 1: return [["M","P"],["S","M"]];
+    case 2: return [["P","M"],["S","M"]];
+    case 3: return [["M","P"],["M","S"]];
+    case 4: return [["P","M"],["M","S"]];
+  }
+}
+
+function distributedTerms(type, subject, predicate) {
+  if (type === "A") return new Set([subject]);
+  if (type === "E") return new Set([subject, predicate]);
+  if (type === "I") return new Set();
+  if (type === "O") return new Set([predicate]);
+  return new Set();
+}
+
+/**
+ * Port of SyllogismValidityChecker.check_validity + _diagnose_invalidity.
+ * types: [majorPremiseType, minorPremiseType, conclusionType], figure: 1-4
+ */
+function checkValidity(t1, t2, t3, figure) {
+  const mood = t1 + t2 + t3;
+  const form = mood + "-" + figure;
+  const result = { form, mood, figure, existentialImport: EXISTENTIAL_IMPORT.has(form) };
+
+  if (VALID_FORMS.has(form)) {
+    result.valid = true;
+    result.formName = FORM_NAMES[form];
+    result.reason = "Valid syllogistic form: " + result.formName +
+      (result.existentialImport ? " (requires existential import)" : "");
+    return result;
+  }
+
+  result.valid = false;
+  result.formName = null;
+
+  // Diagnose invalidity using the classical rules
+  const reasons = [];
+  const negCount = [t1, t2].filter(t => t === "E" || t === "O").length;
+  if (negCount >= 2) reasons.push("Two negative premises (Fallacy of Exclusive Premises)");
+
+  const hasNegPremise = negCount >= 1;
+  if (hasNegPremise && (t3 === "A" || t3 === "I"))
+    reasons.push("Negative premise with affirmative conclusion");
+
+  const allAffPremises = [t1, t2].every(t => t === "A" || t === "I");
+  if (allAffPremises && (t3 === "E" || t3 === "O"))
+    reasons.push("Affirmative premises cannot yield a negative conclusion");
+
+  const particularCount = [t1, t2].filter(t => t === "I" || t === "O").length;
+  if (particularCount >= 2) reasons.push("Two particular premises (Fallacy of Two Particulars)");
+
+  // Distribution-based rules need the term layout for this figure
+  const [[p1s, p1p], [p2s, p2p]] = premiseLayout(figure);
+  const d1 = distributedTerms(t1, p1s, p1p);
+  const d2 = distributedTerms(t2, p2s, p2p);
+  const dC = distributedTerms(t3, "S", "P");
+  const dPrem = new Set([...d1, ...d2]);
+
+  if (!d1.has("M") && !d2.has("M")) reasons.push("Undistributed middle term");
+  if (dC.has("P") && !dPrem.has("P")) reasons.push("Illicit major term (P distributed in conclusion but not in its premise)");
+  if (dC.has("S") && !dPrem.has("S")) reasons.push("Illicit minor term (S distributed in conclusion but not in its premise)");
+
+  if (reasons.length === 0) reasons.push("Form " + form + " is not among the 24 valid forms");
+  result.reasons = reasons;
+  result.reason = reasons.join("; ");
+  return result;
+}
+
+/* =====================================================================
+   DEMO EXAMPLES — real instances from data/train_data.json.
+   The "votes" simulate the recorded LLM self-consistency outputs.
+   ===================================================================== */
+
+const EXAMPLES = [
+  {
+    label: "① Invalid + Plausible (cars / vehicles / animals)",
+    id: "50146f21",
+    text: "All cars are a type of vehicle. No animal is a car. Therefore, no animal can be a vehicle.",
+    groundTruth: false, plausibility: true,
+    votes: [
+      { temp: 0.0, types: "A / E / E", terms: "car · vehicle · animal" },
+      { temp: 0.3, types: "A / E / E", terms: "car · vehicle · animal" },
+      { temp: 0.5, types: "A / E / E", terms: "car · vehicle · animal" }
+    ],
+    typeEvidence: [
+      ["A", "“All cars are…”", "matched pattern \\ball\\b"],
+      ["E", "“No animal is…”", "matched pattern \\bno\\s+\\w+\\s+is\\b"],
+      ["E", "“no animal can be…”", "matched pattern \\bno\\b / \\bcannot\\b"]
+    ],
+    // conclusion: no animal(S) ... vehicle(P); middle = car
+    S: "animal", P: "vehicle", M: "car",
+    majorPremise: { text: "All cars are a type of vehicle.", type: "A", mPos: "SUBJECT" },
+    minorPremise: { text: "No animal is a car.", type: "E", mPos: "PREDICATE" },
+    conclusionType: "E",
+    contentNote: "“No animal is a vehicle” sounds plausible-ish, and the premises are everyday facts — a pure LLM is tempted to wave it through. The lookup table doesn't care: AEE-1 distributes “vehicle” in the conclusion but never in a premise → illicit major."
+  },
+  {
+    label: "② Valid + Plausible (sodas / juices / beverages)",
+    id: "dfafb4f6",
+    text: "Nothing that is a soda is a juice. A portion of the things that are beverages are juices. The only logical conclusion is that some beverages are not sodas.",
+    groundTruth: true, plausibility: true,
+    votes: [
+      { temp: 0.0, types: "E / I / O", terms: "soda · juice · beverage" },
+      { temp: 0.3, types: "E / I / O", terms: "soda · juice · beverage" },
+      { temp: 0.5, types: "E / I / O", terms: "soda · juice · beverage" }
+    ],
+    typeEvidence: [
+      ["E", "“Nothing that is…”", "matched pattern \\bnothing\\b"],
+      ["I", "“A portion of the things…”", "matched pattern \\ba\\s+portion\\s+of\\b"],
+      ["O", "“some … are not …”", "matched pattern \\bsome\\b.*\\bnot\\b"]
+    ],
+    S: "beverage", P: "soda", M: "juice",
+    majorPremise: { text: "Nothing that is a soda is a juice.", type: "E", mPos: "PREDICATE" },
+    minorPremise: { text: "A portion of the things that are beverages are juices.", type: "I", mPos: "PREDICATE" },
+    conclusionType: "O",
+    contentNote: "Phrasing varies wildly (“nothing that is”, “a portion of the things”), but the extractor only needs to map each sentence to one of four letters. The validator then finds EIO-2 = Festino instantly."
+  },
+  {
+    label: "③ Invalid + Implausible (planets / suns / celestial bodies)",
+    id: "e30b1f83",
+    text: "Everything that is a planet is a celestial body. Anything that is a sun is a celestial body. There exists at least one sun that is a planet.",
+    groundTruth: false, plausibility: false,
+    votes: [
+      { temp: 0.0, types: "A / A / I", terms: "planet · celestial body · sun" },
+      { temp: 0.3, types: "A / A / I", terms: "planet · celestial body · sun" },
+      { temp: 0.5, types: "A / A / I", terms: "planet · celestial body · sun" }
+    ],
+    typeEvidence: [
+      ["A", "“Everything that is…”", "matched pattern \\bevery\\b"],
+      ["A", "“Anything that is…”", "matched pattern \\bany\\b"],
+      ["I", "“There exists at least one…”", "matched pattern \\bat\\s+least\\s+one\\b"]
+    ],
+    S: "sun", P: "planet", M: "celestial body",
+    majorPremise: { text: "Everything that is a planet is a celestial body.", type: "A", mPos: "PREDICATE" },
+    minorPremise: { text: "Anything that is a sun is a celestial body.", type: "A", mPos: "PREDICATE" },
+    conclusionType: "I",
+    contentNote: "The classic undistributed-middle trap: both premises put the middle term (“celestial body”) in predicate position of an A proposition, so it is never distributed. Sharing a category doesn't connect the two terms."
+  },
+  {
+    label: "④ Valid + Implausible (invisible cats!) — content-effect stress test",
+    id: "a30e07d5",
+    text: "Every cat is an invisible creature. A number of cats are animals. Consequently, a portion of animals are invisible.",
+    groundTruth: true, plausibility: false,
+    votes: [
+      { temp: 0.0, types: "A / I / I", terms: "cat · invisible creature · animal" },
+      { temp: 0.3, types: "A / I / I", terms: "cat · invisible creature · animal" },
+      { temp: 0.5, types: "A / I / I", terms: "cat · invisible creature · animal" }
+    ],
+    typeEvidence: [
+      ["A", "“Every cat is…”", "matched pattern \\bevery\\b"],
+      ["I", "“A number of cats…”", "matched pattern \\ba\\s+number\\s+of\\b"],
+      ["I", "“a portion of animals…”", "matched pattern \\ba\\s+portion\\s+of\\b"]
+    ],
+    S: "animal", P: "invisible creature", M: "cat",
+    majorPremise: { text: "Every cat is an invisible creature.", type: "A", mPos: "SUBJECT" },
+    minorPremise: { text: "A number of cats are animals.", type: "I", mPos: "SUBJECT" },
+    conclusionType: "I",
+    contentNote: "This is where pure LLMs break: invisible cats are absurd, so models reject the argument. The symbolic pipeline never sees “absurdity” — it sees AII-3 = Datisi, a valid form. This is exactly how the system keeps TCE at 1.02."
+  }
+];
+
+/* =====================================================================
+   DEMO STEP ENGINE
+   ===================================================================== */
+
+let currentExample = EXAMPLES[0];
+let currentStep = -1;
+const TOTAL_STEPS = 9;
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+
+function chipT(t) { return `<span class="chip ${t}">${t}</span>`; }
+
+function miniFormsGrid(highlightForm) {
+  let html = '<div class="mini-forms">';
+  for (const f of VALID_FORMS) {
+    html += `<div class="mf ${f === highlightForm ? "match" : ""}">${f}</div>`;
+  }
+  return html + "</div>";
+}
+
+function renderStep(step) {
+  const ex = currentExample;
+  const body = $("#inspectBody");
+  const v = checkValidity(ex.majorPremise.type, ex.minorPremise.type, ex.conclusionType, computedFigure(ex));
+
+  const renderers = {
+    0: () => `
+      <div class="syl-text">“${ex.text}”</div>
+      <div class="kv">
+        <dt>Instance id</dt><dd>${ex.id}…</dd>
+        <dt>Gold validity</dt><dd>${ex.groundTruth ? "VALID" : "INVALID"} (hidden from system)</dd>
+        <dt>Plausibility</dt><dd>${ex.plausibility ? "plausible" : "implausible"} content</dd>
+      </div>`,
+    1: () => `
+      <p style="font-size:13px; margin-bottom:8px;">The extractor prompt forbids reasoning — each call returns <b>only</b> labels. Multiple samples at graduated temperatures guard against single-sample flakiness:</p>
+      ${ex.votes.map(vt => `
+        <div class="vote-row"><span class="temp">T=${vt.temp.toFixed(1)}</span>
+        <span class="mono">${vt.types}</span><span style="color:var(--muted)">·</span>
+        <span style="color:var(--muted); font-size:12px;">${vt.terms}</span></div>`).join("")}
+      <p style="font-size:12.5px; color:var(--muted); margin-top:8px;">(Recorded outputs — in the real pipeline this is ${ex.votes.length}× Claude via AWS Bedrock.)</p>`,
+    2: () => `
+      <p style="font-size:13px;">All samples agree → unanimous vote. Winning structure:</p>
+      <div class="kv" style="margin-top:10px;">
+        <dt>Premise 1 type</dt><dd>${chipT(ex.majorPremise.type)}</dd>
+        <dt>Premise 2 type</dt><dd>${chipT(ex.minorPremise.type)}</dd>
+        <dt>Conclusion type</dt><dd>${chipT(ex.conclusionType)}</dd>
+        <dt>Terms</dt><dd>${[ex.S, ex.P, ex.M].map(t => `<span class="chip">${t}</span>`).join("")}</dd>
+      </div>
+      <p style="font-size:12.5px; color:var(--muted);">Note what is <i>absent</i>: no figure, no validity opinion, no chain of thought. The LLM's job ends here.</p>`,
+    3: () => `
+      <p style="font-size:13px; margin-bottom:8px;">The post-processor double-checks each AEIO label against keyword regexes in the raw sentence (from <span class="mono">postprocessor.TYPE_PATTERNS</span>):</p>
+      <div class="kv">
+        ${ex.typeEvidence.map(([t, q, pat]) => `<dt>${chipT(t)} ${q}</dt><dd style="color:var(--green); font-size:12px;">✓ ${pat}</dd>`).join("")}
+      </div>
+      <p style="font-size:12.5px; color:var(--muted); margin-top:6px;">Mismatches trigger corrections or, if unresolvable, the fallback path.</p>`,
+    4: () => `
+      <p style="font-size:13px; margin-bottom:8px;">Terms are read off the <b>conclusion</b> — pure structure, no semantics:</p>
+      <div class="kv">
+        <dt>Minor term S</dt><dd><span class="chip">${ex.S}</span> = conclusion subject</dd>
+        <dt>Major term P</dt><dd><span class="chip">${ex.P}</span> = conclusion predicate</dd>
+        <dt>Middle term M</dt><dd><span class="chip">${ex.M}</span> = the term in both premises, absent from conclusion</dd>
+      </div>
+      <p style="font-size:12.5px; color:var(--muted);">The premise containing P is designated the <b>major premise</b>; the other is the minor. Premises are reordered if needed.</p>`,
+    5: () => {
+      const key = ex.majorPremise.mPos + "," + ex.minorPremise.mPos;
+      const fig = FIGURE_TABLE[key];
+      return `
+      <p style="font-size:13px;">Where does <span class="chip">${ex.M}</span> sit in each premise?</p>
+      <div class="kv">
+        <dt>Major premise</dt><dd>“${ex.majorPremise.text}” → M is <span class="pos-tag">${ex.majorPremise.mPos}</span></dd>
+        <dt>Minor premise</dt><dd>“${ex.minorPremise.text}” → M is <span class="pos-tag">${ex.minorPremise.mPos}</span></dd>
+      </div>
+      <table class="figtable">
+        <tr><th>M in major</th><th>M in minor</th><th>Figure</th></tr>
+        ${Object.entries(FIGURE_TABLE).map(([k, f]) => {
+          const [a, b] = k.split(",");
+          return `<tr class="${k === key ? "hl" : ""}"><td>${a}</td><td>${b}</td><td>${f}</td></tr>`;
+        }).join("")}
+      </table>
+      <p style="font-size:13px;">→ <b>Figure ${fig}</b>. A 4-row lookup table — this used to be the LLM's most common mistake, now it cannot be wrong.</p>`;
+    },
+    6: () => `
+      <div class="kv">
+        <dt>Mood</dt><dd class="mono" style="font-size:16px;">${v.mood}</dd>
+        <dt>Figure</dt><dd class="mono" style="font-size:16px;">${v.figure}</dd>
+        <dt>Form</dt><dd class="mono" style="font-size:18px; color:var(--yellow);">${v.form}</dd>
+      </div>
+      <p style="font-size:12.5px; color:var(--muted);">The entire syllogism — whatever its wording or subject matter — is now compressed to one token.</p>`,
+    7: () => `
+      <p style="font-size:13px;">Is <span class="mono" style="color:var(--yellow);">${v.form}</span> one of the 24 valid forms?</p>
+      ${miniFormsGrid(v.valid ? v.form : null)}
+      ${v.valid
+        ? `<p style="font-size:13.5px;">✅ <b>Yes — ${v.formName}</b>${v.existentialImport ? " (requires existential import)" : ""}.</p>`
+        : `<p style="font-size:13.5px;">❌ <b>No.</b> Fallacy diagnosis:</p><div class="reason-box"><ul>${v.reasons.map(r => `<li>${r}</li>`).join("")}</ul></div>`}`,
+    8: () => {
+      const pred = v.valid;
+      const correct = pred === ex.groundTruth;
+      return `
+      <div class="verdict ${pred ? "valid" : "invalid"}">${pred ? "VALID" : "INVALID"}</div>
+      <div class="gt-row">
+        <span>method: <b style="color:var(--symbolic)">symbolic</b></span>
+        <span>confidence: <b>0.95</b></span>
+        <span>gold: <b class="${correct ? "ok" : "bad"}">${ex.groundTruth ? "VALID" : "INVALID"} ${correct ? "✓" : "✗"}</b></span>
+      </div>
+      <div class="note-box">💡 ${ex.contentNote}</div>`;
+    }
+  };
+
+  body.innerHTML = renderers[step]();
+}
+
+function computedFigure(ex) {
+  return FIGURE_TABLE[ex.majorPremise.mPos + "," + ex.minorPremise.mPos];
+}
+
+function updateFlowHighlight() {
+  $$(".node[data-step]").forEach(n => {
+    const s = parseInt(n.dataset.step);
+    n.classList.toggle("active", s === currentStep);
+    n.classList.toggle("done", s < currentStep);
+  });
+  $$(".arrow[data-arrow]").forEach(a => {
+    a.classList.toggle("lit", parseInt(a.dataset.arrow) < currentStep);
+  });
+  $("#stepCounter").textContent = currentStep < 0
+    ? "Pick an example, then press ▶ Step"
+    : `Step ${currentStep + 1} of ${TOTAL_STEPS}`;
+  $("#btnStep").disabled = currentStep >= TOTAL_STEPS - 1;
+}
+
+function doStep() {
+  if (currentStep >= TOTAL_STEPS - 1) return;
+  currentStep++;
+  renderStep(currentStep);
+  updateFlowHighlight();
+}
+
+function resetDemo() {
+  currentStep = -1;
+  updateFlowHighlight();
+  $("#inspectBody").innerHTML = `<div class="syl-text">“${currentExample.text}”</div>
+    <p style="color:var(--muted); font-size:13px;">Press ▶ Step to walk the instance through the pipeline.</p>`;
+}
+
+async function runAll() {
+  resetDemo();
+  for (let i = 0; i < TOTAL_STEPS; i++) {
+    doStep();
+    await new Promise(r => setTimeout(r, 1100));
+  }
+}
+
+/* =====================================================================
+   TRY-IT TAB
+   ===================================================================== */
+
+const TEMPLATES = {
+  A: (x, y) => `All ${x} are ${y}.`,
+  E: (x, y) => `No ${x} are ${y}.`,
+  I: (x, y) => `Some ${x} are ${y}.`,
+  O: (x, y) => `Some ${x} are not ${y}.`
+};
+
+function renderTry() {
+  const t1 = $("#selT1").value, t2 = $("#selT2").value, t3 = $("#selT3").value;
+  const fig = parseInt($("#selFig").value);
+  const S = $("#termS").value || "S", P = $("#termP").value || "P", M = $("#termM").value || "M";
+  const dict = { S, P, M };
+
+  const [[p1s, p1p], [p2s, p2p]] = premiseLayout(fig);
+  const sentences = [
+    TEMPLATES[t1](dict[p1s], dict[p1p]),
+    TEMPLATES[t2](dict[p2s], dict[p2p]),
+    "Therefore, " + TEMPLATES[t3](S, P).toLowerCase()
+  ];
+  $("#sentencePreview").innerHTML = sentences.join("<br>");
+
+  const v = checkValidity(t1, t2, t3, fig);
+  let html = `
+    <div class="kv">
+      <dt>Mood</dt><dd class="mono">${v.mood}</dd>
+      <dt>Figure</dt><dd class="mono">${v.figure} &nbsp;<span style="color:var(--muted)">(${premiseLayout(fig).map(p => p.join("-")).join(" / ")})</span></dd>
+      <dt>Form</dt><dd class="mono" style="color:var(--yellow); font-size:16px;">${v.form}</dd>
+    </div>
+    <div class="verdict ${v.valid ? "valid" : "invalid"}">${v.valid ? "VALID" : "INVALID"}</div>`;
+  if (v.valid) {
+    html += `<p style="text-align:center; margin-top:8px; font-size:14px;">Traditional name: <b style="font-style:italic">${v.formName}</b>${v.existentialImport ? ' <span class="ei-mark">◆ existential import</span>' : ""}</p>`;
+  } else {
+    html += `<div class="reason-box"><b style="font-size:12.5px; color:var(--muted);">RULE VIOLATIONS DETECTED</b><ul style="margin-top:6px;">${v.reasons.map(r => `<li>${r}</li>`).join("")}</ul></div>`;
+  }
+  html += miniFormsGrid(v.valid ? v.form : null);
+  $("#tryOutput").innerHTML = html;
+}
+
+/* =====================================================================
+   FORMS TAB
+   ===================================================================== */
+
+function renderFormsGrid() {
+  const byFig = { 1: [], 2: [], 3: [], 4: [] };
+  for (const f of VALID_FORMS) byFig[parseInt(f.split("-")[1])].push(f);
+  const patterns = { 1: "M-P / S-M", 2: "P-M / S-M", 3: "M-P / M-S", 4: "P-M / M-S" };
+  let html = "";
+  for (const fig of [1, 2, 3, 4]) {
+    html += `<div class="fig-card"><h4>Figure ${fig}</h4><div class="pattern">${patterns[fig]} ⊢ S-P</div>`;
+    for (const f of byFig[fig].sort()) {
+      html += `<div class="form-row" data-form="${f}">
+        <span class="mono">${f} ${EXISTENTIAL_IMPORT.has(f) ? '<span class="ei-mark">◆</span>' : ""}</span>
+        <span class="fname">${FORM_NAMES[f]}</span></div>`;
+    }
+    html += "</div>";
+  }
+  $("#formsGrid").innerHTML = html;
+  $$("#formsGrid .form-row").forEach(row => {
+    row.addEventListener("click", () => {
+      const [mood, fig] = row.dataset.form.split("-");
+      $("#selT1").value = mood[0]; $("#selT2").value = mood[1]; $("#selT3").value = mood[2];
+      $("#selFig").value = fig;
+      switchTab("try");
+      renderTry();
+    });
+  });
+}
+
+/* =====================================================================
+   WIRING
+   ===================================================================== */
+
+function switchTab(name) {
+  $$("nav.tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
+  $$(".tab-page").forEach(p => p.classList.toggle("active", p.id === "tab-" + name));
+}
+
+$$("nav.tabs button").forEach(b => b.addEventListener("click", () => switchTab(b.dataset.tab)));
+
+const sel = $("#exampleSelect");
+EXAMPLES.forEach((ex, i) => {
+  const opt = document.createElement("option");
+  opt.value = i; opt.textContent = ex.label;
+  sel.appendChild(opt);
+});
+sel.addEventListener("change", () => { currentExample = EXAMPLES[parseInt(sel.value)]; resetDemo(); });
+
+$("#btnStep").addEventListener("click", doStep);
+$("#btnRun").addEventListener("click", runAll);
+$("#btnReset").addEventListener("click", resetDemo);
+
+["selT1","selT2","selT3","selFig","termS","termP","termM"].forEach(id =>
+  document.getElementById(id).addEventListener("input", renderTry));
+
+// Sanity checks against the Python test cases in validity_checker.py
+console.assert(checkValidity("A","A","I",3).valid === true,  "AAI-3 Darapti should be VALID");
+console.assert(checkValidity("E","A","O",1).valid === true,  "EAO-1 Celaront should be VALID");
+console.assert(checkValidity("A","E","O",2).valid === true,  "AEO-2 Camestrop should be VALID");
+console.assert(checkValidity("E","E","E",1).valid === false, "EEE-1 should be INVALID");
+console.assert(VALID_FORMS.size === 24, "Exactly 24 valid forms");
+
+renderFormsGrid();
+renderTry();
+resetDemo();
+</script>
+</body>
+</html>
