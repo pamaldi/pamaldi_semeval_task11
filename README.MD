@@ -4,6 +4,8 @@
 
 This repository contains the code, notebooks, and system description paper for our participation in [SemEval-2026 Task 11](https://neuro-symbolic-ai.github.io/SemEval2026-Task11/): *Disentangling Content and Formal Reasoning in Language Models* (Subtask 1 — English syllogistic validity classification).
 
+> 🔎 **Interactive pipeline visualizer:** https://pamaldi.github.io/pamaldi_semeval_task11/
+
 ## Results
 
 | Metric | Official Score |
