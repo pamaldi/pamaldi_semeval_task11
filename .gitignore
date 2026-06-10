@@ -1,2 +1,5 @@
 /.idea/
 /subtask_1/aws_credentials.txt
+/subtask_1/linkedin_post.txt
+/subtask_1/linkedin_post_it.txt
+.env

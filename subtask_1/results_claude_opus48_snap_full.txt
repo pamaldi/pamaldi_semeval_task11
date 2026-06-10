@@ -1,0 +1,397 @@
+﻿Model: claude-opus-4-8  |  seed: 42  |  mode: snap (boolean only)  |  n=191
+==============================================================================
+OK [VP] gold=valid   pred=valid  
+        Any object that is a house is a building. Some tents are not buildings. This implies that some tents are not houses.
+OK [VP] gold=valid   pred=valid  
+        Items that are tables are in no way items designed for sitting. Everything that is a chair is an item designed for sitting. Chairs cannot be classified as tables.
+OK [VP] gold=valid   pred=valid  
+        It is not the case that every single car is a truck. All cars are vehicles. One can logically conclude that some vehicles are not trucks.
+OK [VP] gold=valid   pred=valid  
+        Diamonds are in no way soft substances. Everything that is a diamond is a carbon compound. There are some carbon compounds which are not soft substances.
+OK [VP] gold=valid   pred=valid  
+        Every person who is a doctor is also a medical professional. All medical professionals are people with degrees. We can logically conclude that some people with degrees are doctors.
+OK [VP] gold=valid   pred=valid  
+        It is true that some roses are yellow. A rose is a type of flower. Thus, some flowers are yellow.
+OK [VP] gold=valid   pred=valid  
+        Every square is a rectangle. There exist some triangles which are not rectangles. It follows that some triangles are not squares.
+OK [VP] gold=valid   pred=valid  
+        There are no citrus fruits that are berries. Among the berries, a few are fruits. Not all fruits are citrus.
+OK [VP] gold=valid   pred=valid  
+        There are some buildings which are skyscrapers. A skyscraper is a very tall structure. One can therefore conclude that some tall structures are buildings.
+OK [VP] gold=valid   pred=valid  
+        Every single item that is a writing instrument is a tool. There are some pens which are writing instruments. Thus, some pens are tools.
+OK [VP] gold=valid   pred=valid  
+        Some root vegetables are known as carrots. Everything that is a carrot is also a vegetable. Therefore, there are vegetables that are root vegetables.
+OK [VP] gold=valid   pred=valid  
+        Any shape that is a square is also a quadrilateral. No quadrilateral is a circle. It is a necessary conclusion that no circle is a square.
+OK [VP] gold=valid   pred=valid  
+        Some foods that are sweet are berries. All things that are berries are fruits. Consequently, it follows that some fruits are sweet foods.
+OK [VP] gold=valid   pred=valid  
+        Any and all apples are foods that are delicious. There are some apples which are also fruits. Consequently, a portion of fruits are foods that are delicious.
+OK [VP] gold=valid   pred=valid  
+        Every single tree has leaves. Any object that is an oak is a tree. Consequently, all oaks are objects that have leaves.
+OK [VP] gold=valid   pred=valid  
+        It is impossible for a mammal to be an eagle. Some of the eagles are birds. There are a few birds which are not mammals.
+OK [VP] gold=valid   pred=valid  
+        There exist some things which are fruits that are not apples. It is true that all fruits are foods. From this, it follows that there are some foods that are not apples.
+OK [VP] gold=valid   pred=valid  
+        Absolutely no creature classified as a mammal is an animal with feathers. A portion of dogs are mammals. This demonstrates that some dogs are not animals with feathers.
+OK [VP] gold=valid   pred=valid  
+        All things which are violins are string instruments. All things which are violins are musical instruments. It follows that some musical instruments are string instruments.
+OK [VP] gold=valid   pred=valid  
+        Every human is a primate. Any person that is a man is a human. Therefore, it is a certainty that every man is a primate.
+OK [VP] gold=valid   pred=valid  
+        Every single person who is a student is also a person. There are no people who are robots. From this, it follows that no robot is a student.
+OK [VP] gold=valid   pred=valid  
+        Spiders are in no way mammals. Anything that is a spider is an arachnid. It's the case that some arachnids fail to be mammals.
+OK [VP] gold=valid   pred=valid  
+        Not a single state within the USA is Canada. Every single instance of Canada is a country. It is necessary that a portion of countries are not states in the USA.
+OK [VP] gold=valid   pred=valid  
+        There is no software that is hardware. Every program is a form of software. It must be concluded that some programs are not hardware.
+OK [VP] gold=valid   pred=valid  
+        Everything that is a spider is an arachnid. Nothing that is an insect is an arachnid. It is not the case that all insects are spiders.
+OK [VP] gold=valid   pred=valid  
+        There are no shrubs that are tall plants. Every single item that is a tree is a tall plant. This proves that a number of trees are not shrubs.
+OK [VP] gold=valid   pred=valid  
+        No object that is a planet can be a star. There are some things known as gas giants which are planets. Consequently, not all gas giants are stars.
+OK [VP] gold=valid   pred=valid  
+        There are no compounds classified as organic that are made of metal. Every substance that is a sugar is an organic compound. This logically proves that no sugar is made of metal.
+OK [VP] gold=valid   pred=valid  
+        There are no individuals who are elephants that are also people enrolled in kindergarten. All five-year-olds are people enrolled in kindergarten. It can be deduced that some five-year-olds are not elephants.
+XX [VP] gold=valid   pred=invalid
+        Every single river is a thing that flows towards the sea. The Amazon River is a river. A number of parts of the Amazon River flow towards the sea.
+OK [VP] gold=valid   pred=valid  
+        Every single cow is a farm animal. The category of wolves does not contain farm animals. A portion of wolves are not cows.
+XX [VP] gold=valid   pred=invalid
+        Anything that is a cat is also a feline. Under no circumstances is a feline a canine. It can thus be inferred that certain canines are not cats.
+OK [VP] gold=valid   pred=valid  
+        There are no pianos that are not musical instruments. All musical instruments are objects. From this, it can be derived that some objects are pianos.
+OK [VP] gold=valid   pred=valid  
+        There are no planets that are also stars. Everything classified as a celestial body named Earth is a planet. This means some things that are Earth are not stars.
+OK [VP] gold=valid   pred=valid  
+        Nothing that is a fish is also a mammal. The set of creatures that are whales includes some that are mammals. A conclusion that can be drawn is that some whales are not fish.
+OK [VP] gold=valid   pred=valid  
+        It is the case that no lakes are flowing bodies of water. Every single river is, by its nature, a flowing body of water. Rivers are not lakes.
+OK [VP] gold=valid   pred=valid  
+        There are no animals that are non-aquatic and also fish. A portion of the animals that are mammals are also non-aquatic. It must be the case that some mammals are not fish.
+OK [VP] gold=valid   pred=valid  
+        Anything that is a hammer is also an instrument. Some hammers are considered to be tools. A certain number of tools, therefore, are instruments.
+OK [VP] gold=valid   pred=valid  
+        Every instance of chess is a board game. The game of tag is never a board game. Therefore, tag is not chess.
+OK [VP] gold=valid   pred=valid  
+        It is certain that no item categorized as a percussion instrument has strings. A certain group of percussion instruments are musical instruments. Based on this, it must be the case that a portion of musical instruments do not have strings.
+OK [VP] gold=valid   pred=valid  
+        It is the case that no cat is a dog. Among the animals that are cats, some are pets. The logical consequence is that there are pets that are not dogs.
+OK [VP] gold=valid   pred=valid  
+        Not a single car is a bicycle. Vehicles include every single bicycle. It is logically follows that some vehicles are not cars.
+OK [VP] gold=valid   pred=valid  
+        Everything that is a planet is a celestial body. Everything that is a planet is a round object. This means that some round objects are celestial bodies.
+OK [VP] gold=valid   pred=valid  
+        Anything that is C++ is a programming language. There are no instances of English which are programming languages. It is therefore established that no English is C++.
+OK [VP] gold=valid   pred=valid  
+        All things which are metals are conductors. Copper is, without exception, a metal. There exists some copper that is a conductor.
+OK [VP] gold=valid   pred=valid  
+        There is no piece of furniture that can be called a planet. Each and every chair is a piece of furniture. Consequently, no chair is a planet.
+OK [VP] gold=valid   pred=valid  
+        Every piece of fruit grows from plants. There are some apples which are fruits. Therefore, it is the case that some apples grow from plants.
+OK [VP] gold=valid   pred=valid  
+        Every single pencil is an item of stationery. There are no stationery items that can be described as food. It is therefore true that some items of food are not pencils.
+OK [VI] gold=valid   pred=valid  
+        Some robots are dolphins. Every single dolphin is a fish. It must be true that some fish are robots.
+OK [VI] gold=valid   pred=valid  
+        Anything that is clothing is not a shirt. The group of items known as apparel has members that are shirts. It follows that some apparel is not clothing.
+OK [VI] gold=valid   pred=valid  
+        There are no celestial bodies that are giant balls of gas. All stars are giant balls of gas. It follows from this that some stars are not celestial bodies.
+OK [VI] gold=valid   pred=valid  
+        Every single vehicle can be considered an object. There are no cars that are objects. Therefore, no car is a vehicle.
+OK [VI] gold=valid   pred=valid  
+        Every single object can fly. It is known that some boats cannot fly. It follows that some boats are not objects.
+OK [VI] gold=valid   pred=valid  
+        Anything that is a flower is also an insect. There exist some daisies which are not insects. This necessarily means that some daisies are not flowers.
+OK [VI] gold=valid   pred=valid  
+        Every single creature that is a cat is a fish. A number of tigers are cats. This means that there are some tigers which are fish.
+OK [VI] gold=valid   pred=valid  
+        All things that are cars are fruits. No fruit is a vehicle. This proves that no vehicle is a car.
+OK [VI] gold=valid   pred=valid  
+        Anything that is a book is edible. Every single novel is a book. This means that every novel is edible.
+OK [VI] gold=valid   pred=valid  
+        Anything that is a flower is a stone. There are no stones which are roses. This logically implies that some roses are not flowers.
+OK [VI] gold=valid   pred=valid  
+        It is completely false that any fruit is a thing that grows on a tree. A portion of fruits are apples. We must conclude that some apples do not grow on trees.
+OK [VI] gold=valid   pred=valid  
+        Everything that is a fish has legs. There are no sharks that are not fish. At least some sharks are things that have legs.
+OK [VI] gold=valid   pred=valid  
+        Not a single piece of furniture is an animal. Every animal is a chair. It must be that a portion of chairs are not furniture.
+OK [VI] gold=valid   pred=valid  
+        Every writing utensil is an animal. The set of pencils contains no animals. It is the case that some writing utensils are not pencils.
+OK [VI] gold=valid   pred=valid  
+        It is a given that every machine is an animal. No animals are computers. Therefore, it is a necessary conclusion that some computers are not machines.
+OK [VI] gold=valid   pred=valid  
+        There are no mammals who are also rational beings. Every single human is a rational being. Mammals are not humans.
+OK [VI] gold=valid   pred=valid  
+        Every single item that is a number is not an integer. Of the items that are prime numbers, some are integers. It is a correct deduction that some prime numbers are not numbers.
+OK [VI] gold=valid   pred=valid  
+        Any and all clouds are made of solid iron. There are clouds that are a type of cumulus. This implies that some cumulus clouds are solid iron.
+OK [VI] gold=valid   pred=valid  
+        The set of objects and spoons do not overlap. A portion of spoons are implements. Some implements are not objects.
+OK [VI] gold=valid   pred=valid  
+        There are no circles that are 4-sided shapes. Every single circle is a square. Some squares fail to be 4-sided shapes.
+OK [VI] gold=valid   pred=valid  
+        Some bicycles cannot move. It is also true that every bicycle is a vehicle. Consequently, some vehicles cannot move.
+OK [VI] gold=valid   pred=valid  
+        Every single building is a structure that has wheels. Anything that is a house is a building. Consequently, all houses are structures with wheels.
+OK [VI] gold=valid   pred=valid  
+        Nothing that is an organic thing can be said to be a celestial object. Every planet is a type of organic thing. Therefore, there are no planets that are celestial objects.
+OK [VI] gold=valid   pred=valid  
+        Every single liquid is composed of rock. A certain amount of liquid is water. Consequently, it is the case that some water is made of rock.
+OK [VI] gold=valid   pred=valid  
+        Any person who is a scientist is also a researcher. It is impossible for a chemist to be a researcher. This means that no chemist is a scientist.
+OK [VI] gold=valid   pred=valid  
+        Every human is over 10 feet tall. Some basketball players are humans. It follows, then, that some basketball players are over 10 feet tall.
+OK [VI] gold=valid   pred=valid  
+        There are no fish that are creatures. Every single fish is a vertebrate. Some vertebrates fail to be creatures.
+OK [VI] gold=valid   pred=valid  
+        Anything that is an athlete can photosynthesize. Every single tennis player is an athlete. At least one tennis player can photosynthesize.
+OK [VI] gold=valid   pred=valid  
+        There are certain objects designated as official game balls that are not round. Every official game ball is a type of basketball. Consequently, some objects classified as basketballs are not round.
+OK [VI] gold=valid   pred=valid  
+        Reptiles are not animals. All things that are lizards are reptiles. It follows logically that some lizards are not animals.
+OK [VI] gold=valid   pred=valid  
+        No stars are celestial bodies. All suns are things that are stars. It follows that some suns are not celestial bodies.
+OK [VI] gold=valid   pred=valid  
+        A few cars are fish. Every single fish is a swimmer. Consequently, some swimmers are cars.
+OK [VI] gold=valid   pred=valid  
+        Anything which is a shoe is also an idea. All ideas are insects. We can infer that some insects are shoes.
+OK [VI] gold=valid   pred=valid  
+        Every single creature is a mammal. It is true that no mammal is an amphibian. Therefore, it's the case that no amphibian is a creature.
+OK [VI] gold=valid   pred=valid  
+        Each and every dog is a star. All dogs are made of cheese. Therefore, it is the case that some things made of cheese are stars.
+OK [VI] gold=valid   pred=valid  
+        Anything that is a bird is a building. Anything that is a bird is a vehicle. Consequently, some vehicles are buildings.
+OK [VI] gold=valid   pred=valid  
+        There is no overlap between mammals and felines. It is the case that every single cat is a feline. Cats cannot be considered mammals.
+OK [VI] gold=valid   pred=valid  
+        Nothing that is a liquid can be considered a beverage. It is the case that some types of milk are liquids. It follows that some milks are not beverages.
+OK [VI] gold=valid   pred=valid  
+        Nothing that is a living thing is also a stone. Every single stone is a human. Therefore, a subset of humans is not composed of living things.
+OK [VI] gold=valid   pred=valid  
+        Anything that is a cloud is a politician. Every politician is made of cotton candy. Consequently, some things made of cotton candy are clouds.
+XX [VI] gold=valid   pred=invalid
+        Not one single animal is a pet. All dogs are pets. It follows from this that some dogs are not animals.
+OK [VI] gold=valid   pred=valid  
+        A stone is never inanimate. Everything that is a statue is a stone. Therefore, this implies that no statue is inanimate.
+OK [VI] gold=valid   pred=valid  
+        Any part of the year is a day. There are no months which are days. It can be said that a portion of months are not parts of the year.
+OK [VI] gold=valid   pred=valid  
+        There are some oceans which are insects. Every insect is an animal. It follows that some animals are oceans.
+OK [VI] gold=valid   pred=valid  
+        It is impossible for an animal to be a rock. A portion of rocks are felines. Some of the felines are not animals.
+OK [VI] gold=valid   pred=valid  
+        There are no pets which are animals. A few birds are categorized as pets. Thus, a group of birds are not animals.
+OK [VI] gold=valid   pred=valid  
+        Some people are gold. All things which are gold are metals. It must follow that some metals are people.
+OK [VI] gold=valid   pred=valid  
+        Not a single object that is a vehicle is a type of transportation. A number of vehicles are buses. The conclusion that some buses are not transportation necessarily follows.
+OK [IP] gold=invalid pred=invalid
+        Some plants are living things. There are some trees that are plants. It is therefore the case that every tree is a living thing.
+OK [IP] gold=invalid pred=invalid
+        It is not the case that a pencil is a paper good. Not a single pencil is a book. This makes it true that all books are paper goods.
+OK [IP] gold=invalid pred=invalid
+        Anything that is a car is a vehicle. All of the things that are bicycles are vehicles. This means that there are no bicycles that are cars.
+OK [IP] gold=invalid pred=invalid
+        Every person who is a filmmaker is someone who works in production. The set of directors contains someone who works in production. Consequently, every director is a filmmaker.
+OK [IP] gold=invalid pred=invalid
+        Some individuals who have degrees are people who work in schools. Some person who works in a school is a teacher. As a result, some teachers are individuals with degrees.
+OK [IP] gold=invalid pred=invalid
+        Some member of the group of fish is not in the group of mammals. At least one dog is a mammal. At least one dog is not a fish.
+OK [IP] gold=invalid pred=invalid
+        Nothing that is a metal is a mammal. Among the creatures that are snakes, there are none that are metals. It must be concluded that no snakes are mammals.
+OK [IP] gold=invalid pred=invalid
+        No cat is a dog. All dogs are mammals without exception. A number of mammals are cats.
+XX [IP] gold=invalid pred=valid  
+        There are no bikes that can be called cars. It is also true that every bike is a type of vehicle. This has led to the conclusion that a portion of vehicles are bikes.
+OK [IP] gold=invalid pred=invalid
+        There are no birds that are also mammals. The set of pets includes some creatures that are mammals. A consequence is that some pets are birds.
+OK [IP] gold=invalid pred=invalid
+        There are some mammals that are animals. Every single dog is a mammal. It is therefore the case that every dog is an animal.
+OK [IP] gold=invalid pred=invalid
+        Every piece of fruit is edible. Any apple is a fruit. This means that some apples are not vegetables.
+OK [IP] gold=invalid pred=invalid
+        It is true that no athletes are lazy. A number of people are athletes. Consequently, some people are lazy.
+OK [IP] gold=invalid pred=invalid
+        Anything that is a rose is a flower. There are no tulips that are roses. Every tulip is a flower.
+OK [IP] gold=invalid pred=invalid
+        There are some Ferraries that are things with wheels. Everything that is a Ferrari is a car. It follows that every car has wheels.
+XX [IP] gold=invalid pred=valid  
+        There are no cats that can be called dogs. It is also true that every cat is a type of animal. This has led to the conclusion that a portion of animals are cats.
+OK [IP] gold=invalid pred=invalid
+        Not a single animal with wings is an aquatic mammal. Anything that is an aquatic mammal is a fish. It is necessarily true that no fish are animals with wings.
+OK [IP] gold=invalid pred=invalid
+        There are no plants that are mammals. Some rose is a plant. It is the case that no roses are mammals.
+OK [IP] gold=invalid pred=invalid
+        Every single tiger is a feline. All tigers are mammals. It follows from this that some mammals are not felines.
+OK [IP] gold=invalid pred=invalid
+        There are some mammals that are animals. All dogs are mammals. Thus, all dogs are animals.
+OK [IP] gold=invalid pred=invalid
+        There are no professors that are children. Some children are athletes. It is concluded that some professors are athletes.
+OK [IP] gold=invalid pred=invalid
+        There exist some objects that are books which are not digital files. Every single book is an item with pages. Consequently, some items with pages are digital files.
+OK [IP] gold=invalid pred=invalid
+        The category of chairs and the category of living things do not overlap. The group of living things and the group of inanimate objects are mutually exclusive. A portion of inanimate objects are not chairs.
+OK [IP] gold=invalid pred=invalid
+        Every single apple is a fruit. Nothing that is a banana is an apple. It follows from this that every banana is a fruit.
+OK [IP] gold=invalid pred=invalid
+        There are no plants that are animals. It is the case that some flower is a plant. No flowers are animals.
+OK [IP] gold=invalid pred=invalid
+        It is true that no apples are mammals. Every single apple is a fruit. This is why every fruit is not a mammal.
+OK [IP] gold=invalid pred=invalid
+        Anything that is a square is also a quadrilateral. No circle is a square. It follows that no circle is a quadrilateral.
+OK [IP] gold=invalid pred=invalid
+        There is at least one spoon that is a kitchen tool. Some of the utensils are spoons. Consequently, some of the utensils are kitchen tools.
+OK [IP] gold=invalid pred=invalid
+        No orange is an apple. Apples are, without exception, fruits. A number of fruits are oranges.
+OK [IP] gold=invalid pred=invalid
+        There are no creatures that are non-bipeds that are also living creatures. Everything that is a squirrel is a non-biped. Thus, every squirrel is a living creature.
+OK [IP] gold=invalid pred=invalid
+        There exist some things which are cars that are not expensive things. It is true that all cars are vehicles. It follows that some vehicles are expensive things.
+XX [IP] gold=invalid pred=valid  
+        Something that is a chair is a table. A thing that is a table cannot be a building. It follows that a building is never a chair.
+OK [IP] gold=invalid pred=invalid
+        There are no birds which are aquatic animals. Some animals are things that are birds. It must be true that some animals are aquatic animals.
+OK [IP] gold=invalid pred=invalid
+        Everything that is a tree is a plant. Everything that is a flower is a plant. This implies that some flowers are not trees.
+OK [IP] gold=invalid pred=invalid
+        It is the case that some pencils are white. There are some sheets of paper that are not white. This implies that some sheets of paper are not pencils.
+OK [IP] gold=invalid pred=invalid
+        There is not a single inanimate object that is a writer. A portion of inanimate objects are people. It is the case that some people are writers.
+OK [IP] gold=invalid pred=invalid
+        No item that is a polygon with seven sides is a square. There are no triangles which are polygons with seven sides. Thus, a portion of triangles are not squares.
+OK [IP] gold=invalid pred=invalid
+        Every person who is a prime minister is a politician. There are a number of people who are celebrities who are also politicians. It follows from this that there are some celebrities who are prime ministers.
+OK [IP] gold=invalid pred=invalid
+        A portion of things that are paper objects are books. Among the items known as notebooks, some are paper objects. This allows us to state that not all notebooks are books.
+OK [IP] gold=invalid pred=invalid
+        Every single bird has a beak. It is not true that any bird is a penguin. Therefore, some penguins have beaks.
+OK [IP] gold=invalid pred=invalid
+        It is the case that no adult is a child. Some people are adults. It follows that some people are children.
+OK [IP] gold=invalid pred=invalid
+        Every single skyscraper is a building. Some sheds are skyscrapers. Consequently, every shed is a building.
+OK [IP] gold=invalid pred=invalid
+        It is not true that all vegetables are green. All vegetables are, without exception, plants. As a result, it is suggested that some plants are green.
+OK [IP] gold=invalid pred=invalid
+        There are some animals that are mammals. There are no mammals that are birds. Thus, it can be said that some birds are animals.
+OK [IP] gold=invalid pred=invalid
+        Every single dog is a thing with fur. It is the case that no cat is a dog. This implies that some cats have fur.
+OK [IP] gold=invalid pred=invalid
+        It is the case that there are no mammals who are insects. There are animals who are mammals. Therefore, some animals are insects.
+OK [IP] gold=invalid pred=invalid
+        There is at least an odd number that is a negative number. A portion of the prime numbers are negative numbers. Consequently, some prime numbers are odd numbers.
+OK [II] gold=invalid pred=invalid
+        There are no fish which are mammals. Some reptiles are things that are fish. It follows that some reptiles are mammals.
+OK [II] gold=invalid pred=invalid
+        Every fish is a swimmer. There are a number of birds that are swimmers. It follows from this that there are some birds that are fish.
+OK [II] gold=invalid pred=invalid
+        There is no canine that is a feline. Everything that is a canine is also a dog. This makes it true that all dogs are cats.
+OK [II] gold=invalid pred=invalid
+        Every single human is a mammal. Everything that is a doctor is a human. It's the case that some doctors are not mammals.
+OK [II] gold=invalid pred=invalid
+        There are no metals that are a gas. Every single piece of iron is a metal. It is therefore the case that all iron is a gas.
+OK [II] gold=invalid pred=invalid
+        A few reptiles are mammals. There are no mammals that are fish. As a result, some fish are reptiles.
+OK [II] gold=invalid pred=invalid
+        It is the case that some clouds are white. There are some sheep that are also white. This implies that all sheep are clouds.
+OK [II] gold=invalid pred=invalid
+        There is not one fish that is a window. Some of the things that are animals are fish. It must be true that some animals are windows.
+OK [II] gold=invalid pred=invalid
+        Nothing that is a bird is able to fly. Every single bird is a human being. It is therefore true that every human can fly.
+OK [II] gold=invalid pred=invalid
+        It is true that a portion of animals are birds. Among the animals that are penguins, some are also animals. This proves that not every penguin is a bird.
+OK [II] gold=invalid pred=invalid
+        Anything that is a planet is a celestial body. The category of comets contains no celestial bodies. Every comet is a planet.
+OK [II] gold=invalid pred=invalid
+        It is the case that there are no reptiles that are birds. Some things with furnitures are reptiles. It follows that some things with furnitures are birds.
+OK [II] gold=invalid pred=invalid
+        No item that is a state is a government seat. A portion of cities are not government seats. Therefore, every single city is a state.
+OK [II] gold=invalid pred=invalid
+        It is true that no person who is North American is a European. It is also true that no person who is French is a North American. It is a logical necessity that no French person is a European.
+OK [II] gold=invalid pred=invalid
+        Anything that is a sea is a large body of saltwater. The category of rivers contains no large bodies of saltwater. Every river is a sea.
+OK [II] gold=invalid pred=invalid
+        There are no cars that are not alive. It is the case that no horse is alive. At least some horses are cars.
+OK [II] gold=invalid pred=invalid
+        Every single square is a shape. Every single circle is a shape. As such, every circle is a square.
+OK [II] gold=invalid pred=invalid
+        There are no books that can be called plants. It is also true that every book is a type of animal. This has led to the conclusion that every animal is a plant.
+OK [II] gold=invalid pred=invalid
+        Every single fish lives in water. Any fish is an animal. This means that all animals live in water.
+OK [II] gold=invalid pred=invalid
+        No animal is a rock. Some rocks are plants. From this, it can be concluded that some animals are plants.
+OK [II] gold=invalid pred=invalid
+        It is known that there are no stars which are planets. Every single thing that is the Earth is a planet. As such, some things on Earth are stars.
+OK [II] gold=invalid pred=invalid
+        Anything that is a human is also a mammal. No animal is a human. This means that no animal is a mammal.
+OK [II] gold=invalid pred=invalid
+        The entire set of fruits is composed of round objects with a citrus peel. At least one orange is not a round object with a citrus peel. Every single fruit is an orange.
+OK [II] gold=invalid pred=invalid
+        No animal is a tree. All trees are plants without exception. A number of plants are animals.
+OK [II] gold=invalid pred=invalid
+        No reptiles possess fur. There are some snakes which are reptiles. This means that some snakes have fur.
+OK [II] gold=invalid pred=invalid
+        There are no animals that are trees. At least one plant is a tree. Therefore, there is at least one plant which is an animal.
+OK [II] gold=invalid pred=invalid
+        Every single dog is an animal. Nothing that is a fish is an animal. It follows from this that every single fish is a dog.
+OK [II] gold=invalid pred=invalid
+        There is not a single piece of paper that can be eaten. A portion of all paper is a book. It is the case that some books are edible.
+OK [II] gold=invalid pred=invalid
+        There exist some things that are books which do not have pages. Every single book is a living thing. Consequently, some living things have pages.
+OK [II] gold=invalid pred=invalid
+        There are no animals that can be called chairs. It is also true that every animal is a type of human. This has led to the conclusion that all humans are chairs.
+OK [II] gold=invalid pred=invalid
+        There are no numbers that are ideas. Everything that is a liquid is a number. Thus, every liquid is an idea.
+OK [II] gold=invalid pred=invalid
+        Every single bus driver is not a person who wears a uniform. A portion of the people who are doctors are people who wear uniforms. The result of this is that some doctors are bus drivers.
+OK [II] gold=invalid pred=invalid
+        All things that are birds are animals. It is also true that every single bird is an insect. This proves that all insects are animals.
+OK [II] gold=invalid pred=invalid
+        The set of humans is a subset of the set of legal professionals. At least one doctor is not a legal professional. The entire group of doctors is not humans.
+OK [II] gold=invalid pred=invalid
+        There exist some individuals who are scientists who are not physicists. Every single person who is a scientist is an academic. One can thus conclude that all academics are physicists.
+OK [II] gold=invalid pred=invalid
+        There are no cars that are airplanes. Everything that is a dog is a car. Thus, every dog is an airplane.
+OK [II] gold=invalid pred=invalid
+        Something that is a bird is a mammal. A thing that is a dog is never a bird. It follows that a dog is never a mammal.
+OK [II] gold=invalid pred=invalid
+        A few of the lizards are dogs. There are no dogs that are felines. As a result, some felines are lizards.
+OK [II] gold=invalid pred=invalid
+        Every single triangle is a polygon. Anything that is a triangle is also a geometric shape with three sides. A portion of geometric shapes with three sides are not polygons.
+OK [II] gold=invalid pred=invalid
+        There are no birds that are triangles. Every triangle is, by definition, a shape. Thus, some shapes are birds.
+OK [II] gold=invalid pred=invalid
+        There are no plants that are animals. Every single oak tree is a plant. It is therefore the case that all oak trees are animals.
+OK [II] gold=invalid pred=invalid
+        Every single four-sided-shape is a rectangle. All four-sided-shapes are squares. It follows from this that some squares are not rectangles.
+OK [II] gold=invalid pred=invalid
+        No animal that is a house pet is a feline. Not a single cat is a house pet. This demonstrates that some cats are not felines.
+OK [II] gold=invalid pred=invalid
+        The category of celestial bodies and the category of planets are mutually exclusive. Not a single planet is a star. It must be the case that a portion of stars are not celestial bodies.
+OK [II] gold=invalid pred=invalid
+        Every single fruit is a food. Nothing that is a vegetable is a food. It follows from this that every vegetable is a fruit.
+OK [II] gold=invalid pred=invalid
+        There are no plants that are metal objects. Everything that is a flower is a plant. It's the case that some flowers are metal objects.
+OK [II] gold=invalid pred=invalid
+        There are no fish that do not live on the moon. It is the case that no cat is a fish. At least some cats live on the moon.
+OK [II] gold=invalid pred=invalid
+        There are no creatures with scales who are also mythical creatures. A portion of creatures with scales are fish. It is the case that a few fish are mythical creatures.
+==============================================================================
+Overall accuracy: 185/191 = 96.86%
+  VP (valid+plausible): 46/48 = 95.83%
+  VI (valid+implausible): 47/48 = 97.92%
+  IP (invalid+plausible): 44/47 = 93.62%
+  II (invalid+implausible): 48/48 = 100.00%
+
+False-valid (accept invalid):   3
+False-invalid (reject valid):   3
+
+Plausible accuracy:   94.74% (n=95)
+Implausible accuracy: 98.96% (n=96)
+Total Content Effect (TCE): 4.22
